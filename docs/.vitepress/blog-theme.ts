@@ -38,6 +38,13 @@ const blogTheme = getThemeConfig({
 		pageSize: 9,
 		empty: "暂无精选内容",
 	},
+	comment: {
+        repo: 'wkndnite/blog',
+        repoId: 'R_kgDONpNMDQ=',
+        category: 'Announcements',
+        categoryId: '"DIC_kwDONpNMDc4Cl8hW"',
+        inputPosition: 'top'
+    }
 });
 
 export { blogTheme };

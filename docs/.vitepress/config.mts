@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 import { blogTheme } from "./blog-theme";
+import {SponsorPlugin} from "vitepress-plugin-sponsor";
 
 export default defineConfig({
 	cleanUrls: true,
@@ -88,4 +89,17 @@ export default defineConfig({
 			"/Life/": [{ text: "菊次郎的夏天", link: "/Life/菊次郎的夏天" }],
 		},
 	},
+	vite: {
+        plugins: [
+            // 打赏插件
+            SponsorPlugin({
+                /**
+                 * 打赏模块样式
+                 */
+                type: 'simple',
+                aliPayQR: '/aliPayQR.jpg',
+                weChatQR: '/weChatPayQR.jpg',
+            })
+        ]
+    }
 });
