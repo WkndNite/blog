@@ -15,7 +15,7 @@ export default defineConfig({
 	description: "基于粥里有勺糖提供主题所搭建的周末晚的博客",
 	lastUpdated: true,
 	head: [
-		["link", { rel: "icon", href: "/favicon.ico" }],
+		["link", { rel: "icon", href: "/logo.svg" }],
 		["link", { rel: "stylesheet", href: "https://chinese-fonts-cdn.deno.dev/packages/lywkpmydb/dist/LXGWWenKaiMonoScreen/result.css" }],
 	],
 	themeConfig: {
