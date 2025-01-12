@@ -11,7 +11,7 @@ const blogTheme = getThemeConfig({
 	},
 
 	themeColor: "vp-default",
-	recommend:false,
+	recommend: false,
 	author: "周末晚",
 	friend: [
 		{
@@ -39,12 +39,16 @@ const blogTheme = getThemeConfig({
 		empty: "暂无精选内容",
 	},
 	comment: {
-        repo: 'wkndnite/blog',
-        repoId: 'R_kgDONpNMDQ=',
-        category: 'Announcements',
-        categoryId: '"DIC_kwDONpNMDc4Cl8hW"',
-        inputPosition: 'top'
-    }
+		type: "giscus",
+		options: {
+			repo: "WkndNite/blog",
+			repoId: "R_kgDONpNMDQ",
+			category: "Announcements",
+			categoryId: "DIC_kwDONpNMDc4Cl8hV",
+			inputPosition: "top",
+		},
+		mobileMinify: true,
+	},
 });
 
 export { blogTheme };
