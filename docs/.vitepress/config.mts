@@ -136,6 +136,14 @@ export default defineConfig({
               text: 'React 核心概念（二）',
               link: '/Frontend/React/core-concepts-two',
             },
+            {
+              text: 'React 路由',
+              link: '/Frontend/React/router',
+            },
+            {
+              text: 'Redux —— React 中的状态管理库',
+              link: '/Frontend/React/redux',
+            },
           ],
         },
       ],
