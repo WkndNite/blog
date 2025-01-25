@@ -9,7 +9,7 @@
 
 ## Author
 
-👤 **周末晚**
+👤 **Zong Fan**
 
 - Website: <https://blog.wkndnite-tech.cn/>
 - Github: [@WkndNite](https://github.com/WkndNite)
