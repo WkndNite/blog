@@ -32,7 +32,7 @@ cover: https://redux.js.org/img/redux.svg
 
    :::code-group
 
-   ```js [index.js]
+   ```js [index.js] {4,8,10-12}
    import React from 'react';
    import ReactDOM from 'react-dom/client';
    import App from './App';
@@ -47,7 +47,7 @@ cover: https://redux.js.org/img/redux.svg
    });
    ```
 
-   ```js [App.jsx]
+   ```js [App.jsx] {17,18}
    import List from './components/List';
    import Input from './components/Input';
    import './css/App.css';
@@ -128,7 +128,7 @@ cover: https://redux.js.org/img/redux.svg
 
    :::code-group
 
-   ```jsx [Input.jsx]
+   ```jsx [Input.jsx] {2,7}
    import React from 'react';
    import { addListAction } from '../redux/actions';
 
@@ -162,7 +162,7 @@ cover: https://redux.js.org/img/redux.svg
    }
    ```
 
-   ```jsx [List.jsx]
+   ```jsx [List.jsx] {2,15,31,37}
    import React from 'react';
    import { deleteListAction, updateListAction } from '../redux/actions';
 
@@ -217,7 +217,7 @@ cover: https://redux.js.org/img/redux.svg
 
    :::code-group
 
-   ```js [store.js]
+   ```js [store.js] {5,6,9}
    import { createStore } from 'redux';
 
    import { todoReducer } from './reducers';
@@ -298,3 +298,181 @@ cover: https://redux.js.org/img/redux.svg
    ```
 
    :::
+
+:::warning
+上面的代码本质上还是单向数据流，和所希望的独立仓库仍有出入，反而更像是传统的父子通信。
+:::
+
+## React Redux
+
+Redux 是一个独立的第三方库，之后 React 在 Redux 的基础上推出了 [React-Redux](https://react-redux.js.org/)。
+
+最新版的 React-Redux，已经全面拥抱了 Hooks，内置了诸如 `useSelector`、`useDispatch`、`useStore` 一类的 Hook。
+
+另外，Redux 官方推出了 [Redux Toolkit](https://redux-toolkit.js.org/) 来简化整个 Redux 的使用。因此现在在 React 应用中，状态管理库的使用一般都是 **React Redux + Redux Toolkit**。
+
+```bash
+ npm install @reduxjs/toolkit react-redux
+```
+
+使用 React Redux 的代码如下：
+
+:::code-group
+
+```js [index.js] {4,5,10,12}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+);
+```
+
+```jsx [Input.jsx] {2,3,7,23-25}
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addTodo } from '../redux/todoSlice';
+
+export default function Input(props) {
+  const [value, setValue] = React.useState('');
+  const dispatcher = useDispatch();
+  return (
+    <div className="row">
+      <div className="col-md-8">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="请输入待办事项"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+      </div>
+      <div className="col-md-4">
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            dispatcher(
+              addTodo({ id: Date.now(), title: value, completed: false }),
+            );
+            setValue('');
+          }}
+        >
+          添加
+        </button>
+      </div>
+    </div>
+  );
+}
+```
+
+```jsx [List.jsx] {2,3,6,7,33,39}
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteTodo, changeTodo } from '../redux/todoSlice';
+
+export default function List() {
+  const list = useSelector((state) => state.todoList.todos);
+  const dispatcher = useDispatch();
+
+  return (
+    <div>
+      <ul
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '10px',
+          marginTop: '20px',
+        }}
+      >
+        {list.map((item) => (
+          <li
+            key={item.id}
+            className="text-primary"
+            style={{
+              fontSize: '20px',
+              width: '310px',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+          >
+            <span
+              className={['item', item.completed ? 'completed' : ''].join(' ')}
+              onClick={() => dispatcher(changeTodo(item.id))}
+            >
+              {item.title}
+            </span>
+            <button
+              className="btn btn-danger"
+              onClick={() => dispatcher(deleteTodo(item.id))}
+            >
+              删除
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+```
+
+```js [store.js]
+import { configureStore } from '@reduxjs/toolkit';
+import todoListReducer from './todoSlice';
+
+export default configureStore({
+  reducer: {
+    todoList: todoListReducer,
+  },
+});
+```
+
+```js [todoSlice.js]
+import { createSlice } from '@reduxjs/toolkit';
+
+export const todoSlice = createSlice({
+  name: 'todoList',
+  initialState: {
+    todos: [
+      { id: 1, title: 'Learn React', completed: false },
+      { id: 2, title: 'Learn Redux', completed: false },
+      { id: 3, title: 'Learn React Native', completed: false },
+    ],
+  },
+  reducers: {
+    addTodo: (state, action) => {
+      state.todos.push(action.payload);
+    },
+    deleteTodo: (state, action) => {
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+    },
+    changeTodo: (state, action) => {
+      state.todos = state.todos.map((todo) => {
+        if (todo.id === action.payload) {
+          todo.completed = !todo.completed;
+        }
+        return todo;
+      });
+    },
+  },
+});
+
+export default todoSlice.reducer;
+
+export const { addTodo, deleteTodo, changeTodo } = todoSlice.actions;
+```
+
+:::
+
+## 与后端进行交互
+
+一般来讲，当数据发生变化时，不仅仅是前端的状态库要更新数据，服务器端也要对应的对数据进行更新，此时的更新流程如下：
+
+![后端交互流程图](./assets/redux-backend.excalidraw.png)
