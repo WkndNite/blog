@@ -22,3 +22,19 @@ date: 2025-01-21
 ## React-router
 
 可以参照当前官网最新信息：[React Router](https://reactrouter.com/)
+
+## 管理系统 Demo
+
+### 服务端
+
+通过下面的命令可以快速搭建一个本地服务器，只需要把需要的数据存放在 `server/db.json` 中：
+
+```bash
+mkdir server
+npm init -y
+npm i json-server
+```
+
+### 客户端
+
+详细代码可以参照 [GitHub 仓库](https://github.com/WkndNite/react-demos/tree/main/student-ms/client)
