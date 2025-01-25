@@ -1,7 +1,7 @@
 ---
 date: 2024-12-27
 tags:
-    - 设计模式
+  - 设计模式
 ---
 
 # 设计模式
@@ -20,27 +20,27 @@ tags:
 
 ```js
 class Car {
-    drive() {
-        console.log('Driving a car');
-    }
+  drive() {
+    console.log('Driving a car');
+  }
 }
 
 class Bike {
-    ride() {
-        console.log('Riding a bike');
-    }
+  ride() {
+    console.log('Riding a bike');
+  }
 }
 
 class VehicleFactory {
-    static createVehicle(type) {
-        if (type === 'car') {
-            return new Car();
-        } else if (type === 'bike') {
-            return new Bike();
-        } else {
-            throw new Error('Invalid vehicle type');
-        }
+  static createVehicle(type) {
+    if (type === 'car') {
+      return new Car();
+    } else if (type === 'bike') {
+      return new Bike();
+    } else {
+      throw new Error('Invalid vehicle type');
     }
+  }
 }
 
 const vehicle1 = VehicleFactory.createVehicle('car');
@@ -56,33 +56,33 @@ vehicle2.ride(); // Riding a bike
 
 ```js
 class Car {
-    drive() {
-        console.log('Driving a car');
-    }
+  drive() {
+    console.log('Driving a car');
+  }
 }
 
 class Bike {
-    ride() {
-        console.log('Riding a bike');
-    }
+  ride() {
+    console.log('Riding a bike');
+  }
 }
 
 class VehicleFactory {
-    createVehicle() {
-        throw new Error('This method must be overridden');
-    }
+  createVehicle() {
+    throw new Error('This method must be overridden');
+  }
 }
 
 class CarFactory extends VehicleFactory {
-    createVehicle() {
-        return new Car();
-    }
+  createVehicle() {
+    return new Car();
+  }
 }
 
 class BikeFactory extends VehicleFactory {
-    createVehicle() {
-        return new Bike();
-    }
+  createVehicle() {
+    return new Bike();
+  }
 }
 
 const carFactory = new CarFactory();
@@ -100,25 +100,25 @@ bike.ride(); // Riding a bike
 
 ```js
 class ProductA {
-    constructor(name) {
-        this.name = name;
-    }
+  constructor(name) {
+    this.name = name;
+  }
 }
 
 class ProductB {
-    constructor(name) {
-        this.name = name;
-    }
+  constructor(name) {
+    this.name = name;
+  }
 }
 
 class AbstractFactory {
-    createProductA(name) {
-        return new ProductA(name);
-    }
+  createProductA(name) {
+    return new ProductA(name);
+  }
 
-    createProductB(name) {
-        return new ProductB(name);
-    }
+  createProductB(name) {
+    return new ProductB(name);
+  }
 }
 ```
 
@@ -132,13 +132,13 @@ class AbstractFactory {
 
 ```js
 class Prototype {
-    constructor(name) {
-        this.name = name;
-    }
+  constructor(name) {
+    this.name = name;
+  }
 
-    clone() {
-        return new Prototype(this.name);
-    }
+  clone() {
+    return new Prototype(this.name);
+  }
 }
 ```
 
@@ -148,27 +148,27 @@ class Prototype {
 
 ```js
 class Product {
-    constructor() {
-        this.parts = [];
-    }
+  constructor() {
+    this.parts = [];
+  }
 
-    addPart(part) {
-        this.parts.push(part);
-    }
+  addPart(part) {
+    this.parts.push(part);
+  }
 }
 
 class Builder {
-    constructor() {
-        this.product = new Product();
-    }
+  constructor() {
+    this.product = new Product();
+  }
 
-    buildPart(part) {
-        this.product.addPart(part);
-    }
+  buildPart(part) {
+    this.product.addPart(part);
+  }
 
-    getResult() {
-        return this.product;
-    }
+  getResult() {
+    return this.product;
+  }
 }
 ```
 
@@ -182,19 +182,19 @@ class Builder {
 
 ```js
 class OldInterface {
-    specificRequest() {
-        return 'Old Interface';
-    }
+  specificRequest() {
+    return 'Old Interface';
+  }
 }
 
 class Adapter {
-    constructor(oldInterface) {
-        this.oldInterface = oldInterface;
-    }
+  constructor(oldInterface) {
+    this.oldInterface = oldInterface;
+  }
 
-    request() {
-        return this.oldInterface.specificRequest();
-    }
+  request() {
+    return this.oldInterface.specificRequest();
+  }
 }
 ```
 
@@ -204,19 +204,19 @@ class Adapter {
 
 ```js
 class Abstraction {
-    constructor(implementor) {
-        this.implementor = implementor;
-    }
+  constructor(implementor) {
+    this.implementor = implementor;
+  }
 
-    operation() {
-        this.implementor.operationImpl();
-    }
+  operation() {
+    this.implementor.operationImpl();
+  }
 }
 
 class ConcreteImplementor {
-    operationImpl() {
-        console.log('Concrete Implementor Operation');
-    }
+  operationImpl() {
+    console.log('Concrete Implementor Operation');
+  }
 }
 ```
 
@@ -226,28 +226,28 @@ class ConcreteImplementor {
 
 ```js
 class Component {
-    operation() {}
+  operation() {}
 }
 
 class Leaf extends Component {
-    operation() {
-        console.log('Leaf operation');
-    }
+  operation() {
+    console.log('Leaf operation');
+  }
 }
 
 class Composite extends Component {
-    constructor() {
-        super();
-        this.children = [];
-    }
+  constructor() {
+    super();
+    this.children = [];
+  }
 
-    add(component) {
-        this.children.push(component);
-    }
+  add(component) {
+    this.children.push(component);
+  }
 
-    operation() {
-        this.children.forEach((child) => child.operation());
-    }
+  operation() {
+    this.children.forEach((child) => child.operation());
+  }
 }
 ```
 
@@ -257,20 +257,20 @@ class Composite extends Component {
 
 ```js
 class Component {
-    operation() {
-        return 'Component';
-    }
+  operation() {
+    return 'Component';
+  }
 }
 
 class Decorator extends Component {
-    constructor(component) {
-        super();
-        this.component = component;
-    }
+  constructor(component) {
+    super();
+    this.component = component;
+  }
 
-    operation() {
-        return `Decorator(${this.component.operation()})`;
-    }
+  operation() {
+    return `Decorator(${this.component.operation()})`;
+  }
 }
 ```
 
@@ -280,26 +280,26 @@ class Decorator extends Component {
 
 ```js
 class SubsystemA {
-    operation() {
-        return 'SubsystemA';
-    }
+  operation() {
+    return 'SubsystemA';
+  }
 }
 
 class SubsystemB {
-    operation() {
-        return 'SubsystemB';
-    }
+  operation() {
+    return 'SubsystemB';
+  }
 }
 
 class Facade {
-    constructor() {
-        this.subsystemA = new SubsystemA();
-        this.subsystemB = new SubsystemB();
-    }
+  constructor() {
+    this.subsystemA = new SubsystemA();
+    this.subsystemB = new SubsystemB();
+  }
 
-    operation() {
-        return `${this.subsystemA.operation()} + ${this.subsystemB.operation()}`;
-    }
+  operation() {
+    return `${this.subsystemA.operation()} + ${this.subsystemB.operation()}`;
+  }
 }
 ```
 
@@ -309,22 +309,22 @@ class Facade {
 
 ```js
 class Flyweight {
-    constructor(sharedState) {
-        this.sharedState = sharedState;
-    }
+  constructor(sharedState) {
+    this.sharedState = sharedState;
+  }
 }
 
 class FlyweightFactory {
-    constructor() {
-        this.flyweights = {};
-    }
+  constructor() {
+    this.flyweights = {};
+  }
 
-    getFlyweight(sharedState) {
-        if (!this.flyweights[sharedState]) {
-            this.flyweights[sharedState] = new Flyweight(sharedState);
-        }
-        return this.flyweights[sharedState];
+  getFlyweight(sharedState) {
+    if (!this.flyweights[sharedState]) {
+      this.flyweights[sharedState] = new Flyweight(sharedState);
     }
+    return this.flyweights[sharedState];
+  }
 }
 ```
 
@@ -334,19 +334,19 @@ class FlyweightFactory {
 
 ```js
 class RealSubject {
-    request() {
-        return 'RealSubject';
-    }
+  request() {
+    return 'RealSubject';
+  }
 }
 
 class Proxy {
-    constructor(realSubject) {
-        this.realSubject = realSubject;
-    }
+  constructor(realSubject) {
+    this.realSubject = realSubject;
+  }
 
-    request() {
-        return this.realSubject.request();
-    }
+  request() {
+    return this.realSubject.request();
+  }
 }
 ```
 
@@ -360,17 +360,17 @@ class Proxy {
 
 ```js
 class Handler {
-    setNext(handler) {
-        this.nextHandler = handler;
-        return handler;
-    }
+  setNext(handler) {
+    this.nextHandler = handler;
+    return handler;
+  }
 
-    handle(request) {
-        if (this.nextHandler) {
-            return this.nextHandler.handle(request);
-        }
-        return null;
+  handle(request) {
+    if (this.nextHandler) {
+      return this.nextHandler.handle(request);
     }
+    return null;
+  }
 }
 ```
 
@@ -380,24 +380,24 @@ class Handler {
 
 ```js
 class Command {
-    execute() {}
+  execute() {}
 }
 
 class ConcreteCommand extends Command {
-    constructor(receiver) {
-        super();
-        this.receiver = receiver;
-    }
+  constructor(receiver) {
+    super();
+    this.receiver = receiver;
+  }
 
-    execute() {
-        this.receiver.action();
-    }
+  execute() {
+    this.receiver.action();
+  }
 }
 
 class Receiver {
-    action() {
-        console.log('Receiver action');
-    }
+  action() {
+    console.log('Receiver action');
+  }
 }
 ```
 
@@ -407,20 +407,20 @@ class Receiver {
 
 ```js
 class Context {
-    constructor(input) {
-        this.input = input;
-        this.output = 0;
-    }
+  constructor(input) {
+    this.input = input;
+    this.output = 0;
+  }
 }
 
 class Expression {
-    interpret(context) {}
+  interpret(context) {}
 }
 
 class TerminalExpression extends Expression {
-    interpret(context) {
-        context.output += parseInt(context.input);
-    }
+  interpret(context) {
+    context.output += parseInt(context.input);
+  }
 }
 ```
 
@@ -430,18 +430,18 @@ class TerminalExpression extends Expression {
 
 ```js
 class Iterator {
-    constructor(collection) {
-        this.collection = collection;
-        this.index = 0;
-    }
+  constructor(collection) {
+    this.collection = collection;
+    this.index = 0;
+  }
 
-    next() {
-        return this.collection[this.index++];
-    }
+  next() {
+    return this.collection[this.index++];
+  }
 
-    hasNext() {
-        return this.index < this.collection.length;
-    }
+  hasNext() {
+    return this.index < this.collection.length;
+  }
 }
 ```
 
@@ -451,49 +451,49 @@ class Iterator {
 
 ```js
 class Mediator {
-    notify(sender, event) {}
+  notify(sender, event) {}
 }
 
 class ConcreteMediator extends Mediator {
-    constructor() {
-        super();
-        this.colleague1 = new Colleague1(this);
-        this.colleague2 = new Colleague2(this);
-    }
+  constructor() {
+    super();
+    this.colleague1 = new Colleague1(this);
+    this.colleague2 = new Colleague2(this);
+  }
 
-    notify(sender, event) {
-        if (event === 'A') {
-            this.colleague2.doC();
-        } else if (event === 'B') {
-            this.colleague1.doD();
-        }
+  notify(sender, event) {
+    if (event === 'A') {
+      this.colleague2.doC();
+    } else if (event === 'B') {
+      this.colleague1.doD();
     }
+  }
 }
 
 class Colleague {
-    constructor(mediator) {
-        this.mediator = mediator;
-    }
+  constructor(mediator) {
+    this.mediator = mediator;
+  }
 }
 
 class Colleague1 extends Colleague {
-    doA() {
-        this.mediator.notify(this, 'A');
-    }
+  doA() {
+    this.mediator.notify(this, 'A');
+  }
 
-    doD() {
-        console.log('Colleague1 does D');
-    }
+  doD() {
+    console.log('Colleague1 does D');
+  }
 }
 
 class Colleague2 extends Colleague {
-    doB() {
-        this.mediator.notify(this, 'B');
-    }
+  doB() {
+    this.mediator.notify(this, 'B');
+  }
 
-    doC() {
-        console.log('Colleague2 does C');
-    }
+  doC() {
+    console.log('Colleague2 does C');
+  }
 }
 ```
 
@@ -503,41 +503,41 @@ class Colleague2 extends Colleague {
 
 ```js
 class Memento {
-    constructor(state) {
-        this.state = state;
-    }
+  constructor(state) {
+    this.state = state;
+  }
 }
 
 class Originator {
-    constructor() {
-        this.state = '';
-    }
+  constructor() {
+    this.state = '';
+  }
 
-    setState(state) {
-        this.state = state;
-    }
+  setState(state) {
+    this.state = state;
+  }
 
-    saveStateToMemento() {
-        return new Memento(this.state);
-    }
+  saveStateToMemento() {
+    return new Memento(this.state);
+  }
 
-    getStateFromMemento(memento) {
-        this.state = memento.state;
-    }
+  getStateFromMemento(memento) {
+    this.state = memento.state;
+  }
 }
 
 class Caretaker {
-    constructor() {
-        this.mementoList = [];
-    }
+  constructor() {
+    this.mementoList = [];
+  }
 
-    add(memento) {
-        this.mementoList.push(memento);
-    }
+  add(memento) {
+    this.mementoList.push(memento);
+  }
 
-    get(index) {
-        return this.mementoList[index];
-    }
+  get(index) {
+    return this.mementoList[index];
+  }
 }
 ```
 
@@ -547,21 +547,21 @@ class Caretaker {
 
 ```js
 class Subject {
-    constructor() {
-        this.observers = [];
-    }
+  constructor() {
+    this.observers = [];
+  }
 
-    attach(observer) {
-        this.observers.push(observer);
-    }
+  attach(observer) {
+    this.observers.push(observer);
+  }
 
-    notify() {
-        this.observers.forEach((observer) => observer.update());
-    }
+  notify() {
+    this.observers.forEach((observer) => observer.update());
+  }
 }
 
 class Observer {
-    update() {}
+  update() {}
 }
 ```
 
@@ -571,35 +571,35 @@ class Observer {
 
 ```js
 class Context {
-    constructor(state) {
-        this.state = state;
-    }
+  constructor(state) {
+    this.state = state;
+  }
 
-    setState(state) {
-        this.state = state;
-    }
+  setState(state) {
+    this.state = state;
+  }
 
-    request() {
-        this.state.handle(this);
-    }
+  request() {
+    this.state.handle(this);
+  }
 }
 
 class State {
-    handle(context) {}
+  handle(context) {}
 }
 
 class ConcreteStateA extends State {
-    handle(context) {
-        console.log('State A handling request.');
-        context.setState(new ConcreteStateB());
-    }
+  handle(context) {
+    console.log('State A handling request.');
+    context.setState(new ConcreteStateB());
+  }
 }
 
 class ConcreteStateB extends State {
-    handle(context) {
-        console.log('State B handling request.');
-        context.setState(new ConcreteStateA());
-    }
+  handle(context) {
+    console.log('State B handling request.');
+    context.setState(new ConcreteStateA());
+  }
 }
 ```
 
@@ -609,33 +609,33 @@ class ConcreteStateB extends State {
 
 ```js
 class Context {
-    constructor(strategy) {
-        this.strategy = strategy;
-    }
+  constructor(strategy) {
+    this.strategy = strategy;
+  }
 
-    setStrategy(strategy) {
-        this.strategy = strategy;
-    }
+  setStrategy(strategy) {
+    this.strategy = strategy;
+  }
 
-    executeStrategy() {
-        this.strategy.execute();
-    }
+  executeStrategy() {
+    this.strategy.execute();
+  }
 }
 
 class Strategy {
-    execute() {}
+  execute() {}
 }
 
 class ConcreteStrategyA extends Strategy {
-    execute() {
-        console.log('Strategy A executed.');
-    }
+  execute() {
+    console.log('Strategy A executed.');
+  }
 }
 
 class ConcreteStrategyB extends Strategy {
-    execute() {
-        console.log('Strategy B executed.');
-    }
+  execute() {
+    console.log('Strategy B executed.');
+  }
 }
 ```
 
@@ -645,23 +645,23 @@ class ConcreteStrategyB extends Strategy {
 
 ```js
 class AbstractClass {
-    templateMethod() {
-        this.primitiveOperation1();
-        this.primitiveOperation2();
-    }
+  templateMethod() {
+    this.primitiveOperation1();
+    this.primitiveOperation2();
+  }
 
-    primitiveOperation1() {}
-    primitiveOperation2() {}
+  primitiveOperation1() {}
+  primitiveOperation2() {}
 }
 
 class ConcreteClass extends AbstractClass {
-    primitiveOperation1() {
-        console.log('Primitive Operation 1');
-    }
+  primitiveOperation1() {
+    console.log('Primitive Operation 1');
+  }
 
-    primitiveOperation2() {
-        console.log('Primitive Operation 2');
-    }
+  primitiveOperation2() {
+    console.log('Primitive Operation 2');
+  }
 }
 ```
 
@@ -671,18 +671,18 @@ class ConcreteClass extends AbstractClass {
 
 ```js
 class Visitor {
-    visit(element) {}
+  visit(element) {}
 }
 
 class ConcreteVisitor extends Visitor {
-    visit(element) {
-        console.log('Visiting element');
-    }
+  visit(element) {
+    console.log('Visiting element');
+  }
 }
 
 class Element {
-    accept(visitor) {
-        visitor.visit(this);
-    }
+  accept(visitor) {
+    visitor.visit(this);
+  }
 }
 ```

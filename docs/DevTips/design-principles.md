@@ -1,6 +1,6 @@
 ---
 tags:
-    - 设计原则
+  - 设计原则
 date: 2024-12-28
 ---
 
@@ -16,20 +16,20 @@ date: 2024-12-28
 
 ```js
 class User {
-    constructor(name, email) {
-        this.name = name;
-        this.email = email;
-    }
+  constructor(name, email) {
+    this.name = name;
+    this.email = email;
+  }
 
-    getUserInfo() {
-        return `Name: ${this.name}, Email: ${this.email}`;
-    }
+  getUserInfo() {
+    return `Name: ${this.name}, Email: ${this.email}`;
+  }
 }
 
 class UserRepository {
-    save(user) {
-        // 保存用户到数据库
-    }
+  save(user) {
+    // 保存用户到数据库
+  }
 }
 ```
 
@@ -39,32 +39,32 @@ class UserRepository {
 
 ```js
 class Shape {
-    area() {
-        throw new Error('This method must be overridden');
-    }
+  area() {
+    throw new Error('This method must be overridden');
+  }
 }
 
 class Rectangle extends Shape {
-    constructor(width, height) {
-        super();
-        this.width = width;
-        this.height = height;
-    }
+  constructor(width, height) {
+    super();
+    this.width = width;
+    this.height = height;
+  }
 
-    area() {
-        return this.width * this.height;
-    }
+  area() {
+    return this.width * this.height;
+  }
 }
 
 class Circle extends Shape {
-    constructor(radius) {
-        super();
-        this.radius = radius;
-    }
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
 
-    area() {
-        return Math.PI * this.radius * this.radius;
-    }
+  area() {
+    return Math.PI * this.radius * this.radius;
+  }
 }
 ```
 
@@ -74,19 +74,19 @@ class Circle extends Shape {
 
 ```js
 class Bird {
-    fly() {
-        console.log('Flying');
-    }
+  fly() {
+    console.log('Flying');
+  }
 }
 
 class Sparrow extends Bird {
-    // Sparrow 可以替换 Bird
+  // Sparrow 可以替换 Bird
 }
 
 class Ostrich extends Bird {
-    fly() {
-        throw new Error("Ostriches can't fly");
-    }
+  fly() {
+    throw new Error("Ostriches can't fly");
+  }
 }
 ```
 
@@ -96,24 +96,24 @@ class Ostrich extends Bird {
 
 ```js
 class Printer {
-    print() {
-        throw new Error('This method must be overridden');
-    }
+  print() {
+    throw new Error('This method must be overridden');
+  }
 }
 
 class Scanner {
-    scan() {
-        throw new Error('This method must be overridden');
-    }
+  scan() {
+    throw new Error('This method must be overridden');
+  }
 }
 
 class AllInOnePrinter extends Printer {
-    print() {
-        console.log('Printing');
-    }
-    scan() {
-        console.log('Scanning');
-    }
+  print() {
+    console.log('Printing');
+  }
+  scan() {
+    console.log('Scanning');
+  }
 }
 ```
 
@@ -123,25 +123,25 @@ class AllInOnePrinter extends Printer {
 
 ```js
 class Database {
-    connect() {
-        throw new Error('This method must be overridden');
-    }
+  connect() {
+    throw new Error('This method must be overridden');
+  }
 }
 
 class MySQLDatabase extends Database {
-    connect() {
-        console.log('Connecting to MySQL');
-    }
+  connect() {
+    console.log('Connecting to MySQL');
+  }
 }
 
 class UserService {
-    constructor(database) {
-        this.database = database;
-    }
+  constructor(database) {
+    this.database = database;
+  }
 
-    connectToDatabase() {
-        this.database.connect();
-    }
+  connectToDatabase() {
+    this.database.connect();
+  }
 }
 
 const mySQLDatabase = new MySQLDatabase();
@@ -155,19 +155,19 @@ userService.connectToDatabase(); // Connecting to MySQL
 
 ```js
 class Engine {
-    start() {
-        console.log('Engine started');
-    }
+  start() {
+    console.log('Engine started');
+  }
 }
 
 class Car {
-    constructor() {
-        this.engine = new Engine();
-    }
+  constructor() {
+    this.engine = new Engine();
+  }
 
-    start() {
-        this.engine.start();
-    }
+  start() {
+    this.engine.start();
+  }
 }
 
 const car = new Car();
@@ -180,19 +180,19 @@ car.start(); // Engine started
 
 ```js
 class Engine {
-    start() {
-        console.log('Engine started');
-    }
+  start() {
+    console.log('Engine started');
+  }
 }
 
 class Car {
-    constructor(engine) {
-        this.engine = engine;
-    }
+  constructor(engine) {
+    this.engine = engine;
+  }
 
-    start() {
-        this.engine.start();
-    }
+  start() {
+    this.engine.start();
+  }
 }
 
 const engine = new Engine();
@@ -206,19 +206,19 @@ car.start(); // Engine started
 
 ```js
 class Engine {
-    start() {
-        console.log('Engine started');
-    }
+  start() {
+    console.log('Engine started');
+  }
 }
 
 class Car {
-    constructor() {
-        this.engine = new Engine();
-    }
+  constructor() {
+    this.engine = new Engine();
+  }
 
-    start() {
-        this.engine.start();
-    }
+  start() {
+    this.engine.start();
+  }
 }
 
 const car = new Car();
@@ -231,9 +231,9 @@ car.start(); // Engine started
 
 ```js
 class Calculator {
-    add(a, b) {
-        return a + b;
-    }
+  add(a, b) {
+    return a + b;
+  }
 }
 
 const calculator = new Calculator();
@@ -246,13 +246,13 @@ console.log(calculator.add(1, 2)); // 3
 
 ```js
 class MathOperations {
-    add(a, b) {
-        return a + b;
-    }
+  add(a, b) {
+    return a + b;
+  }
 
-    subtract(a, b) {
-        return a - b;
-    }
+  subtract(a, b) {
+    return a - b;
+  }
 }
 
 const mathOps = new MathOperations();
@@ -266,13 +266,13 @@ console.log(mathOps.subtract(5, 3)); // 2
 
 ```js
 class User {
-    constructor(name, email) {
-        this.name = name;
-        this.email = email;
-    }
+  constructor(name, email) {
+    this.name = name;
+    this.email = email;
+  }
 
-    getUserInfo() {
-        return `Name: ${this.name}, Email: ${this.email}`;
-    }
+  getUserInfo() {
+    return `Name: ${this.name}, Email: ${this.email}`;
+  }
 }
 ```

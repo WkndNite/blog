@@ -1,7 +1,7 @@
 ---
 tags:
-    - JavaScript
-    - 前端
+  - JavaScript
+  - 前端
 date: 2025-01-01
 ---
 

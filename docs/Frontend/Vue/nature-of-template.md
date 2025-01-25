@@ -1,7 +1,7 @@
 ---
 tag:
-    - Vue
-    - 前端
+  - Vue
+  - 前端
 date: 2025-01-17
 sticky: 5
 ---
@@ -26,26 +26,26 @@ import { defineComponent, h } from 'vue';
 import styles from './UserCard.module.css';
 
 export default defineComponent({
-    name: 'UserCard',
-    props: {
-        name: String,
-        email: String,
-        avatarUrl: String,
-    },
-    setup(props) {
-        return () =>
-            h('div', { class: styles.userCard }, [
-                h('img', {
-                    class: styles.avatar,
-                    src: props.avatarUrl,
-                    alt: 'UserCard Avatar',
-                }),
-                h('div', { class: styles.userCardContent }, [
-                    h('h2', props.name),
-                    h('p', props.email),
-                ]),
-            ]);
-    },
+  name: 'UserCard',
+  props: {
+    name: String,
+    email: String,
+    avatarUrl: String,
+  },
+  setup(props) {
+    return () =>
+      h('div', { class: styles.userCard }, [
+        h('img', {
+          class: styles.avatar,
+          src: props.avatarUrl,
+          alt: 'UserCard Avatar',
+        }),
+        h('div', { class: styles.userCardContent }, [
+          h('h2', props.name),
+          h('p', props.email),
+        ]),
+      ]);
+  },
 });
 
 // Layout.vue
@@ -59,25 +59,25 @@ import { h } from 'vue';
 import styles from './UserCard.module.css';
 
 export default {
-    name: 'UserCard',
-    props: {
-        name: String,
-        email: String,
-        avatarUrl: String,
-    },
-    render() {
-        return h('div', { class: styles.userCard }, [
-            h('img', {
-                class: styles.avatar,
-                src: this.avatarUrl,
-                alt: 'UserCard Avatar',
-            }),
-            h('div', { class: styles.userCardContent }, [
-                h('h2', this.name),
-                h('p', this.email),
-            ]),
-        ]);
-    },
+  name: 'UserCard',
+  props: {
+    name: String,
+    email: String,
+    avatarUrl: String,
+  },
+  render() {
+    return h('div', { class: styles.userCard }, [
+      h('img', {
+        class: styles.avatar,
+        src: this.avatarUrl,
+        alt: 'UserCard Avatar',
+      }),
+      h('div', { class: styles.userCardContent }, [
+        h('h2', this.name),
+        h('p', this.email),
+      ]),
+    ]);
+  },
 };
 
 // Layout.vue
@@ -98,9 +98,9 @@ import UserCard from './UserCard.js';
 
 ```vue
 <template>
-    <div>
-        <h1 :id="someId">Hello</h1>
-    </div>
+  <div>
+    <h1 :id="someId">Hello</h1>
+  </div>
 </template>
 ```
 
@@ -114,7 +114,7 @@ import UserCard from './UserCard.js';
 
 ```js
 function render() {
-    return h('div', [h('h1', { id: someId }, 'Hello')]);
+  return h('div', [h('h1', { id: someId }, 'Hello')]);
 }
 ```
 
@@ -131,10 +131,10 @@ function render() {
 
 ```js
 function compiler(template) {
-    const ast = parser(template);
-    transform(ast);
-    const code = generator(ast);
-    return code;
+  const ast = parser(template);
+  transform(ast);
+  const code = generator(ast);
+  return code;
 }
 ```
 
@@ -142,126 +142,126 @@ function compiler(template) {
 
 1. 假设有如下一段模板：
 
-    ```vue
-    <div>
-        <p>Vue</p>
-        <p>React</p>
-    </div>
-    ```
+   ```vue
+   <div>
+       <p>Vue</p>
+       <p>React</p>
+   </div>
+   ```
 
 2. 对于模板编译器来讲，就是一段字符串：
 
-    ```text
-    <div><p>Vue</p><p>React</p></div>
-    ```
+   ```text
+   <div><p>Vue</p><p>React</p></div>
+   ```
 
 3. 首先是解析器，拿到这个字符串之后对字符串进行解析，得到一个一个的 token，大致如下：
 
-    ```js
-    [
-        { type: 'tag', name: 'div' },
-        { type: 'tag', name: 'p' },
-        { type: 'text', content: 'Vue' },
-        { type: 'tagEnd', name: 'p' },
-        { type: 'tag', name: 'p' },
-        { type: 'text', content: 'React' },
-        { type: 'tagEnd', name: 'p' },
-        { type: 'tagEnd', name: 'div' },
-    ];
-    ```
+   ```js
+   [
+     { type: 'tag', name: 'div' },
+     { type: 'tag', name: 'p' },
+     { type: 'text', content: 'Vue' },
+     { type: 'tagEnd', name: 'p' },
+     { type: 'tag', name: 'p' },
+     { type: 'text', content: 'React' },
+     { type: 'tagEnd', name: 'p' },
+     { type: 'tagEnd', name: 'div' },
+   ];
+   ```
 
-    :::info
-    生成 token 的过程会涉及到编译原理的知识，如有限状态机。
-    :::
+   :::info
+   生成 token 的过程会涉及到编译原理的知识，如有限状态机。
+   :::
 
 4. 另外，解析器需要根据得到的 token 来生成模板 AST：
 
-    ```js
-    {
-        "type": "Root",
-        "children": [
-            {
-                "type": "Element",
-                "tag": "div",
-                "children": [
-                    {
-                        "type": "Element",
-                        "tag": "p",
-                        "children": [
-                            {
-                                "type": "Text",
-                                "content": "Vue"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "Element",
-                        "tag": "p",
-                        "children": [
-                            {
-                                "type": "Text",
-                                "content": "React"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
-    ```
+   ```js
+   {
+       "type": "Root",
+       "children": [
+           {
+               "type": "Element",
+               "tag": "div",
+               "children": [
+                   {
+                       "type": "Element",
+                       "tag": "p",
+                       "children": [
+                           {
+                               "type": "Text",
+                               "content": "Vue"
+                           }
+                       ]
+                   },
+                   {
+                       "type": "Element",
+                       "tag": "p",
+                       "children": [
+                           {
+                               "type": "Text",
+                               "content": "React"
+                           }
+                       ]
+                   }
+               ]
+           }
+       ]
+   }
+   ```
 
-    :::info
-    解析器、转换器、生成器的具体代码——如何得到树状结构此处不做赘述。
-    :::
+   :::info
+   解析器、转换器、生成器的具体代码——如何得到树状结构此处不做赘述。
+   :::
 
 5. 接下来是转换器，将模板 AST 转换为 JS AST：
 
-    ```js
-    {
-        "type": "FunctionDecl",
-        "id": { "type": "Identifier", "name": "render" },
-        "params": [],
-        "body": {
-            "type": "ReturnStatement",
-            "return": {
-                "type": "CallExpression",
-                "callee": { "type": "Identifier", "name": "h" },
-                "arguments": [
-                    { "type": "StringLiteral", "value": "div" },
-                    {
-                        "type": "ArrayExpression",
-                        "elements": [
-                            {
-                                "type": "CallExpression",
-                                "callee": { "type": "Identifier", "name": "h" },
-                                "arguments": [
-                                    { "type": "StringLiteral", "value": "p" },
-                                    { "type": "StringLiteral", "value": "Vue" }
-                                ]
-                            },
-                            {
-                                "type": "CallExpression",
-                                "callee": { "type": "Identifier", "name": "h" },
-                                "arguments": [
-                                    { "type": "StringLiteral", "value": "p" },
-                                    { "type": "StringLiteral", "value": "React" }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        }
-    }
-    ```
+   ```js
+   {
+       "type": "FunctionDecl",
+       "id": { "type": "Identifier", "name": "render" },
+       "params": [],
+       "body": {
+           "type": "ReturnStatement",
+           "return": {
+               "type": "CallExpression",
+               "callee": { "type": "Identifier", "name": "h" },
+               "arguments": [
+                   { "type": "StringLiteral", "value": "div" },
+                   {
+                       "type": "ArrayExpression",
+                       "elements": [
+                           {
+                               "type": "CallExpression",
+                               "callee": { "type": "Identifier", "name": "h" },
+                               "arguments": [
+                                   { "type": "StringLiteral", "value": "p" },
+                                   { "type": "StringLiteral", "value": "Vue" }
+                               ]
+                           },
+                           {
+                               "type": "CallExpression",
+                               "callee": { "type": "Identifier", "name": "h" },
+                               "arguments": [
+                                   { "type": "StringLiteral", "value": "p" },
+                                   { "type": "StringLiteral", "value": "React" }
+                               ]
+                           }
+                       ]
+                   }
+               ]
+           }
+       }
+   }
+   ```
 
 6. 最后，生成器将 JS AST 转换为渲染函数：
 
-    ```js
-    function render() {
-        return h('div', [h('p', 'Vue'), h('p', 'React')]);
-    }
-    ```
+   ```js
+   function render() {
+     return h('div', [h('p', 'Vue'), h('p', 'React')]);
+   }
+   ```
 
 ## 编译时机
 
@@ -277,85 +277,85 @@ function compiler(template) {
 ```html [index.html]
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="index.css" />
-    </head>
-    <body>
-        <div id="app">
-            <user-card :name :email :avatar-url></user-card>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="app">
+      <user-card :name :email :avatar-url></user-card>
+    </div>
+
+    <template id="user-card-template">
+      <div class="user-card">
+        <img :src="avatarUrl" alt="user avatar" class="avatar" />
+        <div class="user-info">
+          <h2>{{name}}</h2>
+          <p>{{email}}</p>
         </div>
+      </div>
+    </template>
 
-        <template id="user-card-template">
-            <div class="user-card">
-                <img :src="avatarUrl" alt="user avatar" class="avatar" />
-                <div class="user-info">
-                    <h2>{{name}}</h2>
-                    <p>{{email}}</p>
-                </div>
-            </div>
-        </template>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const { createApp } = Vue;
 
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script>
-            const { createApp } = Vue;
+      const UserCard = {
+        name: 'UserCard',
+        props: {
+          name: String,
+          email: String,
+          avatarUrl: String,
+        },
+        template: '#user-card-template',
+      };
 
-            const UserCard = {
-                name: 'UserCard',
-                props: {
-                    name: String,
-                    email: String,
-                    avatarUrl: String,
-                },
-                template: '#user-card-template',
-            };
-
-            createApp({
-                components: {
-                    UserCard,
-                },
-                data() {
-                    return {
-                        name: '周末晚',
-                        email: 'WkndNite@126.com',
-                        avatarUrl: 'https://blog.wkndnite-tech.cn/logo.png',
-                    };
-                },
-            }).mount('#app');
-        </script>
-    </body>
+      createApp({
+        components: {
+          UserCard,
+        },
+        data() {
+          return {
+            name: '周末晚',
+            email: 'WkndNite@126.com',
+            avatarUrl: 'https://blog.wkndnite-tech.cn/logo.png',
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
 </html>
 ```
 
 ```css [index.css]
 .user-card {
-    display: flex;
-    align-items: center;
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px 0;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
 }
 
 .avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
 }
 .user-info h2 {
-    margin: 0;
-    font-size: 20px;
-    color: #333;
+  margin: 0;
+  font-size: 20px;
+  color: #333;
 }
 
 .user-info p {
-    margin: 5px 0 0;
-    font-size: 16px;
-    color: #666;
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #666;
 }
 ```
 

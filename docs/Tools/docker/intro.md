@@ -1,7 +1,7 @@
 ---
 date: 2024-12-23
 tags:
-    - Docker
+  - Docker
 cover: https://docs.docker.com/get-started/images/docker-architecture.webp
 ---
 

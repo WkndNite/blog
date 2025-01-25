@@ -1,10 +1,10 @@
 ---
 date: 2024-12-10
 tags:
-    - Astro
-    - Starlight
-    - 开发实践
-    - 技术博客
+  - Astro
+  - Starlight
+  - 开发实践
+  - 技术博客
 ---
 
 # 项目初始化

@@ -1,8 +1,8 @@
 ---
 date: 2025-01-19
 tags:
-    - React
-    - 前端
+  - React
+  - 前端
 cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/210px-React-icon.svg.png
 ---
 
@@ -27,30 +27,30 @@ cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/
 import React, { Component } from 'react';
 
 export default class App extends Component {
-    state = {
-        value: 'test content',
-    };
+  state = {
+    value: 'test content',
+  };
 
-    handleChange = (event) => {
-        this.setState({ value: event.target.value });
-    };
+  handleChange = (event) => {
+    this.setState({ value: event.target.value });
+  };
 
-    handleClick = () => {
-        console.log(this.state.value);
-    };
+  handleClick = () => {
+    console.log(this.state.value);
+  };
 
-    render() {
-        return (
-            <div>
-                <input
-                    type="text"
-                    value={this.state.value}
-                    onChange={this.handleChange}
-                />
-                <button onClick={this.handleClick}>提交</button>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <input
+          type="text"
+          value={this.state.value}
+          onChange={this.handleChange}
+        />
+        <button onClick={this.handleClick}>提交</button>
+      </div>
+    );
+  }
 }
 ```
 
@@ -58,49 +58,49 @@ export default class App extends Component {
 import React, { Component } from 'react';
 
 export default class App extends Component {
-    state = {
-        value1: '',
-        value2: '',
-    };
+  state = {
+    value1: '',
+    value2: '',
+  };
 
-    handleChange = (event) => {
-        const name = event.target.name;
-        switch (name) {
-            case 'one':
-                this.setState({
-                    value1: event.target.value.toUpperCase(),
-                });
-                break;
-            case 'two':
-                this.setState({
-                    value2: event.target.value.replace(/\D/g, ''),
-                });
-                break;
-            default:
-                break;
-        }
-    };
-
-    render() {
-        return (
-            <div>
-                <input
-                    type="text"
-                    name="one"
-                    value={this.state.value1}
-                    onChange={this.handleChange}
-                    placeholder="自动转为大写"
-                />
-                <input
-                    type="text"
-                    name="two"
-                    value={this.state.value2}
-                    onChange={this.handleChange}
-                    placeholder="只能输入数字"
-                />
-            </div>
-        );
+  handleChange = (event) => {
+    const name = event.target.name;
+    switch (name) {
+      case 'one':
+        this.setState({
+          value1: event.target.value.toUpperCase(),
+        });
+        break;
+      case 'two':
+        this.setState({
+          value2: event.target.value.replace(/\D/g, ''),
+        });
+        break;
+      default:
+        break;
     }
+  };
+
+  render() {
+    return (
+      <div>
+        <input
+          type="text"
+          name="one"
+          value={this.state.value1}
+          onChange={this.handleChange}
+          placeholder="自动转为大写"
+        />
+        <input
+          type="text"
+          name="two"
+          value={this.state.value2}
+          onChange={this.handleChange}
+          placeholder="只能输入数字"
+        />
+      </div>
+    );
+  }
 }
 ```
 
@@ -108,29 +108,29 @@ export default class App extends Component {
 import React, { Component } from 'react';
 
 export default class App extends Component {
-    state = {
-        value: '',
-    };
+  state = {
+    value: '',
+  };
 
-    handleChange = (event) => {
-        this.setState({ value: event.target.value });
-    };
+  handleChange = (event) => {
+    this.setState({ value: event.target.value });
+  };
 
-    render() {
-        return (
-            <div>
-                {/* 原生的 HTML 内容应该书写在 textarea 标签之间 */}
-                {/* React 方便起见将内容统一交给 value 绑定 */}
-                <textarea
-                    name=""
-                    id=""
-                    value={this.state.value}
-                    onChange={this.handleChange}
-                    placeholder="Text here"
-                />
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        {/* 原生的 HTML 内容应该书写在 textarea 标签之间 */}
+        {/* React 方便起见将内容统一交给 value 绑定 */}
+        <textarea
+          name=""
+          id=""
+          value={this.state.value}
+          onChange={this.handleChange}
+          placeholder="Text here"
+        />
+      </div>
+    );
+  }
 }
 ```
 
@@ -138,36 +138,36 @@ export default class App extends Component {
 import React, { Component } from 'react';
 
 export default class App extends Component {
-    state = {
-        selectedOption: null,
-    };
+  state = {
+    selectedOption: null,
+  };
 
-    handleChange = (index) => {
-        this.setState({ selectedOption: index });
-    };
+  handleChange = (index) => {
+    this.setState({ selectedOption: index });
+  };
 
-    render() {
-        const options = ['HTML', 'CSS', 'JavaScript', 'React', 'Vue'];
+  render() {
+    const options = ['HTML', 'CSS', 'JavaScript', 'React', 'Vue'];
 
-        return (
-            <div>
-                {options.map((item, index) => {
-                    return (
-                        <div key={index}>
-                            <input
-                                type="radio"
-                                name="skills"
-                                value={item}
-                                checked={this.state.selectedOption === index}
-                                onChange={() => this.handleChange(index)}
-                            />
-                            <label>{item}</label>
-                        </div>
-                    );
-                })}
+    return (
+      <div>
+        {options.map((item, index) => {
+          return (
+            <div key={index}>
+              <input
+                type="radio"
+                name="skills"
+                value={item}
+                checked={this.state.selectedOption === index}
+                onChange={() => this.handleChange(index)}
+              />
+              <label>{item}</label>
             </div>
-        );
-    }
+          );
+        })}
+      </div>
+    );
+  }
 }
 ```
 
@@ -175,41 +175,41 @@ export default class App extends Component {
 import React, { Component } from 'react';
 
 export default class App extends Component {
-    state = {
-        checkBoxes: [
-            { content: 'HTML', checked: false },
-            { content: 'CSS', checked: false },
-            { content: 'JavaScript', checked: false },
-            { content: 'React', checked: false },
-            { content: 'Vue', checked: false },
-        ],
-    };
+  state = {
+    checkBoxes: [
+      { content: 'HTML', checked: false },
+      { content: 'CSS', checked: false },
+      { content: 'JavaScript', checked: false },
+      { content: 'React', checked: false },
+      { content: 'Vue', checked: false },
+    ],
+  };
 
-    handleChange = (index) => {
-        const checkBoxes = [...this.state.checkBoxes];
-        checkBoxes[index].checked = !checkBoxes[index].checked;
-        this.setState({ checkBoxes });
-    };
+  handleChange = (index) => {
+    const checkBoxes = [...this.state.checkBoxes];
+    checkBoxes[index].checked = !checkBoxes[index].checked;
+    this.setState({ checkBoxes });
+  };
 
-    render() {
-        return (
-            <div>
-                {this.state.checkBoxes.map((item, index) => {
-                    return (
-                        <div key={index}>
-                            <input
-                                type="checkbox"
-                                value={item.content}
-                                checked={item.checked}
-                                onChange={() => this.handleChange(index)}
-                            />
-                            <label>{item.content}</label>
-                        </div>
-                    );
-                })}
+  render() {
+    return (
+      <div>
+        {this.state.checkBoxes.map((item, index) => {
+          return (
+            <div key={index}>
+              <input
+                type="checkbox"
+                value={item.content}
+                checked={item.checked}
+                onChange={() => this.handleChange(index)}
+              />
+              <label>{item.content}</label>
             </div>
-        );
-    }
+          );
+        })}
+      </div>
+    );
+  }
 }
 ```
 
@@ -217,25 +217,25 @@ export default class App extends Component {
 import React, { Component } from 'react';
 
 export default class App extends Component {
-    state = {
-        value: 'balance',
-    };
+  state = {
+    value: 'balance',
+  };
 
-    handleChange = (e) => {
-        this.setState({ value: e.target.value });
-    };
+  handleChange = (e) => {
+    this.setState({ value: e.target.value });
+  };
 
-    render() {
-        return (
-            <div>
-                <select value={this.state.value} onChange={this.handleChange}>
-                    <option value="income">Income</option>
-                    <option value="outcome">Outcome</option>
-                    <option value="balance">Balance</option>
-                </select>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <select value={this.state.value} onChange={this.handleChange}>
+          <option value="income">Income</option>
+          <option value="outcome">Outcome</option>
+          <option value="balance">Balance</option>
+        </select>
+      </div>
+    );
+  }
 }
 ```
 
@@ -255,23 +255,23 @@ export default class App extends Component {
 import React, { Component } from 'react';
 
 export default class App extends Component {
-    constructor() {
-        super();
-        this.inputRef = React.createRef();
-    }
+  constructor() {
+    super();
+    this.inputRef = React.createRef();
+  }
 
-    handleClick = () => {
-        console.log(this.inputRef.current.value);
-    };
+  handleClick = () => {
+    console.log(this.inputRef.current.value);
+  };
 
-    render() {
-        return (
-            <div>
-                <input type="text" ref={this.inputRef} defaultValue="1" />
-                <button onClick={this.handleClick}>Click</button>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <input type="text" ref={this.inputRef} defaultValue="1" />
+        <button onClick={this.handleClick}>Click</button>
+      </div>
+    );
+  }
 }
 ```
 
@@ -279,24 +279,24 @@ export default class App extends Component {
 import React, { Component } from 'react';
 
 export default class App extends Component {
-    constructor() {
-        super();
-        this.uploadRef = React.createRef();
-    }
+  constructor() {
+    super();
+    this.uploadRef = React.createRef();
+  }
 
-    handleClick = () => {
-        console.log(this.uploadRef.current.files[0].name);
-    };
+  handleClick = () => {
+    console.log(this.uploadRef.current.files[0].name);
+  };
 
-    render() {
-        return (
-            <div>
-                <h1>File Upload</h1>
-                <input type="file" ref={this.uploadRef} />
-                <button onClick={this.handleClick}>Upload</button>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <h1>File Upload</h1>
+        <input type="file" ref={this.uploadRef} />
+        <button onClick={this.handleClick}>Upload</button>
+      </div>
+    );
+  }
 }
 ```
 
@@ -325,19 +325,19 @@ React 在组件的生命周期中提供了一系列钩子函数（类似于事�
 ### 常用的生命周期钩子函数
 
 1. constructor
-    - 同一个组件对象只会创建一次。
-    - 不要再第一次挂载到页面之前，调用 setState，为了避免问题，构造函数中严禁使用 setState。
+   - 同一个组件对象只会创建一次。
+   - 不要再第一次挂载到页面之前，调用 setState，为了避免问题，构造函数中严禁使用 setState。
 2. render
-    - render 是真个类组件中必须要书写的生命周期方法。
-    - 返回一个虚拟 DOM，会被挂载到虚拟 DOM 树中，最终渲染到页面的真实 DOM 中。
-    - render 可能不止运行一次，只要需要重新渲染，就会重新运行。
-    - 严禁使用 setState，因为可能会导致无限递归渲染。
+   - render 是真个类组件中必须要书写的生命周期方法。
+   - 返回一个虚拟 DOM，会被挂载到虚拟 DOM 树中，最终渲染到页面的真实 DOM 中。
+   - render 可能不止运行一次，只要需要重新渲染，就会重新运行。
+   - 严禁使用 setState，因为可能会导致无限递归渲染。
 3. componentDidMount
-    - 只会执行一次。
-    - 可以使用 setState。
-    - 通常情况下，会将网络请求、启动计时器等一开始需要的操作，书写到该函数中。
+   - 只会执行一次。
+   - 可以使用 setState。
+   - 通常情况下，会将网络请求、启动计时器等一开始需要的操作，书写到该函数中。
 4. componentWillUnmount
-    - 通常在该函数中销毁一些组件依赖的资源，比如计时器。
+   - 通常在该函数中销毁一些组件依赖的资源，比如计时器。
 
 ## Hooks
 
@@ -353,32 +353,32 @@ Hooks 的出现，首先解决了以下问题：
 import React, { Component } from 'react';
 
 export default class App extends Component {
-    state = {
-        count: 0,
-    };
+  state = {
+    count: 0,
+  };
 
-    increment = () => {
-        this.setState({
-            count: this.state.count + 1,
-        });
-    };
+  increment = () => {
+    this.setState({
+      count: this.state.count + 1,
+    });
+  };
 
-    componentDidMount() {
-        document.title = `Count: ${this.state.count}`;
-    }
+  componentDidMount() {
+    document.title = `Count: ${this.state.count}`;
+  }
 
-    componentDidUpdate() {
-        document.title = `Count: ${this.state.count}`;
-    }
+  componentDidUpdate() {
+    document.title = `Count: ${this.state.count}`;
+  }
 
-    render() {
-        return (
-            <div>
-                <h1>{this.state.count}</h1>
-                <button onClick={this.increment}>+1</button>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.count}</h1>
+        <button onClick={this.increment}>+1</button>
+      </div>
+    );
+  }
 }
 ```
 
@@ -409,205 +409,205 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
 
 1. useState
 
-    :::code-group
+   :::code-group
 
-    ```jsx [基本使用]
-    import React from 'react';
+   ```jsx [基本使用]
+   import React from 'react';
 
-    export default function App() {
-        const [count, setCount] = React.useState(0);
+   export default function App() {
+     const [count, setCount] = React.useState(0);
 
-        const handleClick = () => {
-            setCount(count + 1);
-        };
+     const handleClick = () => {
+       setCount(count + 1);
+     };
 
-        return (
-            <div>
-                <h1>{count}</h1>
-                <button onClick={handleClick}>+1</button>
-            </div>
-        );
-    }
-    ```
+     return (
+       <div>
+         <h1>{count}</h1>
+         <button onClick={handleClick}>+1</button>
+       </div>
+     );
+   }
+   ```
 
-    ```jsx [声明多个状态]
-    import React from 'react';
+   ```jsx [声明多个状态]
+   import React from 'react';
 
-    export default function App() {
-        const [name, setName] = React.useState('John');
-        const [age, setAge] = React.useState(30);
-        const [email, setEmail] = React.useState('john@example.com');
+   export default function App() {
+     const [name, setName] = React.useState('John');
+     const [age, setAge] = React.useState(30);
+     const [email, setEmail] = React.useState('john@example.com');
 
-        const handleClick = () => {
-            setName('Doe');
-            setAge(40);
-            setEmail('doe@example.com');
-        };
+     const handleClick = () => {
+       setName('Doe');
+       setAge(40);
+       setEmail('doe@example.com');
+     };
 
-        return (
-            <div>
-                <h1>Hello {name}</h1>
-                <p>Age: {age}</p>
-                <p>Email: {email}</p>
-                <button onClick={handleClick}>Click me</button>
-            </div>
-        );
-    }
-    ```
+     return (
+       <div>
+         <h1>Hello {name}</h1>
+         <p>Age: {age}</p>
+         <p>Email: {email}</p>
+         <button onClick={handleClick}>Click me</button>
+       </div>
+     );
+   }
+   ```
 
-    :::
+   :::
 
 2. useEffect
 
-    - 纯函数：纯函数是指在函数的执行过程中，不会对程序的状态进行任何改变，也不会对外部环境产生任何副作用，即只依赖于其输入参数，而不依赖于任何外部变量或状态的函数。比如 `const square = (x) => x * x`。
-    - 副作用：副作用是指在函数执行过程中，除了返回值之外，还对外部环境产生了影响，这些影响是不可控、不可预测的。比如 `console.log`、`document.write`、`fetch` 等。
+   - 纯函数：纯函数是指在函数的执行过程中，不会对程序的状态进行任何改变，也不会对外部环境产生任何副作用，即只依赖于其输入参数，而不依赖于任何外部变量或状态的函数。比如 `const square = (x) => x * x`。
+   - 副作用：副作用是指在函数执行过程中，除了返回值之外，还对外部环境产生了影响，这些影响是不可控、不可预测的。比如 `console.log`、`document.write`、`fetch` 等。
 
-    > 函数式编程不是不需要副作用，而是需要将副作用控制在可控范围内，比如通过 `useEffect` 来处理副作用。
+   > 函数式编程不是不需要副作用，而是需要将副作用控制在可控范围内，比如通过 `useEffect` 来处理副作用。
 
-    :::code-group
+   :::code-group
 
-    ```jsx [基本使用]
-    import React from 'react';
+   ```jsx [基本使用]
+   import React from 'react';
 
-    export default function App() {
-        const [count, setCount] = React.useState(0);
+   export default function App() {
+     const [count, setCount] = React.useState(0);
 
-        React.useEffect(() => {
-            document.title = `Count: ${count}`;
-        });
+     React.useEffect(() => {
+       document.title = `Count: ${count}`;
+     });
 
-        return (
-            <div>
-                <h1>Counter:{count}</h1>
-                <button onClick={() => setCount(count + 1)}>Increment</button>
-            </div>
-        );
-    }
-    ```
+     return (
+       <div>
+         <h1>Counter:{count}</h1>
+         <button onClick={() => setCount(count + 1)}>Increment</button>
+       </div>
+     );
+   }
+   ```
 
-    ```jsx [执行清理工作] {13,14}
-    import React from 'react';
+   ```jsx [执行清理工作] {13,14}
+   import React from 'react';
 
-    export default function App() {
-        const [count, setCount] = React.useState(0);
+   export default function App() {
+     const [count, setCount] = React.useState(0);
 
-        // 每次执行都会产生新的定时器 所以点击按钮会加速
-        // React.useEffect(() => {
-        //     setInterval(() => {
-        //         console.log('hello');
-        //     }, 1000);
-        // });
+     // 每次执行都会产生新的定时器 所以点击按钮会加速
+     // React.useEffect(() => {
+     //     setInterval(() => {
+     //         console.log('hello');
+     //     }, 1000);
+     // });
 
-        // Solution: useEffect 会返回一个清理函数
-        // 该函数会在下一次渲染之后但是执行 useEffect 之前执行
-        React.useEffect(() => {
-            const timer = setInterval(() => {
-                console.log('hello');
-            }, 1000);
+     // Solution: useEffect 会返回一个清理函数
+     // 该函数会在下一次渲染之后但是执行 useEffect 之前执行
+     React.useEffect(() => {
+       const timer = setInterval(() => {
+         console.log('hello');
+       }, 1000);
 
-            return () => {
-                clearInterval(timer);
-            };
-        });
+       return () => {
+         clearInterval(timer);
+       };
+     });
 
-        return (
-            <div>
-                <h1>Counter:{count}</h1>
-                <button onClick={() => setCount(count + 1)}>Increment</button>
-            </div>
-        );
-    }
-    ```
+     return (
+       <div>
+         <h1>Counter:{count}</h1>
+         <button onClick={() => setCount(count + 1)}>Increment</button>
+       </div>
+     );
+   }
+   ```
 
-    ```jsx [无依赖-数据请求]
-    import React from 'react';
+   ```jsx [无依赖-数据请求]
+   import React from 'react';
 
-    function mockApi() {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve();
-            }, 500);
-        });
-    }
+   function mockApi() {
+     return new Promise((resolve) => {
+       setTimeout(() => {
+         resolve();
+       }, 500);
+     });
+   }
 
-    export default function App() {
-        const [count, setCount] = React.useState(0);
+   export default function App() {
+     const [count, setCount] = React.useState(0);
 
-        React.useEffect(() => {
-            mockApi().then(() => {
-                setCount(count + 1);
-                console.log('API call done');
-            });
-        });
+     React.useEffect(() => {
+       mockApi().then(() => {
+         setCount(count + 1);
+         console.log('API call done');
+       });
+     });
 
-        return (
-            <div>
-                <h1>Counter:{count}</h1>
-                <button onClick={() => setCount(count + 1)}>Increment</button>
-            </div>
-        );
-    }
-    ```
+     return (
+       <div>
+         <h1>Counter:{count}</h1>
+         <button onClick={() => setCount(count + 1)}>Increment</button>
+       </div>
+     );
+   }
+   ```
 
-    ```jsx [无依赖-多状态]
-    import React from 'react';
+   ```jsx [无依赖-多状态]
+   import React from 'react';
 
-    export default function App() {
-        const [count1, setCount1] = React.useState(0);
-        const [count2, setCount2] = React.useState(0);
-        const [count3, setCount3] = React.useState(0);
+   export default function App() {
+     const [count1, setCount1] = React.useState(0);
+     const [count2, setCount2] = React.useState(0);
+     const [count3, setCount3] = React.useState(0);
 
-        React.useEffect(() => {
-            console.log('useEffect');
-        });
+     React.useEffect(() => {
+       console.log('useEffect');
+     });
 
-        return (
-            <div>
-                <button onClick={() => setCount1(count1 + 1)}>
-                    Count 1: {count1}
-                </button>
-                <button onClick={() => setCount2(count2 + 1)}>
-                    Count 2: {count2}
-                </button>
-                <button onClick={() => setCount3(count3 + 1)}>
-                    Count 3: {count3}
-                </button>
-            </div>
-        );
-    }
-    ```
+     return (
+       <div>
+         <button onClick={() => setCount1(count1 + 1)}>
+           Count 1: {count1}
+         </button>
+         <button onClick={() => setCount2(count2 + 1)}>
+           Count 2: {count2}
+         </button>
+         <button onClick={() => setCount3(count3 + 1)}>
+           Count 3: {count3}
+         </button>
+       </div>
+     );
+   }
+   ```
 
-    ```jsx [依赖数组] {11,12}
-    import React from 'react';
+   ```jsx [依赖数组] {11,12}
+   import React from 'react';
 
-    export default function App() {
-        const [count1, setCount1] = React.useState(0);
-        const [count2, setCount2] = React.useState(0);
-        const [count3, setCount3] = React.useState(0);
+   export default function App() {
+     const [count1, setCount1] = React.useState(0);
+     const [count2, setCount2] = React.useState(0);
+     const [count3, setCount3] = React.useState(0);
 
-        React.useEffect(() => {
-            console.log('useEffect');
-        }, [count1]);
-        // 上面这一行可以传入一个依赖数组，当依赖数组中的值发生变化时，useEffect 才会执行
-        // 如果只想要开始默认执行一次，可以传入一个空数组
+     React.useEffect(() => {
+       console.log('useEffect');
+     }, [count1]);
+     // 上面这一行可以传入一个依赖数组，当依赖数组中的值发生变化时，useEffect 才会执行
+     // 如果只想要开始默认执行一次，可以传入一个空数组
 
-        return (
-            <div>
-                <button onClick={() => setCount1(count1 + 1)}>
-                    Count 1: {count1}
-                </button>
-                <button onClick={() => setCount2(count2 + 1)}>
-                    Count 2: {count2}
-                </button>
-                <button onClick={() => setCount3(count3 + 1)}>
-                    Count 3: {count3}
-                </button>
-            </div>
-        );
-    }
-    ```
+     return (
+       <div>
+         <button onClick={() => setCount1(count1 + 1)}>
+           Count 1: {count1}
+         </button>
+         <button onClick={() => setCount2(count2 + 1)}>
+           Count 2: {count2}
+         </button>
+         <button onClick={() => setCount3(count3 + 1)}>
+           Count 3: {count3}
+         </button>
+       </div>
+     );
+   }
+   ```
 
-    :::
+   :::
 
 ### 自定义 Hook
 
@@ -622,8 +622,8 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
 import React from 'react';
 
 export default function useMyBook() {
-    const [bookName, setBookName] = React.useState('React learning');
-    return { bookName, setBookName };
+  const [bookName, setBookName] = React.useState('React learning');
+  return { bookName, setBookName };
 }
 ```
 
@@ -631,16 +631,16 @@ export default function useMyBook() {
 import useMyBook from './useMyBook';
 
 export default function App() {
-    const { bookName, setBookName } = useMyBook();
+  const { bookName, setBookName } = useMyBook();
 
-    return (
-        <div>
-            <h1>Book name: {bookName}</h1>
-            <button onClick={() => setBookName('React in Action')}>
-                Change book name
-            </button>
-        </div>
-    );
+  return (
+    <div>
+      <h1>Book name: {bookName}</h1>
+      <button onClick={() => setBookName('React in Action')}>
+        Change book name
+      </button>
+    </div>
+  );
 }
 ```
 

@@ -1,8 +1,8 @@
 ---
 date: 2024-12-28
 tags:
-    - CSS
-    - 前端
+  - CSS
+  - 前端
 sticky: 2
 ---
 
@@ -13,24 +13,24 @@ sticky: 2
 ```css
 /*author stylesheet*/
 body {
-    font-family: Arial;
+  font-family: Arial;
 }
 .red {
-    color: red;
-    font-size: 40px;
+  color: red;
+  font-size: 40px;
 }
 h1 {
-    font-size: 26px;
+  font-size: 26px;
 }
 div h1.red {
-    font-size: 3em;
-    font-size: 30px;
+  font-size: 3em;
+  font-size: 30px;
 }
 /*user agent stylesheet*/
 h1 {
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
 }
 ```
 
@@ -42,9 +42,9 @@ h1 {
 
 ```css
 h1 {
-    display: block;
-    color: red;
-    font-weight: bold;
+  display: block;
+  color: red;
+  font-weight: bold;
 }
 ```
 
@@ -53,13 +53,13 @@ h1 {
 如果有多个样式表，或者同一个样式表中有多个相同选择器的声明，就会发生层叠冲突。层叠冲突的解决，是根据 CSS 的层叠规则来解决的。层叠规则是：
 
 - 比较重要性
-    - 作者样式表会覆盖浏览器样式表
-    - 重要声明会覆盖普通声明
+  - 作者样式表会覆盖浏览器样式表
+  - 重要声明会覆盖普通声明
 - 比较特殊性
-    - 特殊性高的选择器会覆盖特殊性低的选择器
-    - 通过选择器的个数，计算得到一个四位数，数值越大，特殊性越高。千位取决于是不是内联样式，百位取决于 ID 选择器的个数，十位取决于类选择器、属性选择器和伪类选择器的个数，个位取决于元素选择器和伪元素选择器的个数。在以前，这个数字并不是逢十进一，而是逢 256 进一，现在已经分为了四个等级，单独存储数字比较了。
+  - 特殊性高的选择器会覆盖特殊性低的选择器
+  - 通过选择器的个数，计算得到一个四位数，数值越大，特殊性越高。千位取决于是不是内联样式，百位取决于 ID 选择器的个数，十位取决于类选择器、属性选择器和伪类选择器的个数，个位取决于元素选择器和伪元素选择器的个数。在以前，这个数字并不是逢十进一，而是逢 256 进一，现在已经分为了四个等级，单独存储数字比较了。
 - 比较源次序
-    - 后面的样式表会覆盖前面的样式表
+  - 后面的样式表会覆盖前面的样式表
 
 :::tip 层叠在实际应用有什么用?
 
@@ -72,10 +72,10 @@ h1 {
 
 ```css
 h1 {
-    display: block;
-    color: red;
-    font-weight: bold;
-    font-size: 30px;
+  display: block;
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
 }
 ```
 
@@ -87,11 +87,11 @@ h1 {
 
 ```css
 h1 {
-    display: block;
-    color: red;
-    font-weight: bold;
-    font-size: 30px;
-    font-family: Arial;
+  display: block;
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Arial;
 }
 ```
 
@@ -103,12 +103,12 @@ h1 {
 
 ```css
 h1 {
-    display: block;
-    color: red;
-    font-weight: bold;
-    font-size: 30px;
-    font-family: Arial;
-    background-color: transparent;
-    /*Other Styles*/
+  display: block;
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Arial;
+  background-color: transparent;
+  /*Other Styles*/
 }
 ```

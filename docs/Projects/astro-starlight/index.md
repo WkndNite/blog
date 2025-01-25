@@ -2,10 +2,10 @@
 date: 2024-12-10
 description: 关于 Astro + Starlight 的开发实践指北
 tags:
-    - Astro
-    - Starlight
-    - 开发实践
-    - 技术博客
+  - Astro
+  - Starlight
+  - 开发实践
+  - 技术博客
 ---
 
 # 开发指北

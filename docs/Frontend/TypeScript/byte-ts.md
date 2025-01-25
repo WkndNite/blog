@@ -1,7 +1,7 @@
 ---
 tags:
-    - 前端
-    - TypeScript
+  - 前端
+  - TypeScript
 date: 2025-01-21
 cover: https://learntypescript.dev/static/f5c65fe3cf6dbed670bc14754c33342b/6d494/ts-js.webp
 ---
@@ -43,31 +43,31 @@ cover: https://learntypescript.dev/static/f5c65fe3cf6dbed670bc14754c33342b/6d494
 
 1. 定义：接口是为了定义对象类型
 2. 特点：
-    - 可选属性：?
-    - 只读属性：readonly
-    - 可以描述函数类型。
-    - 可以描述自定义属性。
+   - 可选属性：?
+   - 只读属性：readonly
+   - 可以描述函数类型。
+   - 可以描述自定义属性。
 3. 总结：接口非常灵活，可以帮助开发人员实现 duck typing。
 
 > Duck typing is a term commonly related to dynamically typed programming languages and polymorphism. The idea behind this principle is that the code itself doesn't care about whether an object is a duck, rather it only cares about whether it quacks.
 
 ```ts
 interface Person {
-    name: string;
-    age: number;
+  name: string;
+  age: number;
 }
 const p1: person = {
-    name: '周末晚',
-    age: '22',
+  name: '周末晚',
+  age: '22',
 };
 
 interface RandomKey {
-    [propName: string]: string;
+  [propName: string]: string;
 }
 const obj: RandomKey = {
-    a: 'hello',
-    b: 'world',
-    c: 'typeScript',
+  a: 'hello',
+  b: 'world',
+  c: 'typeScript',
 };
 ```
 
@@ -75,11 +75,11 @@ const obj: RandomKey = {
 
 1. 定义：写法和 JS 差不多，增加了一些定义
 2. 特点：
-    - 增加了 `public`、`private`、`protected` 修饰符。
-    - 抽象类：
-        - 只能被继承，不能被实例化。
-        - 作为基类，抽象方法必须被子类实现。
-    - `interface` 约束类，使用 `implements` 关键字。
+   - 增加了 `public`、`private`、`protected` 修饰符。
+   - 抽象类：
+     - 只能被继承，不能被实例化。
+     - 作为基类，抽象方法必须被子类实现。
+   - `interface` 约束类，使用 `implements` 关键字。
 
 ## TS 进阶
 
@@ -87,56 +87,56 @@ const obj: RandomKey = {
 
 1. 联合类型 |
 
-    ```ts
-    let num: number | string;
-    num = 8;
-    num = 'eight';
-    ```
+   ```ts
+   let num: number | string;
+   num = 8;
+   num = 'eight';
+   ```
 
 2. 交叉类型 &
 
-    ```ts
-    interface Person {
-        name: string;
-        age: number;
-    }
-    type Student = Person & { grade: number };
-    const stu: Student = {
-        name: '周末晚',
-        age: '22',
-        grade: '60',
-    };
-    ```
+   ```ts
+   interface Person {
+     name: string;
+     age: number;
+   }
+   type Student = Person & { grade: number };
+   const stu: Student = {
+     name: '周末晚',
+     age: '22',
+     grade: '60',
+   };
+   ```
 
 3. 类型断言
 
-    断言有两种用法：通过标识符实现属性前置定义以及通过 `as` 标识符实现，比较推荐后者。
+   断言有两种用法：通过标识符实现属性前置定义以及通过 `as` 标识符实现，比较推荐后者。
 
-    断言又可以分类为 `非空断言` 和 `确定赋值断言`。
+   断言又可以分类为 `非空断言` 和 `确定赋值断言`。
 
-    ```ts
-    function getLength1(arg: number | string): number {
-        return arg.length;
-        //Property 'length' does not exist on type 'number'.
-    }
+   ```ts
+   function getLength1(arg: number | string): number {
+     return arg.length;
+     //Property 'length' does not exist on type 'number'.
+   }
 
-    function getLength2(arg: number | string): number {
-        const str = arg as string;
-        if (str.length) {
-            return str.length;
-        } else {
-            const number = arg as number;
-            return number.toString().length;
-        }
-    }
-    ```
+   function getLength2(arg: number | string): number {
+     const str = arg as string;
+     if (str.length) {
+       return str.length;
+     } else {
+       const number = arg as number;
+       return number.toString().length;
+     }
+   }
+   ```
 
 4. 类型别名
-    - 相同点：都可以定义对象或者函数，都允许继承。
-    - 差异点：
-        - `interface` 主要用来定义对象，`type` 主要定义别名。
-        - `interface` 不可以定义基本类型，`type` 可以定义基本类型。
-        - `interface` 可以合并重复声明，`type` 不可以。
+   - 相同点：都可以定义对象或者函数，都允许继承。
+   - 差异点：
+     - `interface` 主要用来定义对象，`type` 主要定义别名。
+     - `interface` 不可以定义基本类型，`type` 可以定义基本类型。
+     - `interface` 可以合并重复声明，`type` 不可以。
 
 ### 泛型
 
@@ -144,30 +144,30 @@ const obj: RandomKey = {
 
 1. 泛型的使用可以通过尖括号定义，也可以通过传入参数的类型自动推导。
 
-    ```ts
-    function getNumber(arg: number): number {}
-    function getString(arg: string): string {}
-    function getAny(arg: any): any {}
-    // 输入和输出类型一致 需要予以关联
-    function getSomething<T>(arg: T): T {}
-    getSomething<string>('Hello');
-    getSomething('Hello');
-    ```
+   ```ts
+   function getNumber(arg: number): number {}
+   function getString(arg: string): string {}
+   function getAny(arg: any): any {}
+   // 输入和输出类型一致 需要予以关联
+   function getSomething<T>(arg: T): T {}
+   getSomething<string>('Hello');
+   getSomething('Hello');
+   ```
 
 2. 泛型的基础操作符
 
-    - typeof：获取类型。
-    - keyof：获取所有键。
-    - in：遍历枚举类型。
-    - T[k]：索引访问。
-    - extends：泛型约束。
+   - typeof：获取类型。
+   - keyof：获取所有键。
+   - in：遍历枚举类型。
+   - T[k]：索引访问。
+   - extends：泛型约束。
 
 3. 泛型常用的工具类型
 
-    - Partial
-    - Require
-    - Readonly
-    - Pick / Record / ...
+   - Partial
+   - Require
+   - Readonly
+   - Pick / Record / ...
 
 ## 实战 & 工程向
 

@@ -1,7 +1,7 @@
 ---
 tags:
-    - CSS
-    - 前端
+  - CSS
+  - 前端
 sticky: 1
 date: 2025-01-01
 ---
@@ -25,19 +25,19 @@ date: 2025-01-01
 ### 块盒
 
 1. 每个块盒的总宽度（content + padding + border + margin）必须等于包含块宽度。
-    - 宽度的默认值是 auto，auto 就代表吸收剩余空间的能力。
-    - magin 的默认值是 0，但可以设置为 auto。
-    - width 和 margin 同时为 auto 时，**width 会优先获得 auto** ，margin 会优先获得 `0`。
-    - 若 content + padding + border + margin 的总宽度仍然不够，则 margin-right 会自动获得 auto，吸收剩余空间。
-    - 在常规流中，块盒可以通过 `width 固定; margin-left: auto; margin-right: auto;` 实现水平居中。
+   - 宽度的默认值是 auto，auto 就代表吸收剩余空间的能力。
+   - magin 的默认值是 0，但可以设置为 auto。
+   - width 和 margin 同时为 auto 时，**width 会优先获得 auto** ，margin 会优先获得 `0`。
+   - 若 content + padding + border + margin 的总宽度仍然不够，则 margin-right 会自动获得 auto，吸收剩余空间。
+   - 在常规流中，块盒可以通过 `width 固定; margin-left: auto; margin-right: auto;` 实现水平居中。
 2. 每个块盒垂直方向上的 auto 值。
-    - height: auto 时，块盒的高度由内容决定。
-    - margin: auto 时，块盒的垂直方向上的 auto 值会自动获得 0。
+   - height: auto 时，块盒的高度由内容决定。
+   - margin: auto 时，块盒的垂直方向上的 auto 值会自动获得 0。
 3. 百分比取值
-    - padding 、margin 、width 的百分比取值，都是**相对于包含块**的**宽度**。
-    - 高度的百分比需要考虑**包含块的高度是否取决于子元素的高度**。
-        - 如果父元素的高度取决于子元素的高度，比如父元素的高度是 auto 或者没有设置高度，那么子元素的高度百分比是无效的。
-        - 如果父元素的高度不取决于子元素的高度，比如父元素的高度是固定的，那么子元素的高度百分比是有效的。
+   - padding 、margin 、width 的百分比取值，都是**相对于包含块**的**宽度**。
+   - 高度的百分比需要考虑**包含块的高度是否取决于子元素的高度**。
+     - 如果父元素的高度取决于子元素的高度，比如父元素的高度是 auto 或者没有设置高度，那么子元素的高度百分比是无效的。
+     - 如果父元素的高度不取决于子元素的高度，比如父元素的高度是固定的，那么子元素的高度百分比是有效的。
 
 :::tip
 父元素的 width 是 600px，height 是 1000px。子元素的 margin-top 是 50%，那么子元素的 margin-top 的值是 300px，而不是 500px。
@@ -141,8 +141,8 @@ clear 属性
 - 一个元素只要 position 的值不是 static，认为该元素是定位元素。
 - 定位元素除了 relative 以外，都是脱离常规流的。
 - 一个脱离了文档流的元素：
-    - 文档流中的元素摆放会忽略该元素。
-    - 文档流中元素计算自然高度会忽略该元素。
+  - 文档流中的元素摆放会忽略该元素。
+  - 文档流中元素计算自然高度会忽略该元素。
 
 ### 相对定位
 

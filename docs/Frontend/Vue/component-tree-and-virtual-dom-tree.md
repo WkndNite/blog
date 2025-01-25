@@ -1,8 +1,8 @@
 ---
 tags:
-    - Vue
-    - 前端
-    - 虚拟 DOM
+  - Vue
+  - 前端
+  - 虚拟 DOM
 date: 2025-01-20
 sticky: 6
 ---
@@ -15,12 +15,12 @@ sticky: 6
 
 ```html
 <div>
-    <h1>Here is a list!</h1>
-    <ul>
-        <li>Apple</li>
-        <li>Banana</li>
-        <li>Cherry</li>
-    </ul>
+  <h1>Here is a list!</h1>
+  <ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul>
 </div>
 ```
 
@@ -53,19 +53,19 @@ sticky: 6
 
 ```vue
 <template>
-    <div class="wrapper">
-        <div class="msg1">{{ msg }}</div>
-        <div class="msg2">{{ msg }}</div>
-    </div>
+  <div class="wrapper">
+    <div class="msg1">{{ msg }}</div>
+    <div class="msg2">{{ msg }}</div>
+  </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            msg: 'Hello Vue 1.0',
-        };
-    },
+  data() {
+    return {
+      msg: 'Hello Vue 1.0',
+    };
+  },
 };
 </script>
 ```
