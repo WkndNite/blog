@@ -34,4 +34,4 @@ author: false
 - [React 核心概念（一）](./React/core-concepts-one.md)
 - [React 核心概念（二）](./React/core-concepts-two.md)
 - [React 路由](./React/router.md)
-- [Redux —— React 中的状态管理库](./React/redux.md)
+- [React 中的状态管理库](./React/redux.md)

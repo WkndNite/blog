@@ -141,7 +141,7 @@ export default defineConfig({
               link: '/Frontend/React/router',
             },
             {
-              text: 'Redux —— React 中的状态管理库',
+              text: 'React 中的状态管理库',
               link: '/Frontend/React/redux',
             },
           ],
