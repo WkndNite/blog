@@ -122,6 +122,10 @@ export default defineConfig({
               text: 'Vue 中数据拦截的本质',
               link: '/Frontend/Vue/data-interception',
             },
+            {
+              text:'Vue 中响应式数据的本质',
+              link:'/Frontend/Vue/reactive-data'
+            }
           ],
         },
         {

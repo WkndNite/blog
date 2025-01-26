@@ -28,6 +28,7 @@ author: false
 - [Vue3 模板的本质](./Vue/nature-of-template.md)
 - [组件树和虚拟 DOM 树](./Vue/component-tree-and-virtual-dom-tree.md)
 - [Vue 中数据拦截的本质](./Vue/data-interception.md)
+- [Vue 中响应式数据的本质](./Vue/reactive-data.md)
 
 ## React
 
