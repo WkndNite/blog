@@ -155,7 +155,7 @@ git push # 推送代码到远程仓库
    ```bash
    git sparse-checkout init # 启用 sparse-checkout
    git sparse-checkout set dir/
-   git sparse-checkout  list
+   git sparse-checkout list
    git sparse-checkout add dir/
    git sparse-checkout disable
    ```
