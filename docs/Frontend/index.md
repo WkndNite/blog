@@ -21,7 +21,7 @@ author: false
 
 - [字节·深入浅出 TypeScript](./TypeScript/byte-ts.md)
 
-## [<span style="color:#3C3C43">Vue</span>](https://cn.vuejs.org/)
+## [<span style="color:var(--vp-c-text-1)">Vue</span>](https://cn.vuejs.org/)
 
 - [Vue3 里的 ref 和 reactive](./Vue/ref-reactive.md)
 - [谈一谈 Vue 中的虚拟 DOM](./Vue/virtual-dom.md)
@@ -30,7 +30,7 @@ author: false
 - [Vue 中数据拦截的本质](./Vue/data-interception.md)
 - [Vue 中响应式数据的本质](./Vue/reactive-data.md)
 
-## [<span style="color:#3C3C43">React</span>](https://zh-hans.react.dev/)
+## [<span style="color:var(--vp-c-text-1)">React</span>](https://zh-hans.react.dev/)
 
 - [React 核心概念（一）](./React/core-concepts-one.md)
 - [React 核心概念（二）](./React/core-concepts-two.md)
