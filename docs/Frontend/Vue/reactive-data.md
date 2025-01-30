@@ -1,8 +1,8 @@
 ---
 date: 2025-01-26
 tags:
-   - Vue
-   - 前端
+  - Vue
+  - 前端
 sticky: 8
 ---
 

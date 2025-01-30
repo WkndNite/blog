@@ -123,9 +123,9 @@ export default defineConfig({
               link: '/Frontend/Vue/data-interception',
             },
             {
-              text:'Vue 中响应式数据的本质',
-              link:'/Frontend/Vue/reactive-data'
-            }
+              text: 'Vue 中响应式数据的本质',
+              link: '/Frontend/Vue/reactive-data',
+            },
           ],
         },
         {

@@ -18,7 +18,7 @@ cover: https://redux.js.org/img/redux.svg
 
 2015 年的时候，Dan Abramov 推出的 Redux 席卷了整个 React 社区，其本质就是在 Flux 上做了一些更新：
 
-- 单向数据流，View 发出 Action(store.dispatch(action))，Store 调用 Reducer 计算出新的 State，若 State 产生变化，则调用监听函数重新渲染 View(store.subscribe(render))。
+- 单向数据流，View 发出 Action( store.dispatch( action ) )，Store 调用 Reducer 计算出新的 State，若 State 产生变化，则调用监听函数重新渲染 View( store.subscribe( render ) )。
 - 单一数据源，只有一个 Store。
 - state 是只读的，每次更新后只能返回一个新的 state。
 - 没有 Dispatcher，而是在 Store 中集成了 dispatch 方法，store.dispatch() 是 View 发出 Action 的唯一途径。
