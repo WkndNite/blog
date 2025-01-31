@@ -18,7 +18,7 @@ ref 以及 reactive 源码如下：
 
 :::code-group
 
-```ts [源码 ref]
+```ts [ref]
 class RefImpl<T> {
   private _value: T;
   private _rawValue: T;
@@ -49,7 +49,7 @@ export const toReactive = <T extends unknown>(value: T): T =>
   isObject(value) ? reactive(value) : value;
 ```
 
-```ts [源码 reactive]
+```ts [reactive]
 function createReactiveObject(
   target: Target,
   isReadonly: boolean,
