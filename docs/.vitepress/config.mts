@@ -16,6 +16,8 @@ export default defineConfig({
       infoLabel: '信息',
       detailsLabel: '详细信息',
     },
+    theme: { light: 'one-light', dark: 'dracula' },
+    codeCopyButtonTitle:'复制代码',
   },
   extends: blogTheme,
   lang: 'zh-cn',
