@@ -79,3 +79,7 @@ export function reactive(target: Object) {
 ```
 
 :::
+
+从源码中我们就可以看出， `ref` 和 `reactive` 在实现响应式上面的策略是有所不同的——前者是通过 `Object.defineProperty` 和 `Proxy`，后者是通过使用 `Proxy`。
+
+理解响应式数据本质，还要学会 **判断某个操作是否会产生数据拦截**。只有产生数据拦截，才会触发后续的依赖收集和派发更新。
