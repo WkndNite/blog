@@ -4,6 +4,7 @@ tags:
   - 网络
   - 计算机基础
   - 面试
+cover: https://blog.wkndnite-tech.cn/assets/models.excalidraw.Bh1DN39R.png
 ---
 
 # 面试·五层网络模型
