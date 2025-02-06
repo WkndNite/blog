@@ -64,7 +64,7 @@ export default defineConfig({
       '/Frontend/': [
         {
           text: 'CSS',
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: 'CSS 计算属性',
@@ -82,7 +82,7 @@ export default defineConfig({
         },
         {
           text: 'JavaScript',
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: '一些或大或小的坑',
@@ -92,7 +92,7 @@ export default defineConfig({
         },
         {
           text: 'TypeScript',
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: '字节·深入浅出 TypeScript',
@@ -102,7 +102,7 @@ export default defineConfig({
         },
         {
           text: 'Vue',
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: 'Vue3 里的 ref 和 reactive',
@@ -132,7 +132,7 @@ export default defineConfig({
         },
         {
           text: 'React',
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: 'React 核心概念（一）',
@@ -170,7 +170,7 @@ export default defineConfig({
       '/Projects/': [
         {
           text: 'Astro Starlight',
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: '简介',
@@ -190,7 +190,7 @@ export default defineConfig({
       '/Tools/': [
         {
           text: 'Docker',
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: 'Docker 存在的必要性',
