@@ -1,647 +1,668 @@
 ---
-date: 2025-01-19
+date: 2025-01-17
 tags:
   - React
   - 前端
 cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/210px-React-icon.svg.png
 ---
 
-# React 核心概念（二）
+# React 核心概念 （一）
 
-## 表单
+## 项目搭建
 
-### 受控组件
-
-无论是学习 Vue 还是 React，最重要的就是转换思想。这一步非常重要，往往也比较困难。
-
-在以前 jQuery 时代，开发人员需要获取到 DOM 节点，然后进行操作。而在现代前端开发中，采用的是 MVVVM 的模式。将视图和视图模型进行绑定，视图模型的改变，自然会引起视图改变。开发人员需要专注在视图模型上面。
-
-因此，这里所谓的受控组件，本质上就是将表单中的控件和视图模型（状态）进行绑定，之后就是针对状态进行操作。受控组件与非受控组件的区别也就在于内容是由用户决定还是由 state 决定。
-
-受控与非受控的选择可以参考 [这篇文章](https://goshacmd.com/controlled-vs-uncontrolled-inputs-react/)
-
-::::details
-:::code-group
-
-```jsx [基本的受控组件]
-import React, { Component } from 'react';
-
-export default class App extends Component {
-  state = {
-    value: 'test content',
-  };
-
-  handleChange = (event) => {
-    this.setState({ value: event.target.value });
-  };
-
-  handleClick = () => {
-    console.log(this.state.value);
-  };
-
-  render() {
-    return (
-      <div>
-        <input
-          type="text"
-          value={this.state.value}
-          onChange={this.handleChange}
-        />
-        <button onClick={this.handleClick}>提交</button>
-      </div>
-    );
-  }
-}
+```bash
+npx create-react-app my-app
+cd my-app
+npm start
 ```
 
-```jsx [对用户输入内容进行控制]
-import React, { Component } from 'react';
+## JSX
 
-export default class App extends Component {
-  state = {
-    value1: '',
-    value2: '',
-  };
+### 基础语法
 
-  handleChange = (event) => {
-    const name = event.target.name;
-    switch (name) {
-      case 'one':
-        this.setState({
-          value1: event.target.value.toUpperCase(),
-        });
-        break;
-      case 'two':
-        this.setState({
-          value2: event.target.value.replace(/\D/g, ''),
-        });
-        break;
-      default:
-        break;
-    }
-  };
+JSX 是一种 JavaScript 的语法扩展。在 React 中，我们使用 JSX 来描述 UI 界面。
 
-  render() {
-    return (
-      <div>
-        <input
-          type="text"
-          name="one"
-          value={this.state.value1}
-          onChange={this.handleChange}
-          placeholder="自动转为大写"
-        />
-        <input
-          type="text"
-          name="two"
-          value={this.state.value2}
-          onChange={this.handleChange}
-          placeholder="只能输入数字"
-        />
-      </div>
-    );
-  }
-}
-```
-
-```jsx [文本域]
-import React, { Component } from 'react';
-
-export default class App extends Component {
-  state = {
-    value: '',
-  };
-
-  handleChange = (event) => {
-    this.setState({ value: event.target.value });
-  };
-
-  render() {
-    return (
-      <div>
-        {/* 原生的 HTML 内容应该书写在 textarea 标签之间 */}
-        {/* React 方便起见将内容统一交给 value 绑定 */}
-        <textarea
-          name=""
-          id=""
-          value={this.state.value}
-          onChange={this.handleChange}
-          placeholder="Text here"
-        />
-      </div>
-    );
-  }
-}
-```
-
-```jsx [单选框]
-import React, { Component } from 'react';
-
-export default class App extends Component {
-  state = {
-    selectedOption: null,
-  };
-
-  handleChange = (index) => {
-    this.setState({ selectedOption: index });
-  };
-
-  render() {
-    const options = ['HTML', 'CSS', 'JavaScript', 'React', 'Vue'];
-
-    return (
-      <div>
-        {options.map((item, index) => {
-          return (
-            <div key={index}>
-              <input
-                type="radio"
-                name="skills"
-                value={item}
-                checked={this.state.selectedOption === index}
-                onChange={() => this.handleChange(index)}
-              />
-              <label>{item}</label>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-}
-```
-
-```jsx [多选框]
-import React, { Component } from 'react';
-
-export default class App extends Component {
-  state = {
-    checkBoxes: [
-      { content: 'HTML', checked: false },
-      { content: 'CSS', checked: false },
-      { content: 'JavaScript', checked: false },
-      { content: 'React', checked: false },
-      { content: 'Vue', checked: false },
-    ],
-  };
-
-  handleChange = (index) => {
-    const checkBoxes = [...this.state.checkBoxes];
-    checkBoxes[index].checked = !checkBoxes[index].checked;
-    this.setState({ checkBoxes });
-  };
-
-  render() {
-    return (
-      <div>
-        {this.state.checkBoxes.map((item, index) => {
-          return (
-            <div key={index}>
-              <input
-                type="checkbox"
-                value={item.content}
-                checked={item.checked}
-                onChange={() => this.handleChange(index)}
-              />
-              <label>{item.content}</label>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-}
-```
-
-```jsx [下拉列表]
-import React, { Component } from 'react';
-
-export default class App extends Component {
-  state = {
-    value: 'balance',
-  };
-
-  handleChange = (e) => {
-    this.setState({ value: e.target.value });
-  };
-
-  render() {
-    return (
-      <div>
-        <select value={this.state.value} onChange={this.handleChange}>
-          <option value="income">Income</option>
-          <option value="outcome">Outcome</option>
-          <option value="balance">Balance</option>
-        </select>
-      </div>
-    );
-  }
-}
-```
-
-:::
-::::
-
-### 非受控组件
-
-大多数情况下，在 React 中推荐使用受控组件来对表单进行操作，这样能对表单控件的数据进行统一管理。
-
-但是在某些特殊情况下，需要使用以前传统的 DOM 方案进行处理，此时替代的方案就是非受控组件。
-
-::::details
-:::code-group
-
-```jsx [基本的非受控组件]
-import React, { Component } from 'react';
-
-export default class App extends Component {
-  constructor() {
-    super();
-    this.inputRef = React.createRef();
-  }
-
-  handleClick = () => {
-    console.log(this.inputRef.current.value);
-  };
-
-  render() {
-    return (
-      <div>
-        <input type="text" ref={this.inputRef} defaultValue="1" />
-        <button onClick={this.handleClick}>Click</button>
-      </div>
-    );
-  }
-}
-```
-
-```jsx [上传文件]
-import React, { Component } from 'react';
-
-export default class App extends Component {
-  constructor() {
-    super();
-    this.uploadRef = React.createRef();
-  }
-
-  handleClick = () => {
-    console.log(this.uploadRef.current.files[0].name);
-  };
-
-  render() {
-    return (
-      <div>
-        <h1>File Upload</h1>
-        <input type="file" ref={this.uploadRef} />
-        <button onClick={this.handleClick}>Upload</button>
-      </div>
-    );
-  }
-}
-```
-
-:::
-::::
-
-:::tip
-
-- 在表单元素里使用 `value` 必须要有 `onChange` 事件来处理变化，否则会出现警告。
-- 使用了 `value` 的元素会被 React 视为受控组件，在非受控组件里使用默认值需要通过 `defaultValue` 属性来设置。
-
-:::
-
-## 生命周期
-
-### 什么是生命周期
-
-所谓生命周期，指的是组件从诞生到销毁会经历一系列的过程，该过程就叫做生命周期。
-
-React 在组件的生命周期中提供了一系列钩子函数（类似于事件），可以让开发者在函数中注入代码，这些代码会在适当的时机运行。
-
-**生命周期钩子函数是独属于类组件的东西**，但是自从 React v16.8 以来，整体已经开始以函数式组件为主，因此此处仅介绍一些常用的生命周期钩子函数。
-
-完整的生命周期图谱，可以参考官网：[React 组件的生命周期图谱](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
-
-### 常用的生命周期钩子函数
-
-1. constructor
-   - 同一个组件对象只会创建一次。
-   - 不要再第一次挂载到页面之前，调用 setState，为了避免问题，构造函数中严禁使用 setState。
-2. render
-   - render 是真个类组件中必须要书写的生命周期方法。
-   - 返回一个虚拟 DOM，会被挂载到虚拟 DOM 树中，最终渲染到页面的真实 DOM 中。
-   - render 可能不止运行一次，只要需要重新渲染，就会重新运行。
-   - 严禁使用 setState，因为可能会导致无限递归渲染。
-3. componentDidMount
-   - 只会执行一次。
-   - 可以使用 setState。
-   - 通常情况下，会将网络请求、启动计时器等一开始需要的操作，书写到该函数中。
-4. componentWillUnmount
-   - 通常在该函数中销毁一些组件依赖的资源，比如计时器。
-
-## Hooks
-
-### Hooks 基本介绍
-
-> Hook 是 React 16.8 引入的新特性，它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
-
-Hooks 的出现，首先解决了以下问题：
-
-- 告别令人疑惑的生命周期，相同的代码可能会在不同的生命周期出现。
-
-```jsx [App.jsx]
-import React, { Component } from 'react';
-
-export default class App extends Component {
-  state = {
-    count: 0,
-  };
-
-  increment = () => {
-    this.setState({
-      count: this.state.count + 1,
-    });
-  };
-
-  componentDidMount() {
-    document.title = `Count: ${this.state.count}`;
-  }
-
-  componentDidUpdate() {
-    document.title = `Count: ${this.state.count}`;
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>{this.state.count}</h1>
-        <button onClick={this.increment}>+1</button>
-      </div>
-    );
-  }
-}
-```
-
-- 告别类组件中烦人的 `this`。在类组件中，会存在 `this` 指向的问题，不能直接通过 `this` 获取组件实例，需要修改 `this` 的指向。
-- 告别繁重的类组件，回归前端程序员熟悉的函数编程。
-
-另外，Hooks 的出现，还有一个更加重要的信号，那就是整个 React 思想上的转变。从 `面向对象` 到 `函数式编程`。这是编程范式上面的转变——从 `命令式` 到 `声明式`。
-
-:::tip 编程范式
-
-- 命令式编程，就是告诉计算机如何去做，需要给计算机指定每一个步骤，包括 `面向过程` 和 `面向对象`。
-- 声明式编程，就是告诉计算机你想要做什么，剩下的步骤由计算机来完成，包括 `函数式编程` 和 HTML、CSS、SQL 等 `DSL（领域特定语言）`。
-- 声明式编程是随着命令式编程同期出现的，只是早期的声明式编程不够强大，因此命令式编程大行其道，而现代的声明式编程已经非常强大，可以解决很多命令式编程无法解决的问题。
-  :::
-
-:::info
-因此，当学习 Hooks 的时候，会发现突然多出了一些以前不熟悉的概念，比如 `纯函数`、`副作用`、`函数柯里化`、`高阶函数` 等。
-:::
-
-Hooks 就是 JavaScript 函数，但是使用它们会有两个额外的规则：
-
-1. 只能在 `函数最外层` 调用 Hook。不要在循环、条件判断或者子函数中调用。
-2. 只能在 React 的 `函数组件` 中调用 Hook。不要在其他 JavaScript 函数中调用。
-
-### useState 和 useEffect
-
-React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Hook 的数量还在持续增加当中。入门阶段，我们掌握两个最常用的 Hook 就足够了。一个是为函数组件添加状态的 `useState`，另一个是处理函数副作用的 `useEffect`。
-
-1. useState
-
-   :::code-group
-
-   ```jsx [基本使用]
-   import React from 'react';
-
-   export default function App() {
-     const [count, setCount] = React.useState(0);
-
-     const handleClick = () => {
-       setCount(count + 1);
-     };
-
-     return (
-       <div>
-         <h1>{count}</h1>
-         <button onClick={handleClick}>+1</button>
-       </div>
-     );
-   }
-   ```
-
-   ```jsx [声明多个状态]
-   import React from 'react';
-
-   export default function App() {
-     const [name, setName] = React.useState('John');
-     const [age, setAge] = React.useState(30);
-     const [email, setEmail] = React.useState('john@example.com');
-
-     const handleClick = () => {
-       setName('Doe');
-       setAge(40);
-       setEmail('doe@example.com');
-     };
-
-     return (
-       <div>
-         <h1>Hello {name}</h1>
-         <p>Age: {age}</p>
-         <p>Email: {email}</p>
-         <button onClick={handleClick}>Click me</button>
-       </div>
-     );
-   }
-   ```
-
-   :::
-
-2. useEffect
-
-   - 纯函数：纯函数是指在函数的执行过程中，不会对程序的状态进行任何改变，也不会对外部环境产生任何副作用，即只依赖于其输入参数，而不依赖于任何外部变量或状态的函数。比如 `const square = (x) => x * x`。
-   - 副作用：副作用是指在函数执行过程中，除了返回值之外，还对外部环境产生了影响，这些影响是不可控、不可预测的。比如 `console.log`、`document.write`、`fetch` 等。
-
-   > 函数式编程不是不需要副作用，而是需要将副作用控制在可控范围内，比如通过 `useEffect` 来处理副作用。
-
-   :::code-group
-
-   ```jsx [基本使用]
-   import React from 'react';
-
-   export default function App() {
-     const [count, setCount] = React.useState(0);
-
-     React.useEffect(() => {
-       document.title = `Count: ${count}`;
-     });
-
-     return (
-       <div>
-         <h1>Counter:{count}</h1>
-         <button onClick={() => setCount(count + 1)}>Increment</button>
-       </div>
-     );
-   }
-   ```
-
-   ```jsx [执行清理工作] {13,14}
-   import React from 'react';
-
-   export default function App() {
-     const [count, setCount] = React.useState(0);
-
-     // 每次执行都会产生新的定时器 所以点击按钮会加速
-     // React.useEffect(() => {
-     //     setInterval(() => {
-     //         console.log('hello');
-     //     }, 1000);
-     // });
-
-     // Solution: useEffect 会返回一个清理函数
-     // 该函数会在下一次渲染之后但是执行 useEffect 之前执行
-     React.useEffect(() => {
-       const timer = setInterval(() => {
-         console.log('hello');
-       }, 1000);
-
-       return () => {
-         clearInterval(timer);
-       };
-     });
-
-     return (
-       <div>
-         <h1>Counter:{count}</h1>
-         <button onClick={() => setCount(count + 1)}>Increment</button>
-       </div>
-     );
-   }
-   ```
-
-   ```jsx [无依赖-数据请求]
-   import React from 'react';
-
-   function mockApi() {
-     return new Promise((resolve) => {
-       setTimeout(() => {
-         resolve();
-       }, 500);
-     });
-   }
-
-   export default function App() {
-     const [count, setCount] = React.useState(0);
-
-     React.useEffect(() => {
-       mockApi().then(() => {
-         setCount(count + 1);
-         console.log('API call done');
-       });
-     });
-
-     return (
-       <div>
-         <h1>Counter:{count}</h1>
-         <button onClick={() => setCount(count + 1)}>Increment</button>
-       </div>
-     );
-   }
-   ```
-
-   ```jsx [无依赖-多状态]
-   import React from 'react';
-
-   export default function App() {
-     const [count1, setCount1] = React.useState(0);
-     const [count2, setCount2] = React.useState(0);
-     const [count3, setCount3] = React.useState(0);
-
-     React.useEffect(() => {
-       console.log('useEffect');
-     });
-
-     return (
-       <div>
-         <button onClick={() => setCount1(count1 + 1)}>
-           Count 1: {count1}
-         </button>
-         <button onClick={() => setCount2(count2 + 1)}>
-           Count 2: {count2}
-         </button>
-         <button onClick={() => setCount3(count3 + 1)}>
-           Count 3: {count3}
-         </button>
-       </div>
-     );
-   }
-   ```
-
-   ```jsx [依赖数组] {11,12}
-   import React from 'react';
-
-   export default function App() {
-     const [count1, setCount1] = React.useState(0);
-     const [count2, setCount2] = React.useState(0);
-     const [count3, setCount3] = React.useState(0);
-
-     React.useEffect(() => {
-       console.log('useEffect');
-     }, [count1]);
-     // 上面这一行可以传入一个依赖数组，当依赖数组中的值发生变化时，useEffect 才会执行
-     // 如果只想要开始默认执行一次，可以传入一个空数组
-
-     return (
-       <div>
-         <button onClick={() => setCount1(count1 + 1)}>
-           Count 1: {count1}
-         </button>
-         <button onClick={() => setCount2(count2 + 1)}>
-           Count 2: {count2}
-         </button>
-         <button onClick={() => setCount3(count3 + 1)}>
-           Count 3: {count3}
-         </button>
-       </div>
-     );
-   }
-   ```
-
-   :::
-
-### 自定义 Hook
-
-除了官方内置的 Hook，我们还可以自定义 Hook，自定义 Hook 的本质其实就是函数。但是和普通函数还是有一些区别，主要体现在以下两个点：
-
-- 自定义 Hook 能够调用诸如 `useState`、`useEffect` 等内置 Hook，普通函数则不能。由此可以通过内置的 Hooks 获得 Fiber 的访问方式，可以实现在组件级别存储数据的方案等。
-- 自定义 Hooks 需要以 use 开头，普通函数则没有这个闲置。使用 use 开头并不是一个语法或者一个强制性的方案，更像是一个约定。
-
-:::code-group
-
-```jsx [useMyBook.jsx]
-import React from 'react';
-
-export default function useMyBook() {
-  const [bookName, setBookName] = React.useState('React learning');
-  return { bookName, setBookName };
-}
-```
-
-```jsx [App.jsx]
-import useMyBook from './useMyBook';
-
-export default function App() {
-  const { bookName, setBookName } = useMyBook();
-
+```js
+function App() {
   return (
     <div>
-      <h1>Book name: {bookName}</h1>
-      <button onClick={() => setBookName('React in Action')}>
-        Change book name
-      </button>
+      <h1>Hello, world!</h1>
     </div>
   );
 }
+```
+
+也可以把 JSX 单独提取出来：
+
+```js
+function App() {
+  const element = <h1>Hello, world!</h1>;
+  return element;
+}
+```
+
+官方建议用 `()` 包裹 JSX：
+
+```js
+function App() {
+  const list = (
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+  );
+  return list;
+}
+```
+
+:::info
+JSX 看起来可能比较像模板语言，但事实上它完全是在 JavaScript 内部实现的。
+:::
+
+在使用 JSX 来描述页面的时候，有如下的一些规则：
+
+- 根元素只能有一个，也就是说元素需要被包含在一个闭合标签中。
+  > 如果不希望有多余标签单独用来闭合，可以使用空标签 `<>` 和 `</>`。
+- JSX 中的表达式要用 `{}` 包裹起来。
+  > 注意区分表达式和语句。
+- 属性值指定为字符串字面量，或者在属性值里使用表达式。
+  > 如果属性值是表达式，那么需要用 `{}` 包裹起来。
+- 在设置元素样式的时候，需要使用 `style={}` 并传入一个对象。
+  > 注意，样式名需要使用驼峰命名法，例如 `font-size` 需要写成 `fontSize`。
+- JSX 中 `class` 属性需要写成 `className`，因为 `class` 是 JavaScr ipt 的保留字。
+- 注释需要用 `{/* */}` 包裹起来。
+- JSX 中可以书写数组，数组会被自动展开。
+
+### createElement
+
+Babel 会把 JSX 转译为一个名为 `React.createElement()` 函数调用。
+
+```js
+React.createElement(type, [props], [...children]);
+```
+
+参数说明：
+
+- `type`：创建的 React 元素类型，其值可以是标签名字符串或 React 组件。
+- `props`：可选，React 元素的属性。
+- `children`：可选，React 元素的子元素。
+
+例如，如下的两种代码作用完全相同：
+
+```js
+const element1 = <h1 className="greeting">Hello, world!</h1>;
+
+const element2 = React.createElement(
+  'h1',
+  { className: 'greeting' },
+  'Hello, world!',
+);
+```
+
+看到这里，就能明白以下输出结果的原因了：
+
+```js
+const element1 = <h1 className="greeting">Hello, world!</h1>;
+console.table(element1);
+```
+
+![React.createElement()](./assets/React.createElement.png)
+
+之所以输出的并不是我们希望看到的结果，是因为最终输出的其实是经过 Babel 调用 `React.createElement()` 函数生成的对象。这些对象（虚拟 DOM）被称为 React 元素，它们描述了应该在屏幕上看到的内容。
+
+:::tip
+可以看出，JSX 的本质其实就是 React.createElement 方法的语法糖。
+:::
+
+## 组件与事件绑定
+
+### 组件
+
+在 React 中，组件是构建用户界面的基本单位。组件可以是一个函数，也可以是一个类。函数组件返回 JSX，类组件需要继承自 `React.Component`。
+
+:::code-group
+
+```jsx [类组件.jsx]
+class SomeComponent extends React.Component {
+  render() {
+    return <div>Hello, world!</div>;
+  }
+}
+```
+
+```jsx [函数组件.jsx]
+function SomeComponent() {
+  return <div>Hello, world!</div>;
+}
+```
+
+:::
+
+早期的函数组件被称为无状态组件，只用来展示 UI，没有自身数据以及复杂的逻辑。但是自从 React v16.8 后 Hooks 的出现，函数组件也可以拥有自己的状态了。这不仅仅是语法的改变，也代表着整个 React 编程思想的一种转变。
+
+### 为组件绑定事件
+
+在 React 中，绑定事件的写法如下：
+
+```jsx
+<button onClick={handleClick}>Click me</button>
+```
+
+在 React 中无法像 Vue 通过 `return false` 来阻止默认行为，需要使用 `e.preventDefault()` 来阻止。
+
+```jsx
+function handleClick(e) {
+  e.preventDefault();
+}
+```
+
+:::warning
+此处的 `e` 不是原生事件对象，而是 React 封装的事件对象，是一个合成事件。要是想拿到原生的事件对象，可以使用 `e.nativeEvent`。
+:::
+
+如果是类组件，那么事件处理函数需要写作一个类方法：
+
+```jsx
+class SomeComponent extends React.Component {
+  handleClick(e) {
+    e.preventDefault();
+  }
+
+  render() {
+    return <button onClick={this.handleClick}>Click me</button>;
+  }
+}
+```
+
+### this 的指向
+
+必须谨慎对待 JSX 回调函数中的 `this`。在 JavaScript 中，class 的方法默认不会绑定 `this`。如果你忘记绑定 `this.handleClick` 并把它传给 `onClick`，当你调用这个函数的时候 `this` 的值会是 `undefined`。
+
+- 将事件处理函数修改为箭头函数。
+- 将事件绑定函数修改为箭头函数。
+- 使用 `bind` 方法绑定 `this`。
+
+:::code-group
+
+```jsx [不调整this]
+class SomeComponent extends React.Component {
+  handleClick() {
+    console.log(this); // undefined
+  }
+
+  render() {
+    return <button onClick={this.handleClick}>Click me</button>;
+  }
+}
+```
+
+```jsx [修改函数定义]
+class SomeComponent extends React.Component {
+  handleClick = () => {
+    console.log(this);
+  };
+
+  render() {
+    return <button onClick={this.handleClick}>Click me</button>;
+  }
+}
+```
+
+```jsx [修改回调]
+class SomeComponent extends React.Component {
+  handleClick() {
+    console.log(this);
+  }
+
+  render() {
+    return <button onClick={() => this.handleClick()}>Click me</button>;
+  }
+}
+```
+
+```jsx [bind - 1]
+class SomeComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    console.log(this);
+  }
+
+  render() {
+    return <button onClick={this.handleClick}>Click me</button>;
+  }
+}
+```
+
+```js [bind - 2]
+class SomeComponent extends React.Component {
+  handleClick() {
+    console.log(this);
+  }
+
+  render() {
+    return <button onClick={this.handleClick.bind(this)}>Click me</button>;
+  }
+}
+```
+
+:::
+
+:::warning
+this 的修正只针对类组件！
+:::
+
+### 向事件处理程序传递参数
+
+在循环中，通常我们会为事件处理函数传递额外的参数。例如，若 id 是你要删除的那一行的 ID，以下两种方式都可以向事件处理函数传递参数。
+
+```jsx
+<button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
+<button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
+```
+
+上述两种方式是等价的，分别通过 `箭头函数` 和 `Function.prototype.bind` 来实现。
+
+当然，上面的方式仍然是面向类组件的写法，对于函数组件可以这样写：
+
+```jsx
+function App() {
+  const content = (
+    <button className="greeting" onClick={handleClick('Hello, world!')}>
+      Hello, world!
+    </button>
+  );
+  function handleClick(str) {
+    console.log(str);
+  }
+  return content;
+}
+export default App;
+```
+
+但是如此，会发现页面会默认输出一次 `Hello, world!`，同时点击按钮不会触发 `handleClick` 函数。这是因为 `handleClick` 函数在组件渲染时就被调用了，而不是在按钮被点击时才调用。
+
+**个人实验发现只有传参有这个现象，不用箭头函数但不传参不会如此！**
+
+所以，我们需要将 `handleClick` 函数包裹在一个箭头函数中，这样箭头函数中的代码只有当按钮被点击时才会执行。
+
+```jsx
+function App() {
+  const content = (
+    <button className="greeting" onClick={() => handleClick('Hello, world!')}>
+      Hello, world!
+    </button>
+  );
+  function handleClick(str) {
+    console.log(str);
+  }
+  return content;
+}
+export default App;
+```
+
+## 组件状态与数据传递
+
+### 组件状态
+
+早期类组件被称之为有状态组件，就是因为在类组件中能够维护组件数据。
+
+```jsx
+class SomeComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  // 或者
+  // state = { count: 0 };
+
+  render() {
+    return <div>{this.state.count}</div>;
+  }
+}
+```
+
+不应该直接去修改 state 的值，而是通过 setState 方法来修改。
+
+```jsx
+import React from 'react';
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
+  }
+
+  increment = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  decrement = () => {
+    this.setState({ count: this.state.count - 1 });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Counter</h1>
+        <p>{this.state.count}</p>
+        <button onClick={this.increment}>Increment</button>
+        <button onClick={this.decrement}>Decrement</button>
+      </div>
+    );
+  }
+}
+export default Counter;
+```
+
+:::warning
+出于性能考虑，React 可能会将多个 `setState` 调用合并成一个调用。因为 setState **可能** 会异步更新，所以不要依赖他们的值来更新状态。对于异步的 setState，React 会将多次状态更新后，统一对 state 进行修改，然后再触发组件的重新 render。
+
+如果改变状态的操作在 HTML 元素事件中，状态更新就是异步的；否则是同步的，比如在 setTimeout 中。
+
+:::
+
+:::::tip 最佳实践
+
+- 把所有的 setState 当作是异步的。
+- 永远不要信任 setState 调用之后的状态。
+- 如果要使用改变之后的状态，比如在事件处理函数的异步更新状态过程里，需要使用回调函数（setState 的第二个参数）,当然也可以提前用一个变量存储。
+  > 注意：回调函数拿到的状态是批处理完后的状态，而不是中间状态。可以参考下面的代码注释理解这句话。
+- 如果新的状态要根据之前的状态进行运算，使用函数的方式改变状态（setState 的第一个参数可以是一个函数）。
+
+::::details
+:::code-group
+
+```jsx [回调地狱.jsx] {5}
+class Counter extends React.Component {
+  // ...
+  increment = () => {
+    this.setState({ count: this.state.count + 1 }, () => {
+      console.log(this.state.count); // 只加了 1
+      this.setState({ count: this.state.count + 1 }, () => {
+        this.setState({ count: this.state.count + 1 });
+      });
+    });
+  };
+  // ...
+}
+```
+
+```jsx [函数式更新.jsx] {7}
+class Counter extends React.Component {
+  // ...
+  increment = () => {
+    this.setState(
+      (prevState) => ({ count: prevState.count + 1 }),
+      () => {
+        console.log(this.state.count); // 加了 3
+      },
+    );
+    this.setState((prevState) => ({ count: prevState.count + 1 }));
+    this.setState((prevState) => ({ count: prevState.count + 1 }));
+  };
+  // ...
+}
+```
+
+:::
+::::
+:::::
+
+### props
+
+和 Vue 一样，在 React 中组件会存在层级关系，那么自然会涉及到组件之间进行数据的传递。
+如果是父组件向子组件传递数据，则使用 props。
+如果是函数组件，props 作为函数的一个参数传入。如果是类组件，则需要在 constructor 中将 props 通过 super 传递给父类，然后通过 this.props 的方式来获取传入的值。
+
+:::code-group
+
+```jsx [类组件.jsx]
+class Welcome extends React.Component {
+  // constructor(props) {
+  //     super(props);
+  // }
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+function App() {
+  return (
+    <div>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
+    </div>
+  );
+}
+```
+
+```jsx [函数组件.jsx]
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+function App() {
+  return (
+    <div>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
+    </div>
+  );
+}
+```
+
+:::
+
+:::warning
+
+- 在类组件的代码里，你可能会收到提示，提醒你不需要写这个构造函数。这是 ESlint 的规则，ES2015 会默认提供构造函数，因此不必提供空的构造函数或仅仅是委托到父类的构造函数（ES6 就是 ES2015）。
+- 传递的数据如果是数字或布尔值等类型，需要用 `{}` 包裹起来，否则会默认解析为字符串。
+
+:::
+
+通过 `props.children` 可以实现类似 Vue 中插槽的效果。
+
+:::code-group
+
+```jsx [props.key 实现]
+function Button(props) {
+  return <button>{props.text}</button>;
+}
+
+function App() {
+  return (
+    <div>
+      <Button text="Click me"></Button>
+    </div>
+  );
+}
+```
+
+```jsx [props.children 实现]
+function Button(props) {
+  return <button>{props.children}</button>;
+}
+
+function App() {
+  return (
+    <div>
+      <Button>Click me</Button>
+    </div>
+  );
+}
+```
+
+:::
+
+### props 验证
+
+在 Vue 中，可以对传入的 props 设置默认值，以及验证 props 的有效性。在 React 中，针对 props 也可以做这些事。
+
+类组件可以通过 `defaultProps` 或者 `static defaultProps` 来设置默认值，函数组件则直接在函数参数中设置默认值，或者传入 props 之后，通过解构赋值的方式设置默认值。
+
+:::code-group
+
+```jsx [类组件.jsx]
+import React from 'react';
+
+class Welcome extends React.Component {
+  // static defaultProps = {
+  //     name: 'Stranger',
+  // };
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+Welcome.defaultProps = {
+  name: 'Stranger',
+};
+
+export default Welcome;
+```
+
+```jsx [函数组件.jsx]
+// Before
+function Heading({text}) {
+  return <h1>{text}</h1>;
+}
+Heading.defaultProps = {
+  text: 'Hello, world!',
+};
+
+// After
+function Heading_1({text = 'Hello, world!'}: Props) {
+  return <h1>{text}</h1>;
+}
+function Heading_2(props){
+  const { text = 'Hello, world!' } = props;
+  return <h1>{text}</h1>;
+}
+```
+
+:::
+
+关于 props 的类型检查，从 React v15.5 开始，移入到了 prop-types 库中。但是从 React v19 开始，官方移除了 propType 检查，建议迁移到 TypeScript 或其他类型检查解决方案。
+
+```jsx
+// Before
+import PropTypes from 'prop-types';
+
+function Heading({text}) {
+  return <h1>{text}</h1>;
+}
+Heading.propTypes = {
+  text: PropTypes.string,
+};
+// After
+interface Props {
+  text?: string;
+}
+```
+
+### 状态提升
+
+在 Vue 中，父传子通过 props，子传父通过自定义事件。在 React 中，如果子组件需要向父组件传递数据，同样是通过触发父组件传递给子组件的事件来进行传递。这在官网中被称为 **状态提升**。
+
+:::code-group
+
+```jsx [Welcome.jsx]
+function Welcome(props) {
+  function subClick() {
+    props.parentClick('params from child');
+  }
+  return (
+    <div>
+      <h1>Welcome to React</h1>
+      <button onClick={subClick}>Click me</button>
+    </div>
+  );
+}
+
+export default Welcome;
+```
+
+```jsx [App.js]
+import Welcome from './components/Welcome';
+
+function parentClick(params) {
+  console.log('parent clicked');
+  console.log('params received by parent:', params);
+}
+
+function App() {
+  return (
+    <div>
+      <Welcome parentClick={parentClick} />
+    </div>
+  );
+}
+
+export default App;
+```
+
+:::
+
+如以上的代码在点击按钮后，会输出如下结果：
+
+```text
+parent clicked
+params received by parent: params from child
+```
+
+下面是一个简单的示例，不包括复杂情况，比如数字类型验证等。
+:::code-group
+
+```jsx [App.js]
+import { useState } from 'react';
+import Money from './components/Money';
+
+function App() {
+  const [dollar, setDollar] = useState('');
+  const [rmb, setRmb] = useState('');
+
+  function transform(type, value) {
+    if (type === '美元') {
+      setDollar(value);
+      setRmb(value * 6.5);
+    } else {
+      setRmb(value);
+      setDollar(value / 6.5);
+    }
+  }
+
+  return (
+    <>
+      <Money type="美元" value={dollar} transform={transform} />
+      <Money type="人民币" value={rmb} transform={transform} />
+    </>
+  );
+}
+
+export default App;
+```
+
+```jsx [Money.jsx]
+function Money(props) {
+  function handleChange(e) {
+    props.transform(props.type, e.target.value);
+  }
+  return (
+    <fieldset>
+      <legend>{props.type}</legend>
+      <input value={props.value} onChange={handleChange} />
+    </fieldset>
+  );
+}
+export default Money;
 ```
 
 :::
