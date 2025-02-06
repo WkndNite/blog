@@ -88,47 +88,47 @@ export function reactive(target: Object) {
 
 ```js
 class RefImpl {
-	#value;
-	constructor(value) {
-		this.#value = isObject(value) ? reactive(value) : value;
-	}
+  #value;
+  constructor(value) {
+    this.#value = isObject(value) ? reactive(value) : value;
+  }
 
-	get value() {
-		console.log("get value");
-		return this.#value;
-	}
+  get value() {
+    console.log('get value');
+    return this.#value;
+  }
 
-	set value(newValue) {
-		console.log("set value");
-		this.#value = isObject(newValue) ? reactive(newValue) : newValue;
-	}
+  set value(newValue) {
+    console.log('set value');
+    this.#value = isObject(newValue) ? reactive(newValue) : newValue;
+  }
 }
 
 function isObject(value) {
-	return value !== null && typeof value === "object";
+  return value !== null && typeof value === 'object';
 }
 function deepProxy(obj) {
-	return new Proxy(obj, {
-		get(target, key) {
-			console.log("get", key);
-			const value = target[key];
-			return isObject(value) ? deepProxy(value) : value;
-		},
-		set(target, key, value) {
-			console.log("set", key);
-			target[key] = isObject(value) ? deepProxy(value) : value;
-			return true;
-		},
-		deleteProperty(target, key) {
-			console.log("delete", key);
-			delete target[key];
-			return true;
-		},
-	});
+  return new Proxy(obj, {
+    get(target, key) {
+      console.log('get', key);
+      const value = target[key];
+      return isObject(value) ? deepProxy(value) : value;
+    },
+    set(target, key, value) {
+      console.log('set', key);
+      target[key] = isObject(value) ? deepProxy(value) : value;
+      return true;
+    },
+    deleteProperty(target, key) {
+      console.log('delete', key);
+      delete target[key];
+      return true;
+    },
+  });
 }
 
-const ref = value => new RefImpl(value);
-const reactive = obj => deepProxy(obj);
+const ref = (value) => new RefImpl(value);
+const reactive = (obj) => deepProxy(obj);
 
 state = ref(1);
 state; // 不会拦截
@@ -158,11 +158,11 @@ console.log(state); // 不会拦截
 console.log(state.a); // get a ---> undefined
 state.a = 1; // set a
 state.a = {
-	b: {
-		c: 100,
-	},
+  b: {
+    c: 100,
+  },
 }; // set a
-console.log("====================");
+console.log('====================');
 console.log(state.a.b.c); // get a ---> get b ---> get c ---> 100
 delete state.a.b; // get a ---> delete b
 

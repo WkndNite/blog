@@ -17,7 +17,7 @@ export default defineConfig({
       detailsLabel: '详细信息',
     },
     theme: { light: 'one-light', dark: 'dracula' },
-    codeCopyButtonTitle:'复制代码',
+    codeCopyButtonTitle: '复制代码',
   },
   extends: blogTheme,
   lang: 'zh-cn',
@@ -60,11 +60,22 @@ export default defineConfig({
       { text: '生活随笔', link: '/Life/' },
     ],
     sidebar: {
-      '/CS/': [{ text: '操作系统', items: [{ text: '...' }] }],
+      '/CS/': [
+        {
+          text: '网络',
+          collapsed: false,
+          items: [
+            {
+              text: '面试·五层网络模型',
+              link: '/CS/network/network-model',
+            },
+          ],
+        },
+      ],
       '/Frontend/': [
         {
           text: 'CSS',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: 'CSS 计算属性',
@@ -82,7 +93,7 @@ export default defineConfig({
         },
         {
           text: 'JavaScript',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: '一些或大或小的坑',
@@ -92,7 +103,7 @@ export default defineConfig({
         },
         {
           text: 'TypeScript',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: '字节·深入浅出 TypeScript',
@@ -102,7 +113,7 @@ export default defineConfig({
         },
         {
           text: 'Vue',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: 'Vue3 里的 ref 和 reactive',
@@ -132,7 +143,7 @@ export default defineConfig({
         },
         {
           text: 'React',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: 'React 核心概念（一）',
@@ -170,7 +181,7 @@ export default defineConfig({
       '/Projects/': [
         {
           text: 'Astro Starlight',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: '简介',
@@ -190,7 +201,7 @@ export default defineConfig({
       '/Tools/': [
         {
           text: 'Docker',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: 'Docker 存在的必要性',
