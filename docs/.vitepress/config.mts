@@ -179,24 +179,24 @@ export default defineConfig({
         },
       ],
       '/Projects/': [
-        {
-          text: 'Astro Starlight',
-          collapsed: false,
-          items: [
-            {
-              text: '简介',
-              link: '/Projects/astro-starlight/index',
-            },
-            {
-              text: '项目初始化',
-              link: '/Projects/astro-starlight/init',
-            },
-            {
-              text: '一条简单的配置',
-              link: '/Projects/astro-starlight/simple-config',
-            },
-          ],
-        },
+        // {
+        //   text: 'Astro Starlight',
+        //   collapsed: false,
+        //   items: [
+        //     {
+        //       text: '简介',
+        //       link: '/Projects/astro-starlight/index',
+        //     },
+        //     {
+        //       text: '项目初始化',
+        //       link: '/Projects/astro-starlight/init',
+        //     },
+        //     {
+        //       text: '一条简单的配置',
+        //       link: '/Projects/astro-starlight/simple-config',
+        //     },
+        //   ],
+        // },
       ],
       '/Tools/': [
         {
