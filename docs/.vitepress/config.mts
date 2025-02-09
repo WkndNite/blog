@@ -61,9 +61,7 @@ export default defineConfig({
       { text: '面试备战', link: '/Interview/' },
     ],
     sidebar: {
-      '/CS/': [
-        
-      ],
+      '/CS/': [],
       '/Frontend/': [
         {
           text: 'CSS',
@@ -201,7 +199,7 @@ export default defineConfig({
             },
           ],
         },
-      ]
+      ],
     },
   },
   vite: {
