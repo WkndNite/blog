@@ -1,9 +1,15 @@
 ---
+top: 1
 date: 2025-01-17
 tags:
   - React
   - 前端
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/210px-React-icon.svg.png
+descriptionHTML: '
+<span style="color:var(--description-font-color);">开始构建你的 React 应用</span>
+<pre style="background-color: #292b30; padding: 15px; border-radius: 10px;" class="shiki material-theme-palenight"><code>
+    <span class="line"><span style="color:#FFCB6B;">npx</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">create-react-app</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">your-react-app-name</span></span>
+</code>
+</pre>'
 ---
 
 # React 核心概念 （一）
