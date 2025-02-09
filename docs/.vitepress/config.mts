@@ -195,7 +195,7 @@ export default defineConfig({
           items: [
             {
               text: '五层网络模型',
-              link: '/Interview/network/network-model',
+              link: '/Interview/Network/network-model',
             },
           ],
         },
