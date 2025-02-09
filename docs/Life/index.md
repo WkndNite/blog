@@ -5,7 +5,7 @@ date: false
 author: false
 ---
 
-# 随笔
+# 生活随笔
 
 ## 2020
 

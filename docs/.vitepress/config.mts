@@ -58,19 +58,11 @@ export default defineConfig({
       { text: '项目记录', link: '/Projects/' },
       { text: '实战工具', link: '/Tools/' },
       { text: '生活随笔', link: '/Life/' },
+      { text: '面试备战', link: '/Interview/' },
     ],
     sidebar: {
       '/CS/': [
-        {
-          text: '网络',
-          collapsed: false,
-          items: [
-            {
-              text: '面试·五层网络模型',
-              link: '/CS/network/network-model',
-            },
-          ],
-        },
+        
       ],
       '/Frontend/': [
         {
@@ -198,6 +190,18 @@ export default defineConfig({
         },
       ],
       '/Life/': [{ text: '菊次郎的夏天', link: '/Life/kikujiro-summer' }],
+      '/Interview/': [
+        {
+          text: '网络',
+          collapsed: false,
+          items: [
+            {
+              text: '五层网络模型',
+              link: '/Interview/network/network-model',
+            },
+          ],
+        },
+      ]
     },
   },
   vite: {
