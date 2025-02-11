@@ -5,11 +5,10 @@ import { h } from 'vue';
 // import { ShareButton } from '@theojs/lumen';
 
 export default {
-  
   ...BlogTheme,
   Layout: (props: any) => {
     if (BlogTheme.Layout) {
-      return h(BlogTheme.Layout, props, {
+      return h(BlogTheme.Layout as any, props, {
         'layout-top': () => h(Fireworks),
         // 'nav-bar-content-after': () => h(ShareButton,{
         //   copiedText: '链接已复制',
