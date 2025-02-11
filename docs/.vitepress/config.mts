@@ -203,6 +203,9 @@ export default defineConfig({
     },
   },
   vite: {
+    ssr: {
+      noExternal: ['dayjs']
+    },
     plugins: [
       // 打赏插件
       SponsorPlugin({
