@@ -40,9 +40,8 @@ const blogTheme = getThemeConfig({
     },
   ],
   article: {
-    readingTime: true,
-    readingTimePosition: 'newLine',
     hiddenCover: true,
+    readingTime: false,
   },
   hotArticle: {
     title: '🔥 精选文章',
