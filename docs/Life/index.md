@@ -9,4 +9,4 @@ author: false
 
 ## 2020
 
-- [02-10 菊次郎的夏天](./kikujiro-summer.md)
+- [02-10 菊次郎的夏天](./2020/kikujiro-summer.md)

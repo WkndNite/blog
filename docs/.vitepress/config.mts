@@ -168,7 +168,18 @@ export default defineConfig({
           link: '/DevTips/design-patterns-singleton',
         },
       ],
-      '/Projects/': [],
+      '/Projects/': [
+        {
+          text: 'React',
+          collapsed: false,
+          items: [
+            {
+              text: '请求转发与默认打包路径冲突',
+              link: '/Projects/React/path-conflict-proxy-pack',
+            },
+          ],
+        },
+      ],
       '/Tools/': [
         {
           text: 'Docker',
@@ -187,7 +198,7 @@ export default defineConfig({
           ],
         },
       ],
-      '/Life/': [{ text: '菊次郎的夏天', link: '/Life/kikujiro-summer' }],
+      '/Life/': [{ text: '菊次郎的夏天', link: '/Life/2020/kikujiro-summer' }],
       '/Interview/': [
         {
           text: '网络',
@@ -204,7 +215,7 @@ export default defineConfig({
   },
   vite: {
     ssr: {
-      noExternal: ['dayjs']
+      noExternal: ['dayjs'],
     },
     plugins: [
       // 打赏插件
