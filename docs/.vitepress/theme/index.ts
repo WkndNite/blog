@@ -10,9 +10,10 @@ export default {
     if (BlogTheme.Layout) {
       return h(BlogTheme.Layout as any, props, {
         'layout-top': () => h(Fireworks),
-        'nav-bar-content-after': () => h(ShareButton,{
-          copiedText: '链接已复制',
-        }),
+        'nav-bar-content-after': () =>
+          h(ShareButton, {
+            copiedText: '链接已复制',
+          }),
       });
     }
     return null;
