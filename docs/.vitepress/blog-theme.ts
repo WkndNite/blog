@@ -15,30 +15,40 @@ const blogTheme = getThemeConfig({
     emptyText: '没有找到相关文章',
     heading: '共找到 {{searchResult}} 篇文章',
   },
-  themeColor: 'vp-default',
+  themeColor: 'el-blue',
   recommend: false,
   author: '周末晚',
-  friend: [
-    {
-      nickname: '粥里有勺糖',
-      des: '你的指尖用于改变世界的力量',
-      avatar:
-        'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
-      url: 'https://sugarat.top',
-    },
-    {
-      nickname: 'Vitepress',
-      des: 'Vite & Vue Powered Static Site Generator',
-      avatar: 'https://vitepress.dev/vitepress-logo-large.webp',
-      url: 'https://vitepress.dev/',
-    },
-    {
-      nickname: '苏柘',
-      des: '去发光，而不是被照亮',
-      avatar: 'https://suzhelevel6.github.io/suzhe_blog/touxiang1MB.jpg',
-      url: 'https://suzhelevel6.github.io/suzhe_blog/',
-    },
-  ],
+  friend: {
+    list: [
+      {
+        nickname: '粥里有勺糖',
+        des: '你的指尖用于改变世界的力量',
+        avatar:
+          'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
+        url: 'https://sugarat.top',
+      },
+      {
+        nickname: 'Vitepress',
+        des: 'Vite & Vue Powered Static Site Generator',
+        avatar: 'https://vitepress.dev/vitepress-logo-large.webp',
+        url: 'https://vitepress.dev/',
+      },
+      {
+        nickname: '苏柘',
+        des: '去发光，而不是被照亮',
+        avatar: 'https://suzhelevel6.github.io/suzhe_blog/touxiang1MB.jpg',
+        url: 'https://suzhelevel6.github.io/suzhe_blog/',
+      },
+      {
+        nickname: 'Lumen',
+        des: '集成 Vue 功能组件和主题美化的 VitePress 插件',
+        avatar: 'https://lumen.theojs.cn/Logo.webp',
+        url: 'https://lumen.theojs.cn/',
+      },
+    ],
+    random: true,
+    limit: 3,
+  },
   article: {
     hiddenCover: true,
     readingTime: false,
