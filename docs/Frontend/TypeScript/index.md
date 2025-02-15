@@ -6,4 +6,4 @@ author: false
 
 # TypeScript
 
-- [字节·深入浅出 TypeScript](./TypeScript/byte-ts.md)
+- [字节·深入浅出 TypeScript](./byte-ts.md)

@@ -6,4 +6,4 @@ author: false
 
 # JavaScript
 
-- [一些或大或小的坑](./Javascript/some-details.md)
+- [一些或大或小的坑](./some-details.md)
