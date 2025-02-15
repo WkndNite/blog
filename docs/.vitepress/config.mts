@@ -54,8 +54,45 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: 'CS 基础', link: '/CS/' },
-      { text: '前端学习', link: '/Frontend/' },
-      { text: '开发技巧', link: '/DevTips/' },
+      {
+        text: '前端学习',
+        items: [
+          { text: 'CSS', link: '/Frontend/CSS' },
+          {
+            text: 'JavaScript',
+            link: '/Frontend/JavaScript',
+          },
+          {
+            text: 'TypeScript',
+            link: '/Frontend/TypeScript',
+          },
+          {
+            text: 'Vue',
+            link: '/Frontend/Vue',
+          },
+          {
+            text: 'React',
+            link: '/Frontend/React',
+          },
+        ],
+      },
+      {
+        text: '开发工具',
+        items: [
+          {
+            text: 'Git',
+            link: '/DevTips/Git',
+          },
+          {
+            text: 'Docker',
+            link: '/DevTips/Docker',
+          },
+          {
+            text: '设计模式与设计原则',
+            link: '/DevTips/Design',
+          },
+        ],
+      },
       { text: '项目记录', link: '/Projects/' },
       { text: '实战工具', link: '/Tools/' },
       { text: '生活随笔', link: '/Life/' },
@@ -156,32 +193,18 @@ export default defineConfig({
         },
       ],
       '/DevTips/': [
-        { text: 'Commit 规范', link: '/DevTips/commit' },
-        { text: 'Git 新旧命令', link: '/DevTips/git-command-new' },
         {
-          text: 'Git 大小写不敏感闹乌龙',
-          link: '/DevTips/git-ignorecase',
-        },
-        { text: '设计模式', link: '/DevTips/design-patterns' },
-        { text: '设计原则', link: '/DevTips/design-principles' },
-        {
-          text: '设计模式详解第一期 单例模式',
-          link: '/DevTips/design-patterns-singleton',
-        },
-      ],
-      '/Projects/': [
-        {
-          text: 'React',
+          text: 'Git',
           collapsed: false,
           items: [
+            { text: 'Commit 规范', link: '/DevTips/commit' },
+            { text: 'Git 新旧命令', link: '/DevTips/git-command-new' },
             {
-              text: '请求转发与默认打包路径冲突',
-              link: '/Projects/React/path-conflict-proxy-pack',
+              text: 'Git 大小写不敏感闹乌龙',
+              link: '/DevTips/git-ignorecase',
             },
           ],
         },
-      ],
-      '/Tools/': [
         {
           text: 'Docker',
           collapsed: false,
@@ -195,6 +218,30 @@ export default defineConfig({
             {
               text: 'Docker 通信',
               link: '/Tools/docker/communication',
+            },
+          ],
+        },
+        {
+          text: '设计模式与设计原则',
+          collapsed: false,
+          items: [
+            { text: '设计模式', link: '/DevTips/design-patterns' },
+            { text: '设计原则', link: '/DevTips/design-principles' },
+            {
+              text: '设计模式详解第一期 单例模式',
+              link: '/DevTips/design-patterns-singleton',
+            },
+          ],
+        },
+      ],
+      '/Projects/': [
+        {
+          text: 'React',
+          collapsed: false,
+          items: [
+            {
+              text: '请求转发与默认打包路径冲突',
+              link: '/Projects/React/path-conflict-proxy-pack',
             },
           ],
         },
