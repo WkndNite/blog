@@ -94,7 +94,6 @@ export default defineConfig({
         ],
       },
       { text: '项目记录', link: '/Projects/' },
-      { text: '实战工具', link: '/Tools/' },
       { text: '生活随笔', link: '/Life/' },
       { text: '面试备战', link: '/Interview/' },
     ],
