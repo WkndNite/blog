@@ -3,6 +3,7 @@ tags:
   - React
   - 前端
 date: 2025-01-21
+cover: ./assets/reactrouter.svg
 ---
 
 # React 路由

@@ -10,6 +10,7 @@ descriptionHTML: '
     <span class="line"><span style="color:#FFCB6B;">npx</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">create-react-app</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">your-react-app-name</span></span>
 </code>
 </pre>'
+cover: https://cdn-icons-png.flaticon.com/512/10303/10303238.png
 ---
 
 # React 核心概念 （一）

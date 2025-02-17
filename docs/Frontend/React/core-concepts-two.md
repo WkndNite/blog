@@ -4,7 +4,7 @@ date: 2025-01-19
 tags:
   - React
   - 前端
-cover: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/210px-React-icon.svg.png
+cover: https://cdn-icons-png.flaticon.com/512/10303/10303238.png
 ---
 
 # React 核心概念（二）
