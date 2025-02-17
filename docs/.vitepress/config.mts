@@ -43,14 +43,13 @@ export default defineConfig({
     sidebarMenuLabel: '相关文章',
     lastUpdatedText: '上次更新于',
 
-    logo: '/logo.png',
+    logo: '/logo.svg',
     socialLinks: [
       {
         icon: 'github',
         link: 'https://github.com/Wkndnite',
       },
     ],
-    // items 可以实现下拉框 后期内容多了可以引入
     nav: [
       { text: '首页', link: '/' },
       { text: 'CS 基础', link: '/CS/' },

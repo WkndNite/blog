@@ -18,6 +18,9 @@ const blogTheme = getThemeConfig({
   themeColor: 'el-blue',
   recommend: false,
   author: '周末晚',
+  home:{
+    logo:'/avatar.png',
+  },
   friend: {
     list: [
       {
