@@ -2,7 +2,6 @@
 date: 2024-12-23
 tags:
   - Docker
-cover: https://docs.docker.com/get-started/images/docker-architecture.webp
 ---
 
 # 关于 Docker 的那点破事儿

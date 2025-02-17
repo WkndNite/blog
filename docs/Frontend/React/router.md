@@ -3,7 +3,7 @@ tags:
   - React
   - 前端
 date: 2025-01-21
-cover: ./assets/reactrouter.svg
+cover: https://reactrouter.com/splash/hero-3d-logo.dark.webp
 ---
 
 # React 路由

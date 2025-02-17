@@ -2,7 +2,7 @@
 date: 2024-12-23
 tags:
   - Docker
-cover: https://www.runoob.com/wp-content/uploads/2016/04/docker01.png
+cover: https://cdn-icons-png.flaticon.com/128/15466/15466088.png
 ---
 
 # Docker 命令

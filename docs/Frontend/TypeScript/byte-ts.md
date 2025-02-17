@@ -3,7 +3,7 @@ tags:
   - 前端
   - TypeScript
 date: 2025-01-21
-cover: https://learntypescript.dev/static/f5c65fe3cf6dbed670bc14754c33342b/6d494/ts-js.webp
+cover: https://cdn-icons-png.flaticon.com/128/5968/5968381.png
 ---
 
 # 深入浅出 TypeScript
