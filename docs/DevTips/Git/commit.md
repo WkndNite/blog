@@ -2,6 +2,7 @@
 date: 2024-12-03
 tags:
   - Git
+cover: https://cdn-icons-png.flaticon.com/128/12514/12514434.png
 ---
 
 # 约定式提交
