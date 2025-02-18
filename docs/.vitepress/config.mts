@@ -122,6 +122,10 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
+              text: 'JavaScript 中数字的存储',
+              link: '/Frontend/JavaScript/number-storage',
+            },
+            {
               text: '一些或大或小的坑',
               link: '/Frontend/JavaScript/some-details',
             },
@@ -195,11 +199,11 @@ export default defineConfig({
           text: 'Git',
           collapsed: false,
           items: [
-            { text: 'Commit 规范', link: '/DevTips/commit' },
-            { text: 'Git 新旧命令', link: '/DevTips/git-command-new' },
+            { text: 'Commit 规范', link: '/DevTips/Git/commit' },
+            { text: 'Git 新旧命令', link: '/DevTips/Git/git-command-new' },
             {
               text: 'Git 大小写不敏感闹乌龙',
-              link: '/DevTips/git-ignorecase',
+              link: '/DevTips/Git/git-ignorecase',
             },
           ],
         },
@@ -209,13 +213,13 @@ export default defineConfig({
           items: [
             {
               text: 'Docker 存在的必要性',
-              link: '/Tools/docker/preview',
+              link: '/DevTips/Docker/preview',
             },
-            { text: '简短的介绍', link: '/Tools/Docker/intro' },
-            { text: '一些常用命令', link: '/Tools/Docker/command' },
+            { text: '简短的介绍', link: '/DevTips/Docker/intro' },
+            { text: '一些常用命令', link: '/DevTips/Docker/command' },
             {
               text: 'Docker 通信',
-              link: '/Tools/Docker/communication',
+              link: '/DevTips/Docker/communication',
             },
           ],
         },
@@ -223,11 +227,11 @@ export default defineConfig({
           text: '设计模式与设计原则',
           collapsed: false,
           items: [
-            { text: '设计模式', link: '/DevTips/design-patterns' },
-            { text: '设计原则', link: '/DevTips/design-principles' },
+            { text: '设计模式', link: '/DevTips/Design/design-patterns' },
+            { text: '设计原则', link: '/DevTips/Design/design-principles' },
             {
               text: '设计模式详解第一期 单例模式',
-              link: '/DevTips/design-patterns-singleton',
+              link: '/DevTips/Design/design-patterns-singleton',
             },
           ],
         },
