@@ -123,7 +123,7 @@ export default defineConfig({
           items: [
             {
               text: '一些或大或小的坑',
-              link: '/Frontend/Javascript/some-details',
+              link: '/Frontend/JavaScript/some-details',
             },
           ],
         },
@@ -211,11 +211,11 @@ export default defineConfig({
               text: 'Docker 存在的必要性',
               link: '/Tools/docker/preview',
             },
-            { text: '简短的介绍', link: '/Tools/docker/intro' },
-            { text: '一些常用命令', link: '/Tools/docker/command' },
+            { text: '简短的介绍', link: '/Tools/Docker/intro' },
+            { text: '一些常用命令', link: '/Tools/Docker/command' },
             {
               text: 'Docker 通信',
-              link: '/Tools/docker/communication',
+              link: '/Tools/Docker/communication',
             },
           ],
         },
