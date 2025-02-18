@@ -12,8 +12,10 @@ export default {
         'layout-top': () => h(Fireworks),
         'nav-bar-content-after': () =>
           h(ShareButton, {
-            buttonText:' ',
+            buttonText: ' ',
             copiedText: ' ',
+            buttonIcon: 'noto:link',
+            copiedIcon: 'noto:check-mark-button',
           }),
       });
     }
