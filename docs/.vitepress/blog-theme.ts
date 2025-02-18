@@ -68,9 +68,9 @@ const blogTheme = getThemeConfig({
     type: 'giscus',
     options: {
       repo: 'WkndNite/blog',
-      repoId: 'R_kgDONpNMDQ',
+      repoId: 'R_kgDONtQ1pA',
       category: 'Announcements',
-      categoryId: 'DIC_kwDONpNMDc4Cl8hV',
+      categoryId: 'DIC_kwDONtQ1pM4CnEEJ',
       inputPosition: 'top',
     },
     mobileMinify: true,
