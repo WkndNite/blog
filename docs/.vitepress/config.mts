@@ -248,7 +248,23 @@ export default defineConfig({
           ],
         },
       ],
-      '/Life/': [{ text: '菊次郎的夏天', link: '/Life/2020/kikujiro-summer' }],
+      '/Life/': [
+        {
+          text: '2020',
+          collapsed: false,
+          items: [{ text: '菊次郎的夏天', link: '/Life/2020/kikujiro-summer' }],
+        },
+        {
+          text: '2021',
+          collapsed: false,
+          items: [
+            {
+              text: '《史记·项羽本纪》的一些看法',
+              link: '/Life/2021/historical-records-xiangyu',
+            },
+          ],
+        },
+      ],
       '/Interview/': [
         {
           text: '网络',
