@@ -1,5 +1,4 @@
 ---
-top: 1
 date: 2025-01-17
 tags:
   - React
