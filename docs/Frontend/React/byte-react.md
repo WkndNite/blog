@@ -99,7 +99,7 @@ cover: https://github.com/SAWARATSUKI/KawaiiLogos/blob/main/React/React.png?raw=
 
 ## React 状态管理库
 
-不再展开，可以参考[另一篇文章](/Frontend/React/Redux)。
+不再展开，可以参考[另一篇文章](/Frontend/React/redux)。
 
 推荐状态管理库：
 [React Redux](https://react-redux.js.org/) /
