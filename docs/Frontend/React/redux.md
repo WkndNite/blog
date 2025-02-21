@@ -129,11 +129,11 @@ cover: https://redux.js.org/img/redux.svg
    :::code-group
 
    ```jsx [Input.jsx] {2,7}
-   import React from 'react';
+   import React, { useState } from 'react';
    import { addListAction } from '../redux/actions';
 
    export default function Input(props) {
-     const [value, setValue] = React.useState('');
+     const [value, setValue] = useState('');
      function handleClick() {
        props.store.dispatch(addListAction(value));
        setValue('');
@@ -336,12 +336,12 @@ root.render(
 ```
 
 ```jsx [Input.jsx] {2,3,7,23-25}
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../redux/todoSlice';
 
 export default function Input(props) {
-  const [value, setValue] = React.useState('');
+  const [value, setValue] = useState('');
   const dispatcher = useDispatch();
   return (
     <div className="row">

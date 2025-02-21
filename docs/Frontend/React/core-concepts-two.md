@@ -412,10 +412,10 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    :::code-group
 
    ```jsx [基本使用]
-   import React from 'react';
+   import React, { useState } from 'react';
 
    export default function App() {
-     const [count, setCount] = React.useState(0);
+     const [count, setCount] = useState(0);
 
      const handleClick = () => {
        setCount(count + 1);
@@ -431,12 +431,12 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    ```
 
    ```jsx [声明多个状态]
-   import React from 'react';
+   import React, { useState } from 'react';
 
    export default function App() {
-     const [name, setName] = React.useState('John');
-     const [age, setAge] = React.useState(30);
-     const [email, setEmail] = React.useState('john@example.com');
+     const [name, setName] = useState('John');
+     const [age, setAge] = useState(30);
+     const [email, setEmail] = useState('john@example.com');
 
      const handleClick = () => {
        setName('Doe');
@@ -467,12 +467,12 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    :::code-group
 
    ```jsx [基本使用]
-   import React from 'react';
+   import React, { useState, useEffect } from 'react';
 
    export default function App() {
-     const [count, setCount] = React.useState(0);
+     const [count, setCount] = useState(0);
 
-     React.useEffect(() => {
+     useEffect(() => {
        document.title = `Count: ${count}`;
      });
 
@@ -486,13 +486,13 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    ```
 
    ```jsx [执行清理工作] {13,14}
-   import React from 'react';
+   import React, { useState, useEffect } from 'react';
 
    export default function App() {
-     const [count, setCount] = React.useState(0);
+     const [count, setCount] = useState(0);
 
      // 每次执行都会产生新的定时器 所以点击按钮会加速
-     // React.useEffect(() => {
+     // useEffect(() => {
      //     setInterval(() => {
      //         console.log('hello');
      //     }, 1000);
@@ -500,7 +500,7 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
 
      // Solution: useEffect 会返回一个清理函数
      // 该函数会在下一次渲染之后但是执行 useEffect 之前执行
-     React.useEffect(() => {
+     useEffect(() => {
        const timer = setInterval(() => {
          console.log('hello');
        }, 1000);
@@ -520,7 +520,7 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    ```
 
    ```jsx [无依赖-数据请求]
-   import React from 'react';
+   import React, { useState, useEffect } from 'react';
 
    function mockApi() {
      return new Promise((resolve) => {
@@ -531,9 +531,9 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    }
 
    export default function App() {
-     const [count, setCount] = React.useState(0);
+     const [count, setCount] = useState(0);
 
-     React.useEffect(() => {
+     useEffect(() => {
        mockApi().then(() => {
          setCount(count + 1);
          console.log('API call done');
@@ -550,14 +550,14 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    ```
 
    ```jsx [无依赖-多状态]
-   import React from 'react';
+   import React, { useState, useEffect } from 'react';
 
    export default function App() {
-     const [count1, setCount1] = React.useState(0);
-     const [count2, setCount2] = React.useState(0);
-     const [count3, setCount3] = React.useState(0);
+     const [count1, setCount1] = useState(0);
+     const [count2, setCount2] = useState(0);
+     const [count3, setCount3] = useState(0);
 
-     React.useEffect(() => {
+     useEffect(() => {
        console.log('useEffect');
      });
 
@@ -578,14 +578,14 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    ```
 
    ```jsx [依赖数组] {11,12}
-   import React from 'react';
+   import React, { useState, useEffect } from 'react';
 
    export default function App() {
-     const [count1, setCount1] = React.useState(0);
-     const [count2, setCount2] = React.useState(0);
-     const [count3, setCount3] = React.useState(0);
+     const [count1, setCount1] = useState(0);
+     const [count2, setCount2] = useState(0);
+     const [count3, setCount3] = useState(0);
 
-     React.useEffect(() => {
+     useEffect(() => {
        console.log('useEffect');
      }, [count1]);
      // 上面这一行可以传入一个依赖数组，当依赖数组中的值发生变化时，useEffect 才会执行
@@ -614,15 +614,15 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
 除了官方内置的 Hook，我们还可以自定义 Hook，自定义 Hook 的本质其实就是函数。但是和普通函数还是有一些区别，主要体现在以下两个点：
 
 - 自定义 Hook 能够调用诸如 `useState`、`useEffect` 等内置 Hook，普通函数则不能。由此可以通过内置的 Hooks 获得 Fiber 的访问方式，可以实现在组件级别存储数据的方案等。
-- 自定义 Hooks 需要以 use 开头，普通函数则没有这个闲置。使用 use 开头并不是一个语法或者一个强制性的方案，更像是一个约定。
+- 自定义 Hooks 需要以 use 开头，普通函数则没有这个限制。使用 use 开头并不是一个语法或者一个强制性的方案，更像是一个约定。
 
 :::code-group
 
 ```jsx [useMyBook.jsx]
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function useMyBook() {
-  const [bookName, setBookName] = React.useState('React learning');
+  const [bookName, setBookName] = useState('React learning');
   return { bookName, setBookName };
 }
 ```
