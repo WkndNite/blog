@@ -136,7 +136,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
-              text: '字节·深入浅出 TypeScript',
+              text: '字节 · 深入浅出 TypeScript',
               link: '/Frontend/TypeScript/byte-ts',
             },
           ],
@@ -175,6 +175,10 @@ export default defineConfig({
           text: 'React',
           collapsed: false,
           items: [
+            {
+              text: '字节 · 响应式系统与 React',
+              link: '/Frontend/React/byte-react',
+            },
             {
               text: 'React 核心概念（一）',
               link: '/Frontend/React/core-concepts-one',
