@@ -5,6 +5,7 @@ import { SponsorPlugin } from 'vitepress-plugin-sponsor';
 export default defineConfig({
   cleanUrls: true,
   markdown: {
+    math: true,
     image: {
       lazyLoading: true,
     },
