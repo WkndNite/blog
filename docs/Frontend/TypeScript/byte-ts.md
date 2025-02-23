@@ -6,7 +6,7 @@ date: 2025-01-21
 cover: https://cdn-icons-png.flaticon.com/128/5968/5968381.png
 ---
 
-# 深入浅出 TypeScript
+# 字节 · 深入浅出 TypeScript
 
 这篇文章是我在大三期间参加字节青训营的一份记录，通过它来掌握一些基础和高级的用法、如何应用于企业开发以及通过 Playground 在 JS 与 TS 之间做到转换。
 
