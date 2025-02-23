@@ -1,5 +1,6 @@
 ---
 date: 2025-02-23
+cover: https://cdn-icons-png.flaticon.com/128/11164/11164373.png
 tags:
   - 网络
   - 计算机基础

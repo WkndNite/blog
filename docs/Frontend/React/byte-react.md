@@ -2,7 +2,7 @@
 date: 2025-02-21
 tags:
   - React
-cover: https://github.com/SAWARATSUKI/KawaiiLogos/blob/main/React/React.png?raw=true
+cover: https://cdn-icons-png.flaticon.com/128/2497/2497631.png
 ---
 
 # 字节 · 响应式系统与 React
