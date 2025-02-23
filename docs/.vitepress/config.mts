@@ -279,6 +279,10 @@ export default defineConfig({
               text: '五层网络模型',
               link: '/Interview/Network/network-model',
             },
+            {
+              text: '常见请求方法',
+              link: '/Interview/Network/request-method',
+            },
           ],
         },
       ],
