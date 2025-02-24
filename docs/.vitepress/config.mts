@@ -287,6 +287,10 @@ export default defineConfig({
               text: '常见请求方法',
               link: '/Interview/Network/request-method',
             },
+            {
+              text: 'Cookie',
+              link:"/Interview/Network/cookie",
+            }
           ],
         },
       ],
