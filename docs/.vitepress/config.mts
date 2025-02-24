@@ -31,7 +31,7 @@ export default defineConfig({
       'link',
       {
         rel: 'stylesheet',
-        href: 'https://chinese-fonts-cdn.deno.dev/packages/yozai/dist/Yozai-Bold/result.css',
+        href: 'https://chinese-fonts-cdn.deno.dev/packages/yozai/dist/Yozai-Medium/result.css',
       },
     ],
   ],
