@@ -1,0 +1,33 @@
+---
+date: 2025-02-24
+tags:
+  - LeetCode
+  - 计算机基础
+  - 数据结构与算法
+---
+
+# LeetCode Hot 100 - 哈希
+
+## 1. 两数之和
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function (nums, target) {
+  const map = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    if (map.has(target - nums[i])) {
+      return [i, map.get(target - nums[i])];
+    }
+    map.set(nums[i], i);
+  }
+  return [];
+};
+```
+
+## 49. 字母异位词分组
+
+## 128. 最长连续序列

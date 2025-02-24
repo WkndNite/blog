@@ -98,7 +98,18 @@ export default defineConfig({
       { text: '面试备战', link: '/Interview/' },
     ],
     sidebar: {
-      '/CS/': [],
+      '/CS/': [
+        {
+          text: 'LeetCode Hot 100',
+          collapsed: false,
+          items: [
+            {
+              text: '哈希',
+              link: '/CS/leetcode100/hash',
+            },
+          ],
+        },
+      ],
       '/Frontend/': [
         {
           text: 'CSS',
@@ -289,8 +300,8 @@ export default defineConfig({
             },
             {
               text: 'Cookie',
-              link:"/Interview/Network/cookie",
-            }
+              link: '/Interview/Network/cookie',
+            },
           ],
         },
       ],
