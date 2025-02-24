@@ -130,6 +130,10 @@ export default defineConfig({
               text: '一些或大或小的坑',
               link: '/Frontend/JavaScript/some-details',
             },
+            {
+              text: '位运算',
+              link: '/Frontend/JavaScript/bit-operation',
+            },
           ],
         },
         {
