@@ -145,6 +145,10 @@ export default defineConfig({
               text: '位运算',
               link: '/Frontend/JavaScript/bit-operation',
             },
+            {
+              text: 'JavaScript 作用域与闭包',
+              link: '/Frontend/JavaScript/scope-closure',
+            },
           ],
         },
         {
