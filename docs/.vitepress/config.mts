@@ -306,6 +306,10 @@ export default defineConfig({
               text: 'Cookie',
               link: '/Interview/Network/cookie',
             },
+            {
+              text: 'cookie 和 storage 的区别',
+              link: '/Interview/Network/cookie-storage-difference',
+            },
           ],
         },
       ],

@@ -30,4 +30,23 @@ var twoSum = function (nums, target) {
 
 ## 49. 字母异位词分组
 
+```js
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+var groupAnagrams = function (strs) {
+  const map = new Map();
+  for (let str of strs) {
+    const count = new Array(26).fill(0);
+    for (let c of str) {
+      count[c.charCodeAt() - 'a'.charCodeAt()]++;
+    }
+    const key = count.join(' ');
+    map.has(key) ? map.get(key).push(str) : map.set(key, [str]);
+  }
+  return Array.from(map.values());
+};
+```
+
 ## 128. 最长连续序列

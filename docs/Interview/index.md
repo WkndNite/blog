@@ -12,3 +12,4 @@ author: false
 - [五层网络模型](./Network/network-model.md)
 - [常见的请求方法](./Network/request-method.md)
 - [Cookie](./Network/cookie.md)
+- [cookie、sessionStorage、localStorage的区别](./Network/cookie-storage-difference.md)
