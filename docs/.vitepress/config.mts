@@ -107,6 +107,10 @@ export default defineConfig({
               text: '哈希',
               link: '/CS/leetcode100/hash',
             },
+            {
+              text: '链表',
+              link: '/CS/leetcode100/linklist',
+            },
           ],
         },
       ],
