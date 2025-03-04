@@ -111,6 +111,10 @@ export default defineConfig({
               text: '链表',
               link: '/CS/leetcode100/linklist',
             },
+            {
+              text: '双指针',
+              link: '/CS/leetcode100/two-pointer',
+            },
           ],
         },
       ],
