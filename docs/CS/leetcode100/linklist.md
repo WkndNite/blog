@@ -56,3 +56,48 @@ var getIntersectionNode = function (headA, headB) {
   return curB;
 };
 ```
+
+## 21. 合并两个有序链表
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} i
+ * @param {ListNode} j
+ * @return {ListNode}
+ */
+var mergeTwoLists = function (list1, list2) {
+  let i = list1;
+  let j = list2;
+  let res = new ListNode(-101, null);
+  let cur = res;
+  while (i && j) {
+    if (i.val <= j.val) {
+      cur.next = i;
+      cur = cur.next;
+      i = i.next;
+    } else {
+      cur.next = j;
+      cur = cur.next;
+      j = j.next;
+    }
+  }
+  while (i) {
+    cur.next = i;
+    cur = cur.next;
+    i = i.next;
+  }
+  while (j) {
+    cur.next = j;
+    cur = cur.next;
+    j = j.next;
+  }
+  return res.next;
+};
+```
