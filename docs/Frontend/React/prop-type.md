@@ -143,7 +143,7 @@ export default App;
 
 :::code-group
 
-```js [ChildCom.jsx]
+```jsx [ChildCom.jsx]
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -193,7 +193,7 @@ export default App;
 
 :::code-group
 
-```js [ChildCom.jsx]
+```jsx [ChildCom.jsx]
 import React from 'react';
 
 function ChildCom(props) {

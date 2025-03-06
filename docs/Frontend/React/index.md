@@ -11,3 +11,5 @@ author: false
 - [React 核心概念（二）](./core-concepts-two.md)
 - [React 路由](./router.md)
 - [React 中的状态管理库](./redux.md)
+- [属性默认值和类型验证](./prop-type.md)
+- [高阶组件](./hoc.md)

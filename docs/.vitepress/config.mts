@@ -91,6 +91,10 @@ export default defineConfig({
             text: '设计模式与设计原则',
             link: '/DevTips/Design',
           },
+          {
+            text: '开发杂谈',
+            link: '/DevTips/Others',
+          },
         ],
       },
       { text: '项目记录', link: '/Projects/' },
@@ -222,6 +226,14 @@ export default defineConfig({
             {
               text: 'React 中的状态管理库',
               link: '/Frontend/React/redux',
+            },
+            {
+              text: '属性默认值和类型检查',
+              link: '/Frontend/React/prop-type',
+            },
+            {
+              text: '高阶组件',
+              link: '/Frontend/React/hoc',
             },
           ],
         },
