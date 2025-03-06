@@ -101,3 +101,38 @@ var mergeTwoLists = function (list1, list2) {
   return res.next;
 };
 ```
+
+## 234. 回文链表
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+var isPalindrome = function (head) {
+  const result = [];
+  let cur = head;
+  while (cur) {
+    result.push(cur.val);
+    cur = cur.next;
+  }
+  const length = result.length;
+  let left = 0;
+  let right = length - 1;
+  while (left <= right) {
+    if (result[left] !== result[right]) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+  return true;
+};
+```
