@@ -1,0 +1,36 @@
+{
+  "blog-header": {
+    "prefix": "blog-header",
+    "body": [
+      "---",
+      "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+      "tags:",
+      "   - $2",
+      "---",
+    ],
+  },
+  "blog-container": {
+    "prefix": "blog-container",
+    "body": [":::${1|info,warning,tip,details,danger|}", "$2", ":::"],
+  },
+  "insert js code": {
+    "prefix": "jscode",
+    "body": ["```js [$1]", "$2", "```"],
+  },
+  "insert jsx code": {
+    "prefix": "jsxcode",
+    "body": ["```jsx [$1]", "$2", "```"],
+  },
+  "insert css code": {
+    "prefix": "csscode",
+    "body": ["```css [$1]", "$2", "```"],
+  },
+  "insert html code": {
+    "prefix": "htmlcode",
+    "body": ["```html [$1]", "$2", "```"],
+  },
+  "insert code group": {
+    "prefix": "codegroup",
+    "body": [":::code-group", "$1", ":::"],
+  },
+}

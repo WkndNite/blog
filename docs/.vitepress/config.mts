@@ -235,6 +235,10 @@ export default defineConfig({
               text: '高阶组件',
               link: '/Frontend/React/hoc',
             },
+            {
+              text: 'Context',
+              link: '/Frontend/React/context',
+            },
           ],
         },
       ],
