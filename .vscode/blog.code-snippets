@@ -37,4 +37,8 @@
     "prefix": "video",
     "body": ["<VideoPlayer platform=\"local\" src=\"/videos/$1\" />"],
   },
+  "index navigate": {
+    "prefix": "index",
+    "body": ["---", "hidden: true", "date: false", "author: false", "---"],
+  },
 }

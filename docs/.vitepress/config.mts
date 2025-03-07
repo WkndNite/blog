@@ -63,6 +63,10 @@ export default defineConfig({
             link: '/Frontend/JavaScript',
           },
           {
+            text: 'ES6+',
+            link: '/Frontend/ES6+',
+          },
+          {
             text: 'TypeScript',
             link: '/Frontend/TypeScript',
           },
@@ -164,6 +168,16 @@ export default defineConfig({
             {
               text: 'JavaScript 作用域与闭包',
               link: '/Frontend/JavaScript/scope-closure',
+            },
+          ],
+        },
+        {
+          text: 'ES6+',
+          collapsed: false,
+          items: [
+            {
+              text: 'ES6 一些零碎的改动',
+              link: '/Frontend/ES6+/some-changes',
             },
           ],
         },
