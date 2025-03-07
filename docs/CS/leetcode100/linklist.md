@@ -8,6 +8,51 @@ tags:
 
 # LeetCode Hot 100 - 链表
 
+## 21. 合并两个有序链表
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} i
+ * @param {ListNode} j
+ * @return {ListNode}
+ */
+var mergeTwoLists = function (list1, list2) {
+  let i = list1;
+  let j = list2;
+  let res = new ListNode(-101, null);
+  let cur = res;
+  while (i && j) {
+    if (i.val <= j.val) {
+      cur.next = i;
+      cur = cur.next;
+      i = i.next;
+    } else {
+      cur.next = j;
+      cur = cur.next;
+      j = j.next;
+    }
+  }
+  while (i) {
+    cur.next = i;
+    cur = cur.next;
+    i = i.next;
+  }
+  while (j) {
+    cur.next = j;
+    cur = cur.next;
+    j = j.next;
+  }
+  return res.next;
+};
+```
+
 ## 160. 相交链表
 
 ```js
@@ -57,7 +102,7 @@ var getIntersectionNode = function (headA, headB) {
 };
 ```
 
-## 21. 合并两个有序链表
+## 206. 反转链表
 
 ```js
 /**
@@ -68,37 +113,18 @@ var getIntersectionNode = function (headA, headB) {
  * }
  */
 /**
- * @param {ListNode} i
- * @param {ListNode} j
+ * @param {ListNode} head
  * @return {ListNode}
  */
-var mergeTwoLists = function (list1, list2) {
-  let i = list1;
-  let j = list2;
-  let res = new ListNode(-101, null);
-  let cur = res;
-  while (i && j) {
-    if (i.val <= j.val) {
-      cur.next = i;
-      cur = cur.next;
-      i = i.next;
-    } else {
-      cur.next = j;
-      cur = cur.next;
-      j = j.next;
-    }
+var reverseList = function (head) {
+  let newHead = null;
+  while (head) {
+    const next = head.next;
+    head.next = newHead;
+    newHead = head;
+    head = next;
   }
-  while (i) {
-    cur.next = i;
-    cur = cur.next;
-    i = i.next;
-  }
-  while (j) {
-    cur.next = j;
-    cur = cur.next;
-    j = j.next;
-  }
-  return res.next;
+  return newHead;
 };
 ```
 
@@ -134,31 +160,5 @@ var isPalindrome = function (head) {
     right--;
   }
   return true;
-};
-```
-
-## 206. 反转链表
-
-```js
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-var reverseList = function (head) {
-  let newHead = null;
-  while (head) {
-    const next = head.next;
-    head.next = newHead;
-    newHead = head;
-    head = next;
-  }
-  return newHead;
 };
 ```

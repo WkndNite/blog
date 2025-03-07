@@ -127,6 +127,10 @@ export default defineConfig({
               text: '双指针',
               link: '/CS/leetcode100/two-pointer',
             },
+            {
+              text: '动态规划',
+              link: '/CS/leetcode100/dp',
+            },
           ],
         },
       ],
