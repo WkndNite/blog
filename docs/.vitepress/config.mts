@@ -67,6 +67,10 @@ export default defineConfig({
             link: '/Frontend/TypeScript',
           },
           {
+            text: 'Webpack',
+            link: '/Frontend/Webpack',
+          },
+          {
             text: 'Vue',
             link: '/Frontend/Vue',
           },
@@ -170,6 +174,16 @@ export default defineConfig({
             {
               text: '字节 · 深入浅出 TypeScript',
               link: '/Frontend/TypeScript/byte-ts',
+            },
+          ],
+        },
+        {
+          text: 'Webpack',
+          collapsed: false,
+          items: [
+            {
+              text: 'Webpack 入门',
+              link: '/Frontend/Webpack/intro',
             },
           ],
         },
