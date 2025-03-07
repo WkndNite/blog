@@ -2,7 +2,8 @@ import BlogTheme from '@sugarat/theme';
 import Fireworks from './components/Fireworks.vue';
 import './style.scss';
 import { h } from 'vue';
-import { ShareButton, DocVideoLink } from '@theojs/lumen';
+import { ShareButton } from '@theojs/lumen';
+import VideoPlayer from './components/VideoPlayer.vue';
 
 export default {
   ...BlogTheme,
@@ -24,6 +25,6 @@ export default {
   enhanceApp({ app, router, siteData }) {
     app.component('Fireworks', Fireworks);
     app.component('ShareButton', ShareButton);
-    app.component('Vid', DocVideoLink);
+    app.component('VideoPlayer', VideoPlayer);
   },
 };
