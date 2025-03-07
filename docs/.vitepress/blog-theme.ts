@@ -19,7 +19,7 @@ const blogTheme = getThemeConfig({
   recommend: false,
   author: '周末晚',
   home: {
-    logo: '/avatar.png',
+    logo: '/avatar.jpg',
   },
   friend: {
     list: [
