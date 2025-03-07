@@ -176,8 +176,12 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
-              text: 'ES6 一些零碎的改动',
+              text: 'ES6+ 一些零碎的改动',
               link: '/Frontend/ES6+/some-changes',
+            },
+            {
+              text: 'ES6 中数组的改动',
+              link: '/Frontend/ES6+/array',
             },
           ],
         },
