@@ -15,19 +15,19 @@
   },
   "insert js code": {
     "prefix": "jscode",
-    "body": ["```js [$1]", "$2", "```"],
+    "body": ["```js", "$2", "```"],
   },
   "insert jsx code": {
     "prefix": "jsxcode",
-    "body": ["```jsx [$1]", "$2", "```"],
+    "body": ["```jsx", "$2", "```"],
   },
   "insert css code": {
     "prefix": "csscode",
-    "body": ["```css [$1]", "$2", "```"],
+    "body": ["```css", "$2", "```"],
   },
   "insert html code": {
     "prefix": "htmlcode",
-    "body": ["```html [$1]", "$2", "```"],
+    "body": ["```html", "$2", "```"],
   },
   "insert code group": {
     "prefix": "codegroup",
