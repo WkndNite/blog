@@ -14,3 +14,4 @@ author: false
 - [属性默认值和类型验证](./prop-type.md)
 - [高阶组件](./hoc.md)
 - [Context](./context.md)
+- [Render Props](./render-props.md)

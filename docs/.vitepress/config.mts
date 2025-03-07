@@ -239,6 +239,10 @@ export default defineConfig({
               text: 'Context',
               link: '/Frontend/React/context',
             },
+            {
+              text: 'Render Props',
+              link: '/Frontend/React/render-props',
+            },
           ],
         },
       ],

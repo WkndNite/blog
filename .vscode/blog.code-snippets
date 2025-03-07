@@ -33,4 +33,8 @@
     "prefix": "codegroup",
     "body": [":::code-group", "$1", ":::"],
   },
+  "insert video": {
+    "prefix": "video",
+    "body": ["<VideoPlayer platform=\"local\" src=\"/videos/$1\" />"],
+  },
 }
