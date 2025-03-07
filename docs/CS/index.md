@@ -13,3 +13,4 @@ author: false
 - [链表](./leetcode100/linklist.md)
 - [双指针](./leetcode100/two-pointer.md)
 - [动态规划](./leetcode100/dp.md)
+- [巧妙的解题方法](./leetcode100/technique.md)

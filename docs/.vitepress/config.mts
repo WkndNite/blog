@@ -131,6 +131,10 @@ export default defineConfig({
               text: '动态规划',
               link: '/CS/leetcode100/dp',
             },
+            {
+              text: '巧妙的解题方法',
+              link: '/CS/leetcode100/technique',
+            },
           ],
         },
       ],

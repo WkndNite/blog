@@ -53,6 +53,74 @@ var mergeTwoLists = function (list1, list2) {
 };
 ```
 
+## 141. 环形链表
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+var hasCycle = function (head) {
+  let slow = head;
+  let fast = head;
+
+  while (fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+    if (fast === slow) {
+      return true;
+    }
+  }
+
+  return false;
+};
+```
+
+## 142. 环形链表 II
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var detectCycle = function (head) {
+  if (!head || !head.next) return null;
+  // a + ( n + 1 ) * b + n * c = 2 * ( a + b )
+  // (n - 1 ) * b + n * c = a = ( n - 1 ) * ( b + c ) + c
+  let slow = head,
+    fast = head;
+  while (fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+    if (fast === slow) {
+      let ptr = head;
+      while (ptr !== slow) {
+        ptr = ptr.next;
+        slow = slow.next;
+      }
+      return ptr;
+    }
+  }
+  return null;
+};
+```
+
 ## 160. 相交链表
 
 ```js
@@ -99,6 +167,28 @@ var getIntersectionNode = function (headA, headB) {
     curA = curA.next;
   }
   return curB;
+};
+```
+
+## 198. 打家劫舍
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var rob = function (nums) {
+  // dp[n] = max(dp[n-1] , dp[n-2]+nums[n])
+  if (!nums.length) return 0;
+  if (nums.length === 1) return nums[0];
+  if (nums.length === 2) return nums[0] > nums[1] ? nums[0] : nums[1];
+  const dp = [];
+  dp[0] = nums[0];
+  dp[1] = nums[0] > nums[1] ? nums[0] : nums[1];
+  for (let i = 2; i < nums.length; i++) {
+    dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]);
+  }
+  return dp[nums.length - 1];
 };
 ```
 
