@@ -243,6 +243,10 @@ export default defineConfig({
               text: 'Render Props',
               link: '/Frontend/React/render-props',
             },
+            {
+              text: 'Portals',
+              link: '/Frontend/React/portals',
+            },
           ],
         },
       ],
