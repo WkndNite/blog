@@ -128,6 +128,10 @@ export default defineConfig({
               link: '/CS/leetcode100/two-pointer',
             },
             {
+              text: '树',
+              link: '/CS/leetcode100/tree',
+            },
+            {
               text: '动态规划',
               link: '/CS/leetcode100/dp',
             },
