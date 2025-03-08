@@ -6,4 +6,5 @@ author: false
 
 # Webpack
 
-- [Webpack 的核心功能](./intro.md)
+- [Webpack 入门](./intro.md)
+- [模块化兼容性](./module-compatibility.md)

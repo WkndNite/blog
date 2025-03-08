@@ -211,6 +211,10 @@ export default defineConfig({
               text: 'Webpack 入门',
               link: '/Frontend/Webpack/intro',
             },
+            {
+              text: '模块化兼容性',
+              link: '/Frontend/Webpack/module-compatibility',
+            },
           ],
         },
         {
