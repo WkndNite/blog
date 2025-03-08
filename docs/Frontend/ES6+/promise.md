@@ -385,12 +385,12 @@ method(); // 输出： 失败 123
 
 1. 1 👉 2 👉 4 👉 3
 2. 1 👉 5 👉 2 👉 3 👉 4
-3. pending 👉 pending 👉 fulfilled 👉 fulfilled
+3. promise { &lt; pending &gt; } 👉 promise { &lt; pending &gt; } 👉 promise { &lt; undefined &gt; } 👉 promise { &lt; undefined &gt; }
 4. 2 👉 1
 5. 3 👉 1 👉 2
-6. pending 👉 pending 👉 4 👉 1 👉 3 👉 1
+6. promise { &lt; pending &gt; } 👉 promise { &lt; pending &gt; } 👉 4 👉 1 👉 3 👉 1
 7. 1
-8. promise1 👉 undefined 👉 end 👉 promise2 👉 promise3 👉 promise4 👉 pending 👉 after1
+8. promise1 👉 undefined 👉 end 👉 promise2 👉 promise3 👉 promise4 👉 promise { &lt; pending &gt; } 👉 after1
 9. script start 👉 async1 start 👉 async2 👉 promise1 👉 script end 👉 async1 end 👉 promise2 👉 setTimeout
 
 :::
