@@ -16,3 +16,4 @@ author: false
 - [Context](./context.md)
 - [Render Props](./render-props.md)
 - [Portals](./portals.md)
+- [组件渲染时的性能优化](./performance.md)

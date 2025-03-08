@@ -287,6 +287,10 @@ export default defineConfig({
               text: 'Portals',
               link: '/Frontend/React/portals',
             },
+            {
+              text: '组件渲染时的性能优化',
+              link: '/Frontend/React/performance',
+            },
           ],
         },
       ],
