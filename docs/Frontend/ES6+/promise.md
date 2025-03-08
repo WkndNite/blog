@@ -384,7 +384,7 @@ method(); // 输出： 失败 123
 :::details 参考答案
 
 1. 1 👉 2 👉 4 👉 3
-2. 1 👉 5 👉 4 👉 2 👉 3
+2. 1 👉 5 👉 2 👉 3 👉 4
 3. pending 👉 pending 👉 fulfilled 👉 fulfilled
 4. 2 👉 1
 5. 3 👉 1 👉 2
