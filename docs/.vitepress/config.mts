@@ -191,6 +191,14 @@ export default defineConfig({
               text: 'ES6 中数组的改动',
               link: '/Frontend/ES6+/array',
             },
+            {
+              text: 'ES6 中对象的改动',
+              link: '/Frontend/ES6+/object',
+            },
+            {
+              text: 'Promise',
+              link: '/Frontend/ES6+/promise',
+            },
           ],
         },
         {
