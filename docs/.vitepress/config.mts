@@ -53,7 +53,19 @@ export default defineConfig({
     ],
     nav: [
       { text: '首页', link: '/' },
-      { text: 'CS 基础', link: '/CS/' },
+      {
+        text: 'CS 基础',
+        items: [
+          {
+            text: 'LeetCode Hot 100',
+            link: '/CS/LeetCode-100',
+          },
+          {
+            text: '数据结构与算法',
+            link: '/CS/DSA',
+          },
+        ],
+      },
       {
         text: '前端学习',
         items: [
@@ -117,27 +129,27 @@ export default defineConfig({
           items: [
             {
               text: '哈希',
-              link: '/CS/leetcode100/hash',
+              link: '/CS/LeetCode-100/hash',
             },
             {
               text: '链表',
-              link: '/CS/leetcode100/linklist',
+              link: '/CS/LeetCode-100/linklist',
             },
             {
               text: '双指针',
-              link: '/CS/leetcode100/two-pointer',
+              link: '/CS/LeetCode-100/two-pointer',
             },
             {
               text: '树',
-              link: '/CS/leetcode100/tree',
+              link: '/CS/LeetCode-100/tree',
             },
             {
               text: '动态规划',
-              link: '/CS/leetcode100/dp',
+              link: '/CS/LeetCode-100/dp',
             },
             {
               text: '巧妙的解题方法',
-              link: '/CS/leetcode100/technique',
+              link: '/CS/LeetCode-100/technique',
             },
           ],
         },
