@@ -387,6 +387,11 @@ export default defineConfig({
               text: '请求转发与默认打包路径冲突',
               link: '/Projects/React/path-conflict-proxy-pack',
             },
+            // - [Toast UI 报错无法 parse sourcemap](./React/toastui-parse-sourcemap.md)
+            {
+              text: 'Toast UI sourcemap 报错',
+              link: '/Projects/React/toastui-parse-sourcemap',
+            },
           ],
         },
       ],
