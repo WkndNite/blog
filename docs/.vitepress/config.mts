@@ -153,6 +153,20 @@ export default defineConfig({
             },
           ],
         },
+        {
+          text: '数据结构与算法',
+          collapsed: false,
+          items: [
+            {
+              text: '前端必会算法（一）',
+              link: '/CS/DSA/frontend-1',
+            },
+            {
+              text: '前端必会算法（二）',
+              link: '/CS/DSA/frontend-2',
+            },
+          ],
+        },
       ],
       '/Frontend/': [
         {
