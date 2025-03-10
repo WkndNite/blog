@@ -165,6 +165,10 @@ export default defineConfig({
               text: '前端必会算法（二）',
               link: '/CS/DSA/frontend-2',
             },
+            {
+              text: '前端必会算法（三）',
+              link: '/CS/DSA/frontend-3',
+            },
           ],
         },
       ],

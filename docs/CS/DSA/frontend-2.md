@@ -79,3 +79,55 @@ function buildTree(inOrder, postOrder) {
   };
 }
 ```
+
+## 二叉树的比较
+
+```js
+function CompareTree(root1, root2) {
+  if (root1 === root2) return true;
+  if (!root1 || !root2) return false;
+  if (root1.length !== root2.length) return false;
+  if (root1.data !== root2.data) return false;
+  return (
+    CompareTree(root1.left, root2.left) && CompareTree(root1.right, root2.right)
+  );
+}
+```
+
+## 可对称二叉树比较
+
+```js
+function CompareTree(root1, root2) {
+  if (root1 === root2) return true;
+  if (!root1 || !root2) return false;
+  if (root1.length !== root2.length) return false;
+  if (root1.data !== root2.data) return false;
+  return (
+    (CompareTree(root1.left, root2.left) &&
+      CompareTree(root1.right, root2.right)) ||
+    (CompareTree(root1.left, root2.right) &&
+      CompareTree(root1.right, root2.left))
+  );
+}
+```
+
+## 二叉树的 diff 算法
+
+```js
+function diffTree(root1, root2) {
+  const diffList = [];
+  if (root1 === root2) return diffList;
+  else if (!root1) {
+    diffList.push({ type: 'add', before: null, after: root2 });
+  } else if (!root2) {
+    diffList.push({ type: 'remove', before: root1, after: null });
+  } else if (root1.data !== root2.data) {
+    diffList.push({ type: 'update', before: root1.data, after: root2.data });
+    diffTree(root1.left, root2.left);
+    diffTree(root1.right, root2.right);
+  } else {
+    diffTree(root1.left, root2.left);
+    diffTree(root1.right, root2.right);
+  }
+}
+```
