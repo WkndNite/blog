@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@theojs/lumen": "^5.4.0",
+    "busuanzi.pure.js": "^1.0.3",
     "markdown-it-mathjax3": "^4.3.2",
     "pagefind": "^1.1.1",
     "sass": "^1.76.0",
