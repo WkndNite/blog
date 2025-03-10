@@ -4,6 +4,7 @@ description: 难道我是一名工程化大师？
 tags:
   - Webpack
   - 前端
+  - 工程化
 ---
 
 # Webpack 入门
@@ -76,7 +77,7 @@ Webpack 是基于模块化的打包（构建）工具，它把一切视为模块
 - **基于 NodeJS**：由于 Webpack 在构建的过程中需要读取文件，因此它是运行在 node 环境中的。
 - **基于模块化**：Webpack 在构建过程中要分析依赖关系，方式是通过模块化导入语句进行分析的。它还支持各种模块化标准，包括但不限于 ES6、CommonJS。
 
-### WebPack 的安装
+### Webpack 的安装
 
 Webpack 通过 npm 安装，它提供了两个包：
 

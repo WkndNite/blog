@@ -257,6 +257,10 @@ export default defineConfig({
               text: 'Webpack 中的 配置文件',
               link: '/Frontend/Webpack/config',
             },
+            {
+              text: 'Webpack 编译过程',
+              link: '/Frontend/Webpack/compile-process',
+            },
           ],
         },
         {
