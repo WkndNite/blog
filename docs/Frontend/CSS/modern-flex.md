@@ -178,6 +178,8 @@ $$
 在 Flex 布局中，最好使用 `flex-basis`。
 :::
 
+## 总结
+
 > [!IMPORTANT] 重点
 > 在 Flex 布局中，`flex` 是用于设置 `flex-grow`、`flex-shrink` 和 `flex-basis` 的简写属性。
 
