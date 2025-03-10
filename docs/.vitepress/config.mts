@@ -94,6 +94,10 @@ export default defineConfig({
             text: 'React',
             link: '/Frontend/React',
           },
+          {
+            text: '浏览器',
+            link: '/Frontend/Browser',
+          },
         ],
       },
       {
@@ -352,6 +356,16 @@ export default defineConfig({
             {
               text: '组件渲染时的性能优化',
               link: '/Frontend/React/performance',
+            },
+          ],
+        },
+        {
+          text: '浏览器',
+          collapsed: false,
+          items: [
+            {
+              text: '浏览器渲染原理',
+              link: '/Frontend/Browser/render',
             },
           ],
         },
