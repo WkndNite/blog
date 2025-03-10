@@ -189,6 +189,14 @@ export default defineConfig({
               text: '层叠上下文',
               link: '/Frontend/CSS/stacking-context',
             },
+            {
+              text: '现代化 CSS 中的 border',
+              link: '/Frontend/CSS/modern-border',
+            },
+            {
+              text: '一文搞懂 flex',
+              link: '/Frontend/CSS/modern-flex',
+            },
           ],
         },
         {
