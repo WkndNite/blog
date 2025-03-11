@@ -98,6 +98,27 @@ var levelOrder = function (root) {
 };
 ```
 
+## 104. 二叉树的最大深度
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var maxDepth = function (root) {
+  if (!root) return 0;
+  return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+};
+```
+
 ## 106. 从中序与后序遍历序列构造二叉树
 
 ```js
@@ -129,27 +150,6 @@ var buildTree = function (inorder, postorder) {
   root.right = buildTree(inorderRight, postorderRight);
 
   return root;
-};
-```
-
-## 104. 二叉树的最大深度
-
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {number}
- */
-var maxDepth = function (root) {
-  if (!root) return 0;
-  return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
 };
 ```
 

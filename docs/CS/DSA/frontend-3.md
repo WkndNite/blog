@@ -109,3 +109,69 @@ function buildBST(arr) {
   return root;
 }
 ```
+
+## 二叉树单旋
+
+![alt](./assets/rotate.excalidraw.png)
+
+```js
+function rightRotate(root) {
+  if (!root || !root.left) return root;
+  const newRoot = root.left;
+  root.left = newRoot.right;
+  newRoot.right = root;
+  return newRoot;
+}
+function leftRotate(root) {
+  if (!root || !root.right) return root;
+  const newRoot = root.right;
+  root.right = newRoot.left;
+  newRoot.left = root;
+  return newRoot;
+}
+function change(root) {
+  if (!root) return null;
+  root.left = change(root.left);
+  root.right = change(root.right);
+
+  const leftHeight = getHeight(root.left);
+  const rightHeight = getHeight(root.right);
+  if (Math.abs(leftHeight - rightHeight) <= 1) return root;
+
+  // LL 型（左子树更高，且左子树的左子树更高）
+  if (
+    leftHeight > rightHeight &&
+    getHeight(root.left.left) >= getHeight(root.left.right)
+  ) {
+    return rightRotate(root);
+  }
+
+  // LR 型（左子树更高，且左子树的右子树更高）
+  if (
+    leftHeight > rightHeight &&
+    getHeight(root.left.left) < getHeight(root.left.right)
+  ) {
+    root.left = leftRotate(root.left);
+    return rightRotate(root);
+  }
+
+  // RR 型（右子树更高，且右子树的右子树更高）
+  if (
+    rightHeight > leftHeight &&
+    getHeight(root.right.right) >= getHeight(root.right.left)
+  ) {
+    return leftRotate(root);
+  }
+
+  // RL 型（右子树更高，且右子树的左子树更高）
+  if (
+    rightHeight > leftHeight &&
+    getHeight(root.right.right) < getHeight(root.right.left)
+  ) {
+    root.right = rightRotate(root.right);
+    return leftRotate(root);
+  }
+
+  return root;
+}
+```
