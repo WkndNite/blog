@@ -8,6 +8,20 @@ tags:
 
 # 动态规划
 
+## 53. 最大子数组和
+
+```js
+var maxSubArray = function (nums) {
+  let pre = 0,
+    result = nums[0];
+  nums.forEach((item) => {
+    pre = Math.max(item + pre, item);
+    result = Math.max(result, pre);
+  });
+  return result;
+};
+```
+
 ## 70. 爬楼梯
 
 ```js

@@ -132,6 +132,10 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
+              text: '二分查找',
+              link: '/CS/LeetCode-100/binary-search',
+            },
+            {
               text: '哈希',
               link: '/CS/LeetCode-100/hash',
             },
