@@ -37,6 +37,12 @@ const blogTheme = getThemeConfig({
         url: 'https://vitepress.dev/',
       },
       {
+        nickname: 'Yiov',
+        des: 'VitePress 快速上手中文教程',
+        avatar: 'https://avatars.githubusercontent.com/u/90893790?v=4',
+        url: 'https://vitepress.yiov.top/',
+      },
+      {
         nickname: '苏柘',
         des: '去发光，而不是被照亮',
         avatar: 'https://suzhelevel6.github.io/suzhe_blog/touxiang1MB.jpg',
@@ -47,6 +53,12 @@ const blogTheme = getThemeConfig({
         des: '集成 Vue 功能组件和主题美化的 VitePress 插件',
         avatar: 'https://lumen.theojs.cn/Logo.webp',
         url: 'https://lumen.theojs.cn/',
+      },
+      {
+        nickname: '茂茂导航',
+        des: '基于 VitePress 的个人前端导航页面模板',
+        avatar: 'https://fe-nav.netlify.app/logo.png',
+        url: 'https://fe-nav.netlify.app/',
       },
     ],
     random: true,
