@@ -110,7 +110,7 @@ function render(html) {
 
    分层的好处在于，将来某一个层改变后，仅会对该层进行后续处理，从而 `提升效率`。
 
-   <p class="multi-underline">滚动条、堆叠上下文、transform、opacity 等样式都会或多或少的影响分层结果，也可以通过 will-change 属性更大程度的影响分层结果。</p>
+   <mark>滚动条、堆叠上下文、transform、opacity 等样式都会或多或少的影响分层结果，也可以通过 will-change 属性更大程度的影响分层结果。</mark>
 
 7. 第五步是绘制。
 
