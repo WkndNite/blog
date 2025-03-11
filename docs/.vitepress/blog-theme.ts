@@ -64,7 +64,7 @@ const blogTheme = getThemeConfig({
   },
   comment: {
     label: '',
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 48 48"><g fill="none" stroke-linecap="round" stroke-width="4"><path fill="#2F88FF" stroke="#000" stroke-linejoin="round" d="M44 8H4V38H19L24 43L29 38H44V8Z"/><path stroke="#fff" d="M21 15L20 32"/><path stroke="#fff" d="M28 15L27 32"/><path stroke="#fff" d="M33 20L16 20"/><path stroke="#fff" d="M32 27L15 27"/></g></svg>',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><g fill="none" stroke-linecap="round" stroke-width="4"><path fill="#2F88FF" stroke="#000" stroke-linejoin="round" d="M44 8H4V38H19L24 43L29 38H44V8Z"/><path stroke="#fff" d="M21 15L20 32"/><path stroke="#fff" d="M28 15L27 32"/><path stroke="#fff" d="M33 20L16 20"/><path stroke="#fff" d="M32 27L15 27"/></g></svg>',
     type: 'giscus',
     options: {
       repo: 'WkndNite/blog',
@@ -90,11 +90,6 @@ const blogTheme = getThemeConfig({
         type: 'text',
         content: '欢迎私信交流',
       },
-      {
-        type: 'text',
-        content: '<span id="busuanzi_value_site_uv" /> 人次',
-      },
-      { type: 'text', content: '<span id="busuanzi_value_site_pv" /> 次' },
     ],
   },
 });
