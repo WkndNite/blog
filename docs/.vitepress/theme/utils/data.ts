@@ -397,7 +397,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://echarts.apache.org/zh/index.html',
       },
       {
-        icon: 'https://antv.vision/icons/icon-72x72.png',
+        icon: 'https://mdn.alipayobjects.com/huamei_qa8qxu/afts/img/A*A-lcQbVTpjwAAAAAAAAAAAAADmJ7AQ/original',
         title: 'AntV',
         desc: '蚂蚁集团全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。',
         link: 'https://antv.vision/zh/',
