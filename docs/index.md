@@ -14,5 +14,3 @@ blog:
   inspiringTimeout: 3000
   pageSize: 9
 ---
-
-<DataPanel />

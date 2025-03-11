@@ -4,9 +4,6 @@ import './style.scss';
 import { h } from 'vue';
 import { ShareButton } from '@theojs/lumen';
 import VideoPlayer from './components/VideoPlayer.vue';
-import { inBrowser } from 'vitepress';
-import busuanzi from 'busuanzi.pure.js';
-import DataPanel from './components/DataPanel.vue';
 
 export default {
   ...BlogTheme,
@@ -29,11 +26,5 @@ export default {
     app.component('Fireworks', Fireworks);
     app.component('ShareButton', ShareButton);
     app.component('VideoPlayer', VideoPlayer);
-    app.component('DataPanel', DataPanel);
-    if (inBrowser) {
-      router.onAfterRouteChanged = () => {
-        busuanzi.fetch();
-      };
-    }
   },
 };
