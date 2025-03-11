@@ -52,7 +52,7 @@ export default defineConfig({
       },
     ],
     nav: [
-      { text: '首页', link: '/' },
+      { text: '导航站', link: '/Nav' },
       {
         text: 'CS 基础',
         items: [

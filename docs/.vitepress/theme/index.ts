@@ -4,11 +4,17 @@ import './style.scss';
 import { h } from 'vue';
 import { ShareButton } from '@theojs/lumen';
 import VideoPlayer from './components/VideoPlayer.vue';
+import { useData } from 'vitepress';
+import MNavLinks from './components/MNavLinks.vue';
 
 export default {
   ...BlogTheme,
   Layout: (props: any) => {
+    const { frontmatter } = useData();
     if (BlogTheme.Layout) {
+      if (frontmatter.value?.layoutClass) {
+        props.class = frontmatter.value.layoutClass;
+      }
       return h(BlogTheme.Layout as any, props, {
         'layout-top': () => h(Fireworks),
         'nav-bar-content-after': () =>
@@ -20,9 +26,11 @@ export default {
           }),
       });
     }
+
     return null;
   },
   enhanceApp({ app, router, siteData }) {
+    app.component('MNavLinks', MNavLinks);
     app.component('Fireworks', Fireworks);
     app.component('ShareButton', ShareButton);
     app.component('VideoPlayer', VideoPlayer);
