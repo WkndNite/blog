@@ -170,7 +170,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://iconpark.oceanengine.com/official',
       },
       {
-        icon: 'https://svgl.app/images/logo.svg',
+        icon: '/icons/svgl.svg',
         title: 'SVGL',
         desc: 'SVG 图标库',
         link: 'https://svgl.app/',
