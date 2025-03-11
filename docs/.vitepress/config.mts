@@ -274,12 +274,16 @@ export default defineConfig({
               link: '/Frontend/Webpack/module-compatibility',
             },
             {
-              text: 'Webpack 中的 配置文件',
+              text: 'Webpack 中的配置文件',
               link: '/Frontend/Webpack/config',
             },
             {
               text: 'Webpack 编译过程',
               link: '/Frontend/Webpack/compile-process',
+            },
+            {
+              text: '入口与出口配置',
+              link: '/Frontend/Webpack/entry-output',
             },
           ],
         },
