@@ -52,6 +52,8 @@ mark {
   padding: 0 0.4em;
   border: 1px solid var(--mark-border);
   transition: all 0.3s ease;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 @media (any-hover: hover) {

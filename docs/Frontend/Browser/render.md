@@ -39,13 +39,13 @@ function render(html) {
 
 ![alt](./assets/21160950_93bd310e-74d6-4dd9-bbb3-6322d42e65b0.png)
 
-## Recalculate Style
+### Recalculate Style
 
 ![alt](./assets/21160950_dbfee3fd-5e5d-4943-c1cd-ae97703f188d.png)
 
 对于这一部分，我在[另一篇文章](../CSS/computed.md)里已经有过说明，于是此处不再赘述。
 
-### Layout 布局
+### Layout
 
 ![alt](./assets/21160950_3040d4fc-c208-4389-b90f-093074c778e9.png)
 
@@ -69,6 +69,50 @@ function render(html) {
 - 行盒和块盒不可以相邻。
 
 :::
+
+> 布局过程还会涉及到 **包含块** 的概念。
+
+:::details 包含块
+元素的尺寸和位置，会受它的包含块所影响。对于一些属性，例如 width / height / padding / margin，绝对定位元素的偏移值（比如 position 被设置为 absolute 或 fixed），当我们对其赋予百分比值时，这些值的计算值，就是通过元素的包含块计算得来。
+
+根元素（HTML 元素）所在的包含块，被称之为初始包含块（initial containing block）。对于浏览器而言，初始包含块的的大小等于视口 viewport 的大小，基点在画布的原点（视口左上角）。它是作为元素绝对定位和固定定位的参照物。
+
+> Q：非根元素包含块的判定？
+>
+> 如果元素的 positiion 是 relative 或 static ，那么包含块由离它最近的块容器（block container）的内容区域（content area）的边缘建立。
+>
+> 如果 position 属性是 fixed，那么包含块由视口建立。
+>
+> 如果元素使用了 absolute 定位，则包含块由它的最近的 position 的值不是 static （也就是值为fixed、absolute、relative 或 sticky）的祖先元素的内边距区的边缘组成。
+>
+> 如果 position 属性是 absolute 或 fixed，包含块也可能是由满足以下条件的最近父级元素的内边距区的边缘组成的：
+>
+> - transform 或 perspective 的值不是 none
+> - will-change 的值是 transform 或 perspective
+> - filter 的值不是 none 或 will-change 的值是 filter(只在 Firefox 下生效).
+> - contain 的值是 paint (例如: contain: paint;)
+
+:::
+
+### Layer
+
+### paint
+
+为每一层生成如何绘制的指令。
+
+### Tiling
+
+- 将一层划分为多个块状区域。
+
+- 分块的工作是交给多个线程同时进行的。
+
+### Raster
+
+### Draw
+
+> Q：合成线程为什么会把 quad 提交给 GPU 进程，由 GPU 进程产生系统调用，提交给 GPU 硬件而不是直接提交给硬件？
+>
+> A：合成线程和渲染主线程在渲染进程里，出于安全性考虑，隔离硬件不会对计算机硬件造成影响。所以合成线程必须经过系统调用才能把 quad 提交给硬件。
 
 ## 面试题
 
@@ -137,3 +181,21 @@ function render(html) {
     <mark>变形发生在合成线程，与渲染主线程无关，这就是 transform 效率高的本质原因。</mark>
 
     合成线程会把 quad 提交给 `GPU 进程`，由 GPU 进程产生系统调用，提交给GPU硬件，完成最终的屏幕成像。
+
+### 什么是 Reflow？
+
+- reflow 的本质就是重新计算 layout 树。
+- 当进行了会影响布局树的操作后，需要重新计算布局树，会引发 layout。
+- 为了避免连续的多次操作导致布局树反复计算，浏览器会合并这些操作，当JS代码全部完成后再统一计算。所以改动属性造成的 reflow 是异步完成的。
+- 也因为如此，当 JS 获取布局属性，就可能造成无法获取到最新的布局信息。
+- 浏览器反复权衡下，最终决定获取属性并立即 reflow。
+
+### 什么是 repaint？
+
+- repaint 的本质是重新根据分层信息计算绘制指令。
+- 当改动了可见样式后，就需要重新计算，会引发 repaint。
+- 由于元素的布局信息也属于可见样式，所以 reflow 一定会引起 repaint。
+
+### 为什么transform的效率很高？
+
+因为 transform 既不会影响布局也不会影响指令，它影响的只是渲染流程的最后一个 draw 阶段。由于 draw 阶段在合成线程中，所以 transform 的变化几乎不会影响渲染主线程。反之，渲染主线程无论如何忙碌，也不会影响 transform 的变化。
