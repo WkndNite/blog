@@ -79,7 +79,7 @@ export const NAV_DATA: NavData[] = [
       {
         title: '小林 Coding',
         link: 'https://xiaolincoding.com/',
-        desc: '图解计算机网络、操作系统、计算机组成、数据库、设计模式、算法等',
+        desc: '图解计算机网络、操作系统、计算机组成、数据库等',
         icon: 'https://cdn.xiaolincoding.com/logo.png',
       },
       {
@@ -549,7 +549,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://astro.build',
       },
       {
-        icon: 'https://cn.vuejs.org/logo.svg',
+        icon: 'https://vitepress.dev/vitepress-logo-large.webp',
         title: 'VitePress',
         desc: '由 Vite 和 Vue 驱动的静态网站生成器',
         link: 'https://vitepress.dev',
