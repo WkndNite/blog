@@ -178,8 +178,14 @@ export const NAV_DATA: NavData[] = [
       {
         title: 'Lucide',
         icon: 'https://lucide.dev/favicon.svg',
-        desc: 'Lucide 是一个开源图标库，提供超过 3000 个图标，支持多种颜色和大小，并且可以自定义图标样式',
+        desc: 'Style as you please',
         link: 'https://lucide.dev',
+      },
+      {
+        title: 'Yesicon',
+        link: 'https://yesicon.app/',
+        desc: '192 Open-Source Icon Sets',
+        icon: 'https://yesicon.app/favicon.svg',
       },
     ],
   },
