@@ -29,10 +29,11 @@ export default {
 
     return null;
   },
-  enhanceApp({ app, router, siteData }) {
-    app.component('MNavLinks', MNavLinks);
-    app.component('Fireworks', Fireworks);
-    app.component('ShareButton', ShareButton);
-    app.component('VideoPlayer', VideoPlayer);
+  enhanceApp(ctx: any) {
+    BlogTheme?.enhanceApp?.(ctx);
+    ctx.app.component('MNavLinks', MNavLinks);
+    ctx.app.component('Fireworks', Fireworks);
+    ctx.app.component('ShareButton', ShareButton);
+    ctx.app.component('VideoPlayer', VideoPlayer);
   },
 };

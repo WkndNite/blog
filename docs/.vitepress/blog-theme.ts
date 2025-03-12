@@ -104,6 +104,48 @@ const blogTheme = getThemeConfig({
       },
     ],
   },
+  works: {
+    title: '个人作品',
+    description: '记录开发的点点滴滴',
+    list: [
+      {
+        title: '问卷低码引擎',
+        description: '💭 本地化沙箱的问卷生成平台',
+        time: {
+          start: '2025/03/01',
+        },
+
+        url: 'https://lowcode.maozi.io',
+        cover: {
+          urls: [
+            '../Works/assets/PixPin_2025-03-12_21-09-40.png',
+            '../Works/assets/PixPin_2025-03-12_21-12-19.png',
+            '../Works/assets/PixPin_2025-03-12_21-20-24.png',
+            '../Works/assets/PixPin_2025-03-12_21-21-04.png',
+          ],
+          layout: 'list',
+        },
+        tags: ['Vue3', 'Pinia', 'TypeScript'],
+      },
+      {
+        title: 'IT 知识库前后台',
+        description: '📝 CRA 和 Umi 双架构前后台项目',
+        time: {
+          start: '2025/02/07',
+        },
+
+        url: 'https://github.com/WkndNite/coder-station',
+        cover: {
+          urls: [
+            '../Works/assets/b41cbd6999f93adb61e5fd56adf40af.png',
+            '../Works/assets/94cdbed03feedbb78a9ee5e26890360.png',
+          ],
+          layout: 'list',
+        },
+        tags: ['React', 'Ant Design'],
+      },
+    ],
+  },
 });
 
 export { blogTheme };
