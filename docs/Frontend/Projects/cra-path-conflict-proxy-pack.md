@@ -6,7 +6,7 @@ tags:
   - bug
 ---
 
-# React 中请求转发与默认打包路径冲突
+# React 请求转发与默认打包路径冲突
 
 首先附上这个问题出现在的项目地址：[coder-station](https://github.com/WkndNite/coder-station)
 

@@ -98,6 +98,10 @@ export default defineConfig({
             text: '浏览器',
             link: '/Frontend/Browser',
           },
+          {
+            text: 'Debug',
+            link: '/Frontend/Projects',
+          },
         ],
       },
       {
@@ -121,7 +125,6 @@ export default defineConfig({
           },
         ],
       },
-      { text: '项目记录', link: '/Projects/' },
       { text: '生活随笔', link: '/Life/' },
       { text: '面试备战', link: '/Interview/' },
     ],
@@ -382,6 +385,20 @@ export default defineConfig({
             {
               text: '浏览器渲染原理',
               link: '/Frontend/Browser/render',
+            },
+          ],
+        },
+        {
+          text: 'Debug',
+          collapsed: false,
+          items: [
+            {
+              text: 'React 请求转发与默认打包冲突',
+              link: '/Frontend/Projects/cra-path-conflict-proxy-pack',
+            },
+            {
+              text: 'React Toast UI sourcemap 报错',
+              link: '/Frontend/Projects/toastui-parse-sourcemap',
             },
           ],
         },
