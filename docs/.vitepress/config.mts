@@ -285,6 +285,10 @@ export default defineConfig({
               text: '入口与出口配置',
               link: '/Frontend/Webpack/entry-output',
             },
+            {
+              text: 'Loaders 与 Plugins',
+              link: '/Frontend/Webpack/loaders-plugins',
+            },
           ],
         },
         {

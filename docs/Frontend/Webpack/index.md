@@ -11,3 +11,4 @@ author: false
 - [Webpack 中的配置文件](./config.md)
 - [Webpack 编译过程](./compile-process.md)
 - [入口与出口配置](./entry-output.md)
+- [Loaders 与 Plugins](./loaders-plugins.md)
