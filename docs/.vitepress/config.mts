@@ -160,6 +160,10 @@ export default defineConfig({
               link: '/CS/LeetCode-100/dp',
             },
             {
+              text: '回溯算法',
+              link: '/CS/LeetCode-100/backtracking',
+            },
+            {
               text: '巧妙的解题方法',
               link: '/CS/LeetCode-100/technique',
             },

@@ -13,4 +13,5 @@ author: false
 - [双指针](./two-pointer.md)
 - [树](./tree.md)
 - [动态规划](./dp.md)
+- [回溯算法](./backtracking.md)
 - [巧妙的解题方法](./technique.md)
