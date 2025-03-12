@@ -290,7 +290,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://react-redux.js.org/',
       },
       {
-        icon: 'https://mobx.js.org/img/favicon.png',
+        icon: 'https://mobx.js.org/assets/mobx.png',
         title: 'MobX',
         desc: '一个小型、快速、可扩展的 React 状态管理解决方案',
         link: 'https://mobx.js.org/README.html',
