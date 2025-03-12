@@ -22,7 +22,7 @@ module.exports = (env) => {
 
 在开始构建时，webpack 如果发现配置是一个函数，会调用该函数，将函数返回的对象作为配置内容，因此，开发者可以根据不同的环境返回不同的对象。
 
-在调用webpack函数时，webpack 会向函数传入一个参数 env，该参数的值来自于webpack 命令中给 env 指定的值，例如：
+在调用 webpack 函数时，webpack 会向函数传入一个参数 env，该参数的值来自于 webpack 命令中给 env 指定的值，例如：
 
 ```js
 npx webpack --env abc # env: "abc"
