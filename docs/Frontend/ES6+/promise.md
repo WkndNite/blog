@@ -42,7 +42,7 @@ Promise A+ 规定：
 
 ## Promise API
 
-ES6提供了一套API，实现了Promise A+规范
+ES6 提供了一套API，实现了Promise A+规范
 
 基本使用如下：
 
