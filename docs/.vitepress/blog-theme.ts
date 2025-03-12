@@ -118,10 +118,10 @@ const blogTheme = getThemeConfig({
         url: 'https://lowcode.maozi.io',
         cover: {
           urls: [
-            '../Works/assets/PixPin_2025-03-12_21-09-40.png',
-            '../Works/assets/PixPin_2025-03-12_21-12-19.png',
-            '../Works/assets/PixPin_2025-03-12_21-20-24.png',
-            '../Works/assets/PixPin_2025-03-12_21-21-04.png',
+            '/works/PixPin_2025-03-12_21-09-40.png',
+            '/works/PixPin_2025-03-12_21-12-19.png',
+            '/works/PixPin_2025-03-12_21-20-24.png',
+            '/works/PixPin_2025-03-12_21-21-04.png',
           ],
           layout: 'list',
         },
@@ -137,8 +137,8 @@ const blogTheme = getThemeConfig({
         url: 'https://github.com/WkndNite/coder-station',
         cover: {
           urls: [
-            '../Works/assets/b41cbd6999f93adb61e5fd56adf40af.png',
-            '../Works/assets/94cdbed03feedbb78a9ee5e26890360.png',
+            '/works/b41cbd6999f93adb61e5fd56adf40af.png',
+            '/works/94cdbed03feedbb78a9ee5e26890360.png',
           ],
           layout: 'list',
         },

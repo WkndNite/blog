@@ -127,7 +127,7 @@ export default defineConfig({
       },
       { text: '生活随笔', link: '/Life/' },
       { text: '面试备战', link: '/Interview/' },
-      { text: '个人作品', link: '/works' },
+      { text: '个人作品', link: '/Works' },
     ],
     sidebar: {
       '/CS/': [

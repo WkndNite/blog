@@ -11,6 +11,6 @@ blog:
     - The higher I got , the more amazed I was by the view
     - I would rather be lonely all my life than drift with the tide
   # 设置 inspiringTimeout 可以实现自动切换
-  inspiringTimeout: 3000
+  inspiringTimeout: 5000
   pageSize: 9
 ---
