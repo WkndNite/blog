@@ -48,7 +48,7 @@ const ExampleComponent = React.createClass({
 });
 ```
 
-眼熟不？没错，在 Vue 2.x 中也支持 mixins这样的混合注入。
+眼熟不？没错，在 Vue 2.x 中也支持 mixins 这样的混合注入。
 
 不过这只能在 React 的旧语法 React.createClass 中使用，目前已经不再推荐使用了。
 

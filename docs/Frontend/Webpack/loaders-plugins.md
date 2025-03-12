@@ -242,7 +242,7 @@ class MyPlugin {
 var plugin = new MyPlugin();
 ```
 
-要将插件应用到webpack，需要把插件对象配置到webpack的plugins数组中，如下：
+要将插件应用到 webpack，需要把插件对象配置到 webpack 的 plugins 数组中，如下：
 
 ```js
 module.exports = {
@@ -258,9 +258,9 @@ apply 方法会在创建好 compiler 对象后调用，并向方法传入一个 
 
 ![image](./assets/apply-compiler.png)
 
-Compiler 对象提供了大量 hooks，plugin的开发者可以注册这些钩子函数，参与 Webpack 编译和生成。
+Compiler 对象提供了大量 hooks，plugin 的开发者可以注册这些钩子函数，参与 Webpack 编译和生成。
 
-你可以在apply方法中使用下面的代码注册钩子函数:
+你可以在 apply 方法中使用下面的代码注册钩子函数:
 
 ```js
 class MyPlugin {

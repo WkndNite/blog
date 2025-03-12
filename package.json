@@ -9,7 +9,9 @@
     "build": "NODE_ENV=production vitepress build docs",
     "serve": "vitepress serve docs",
     "format": "prettier --write docs",
-    "clear": "rimraf node_modules docs/.vitepress/cache"
+    "clear": "rimraf node_modules docs/.vitepress/cache",
+    "lint": "textlint --fix .",
+    "cz": "bun format && bun lint && git add . && git cz"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",

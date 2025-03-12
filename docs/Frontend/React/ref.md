@@ -368,7 +368,7 @@ export default withLog;
 
 我们知道，现在整个 React 是函数组件大行其道，那么自然我们会遇到函数组件下如何进行 Ref 的关联。
 
-在函数组件中，官方为我们提供了新的 useRef 这个 Hook来进行关联，但是也可以使用 createRef API，示例如下：
+在函数组件中，官方为我们提供了新的 useRef 这个 Hook 来进行关联，但是也可以使用 createRef API，示例如下：
 
 ```jsx [App.jsx]
 import React from 'react';

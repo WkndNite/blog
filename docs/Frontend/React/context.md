@@ -25,7 +25,7 @@ tags:
 
 根据我们前面所讲的单向数据流规则，那么数据应该被提升到 App 根组件，然后通过 props 一层一层地传递给下面的子组件，最终 subComA-1 拿到所需要的数据；如果 subComA-1 组件需要修改传递下来的数据，那么该组件还需要接收从 App 根组件一层一层传递下来的能够修改数据的方法。
 
-官方在《何时使用Context》这一节中举过一个形象的例子：<https://zh-hans.reactjs.org/docs/context.html#when-to-use-context>
+官方在《何时使用 Context》这一节中举过一个形象的例子：<https://zh-hans.reactjs.org/docs/context.html#when-to-use-context>
 
 因此，简单一句话概括 Context，那就是解决组件之间数据共享的问题，避免一层一层的传递。
 

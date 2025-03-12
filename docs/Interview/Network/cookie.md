@@ -91,7 +91,7 @@ Set-Cookie: key=value; domain=www.baidu.com; path=/; expires=Wed, 21 Oct 2025 07
 
 :::
 
-现在，还剩下最后一个问题，就是如何删除浏览器的一个 cookie呢？
+现在，还剩下最后一个问题，就是如何删除浏览器的一个 cookie 呢？
 
 如果要删除浏览器的 一个 cookie，只需要服务器响应一个同样的域、同样的路径、同样的 key，但是时间是过期的 cookie 即可。
 
