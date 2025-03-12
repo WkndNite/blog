@@ -42,7 +42,7 @@ Promise A+ 规定：
 
 ## Promise API
 
-ES6 提供了一套API，实现了Promise A+规范
+ES6 提供了一套 API，实现了 Promise A+ 规范。
 
 基本使用如下：
 
@@ -64,9 +64,9 @@ pro.then(
 );
 ```
 
-> 至此，回调地狱的问题仍然没能解决
+> 至此，回调地狱的问题仍然没能解决。
 >
-> 要解决回调地狱，还需要进一步学习Promise的知识
+> 要解决回调地狱，还需要进一步学习 Promise 的知识。
 
 ## catch方法
 
@@ -124,15 +124,15 @@ pro.then(处理1).then(处理2).catch(处理3);
 
 ## 消除回调
 
-有了Promise，异步任务就有了一种统一的处理方式。
+有了 Promise，异步任务就有了一种统一的处理方式。
 
-有了统一的处理方式，ES官方就可以对其进一步优化。
+有了统一的处理方式，ES 官方就可以对其进一步优化。
 
-ES7推出了两个关键字 `async` 和 `await`，用于更加优雅的表达 Promise。
+ES7 推出了两个关键字 `async` 和 `await`，用于更加优雅的表达 Promise。
 
 ### async
 
-async关键字用于修饰函数，被它修饰的函数，一定返回 Promise。
+async 关键字用于修饰函数，被它修饰的函数，一定返回 Promise。
 
 ```js
 async function method1() {
