@@ -119,40 +119,6 @@ var maxDepth = function (root) {
 };
 ```
 
-## 106. 从中序与后序遍历序列构造二叉树
-
-```js
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {number[]} inorder
- * @param {number[]} postorder
- * @return {TreeNode}
- */
-var buildTree = function (inorder, postorder) {
-  if (!inorder.length || !postorder.length) return null;
-  const root = new TreeNode(postorder[postorder.length - 1]);
-  const rootIndex = inorder.indexOf(root.val);
-
-  const inorderLeft = inorder.slice(0, rootIndex);
-  const inorderRight = inorder.slice(rootIndex + 1);
-
-  const postorderLeft = postorder.slice(0, rootIndex);
-  const postorderRight = postorder.slice(rootIndex, postorder.length - 1);
-
-  root.left = buildTree(inorderLeft, postorderLeft);
-  root.right = buildTree(inorderRight, postorderRight);
-
-  return root;
-};
-```
-
 ## 108. 将有序数组转换为二叉搜索树
 
 ```js
