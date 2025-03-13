@@ -225,6 +225,10 @@ export default defineConfig({
               text: '一文搞懂 flex',
               link: '/Frontend/CSS/modern-flex',
             },
+            {
+              text: '盘点 CSS Grid',
+              link: '/Frontend/CSS/grid',
+            },
           ],
         },
         {
