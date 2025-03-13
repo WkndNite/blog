@@ -3,7 +3,6 @@ date: 2025-02-25 10:52:51
 tags:
   - 网络
   - 面试
-  - 计算机基础
 ---
 
 # cookie、sessionStorage、localStorage的区别

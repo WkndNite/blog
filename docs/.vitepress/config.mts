@@ -125,9 +125,21 @@ export default defineConfig({
           },
         ],
       },
-      { text: '生活随笔', link: '/Life/' },
-      { text: '面试备战', link: '/Interview/' },
+      {
+        text: '面试备战',
+        items: [
+          {
+            text: '网络',
+            link: '/Interview/Network',
+          },
+          {
+            text: 'JavaScript',
+            link: '/Interview/JavaScript',
+          },
+        ],
+      },
       { text: '个人作品', link: '/Works' },
+      { text: '生活随笔', link: '/Life/' },
     ],
     sidebar: {
       '/CS/': [
@@ -450,22 +462,7 @@ export default defineConfig({
           ],
         },
       ],
-      '/Projects/': [
-        {
-          text: 'React',
-          collapsed: false,
-          items: [
-            {
-              text: '请求转发与默认打包路径冲突',
-              link: '/Projects/React/path-conflict-proxy-pack',
-            },
-            {
-              text: 'Toast UI sourcemap 报错',
-              link: '/Projects/React/toastui-parse-sourcemap',
-            },
-          ],
-        },
-      ],
+
       '/Life/': [
         {
           text: '2020',
@@ -503,6 +500,20 @@ export default defineConfig({
             {
               text: 'cookie 和 storage 的区别',
               link: '/Interview/Network/cookie-storage-difference',
+            },
+          ],
+        },
+        {
+          text: 'JavaScript',
+          collapsed: false,
+          items: [
+            {
+              text: 'let var const',
+              link: '/Interview/JavaScript/let-var-const',
+            },
+            {
+              text: '原型链',
+              link: '/Interview/JavaScript/prototype',
             },
           ],
         },
