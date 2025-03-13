@@ -512,7 +512,7 @@ export default defineConfig({
               link: '/Interview/JavaScript/let-var-const',
             },
             {
-              text: '原型链',
+              text: '原型和原型链',
               link: '/Interview/JavaScript/prototype',
             },
           ],
