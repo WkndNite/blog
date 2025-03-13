@@ -237,7 +237,7 @@ console.log(true.constructor === Boolean);
 - 无论是 `普通对象` 还是 `构造器对象`，都会有自己的原型对象，通过 \_\_proto\_\_ 这个隐式属性，就能找到自己的原型对象，并且 <mark>一直向上找，最终会到达 null</mark>。
 - 普通对象 和 构造器对象 的区别在于是否能够实例化，构造器对象 可以通过 `new` 的形式创建新的实例对象，这些实例对象的原型对象一直往上找最终仍然是到达 null。
 - 只有构造器对象才有 `prototype` 属性，其 prototype 属性指向实例对象的原型对象。
-- 所有构造器对象` 的原型对象均为 <mark>Function.prototype</mark>。
+- 所有构造器对象的原型对象均为 <mark>Function.prototype</mark>。
 - 无论是普通对象还是构造器对象，最终的 `constructor` 指向 <mark>Function</mark>，而 Function 的 constructor 指向自己本身。
 - Object 这个构造器对象比较特殊，实例化出来的对象的原型对象直接就是 <mark>Object.prototype</mark>，而其他的构造器对象，其实例对象的原型对象为对应的 xxx.prototype，再往一层才是 Object.prototype。
 
