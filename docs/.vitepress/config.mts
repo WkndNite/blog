@@ -25,6 +25,17 @@ export default defineConfig({
   description: '基于粥里有勺糖提供主题所搭建的周末晚的博客',
   lastUpdated: true,
   head: [
+    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-095CYQ2P6C' }],
+    [
+      'script',
+      {},
+      `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-095CYQ2P6C');
+    `,
+    ],
     ['link', { rel: 'icon', href: '/logo.svg' }],
     [
       'link',
