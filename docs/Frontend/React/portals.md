@@ -13,7 +13,7 @@ Portals 被翻译为传送门，它要做的事情实际上也确实和传送门
 
 其语法为：
 
-```jsx
+```jsx :no-line-numbers
 ReactDOM.createPortal(child, container);
 ```
 

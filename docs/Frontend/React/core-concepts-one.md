@@ -83,7 +83,7 @@ JSX 看起来可能比较像模板语言，但事实上它完全是在 JavaScrip
 
 Babel 会把 JSX 转译为一个名为 `React.createElement()` 函数调用。
 
-```js
+```js :no-line-numbers
 React.createElement(type, [props], [...children]);
 ```
 
@@ -98,11 +98,7 @@ React.createElement(type, [props], [...children]);
 ```js
 const element1 = <h1 className="greeting">Hello, world!</h1>;
 
-const element2 = React.createElement(
-  'h1',
-  { className: 'greeting' },
-  'Hello, world!',
-);
+const element2 = React.createElement('h1', { className: 'greeting' }, 'Hello, world!');
 ```
 
 看到这里，就能明白以下输出结果的原因了：
@@ -150,7 +146,7 @@ function SomeComponent() {
 
 在 React 中，绑定事件的写法如下：
 
-```jsx
+```jsx :no-line-numbers
 <button onClick={handleClick}>Click me</button>
 ```
 

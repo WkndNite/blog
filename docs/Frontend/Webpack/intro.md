@@ -91,7 +91,7 @@ Webpack 通过 npm 安装，它提供了两个包：
 
 ### Webpack 的使用方式
 
-```bash
+```bash :no-line-numbers
 webpack
 ```
 

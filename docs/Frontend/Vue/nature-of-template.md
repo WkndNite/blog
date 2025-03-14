@@ -40,10 +40,7 @@ export default defineComponent({
           src: props.avatarUrl,
           alt: 'UserCard Avatar',
         }),
-        h('div', { class: styles.userCardContent }, [
-          h('h2', props.name),
-          h('p', props.email),
-        ]),
+        h('div', { class: styles.userCardContent }, [h('h2', props.name), h('p', props.email)]),
       ]);
   },
 });
@@ -72,10 +69,7 @@ export default {
         src: this.avatarUrl,
         alt: 'UserCard Avatar',
       }),
-      h('div', { class: styles.userCardContent }, [
-        h('h2', this.name),
-        h('p', this.email),
-      ]),
+      h('div', { class: styles.userCardContent }, [h('h2', this.name), h('p', this.email)]),
     ]);
   },
 };

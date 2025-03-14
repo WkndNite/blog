@@ -139,35 +139,23 @@ function change(root) {
   if (Math.abs(leftHeight - rightHeight) <= 1) return root;
 
   // LL 型（左子树更高，且左子树的左子树更高）
-  if (
-    leftHeight > rightHeight &&
-    getHeight(root.left.left) >= getHeight(root.left.right)
-  ) {
+  if (leftHeight > rightHeight && getHeight(root.left.left) >= getHeight(root.left.right)) {
     return rightRotate(root);
   }
 
   // LR 型（左子树更高，且左子树的右子树更高）
-  if (
-    leftHeight > rightHeight &&
-    getHeight(root.left.left) < getHeight(root.left.right)
-  ) {
+  if (leftHeight > rightHeight && getHeight(root.left.left) < getHeight(root.left.right)) {
     root.left = leftRotate(root.left);
     return rightRotate(root);
   }
 
   // RR 型（右子树更高，且右子树的右子树更高）
-  if (
-    rightHeight > leftHeight &&
-    getHeight(root.right.right) >= getHeight(root.right.left)
-  ) {
+  if (rightHeight > leftHeight && getHeight(root.right.right) >= getHeight(root.right.left)) {
     return leftRotate(root);
   }
 
   // RL 型（右子树更高，且右子树的左子树更高）
-  if (
-    rightHeight > leftHeight &&
-    getHeight(root.right.right) < getHeight(root.right.left)
-  ) {
+  if (rightHeight > leftHeight && getHeight(root.right.right) < getHeight(root.right.left)) {
     root.right = rightRotate(root.right);
     return leftRotate(root);
   }

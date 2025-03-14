@@ -1,7 +1,7 @@
 ---
 date: 2025-03-07 17:24:43
 tags:
-  - ES6+
+  - ESnext
   - JavaScript
   - 前端
 ---
@@ -60,7 +60,7 @@ for (let i = 0; i < 13; i++) {
 
 ES7 新增语法，使用 `**` 表示幂运算。
 
-```js
+```js :no-line-numbers
 console.log(2 ** 3); // 8
 ```
 

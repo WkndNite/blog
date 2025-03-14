@@ -99,10 +99,7 @@ document.appendChild('div');
 
 ```js
 import { h } from 'vue';
-const vnode = h('div', { class: 'red' }, [
-  h('h1', 'hello world'),
-  h('p', 'hello vue3'),
-]);
+const vnode = h('div', { class: 'red' }, [h('h1', 'hello world'), h('p', 'hello vue3')]);
 console.log(vnode);
 
 // {

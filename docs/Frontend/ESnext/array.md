@@ -1,7 +1,7 @@
 ---
 date: 2025-03-07 18:56:43
 tags:
-  - ES6+
+  - ESnext
   - JavaScript
   - 前端
 ---

@@ -1,7 +1,7 @@
 ---
 date: 2025-03-08 20:54:13
 tags:
-  - ES6+
+  - ESnext
   - JavaScript
   - 前端
 ---
@@ -315,7 +315,7 @@ method(); // 输出： 失败 123
 
 7. 下面代码的输出结果是什么？
 
-   ```js
+   ```js :no-line-numbers
    Promise.resolve(1).then(2).then(Promise.resolve(3)).then(console.log);
    ```
 

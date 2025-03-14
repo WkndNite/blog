@@ -42,11 +42,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <input
-          type="text"
-          value={this.state.value}
-          onChange={this.handleChange}
-        />
+        <input type="text" value={this.state.value} onChange={this.handleChange} />
         <button onClick={this.handleClick}>提交</button>
       </div>
     );
@@ -84,20 +80,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <input
-          type="text"
-          name="one"
-          value={this.state.value1}
-          onChange={this.handleChange}
-          placeholder="自动转为大写"
-        />
-        <input
-          type="text"
-          name="two"
-          value={this.state.value2}
-          onChange={this.handleChange}
-          placeholder="只能输入数字"
-        />
+        <input type="text" name="one" value={this.state.value1} onChange={this.handleChange} placeholder="自动转为大写" />
+        <input type="text" name="two" value={this.state.value2} onChange={this.handleChange} placeholder="只能输入数字" />
       </div>
     );
   }
@@ -121,13 +105,7 @@ export default class App extends Component {
       <div>
         {/* 原生的 HTML 内容应该书写在 textarea 标签之间 */}
         {/* React 方便起见将内容统一交给 value 绑定 */}
-        <textarea
-          name=""
-          id=""
-          value={this.state.value}
-          onChange={this.handleChange}
-          placeholder="Text here"
-        />
+        <textarea name="" id="" value={this.state.value} onChange={this.handleChange} placeholder="Text here" />
       </div>
     );
   }
@@ -154,13 +132,7 @@ export default class App extends Component {
         {options.map((item, index) => {
           return (
             <div key={index}>
-              <input
-                type="radio"
-                name="skills"
-                value={item}
-                checked={this.state.selectedOption === index}
-                onChange={() => this.handleChange(index)}
-              />
+              <input type="radio" name="skills" value={item} checked={this.state.selectedOption === index} onChange={() => this.handleChange(index)} />
               <label>{item}</label>
             </div>
           );
@@ -197,12 +169,7 @@ export default class App extends Component {
         {this.state.checkBoxes.map((item, index) => {
           return (
             <div key={index}>
-              <input
-                type="checkbox"
-                value={item.content}
-                checked={item.checked}
-                onChange={() => this.handleChange(index)}
-              />
+              <input type="checkbox" value={item.content} checked={item.checked} onChange={() => this.handleChange(index)} />
               <label>{item.content}</label>
             </div>
           );
@@ -563,15 +530,9 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
 
      return (
        <div>
-         <button onClick={() => setCount1(count1 + 1)}>
-           Count 1: {count1}
-         </button>
-         <button onClick={() => setCount2(count2 + 1)}>
-           Count 2: {count2}
-         </button>
-         <button onClick={() => setCount3(count3 + 1)}>
-           Count 3: {count3}
-         </button>
+         <button onClick={() => setCount1(count1 + 1)}>Count 1: {count1}</button>
+         <button onClick={() => setCount2(count2 + 1)}>Count 2: {count2}</button>
+         <button onClick={() => setCount3(count3 + 1)}>Count 3: {count3}</button>
        </div>
      );
    }
@@ -593,15 +554,9 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
 
      return (
        <div>
-         <button onClick={() => setCount1(count1 + 1)}>
-           Count 1: {count1}
-         </button>
-         <button onClick={() => setCount2(count2 + 1)}>
-           Count 2: {count2}
-         </button>
-         <button onClick={() => setCount3(count3 + 1)}>
-           Count 3: {count3}
-         </button>
+         <button onClick={() => setCount1(count1 + 1)}>Count 1: {count1}</button>
+         <button onClick={() => setCount2(count2 + 1)}>Count 2: {count2}</button>
+         <button onClick={() => setCount3(count3 + 1)}>Count 3: {count3}</button>
        </div>
      );
    }
@@ -636,9 +591,7 @@ export default function App() {
   return (
     <div>
       <h1>Book name: {bookName}</h1>
-      <button onClick={() => setBookName('React in Action')}>
-        Change book name
-      </button>
+      <button onClick={() => setBookName('React in Action')}>Change book name</button>
     </div>
   );
 }

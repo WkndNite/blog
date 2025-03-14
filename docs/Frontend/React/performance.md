@@ -70,10 +70,7 @@ export default class App extends Component {
   };
 
   shouldComponentUpdate(nextProps, nextState) {
-    if (
-      ObjectEqual(this.props, nextProps) &&
-      ObjectEqual(this.state, nextState)
-    ) {
+    if (ObjectEqual(this.props, nextProps) && ObjectEqual(this.state, nextState)) {
       return false;
     }
     return true;
@@ -739,7 +736,7 @@ export default App;
 
 ## useMemo
 
-```js
+```js :no-line-numbers
 const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 ```
 

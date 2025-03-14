@@ -65,22 +65,13 @@ function createFireworks() {
   }
 
   function updateCoords(e: MouseEvent | TouchEvent) {
-    pointerX =
-      e instanceof MouseEvent
-        ? e.clientX
-        : e.touches[0]?.clientX || e.changedTouches[0]?.clientX;
-    pointerY =
-      e instanceof MouseEvent
-        ? e.clientY
-        : e.touches[0]?.clientY || e.changedTouches[0]?.clientY;
+    pointerX = e instanceof MouseEvent ? e.clientX : e.touches[0]?.clientX || e.changedTouches[0]?.clientX;
+    pointerY = e instanceof MouseEvent ? e.clientY : e.touches[0]?.clientY || e.changedTouches[0]?.clientY;
   }
 
   function setParticleDirection(p: Particle) {
     const angle = (anime.random(0, 360) * Math.PI) / 180;
-    const value = anime.random(
-      defaultConfig.diffuseRadius.min,
-      defaultConfig.diffuseRadius.max,
-    );
+    const value = anime.random(defaultConfig.diffuseRadius.min, defaultConfig.diffuseRadius.max);
     const radius = [-1, 1][anime.random(0, 1)] * value;
     return {
       x: p.x + radius * Math.cos(angle),
@@ -93,10 +84,7 @@ function createFireworks() {
       x,
       y,
       color: `rgba(${colors[anime.random(0, colors.length - 1)]},${anime.random(0.6, 0.9)})`, // 增加蓝色元素
-      radius: anime.random(
-        defaultConfig.circleRadius.min,
-        defaultConfig.circleRadius.max,
-      ),
+      radius: anime.random(defaultConfig.circleRadius.min, defaultConfig.circleRadius.max),
       angle: anime.random(0, 360),
       endPos: setParticleDirection({ x, y }),
       draw() {
@@ -105,14 +93,8 @@ function createFireworks() {
         ctx.rotate((this.angle * Math.PI) / 180);
         ctx.beginPath();
         ctx.moveTo(0, -this.radius!);
-        ctx.lineTo(
-          this.radius! * Math.sin(Math.PI / 3),
-          this.radius! * Math.cos(Math.PI / 3),
-        );
-        ctx.lineTo(
-          -this.radius! * Math.sin(Math.PI / 3),
-          this.radius! * Math.cos(Math.PI / 3),
-        );
+        ctx.lineTo(this.radius! * Math.sin(Math.PI / 3), this.radius! * Math.cos(Math.PI / 3));
+        ctx.lineTo(-this.radius! * Math.sin(Math.PI / 3), this.radius! * Math.cos(Math.PI / 3));
         ctx.closePath();
         ctx.fillStyle = this.color!;
         ctx.fill();
@@ -154,10 +136,7 @@ function createFireworks() {
 
   function animateParticles(x: number, y: number) {
     const circle = createCircle(x, y);
-    const particles: Particle[] = Array.from(
-      { length: defaultConfig.numberOfParticles },
-      () => createParticle(x, y),
-    );
+    const particles: Particle[] = Array.from({ length: defaultConfig.numberOfParticles }, () => createParticle(x, y));
 
     anime
       .timeline()
@@ -170,20 +149,14 @@ function createFireworks() {
           return p.endPos!.y;
         },
         radius: 0,
-        duration: anime.random(
-          defaultConfig.animeDuration.min,
-          defaultConfig.animeDuration.max,
-        ),
+        duration: anime.random(defaultConfig.animeDuration.min, defaultConfig.animeDuration.max),
         easing: 'easeOutExpo',
         update: renderParticle,
       })
       .add(
         {
           targets: circle,
-          radius: anime.random(
-            defaultConfig.orbitRadius.min,
-            defaultConfig.orbitRadius.max,
-          ),
+          radius: anime.random(defaultConfig.orbitRadius.min, defaultConfig.orbitRadius.max),
           lineWidth: 0,
           alpha: {
             value: 0,

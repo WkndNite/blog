@@ -75,8 +75,8 @@ export default defineConfig({
             link: '/Frontend/JavaScript',
           },
           {
-            text: 'ES6+',
-            link: '/Frontend/ES6+',
+            text: 'ESnext',
+            link: '/Frontend/ESnext',
           },
           {
             text: 'TypeScript',
@@ -139,6 +139,10 @@ export default defineConfig({
           {
             text: 'JavaScript',
             link: '/Interview/JavaScript',
+          },
+          {
+            text: '手搓代码',
+            link: '/Interview/diy',
           },
         ],
       },
@@ -262,24 +266,24 @@ export default defineConfig({
           ],
         },
         {
-          text: 'ES6+',
+          text: 'ESnext',
           collapsed: false,
           items: [
             {
               text: 'ES6+ 一些零碎的改动',
-              link: '/Frontend/ES6+/some-changes',
+              link: '/Frontend/ESnext/some-changes',
             },
             {
               text: 'ES6 中数组的改动',
-              link: '/Frontend/ES6+/array',
+              link: '/Frontend/ESnext/array',
             },
             {
               text: 'ES6 中对象的改动',
-              link: '/Frontend/ES6+/object',
+              link: '/Frontend/ESnext/object',
             },
             {
               text: 'Promise',
-              link: '/Frontend/ES6+/promise',
+              link: '/Frontend/ESnext/promise',
             },
           ],
         },
@@ -474,7 +478,6 @@ export default defineConfig({
           ],
         },
       ],
-
       '/Life/': [
         {
           text: '2020',
@@ -540,6 +543,16 @@ export default defineConfig({
             {
               text: '原型和原型链',
               link: '/Interview/JavaScript/prototype',
+            },
+          ],
+        },
+        {
+          text: '手搓代码',
+          collapsed: false,
+          items: [
+            {
+              text: '手搓 Promise 全系列',
+              link: '/Interview/diy/promise',
             },
           ],
         },

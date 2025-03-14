@@ -44,8 +44,7 @@ class RefImpl<T> {
   }
 }
 
-export const toReactive = <T extends unknown>(value: T): T =>
-  isObject(value) ? reactive(value) : value;
+export const toReactive = <T extends unknown>(value: T): T => (isObject(value) ? reactive(value) : value);
 ```
 
 ```ts [createReactiveObject]
@@ -57,23 +56,14 @@ function createReactiveObject(
   proxyMap: WeakMap<Target, any>,
 ) {
   // ...
-  const proxy = new Proxy(
-    target,
-    targetType === TargetType.COLLECTION ? collectionHandlers : baseHandlers,
-  );
+  const proxy = new Proxy(target, targetType === TargetType.COLLECTION ? collectionHandlers : baseHandlers);
   proxyMap.set(target, proxy);
   return proxy;
 }
 
 export function reactive(target: Object) {
   // ...
-  return createReactiveObject(
-    target,
-    false,
-    mutableHandlers,
-    mutableCollectionHandlers,
-    reactiveMap,
-  );
+  return createReactiveObject(target, false, mutableHandlers, mutableCollectionHandlers, reactiveMap);
 }
 ```
 
