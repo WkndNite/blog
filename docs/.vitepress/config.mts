@@ -1,7 +1,9 @@
 import { defineConfig } from 'vitepress';
 import { blogTheme } from './blog-theme';
 import { SponsorPlugin } from 'vitepress-plugin-sponsor';
+import { inject } from '@vercel/analytics';
 
+inject();
 export default defineConfig({
   cleanUrls: true,
   markdown: {
