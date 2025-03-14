@@ -194,6 +194,10 @@ export default defineConfig({
               link: '/CS/LeetCode-100/binary-search',
             },
             {
+              text:'Hot-100 贪心算法',
+              link:'/CS/LeetCode-100/greedy'
+            },
+            {
               text: 'Hot-100 动态规划',
               link: '/CS/LeetCode-100/dp',
             },
