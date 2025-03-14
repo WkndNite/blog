@@ -156,35 +156,35 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
-              text: '二分查找',
+              text: 'Hot-100 二分查找',
               link: '/CS/LeetCode-100/binary-search',
             },
             {
-              text: '哈希',
+              text: 'Hot-100 哈希',
               link: '/CS/LeetCode-100/hash',
             },
             {
-              text: '链表',
+              text: 'Hot-100 链表',
               link: '/CS/LeetCode-100/linklist',
             },
             {
-              text: '双指针',
+              text: 'Hot-100 双指针',
               link: '/CS/LeetCode-100/two-pointer',
             },
             {
-              text: '树',
+              text: 'Hot-100 树',
               link: '/CS/LeetCode-100/tree',
             },
             {
-              text: '动态规划',
+              text: 'Hot-100 动态规划',
               link: '/CS/LeetCode-100/dp',
             },
             {
-              text: '回溯算法',
+              text: 'Hot-100 回溯算法',
               link: '/CS/LeetCode-100/backtracking',
             },
             {
-              text: '巧妙的解题方法',
+              text: 'Hot-100 巧妙的解题方法',
               link: '/CS/LeetCode-100/technique',
             },
           ],
