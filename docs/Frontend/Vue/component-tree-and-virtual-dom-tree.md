@@ -4,7 +4,6 @@ tags:
   - 前端
   - 虚拟 DOM
 date: 2025-01-20
-sticky: 6
 ---
 
 # 组件树和虚拟 DOM 树

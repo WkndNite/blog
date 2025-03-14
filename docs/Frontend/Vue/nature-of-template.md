@@ -3,7 +3,6 @@ tag:
   - Vue
   - 前端
 date: 2025-01-17
-sticky: 5
 ---
 
 # Vue3 模板的本质

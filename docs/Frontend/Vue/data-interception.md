@@ -3,7 +3,6 @@ tags:
   - Vue
   - 前端
 date: 2025-01-20
-sticky: 7
 ---
 
 # Vue 中数据拦截的本质

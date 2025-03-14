@@ -3,7 +3,6 @@ date: 2024-12-28
 tags:
   - CSS
   - 前端
-sticky: 2
 ---
 
 # CSS 计算属性

@@ -4,7 +4,6 @@ tag:
   - 前端
   - 虚拟 DOM
 date: 2025-01-16
-sticky: 4
 ---
 
 # 谈一谈 Vue3 中的虚拟 DOM
