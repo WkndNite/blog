@@ -26,7 +26,6 @@ export default defineConfig({
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }],
-    ['script', { src: 'https://vercel.com/analytics/script.js', defer: '' }],
     [
       'link',
       {
