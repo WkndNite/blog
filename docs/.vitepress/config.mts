@@ -210,6 +210,10 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
+              text: '块级格式化上下文',
+              link: '/Frontend/CSS/block-formatting-context',
+            },
+            {
               text: 'CSS 计算属性',
               link: '/Frontend/CSS/computed',
             },
