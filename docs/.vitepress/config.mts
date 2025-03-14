@@ -133,6 +133,10 @@ export default defineConfig({
             link: '/Interview/Network',
           },
           {
+            text: 'CSS',
+            link: '/Interview/CSS',
+          },
+          {
             text: 'JavaScript',
             link: '/Interview/JavaScript',
           },
@@ -504,6 +508,20 @@ export default defineConfig({
             {
               text: 'cookie 和 storage 的区别',
               link: '/Interview/Network/cookie-storage-difference',
+            },
+          ],
+        },
+        {
+          text: 'CSS',
+          collapsed: false,
+          items: [
+            {
+              text: 'CSS 单位总结',
+              link: '/Interview/CSS/unit',
+            },
+            {
+              text: '居中方式总结',
+              link: '/Interview/CSS/center',
             },
           ],
         },
