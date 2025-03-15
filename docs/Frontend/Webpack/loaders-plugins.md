@@ -151,7 +151,8 @@ var loaderUtil = require('loader-utils');
 function loader(buffer) {
   //给的是buffer
   console.log('文件数据大小：(字节)', buffer.byteLength);
-  var { limit = 1000, filename = '[contenthash].[ext]' } = loaderUtil.getOptions(this);
+  var { limit = 1000, filename = '[contenthash].[ext]' } =
+    loaderUtil.getOptions(this);
   if (buffer.byteLength >= limit) {
     var content = getFilePath.call(this, buffer, filename);
   } else {

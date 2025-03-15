@@ -70,7 +70,10 @@ export default class App extends Component {
   };
 
   shouldComponentUpdate(nextProps, nextState) {
-    if (ObjectEqual(this.props, nextProps) && ObjectEqual(this.state, nextState)) {
+    if (
+      ObjectEqual(this.props, nextProps) &&
+      ObjectEqual(this.state, nextState)
+    ) {
       return false;
     }
     return true;

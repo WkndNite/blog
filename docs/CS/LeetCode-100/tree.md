@@ -4,6 +4,7 @@ tags:
   - Hot-100
   - 计算机基础
   - 数据结构与算法
+  - 二叉树
 ---
 
 # Hot-100 二叉树
@@ -214,6 +215,9 @@ var sortedArrayToBST = function (nums) {
 var isValidBST = function (root, min = -Infinity, max = Infinity) {
   if (!root) return true;
   if (root.val <= min || root.val >= max) return false;
-  return isValidBST(root.left, min, root.val) && isValidBST(root.right, root.val, max);
+  return (
+    isValidBST(root.left, min, root.val) &&
+    isValidBST(root.right, root.val, max)
+  );
 };
 ```

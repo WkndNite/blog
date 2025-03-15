@@ -258,10 +258,14 @@ function withLog(Com) {
       this.state = { n: 1 };
     }
     componentDidMount() {
-      console.log(`日志：组件${Com.name}已经创建，创建时间${formatDate(Date.now(), 'year-time')}`);
+      console.log(
+        `日志：组件${Com.name}已经创建，创建时间${formatDate(Date.now(), 'year-time')}`
+      );
     }
     componentWillUnmount() {
-      console.log(`日志：组件${Com.name}已经销毁，销毁时间${formatDate(Date.now(), 'year-time')}`);
+      console.log(
+        `日志：组件${Com.name}已经销毁，销毁时间${formatDate(Date.now(), 'year-time')}`
+      );
     }
     render() {
       return <Com {...this.props} />;
@@ -310,10 +314,14 @@ function withLog(Com) {
       this.state = { n: 1 };
     }
     componentDidMount() {
-      console.log(`日志：组件${Com.name}已经创建，创建时间${formatDate(Date.now(), 'year-time')}`);
+      console.log(
+        `日志：组件${Com.name}已经创建，创建时间${formatDate(Date.now(), 'year-time')}`
+      );
     }
     componentWillUnmount() {
-      console.log(`日志：组件${Com.name}已经销毁，销毁时间${formatDate(Date.now(), 'year-time')}`);
+      console.log(
+        `日志：组件${Com.name}已经销毁，销毁时间${formatDate(Date.now(), 'year-time')}`
+      );
     }
     render() {
       // 通过 this.props 能够拿到传递下来的 ref

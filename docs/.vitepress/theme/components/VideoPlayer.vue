@@ -7,7 +7,14 @@
     </video>
 
     <!-- 平台嵌入视频 -->
-    <iframe v-else :src="platformUrl" frameborder="0" allowfullscreen :width="width" :height="height"></iframe>
+    <iframe
+      v-else
+      :src="platformUrl"
+      frameborder="0"
+      allowfullscreen
+      :width="width"
+      :height="height"
+    ></iframe>
   </div>
 </template>
 

@@ -98,7 +98,11 @@ React.createElement(type, [props], [...children]);
 ```js
 const element1 = <h1 className="greeting">Hello, world!</h1>;
 
-const element2 = React.createElement('h1', { className: 'greeting' }, 'Hello, world!');
+const element2 = React.createElement(
+  'h1',
+  { className: 'greeting' },
+  'Hello, world!'
+);
 ```
 
 看到这里，就能明白以下输出结果的原因了：

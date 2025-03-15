@@ -1,7 +1,9 @@
 {
   "singleQuote": true,
   "trailingComma": "none",
-  "printWidth": 160,
+  "printWidth": 80,
   "tabWidth": 2,
-  "embeddedLanguageFormatting": "auto"
+  "embeddedLanguageFormatting": "auto",
+  "arrayBracketNewline": true,
+  "bracketSpacing": true
 }

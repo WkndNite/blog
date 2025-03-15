@@ -107,7 +107,8 @@ Set-Cookie: key=value; domain=www.baidu.com; path=/; expires=Wed, 21 Oct 2025 07
 客户端可以通过 `document.cookie` 来设置 cookie。
 
 ```js :no-line-numbers
-document.cookie = 'key=value; domain=www.baidu.com; path=/; expires=Wed, 21 Oct 2025 07:28:00 GMT; Secure;';
+document.cookie =
+  'key=value; domain=www.baidu.com; path=/; expires=Wed, 21 Oct 2025 07:28:00 GMT; Secure;';
 ```
 
 可以看出，客户端设置和服务器设置的格式一样，只是有如下区别：

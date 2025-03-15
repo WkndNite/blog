@@ -47,7 +47,14 @@ function ChildCom(props) {
 ChildCom.propTypes = {
   name: function (props, propName, componentName) {
     if (!/stu/.test(props[propName])) {
-      return new Error('Invalid prop `' + propName + '` supplied to' + ' `' + componentName + '`. Validation failed.');
+      return new Error(
+        'Invalid prop `' +
+          propName +
+          '` supplied to' +
+          ' `' +
+          componentName +
+          '`. Validation failed.'
+      );
     }
   },
   age: PropTypes.number
@@ -97,11 +104,19 @@ function ChildCom(props) {
 }
 
 ChildCom.propTypes = {
-  score: PropTypes.arrayOf(function (propValue, key, componentName, location, propFullName) {
-    if (typeof propValue[key] !== 'number') {
-      return new Error('Invalid prop `' + propFullName + '` supplied to `' + componentName + '`. Expected `number`.');
+  score: PropTypes.arrayOf(
+    function (propValue, key, componentName, location, propFullName) {
+      if (typeof propValue[key] !== 'number') {
+        return new Error(
+          'Invalid prop `' +
+            propFullName +
+            '` supplied to `' +
+            componentName +
+            '`. Expected `number`.'
+        );
+      }
     }
-  })
+  )
 };
 
 export default ChildCom;

@@ -87,7 +87,9 @@ function ChildCom1(props) {
   useEffect(() => {
     console.log(`ChildCom1组件挂载 --- ${formatDate(Date.now(), 'year-time')}`);
     return function () {
-      console.log(`ChildCom1组件卸载 --- ${formatDate(Date.now(), 'year-time')}`);
+      console.log(
+        `ChildCom1组件卸载 --- ${formatDate(Date.now(), 'year-time')}`
+      );
     };
   }, []);
 
@@ -110,7 +112,9 @@ function ChildCom2(props) {
   useEffect(() => {
     console.log(`ChildCom1组件挂载 --- ${formatDate(Date.now(), 'year-time')}`);
     return function () {
-      console.log(`ChildCom1组件卸载 --- ${formatDate(Date.now(), 'year-time')}`);
+      console.log(
+        `ChildCom1组件卸载 --- ${formatDate(Date.now(), 'year-time')}`
+      );
     };
   }, []);
 
@@ -183,9 +187,13 @@ import { formatDate } from '../utils/tools';
 export default function withLog(WrappedComponent) {
   return function EnhancedComponent(props) {
     useEffect(() => {
-      console.log(`${WrappedComponent.name}组件挂载 --- ${formatDate(Date.now(), 'year-time')}`);
+      console.log(
+        `${WrappedComponent.name}组件挂载 --- ${formatDate(Date.now(), 'year-time')}`
+      );
       return function () {
-        console.log(`${WrappedComponent.name}组件卸载 --- ${formatDate(Date.now(), 'year-time')}`);
+        console.log(
+          `${WrappedComponent.name}组件卸载 --- ${formatDate(Date.now(), 'year-time')}`
+        );
       };
     }, []);
     return <WrappedComponent {...props} />;

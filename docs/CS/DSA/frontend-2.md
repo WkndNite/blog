@@ -88,7 +88,9 @@ function CompareTree(root1, root2) {
   if (!root1 || !root2) return false;
   if (root1.length !== root2.length) return false;
   if (root1.data !== root2.data) return false;
-  return CompareTree(root1.left, root2.left) && CompareTree(root1.right, root2.right);
+  return (
+    CompareTree(root1.left, root2.left) && CompareTree(root1.right, root2.right)
+  );
 }
 ```
 
@@ -101,8 +103,10 @@ function CompareTree(root1, root2) {
   if (root1.length !== root2.length) return false;
   if (root1.data !== root2.data) return false;
   return (
-    (CompareTree(root1.left, root2.left) && CompareTree(root1.right, root2.right)) ||
-    (CompareTree(root1.left, root2.right) && CompareTree(root1.right, root2.left))
+    (CompareTree(root1.left, root2.left) &&
+      CompareTree(root1.right, root2.right)) ||
+    (CompareTree(root1.left, root2.right) &&
+      CompareTree(root1.right, root2.left))
   );
 }
 ```

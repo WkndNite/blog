@@ -1,9 +1,10 @@
 ---
 date: 2025-03-15 11:12:23
 tags:
-  - LeetCode-100
+  - Hot-100
   - 计算机基础
   - 数据结构与算法
+  - 图论
 ---
 
 # Hot-100 图论
@@ -17,7 +18,13 @@ tags:
  */
 var numIslands = function (grid) {
   function dfs(grid, i, j) {
-    if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] === '0') {
+    if (
+      i < 0 ||
+      i >= grid.length ||
+      j < 0 ||
+      j >= grid[0].length ||
+      grid[i][j] === '0'
+    ) {
       return;
     }
     grid[i][j] = '0';

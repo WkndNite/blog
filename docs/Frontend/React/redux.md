@@ -104,8 +104,14 @@ cover: https://redux.js.org/img/redux.svg
        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
        <meta name="viewport" content="width=device-width, initial-scale=1" />
        <meta name="theme-color" content="#000000" />
-       <meta name="description" content="Web site created using create-react-app" />
-       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+       <meta
+         name="description"
+         content="Web site created using create-react-app"
+       />
+       <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+       />
 
        <title>React App</title>
      </head>
@@ -135,10 +141,19 @@ cover: https://redux.js.org/img/redux.svg
      return (
        <div className="row">
          <div className="col-md-8">
-           <input type="text" className="form-control" placeholder="请输入待办事项" value={value} onChange={(e) => setValue(e.target.value)} />
+           <input
+             type="text"
+             className="form-control"
+             placeholder="请输入待办事项"
+             value={value}
+             onChange={(e) => setValue(e.target.value)}
+           />
          </div>
          <div className="col-md-4">
-           <button className="btn btn-primary" onClick={() => handleClick(value)}>
+           <button
+             className="btn btn-primary"
+             onClick={() => handleClick(value)}
+           >
              添加
            </button>
          </div>
@@ -174,10 +189,18 @@ cover: https://redux.js.org/img/redux.svg
                  alignItems: 'center'
                }}
              >
-               <span className={['item', item.completed ? 'completed' : ''].join(' ')} onClick={() => props.store.dispatch(updateListAction(item.id))}>
+               <span
+                 className={['item', item.completed ? 'completed' : ''].join(
+                   ' '
+                 )}
+                 onClick={() => props.store.dispatch(updateListAction(item.id))}
+               >
                  {item.title}
                </span>
-               <button className="btn btn-danger" onClick={() => props.store.dispatch(deleteListAction(item.id))}>
+               <button
+                 className="btn btn-danger"
+                 onClick={() => props.store.dispatch(deleteListAction(item.id))}
+               >
                  删除
                </button>
              </li>
@@ -199,7 +222,11 @@ cover: https://redux.js.org/img/redux.svg
 
    import { todoReducer } from './reducers';
 
-   export const store = createStore(todoReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+   export const store = createStore(
+     todoReducer,
+     window.__REDUX_DEVTOOLS_EXTENSION__ &&
+       window.__REDUX_DEVTOOLS_EXTENSION__()
+   );
    ```
 
    ```js [actionType.js]
@@ -319,13 +346,21 @@ export default function Input(props) {
   return (
     <div className="row">
       <div className="col-md-8">
-        <input type="text" className="form-control" placeholder="请输入待办事项" value={value} onChange={(e) => setValue(e.target.value)} />
+        <input
+          type="text"
+          className="form-control"
+          placeholder="请输入待办事项"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
       </div>
       <div className="col-md-4">
         <button
           className="btn btn-primary"
           onClick={() => {
-            dispatcher(addTodo({ id: Date.now(), title: value, completed: false }));
+            dispatcher(
+              addTodo({ id: Date.now(), title: value, completed: false })
+            );
             setValue('');
           }}
         >
@@ -368,10 +403,16 @@ export default function List() {
               alignItems: 'center'
             }}
           >
-            <span className={['item', item.completed ? 'completed' : ''].join(' ')} onClick={() => dispatcher(changeTodo(item.id))}>
+            <span
+              className={['item', item.completed ? 'completed' : ''].join(' ')}
+              onClick={() => dispatcher(changeTodo(item.id))}
+            >
               {item.title}
             </span>
-            <button className="btn btn-danger" onClick={() => dispatcher(deleteTodo(item.id))}>
+            <button
+              className="btn btn-danger"
+              onClick={() => dispatcher(deleteTodo(item.id))}
+            >
               删除
             </button>
           </li>

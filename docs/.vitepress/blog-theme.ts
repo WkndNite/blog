@@ -26,7 +26,8 @@ const blogTheme = getThemeConfig({
       {
         nickname: '粥里有勺糖',
         des: '你的指尖用于改变世界的力量',
-        avatar: 'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
+        avatar:
+          'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
         url: 'https://sugarat.top'
       },
       {
@@ -135,7 +136,10 @@ const blogTheme = getThemeConfig({
 
         url: 'https://github.com/WkndNite/coder-station',
         cover: {
-          urls: ['/works/b41cbd6999f93adb61e5fd56adf40af.png', '/works/94cdbed03feedbb78a9ee5e26890360.png'],
+          urls: [
+            '/works/b41cbd6999f93adb61e5fd56adf40af.png',
+            '/works/94cdbed03feedbb78a9ee5e26890360.png'
+          ],
           layout: 'list'
         },
         tags: ['React', 'Ant Design']
