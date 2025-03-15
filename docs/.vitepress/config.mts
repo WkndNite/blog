@@ -178,12 +178,20 @@ export default defineConfig({
               link: '/CS/LeetCode-100/array',
             },
             {
+              text: 'Hot-100 矩阵',
+              link: '/CS/LeetCode-100/matrix',
+            },
+            {
               text: 'Hot-100 链表',
               link: '/CS/LeetCode-100/linklist',
             },
             {
               text: 'Hot-100 二叉树',
               link: '/CS/LeetCode-100/tree',
+            },
+            {
+              text: 'Hot-100 图论',
+              link: '/CS/LeetCode-100/graph',
             },
             {
               text: 'Hot-100 回溯',
@@ -194,8 +202,16 @@ export default defineConfig({
               link: '/CS/LeetCode-100/binary-search',
             },
             {
-              text:'Hot-100 贪心算法',
-              link:'/CS/LeetCode-100/greedy'
+              text: 'Hot-100 栈',
+              link: '/CS/LeetCode-100/stack',
+            },
+            {
+              text: 'Hot-100 堆',
+              link: '/CS/LeetCode-100/heap',
+            },
+            {
+              text: 'Hot-100 贪心算法',
+              link: '/CS/LeetCode-100/greedy',
             },
             {
               text: 'Hot-100 动态规划',
