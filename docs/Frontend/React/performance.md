@@ -22,7 +22,7 @@ import React, { Component } from 'react';
 
 export default class App extends Component {
   state = {
-    counter: 1,
+    counter: 1
   };
 
   render() {
@@ -33,7 +33,7 @@ export default class App extends Component {
         <button
           onClick={() => {
             this.setState({
-              counter: 1,
+              counter: 1
             });
           }}
         >
@@ -66,7 +66,7 @@ function ObjectEqual(obj1, obj2) {
 
 export default class App extends Component {
   state = {
-    counter: 1,
+    counter: 1
   };
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -84,7 +84,7 @@ export default class App extends Component {
         <button
           onClick={() => {
             this.setState({
-              counter: this.state.counter + 1,
+              counter: this.state.counter + 1
             });
           }}
         >
@@ -93,7 +93,7 @@ export default class App extends Component {
         <button
           onClick={() => {
             this.setState({
-              counter: 1,
+              counter: 1
             });
           }}
         >
@@ -111,7 +111,7 @@ import React, { PureComponent } from 'react';
 
 export default class App extends PureComponent {
   state = {
-    counter: 1,
+    counter: 1
   };
 
   render() {
@@ -122,7 +122,7 @@ export default class App extends PureComponent {
         <button
           onClick={() => {
             this.setState({
-              counter: this.state.counter + 1,
+              counter: this.state.counter + 1
             });
           }}
         >
@@ -131,7 +131,7 @@ export default class App extends PureComponent {
         <button
           onClick={() => {
             this.setState({
-              counter: 1,
+              counter: 1
             });
           }}
         >
@@ -162,7 +162,7 @@ import React, { PureComponent } from 'react';
 
 export default class App extends PureComponent {
   state = {
-    list: [1, 2, 3],
+    list: [1, 2, 3]
   };
 
   render() {
@@ -201,7 +201,7 @@ import React, { PureComponent } from 'react';
 
 export default class App extends PureComponent {
   state = {
-    list: [1, 2, 3],
+    list: [1, 2, 3]
   };
 
   render() {
@@ -212,7 +212,7 @@ export default class App extends PureComponent {
         <button
           onClick={() => {
             this.setState({
-              list: [...this.state.list, this.state.list.length + 1],
+              list: [...this.state.list, this.state.list.length + 1]
             });
           }}
         >
@@ -234,7 +234,7 @@ import React, { Component } from 'react';
 
 export default class App extends Component {
   state = {
-    list: [1, 2, 3],
+    list: [1, 2, 3]
   };
 
   render() {
@@ -245,7 +245,7 @@ export default class App extends Component {
         <button
           onClick={() => {
             this.setState({
-              list: [...this.state.list, this.state.list.length + 1],
+              list: [...this.state.list, this.state.list.length + 1]
             });
           }}
         >
@@ -450,7 +450,7 @@ function ChildCom1() {
       style={{
         width: '200px',
         height: '100px',
-        border: '1px solid',
+        border: '1px solid'
       }}
     >
       ChildCom1
@@ -473,7 +473,7 @@ function ChildCom2() {
       style={{
         width: '200px',
         height: '100px',
-        border: '1px solid',
+        border: '1px solid'
       }}
     >
       ChildCom2
@@ -561,7 +561,7 @@ function ChildCom1(props) {
       style={{
         width: '200px',
         height: '100px',
-        border: '1px solid',
+        border: '1px solid'
       }}
     >
       ChildCom1
@@ -582,7 +582,7 @@ function ChildCom2(props) {
       style={{
         width: '200px',
         height: '100px',
-        border: '1px solid',
+        border: '1px solid'
       }}
     >
       ChildCom2
@@ -610,7 +610,7 @@ function ChildCom1(props) {
       style={{
         width: '200px',
         height: '100px',
-        border: '1px solid',
+        border: '1px solid'
       }}
     >
       ChildCom1
@@ -670,7 +670,7 @@ function ChildCom1(props) {
       style={{
         width: '200px',
         height: '100px',
-        border: '1px solid',
+        border: '1px solid'
       }}
     >
       ChildCom1

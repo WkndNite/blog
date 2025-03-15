@@ -63,7 +63,7 @@ date: 2025-01-20
      value: '张三',
      writable: true,
      enumerable: true,
-     configurable: true,
+     configurable: true
    });
    ```
 
@@ -94,7 +94,7 @@ date: 2025-01-20
      set(value) {
        console.log('Intercepted when writing data');
        data = value;
-     },
+     }
    });
 
    console.log(obj.data); // Intercepted when reading data, Some data
@@ -104,7 +104,7 @@ date: 2025-01-20
 
    ```js [Proxy]
    const obj = {
-     data: 'some data',
+     data: 'some data'
    };
    const p = new Proxy(obj, {
      get(target, prop) {
@@ -114,7 +114,7 @@ date: 2025-01-20
      set(target, prop, value) {
        console.log(`set ${prop} to ${value}`);
        target[prop] = value;
-     },
+     }
    });
    console.log(p.data); // get data, some data
    p.data = 'new data'; // set data to new data
@@ -131,9 +131,9 @@ date: 2025-01-20
    const data = {
      level1: {
        level2: {
-         value: 42,
-       },
-     },
+         value: 42
+       }
+     }
    };
 
    function deepDefineProperty(obj) {
@@ -156,7 +156,7 @@ date: 2025-01-20
            value = newValue;
          },
          configurable: true,
-         enumerable: true,
+         enumerable: true
        });
      }
    }
@@ -183,9 +183,9 @@ date: 2025-01-20
    const data = {
      level1: {
        level2: {
-         value: 42,
-       },
-     },
+         value: 42
+       }
+     }
    };
 
    function deepProxy(obj) {
@@ -203,7 +203,7 @@ date: 2025-01-20
            return deepProxy(value);
          }
          target[key] = value;
-       },
+       }
      });
    }
 
@@ -236,8 +236,8 @@ date: 2025-01-20
    ```js
    var vm = new Vue({
      data: {
-       a: 1,
-     },
+       a: 1
+     }
    });
 
    // `vm.a` 是响应式的

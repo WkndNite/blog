@@ -29,7 +29,7 @@ export default defineComponent({
   props: {
     name: String,
     email: String,
-    avatarUrl: String,
+    avatarUrl: String
   },
   setup(props) {
     return () =>
@@ -37,11 +37,11 @@ export default defineComponent({
         h('img', {
           class: styles.avatar,
           src: props.avatarUrl,
-          alt: 'UserCard Avatar',
+          alt: 'UserCard Avatar'
         }),
-        h('div', { class: styles.userCardContent }, [h('h2', props.name), h('p', props.email)]),
+        h('div', { class: styles.userCardContent }, [h('h2', props.name), h('p', props.email)])
       ]);
-  },
+  }
 });
 
 // Layout.vue
@@ -59,18 +59,18 @@ export default {
   props: {
     name: String,
     email: String,
-    avatarUrl: String,
+    avatarUrl: String
   },
   render() {
     return h('div', { class: styles.userCard }, [
       h('img', {
         class: styles.avatar,
         src: this.avatarUrl,
-        alt: 'UserCard Avatar',
+        alt: 'UserCard Avatar'
       }),
-      h('div', { class: styles.userCardContent }, [h('h2', this.name), h('p', this.email)]),
+      h('div', { class: styles.userCardContent }, [h('h2', this.name), h('p', this.email)])
     ]);
-  },
+  }
 };
 
 // Layout.vue
@@ -159,7 +159,7 @@ function compiler(template) {
      { type: 'tag', name: 'p' },
      { type: 'text', content: 'React' },
      { type: 'tagEnd', name: 'p' },
-     { type: 'tagEnd', name: 'div' },
+     { type: 'tagEnd', name: 'div' }
    ];
    ```
 
@@ -300,22 +300,22 @@ function compiler(template) {
         props: {
           name: String,
           email: String,
-          avatarUrl: String,
+          avatarUrl: String
         },
-        template: '#user-card-template',
+        template: '#user-card-template'
       };
 
       createApp({
         components: {
-          UserCard,
+          UserCard
         },
         data() {
           return {
             name: '周末晚',
             email: 'WkndNite@126.com',
-            avatarUrl: 'https://blog.wkndnite-tech.cn/logo.png',
+            avatarUrl: 'https://blog.wkndnite-tech.cn/logo.png'
           };
-        },
+        }
       }).mount('#app');
     </script>
   </body>

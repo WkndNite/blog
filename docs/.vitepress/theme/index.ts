@@ -22,8 +22,8 @@ export default {
             buttonText: ' ',
             copiedText: ' ',
             buttonIcon: 'noto:link',
-            copiedIcon: 'noto:check-mark-button',
-          }),
+            copiedIcon: 'noto:check-mark-button'
+          })
       });
     }
 
@@ -35,5 +35,5 @@ export default {
     ctx.app.component('Fireworks', Fireworks);
     ctx.app.component('ShareButton', ShareButton);
     ctx.app.component('VideoPlayer', VideoPlayer);
-  },
+  }
 };

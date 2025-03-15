@@ -59,7 +59,7 @@ cover: https://redux.js.org/img/redux.svg
            className="lead"
            style={{
              marginTop: '20px',
-             marginBottom: '30px',
+             marginBottom: '30px'
            }}
          >
            待办事项
@@ -159,7 +159,7 @@ cover: https://redux.js.org/img/redux.svg
              display: 'flex',
              flexDirection: 'column',
              gap: '10px',
-             marginTop: '20px',
+             marginTop: '20px'
            }}
          >
            {props.store.getState().list.map((item) => (
@@ -171,7 +171,7 @@ cover: https://redux.js.org/img/redux.svg
                  width: '310px',
                  display: 'flex',
                  justifyContent: 'space-between',
-                 alignItems: 'center',
+                 alignItems: 'center'
                }}
              >
                <span className={['item', item.completed ? 'completed' : ''].join(' ')} onClick={() => props.store.dispatch(updateListAction(item.id))}>
@@ -213,17 +213,17 @@ cover: https://redux.js.org/img/redux.svg
 
    export const addListAction = (payload) => ({
      type: ADD,
-     payload,
+     payload
    });
 
    export const deleteListAction = (payload) => ({
      type: DELETE,
-     payload,
+     payload
    });
 
    export const updateListAction = (payload) => ({
      type: CHANGE,
-     payload,
+     payload
    });
    ```
 
@@ -234,8 +234,8 @@ cover: https://redux.js.org/img/redux.svg
      list: [
        { id: 1, title: 'Learn React', completed: false },
        { id: 2, title: 'Learn Redux', completed: false },
-       { id: 3, title: 'Learn React Native', completed: false },
-     ],
+       { id: 3, title: 'Learn React Native', completed: false }
+     ]
    };
 
    export function todoReducer(state = defaultState, action) {
@@ -247,13 +247,13 @@ cover: https://redux.js.org/img/redux.svg
              {
                id: Date.now(),
                title: action.payload,
-               completed: false,
-             },
-           ],
+               completed: false
+             }
+           ]
          };
        case DELETE:
          return {
-           list: state.list.filter((item) => item.id !== action.payload),
+           list: state.list.filter((item) => item.id !== action.payload)
          };
        case CHANGE:
          return {
@@ -262,7 +262,7 @@ cover: https://redux.js.org/img/redux.svg
                item.completed = !item.completed;
              }
              return item;
-           }),
+           })
          };
        default:
          return state;
@@ -304,7 +304,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
     <App />
-  </Provider>,
+  </Provider>
 );
 ```
 
@@ -353,7 +353,7 @@ export default function List() {
           display: 'flex',
           flexDirection: 'column',
           gap: '10px',
-          marginTop: '20px',
+          marginTop: '20px'
         }}
       >
         {list.map((item) => (
@@ -365,7 +365,7 @@ export default function List() {
               width: '310px',
               display: 'flex',
               justifyContent: 'space-between',
-              alignItems: 'center',
+              alignItems: 'center'
             }}
           >
             <span className={['item', item.completed ? 'completed' : ''].join(' ')} onClick={() => dispatcher(changeTodo(item.id))}>
@@ -388,8 +388,8 @@ import todoListReducer from './todoSlice';
 
 export default configureStore({
   reducer: {
-    todoList: todoListReducer,
-  },
+    todoList: todoListReducer
+  }
 });
 ```
 
@@ -402,8 +402,8 @@ export const todoSlice = createSlice({
     todos: [
       { id: 1, title: 'Learn React', completed: false },
       { id: 2, title: 'Learn Redux', completed: false },
-      { id: 3, title: 'Learn React Native', completed: false },
-    ],
+      { id: 3, title: 'Learn React Native', completed: false }
+    ]
   },
   reducers: {
     addTodo: (state, action) => {
@@ -419,8 +419,8 @@ export const todoSlice = createSlice({
         }
         return todo;
       });
-    },
-  },
+    }
+  }
 });
 
 export default todoSlice.reducer;

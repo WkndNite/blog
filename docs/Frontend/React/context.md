@@ -63,7 +63,7 @@ export default class ChildCom1 extends Component {
           width: '300px',
           userSelect: 'none',
           margin: '10px',
-          padding: '10px',
+          padding: '10px'
         }}
       >
         ChildCom1
@@ -93,7 +93,7 @@ function ChildCom2() {
               width: '200px',
               userSelect: 'none',
               margin: '10px',
-              padding: '10px',
+              padding: '10px'
             }}
             onClick={() => ctx.setCounter(ctx.counter + 1)}
           >
@@ -122,7 +122,7 @@ export default class ChildCom3 extends Component {
           width: '200px',
           userSelect: 'none',
           margin: '10px',
-          padding: '10px',
+          padding: '10px'
         }}
         onClick={() => this.context.setCounter(this.context.counter + 2)}
       >
@@ -152,7 +152,7 @@ function App() {
           width: '360px',
           userSelect: 'none',
           margin: '10px',
-          padding: '10px',
+          padding: '10px'
         }}
       >
         <div>App</div>
@@ -182,7 +182,7 @@ export default App;
 ```js
 import React from 'react';
 const MyContext = React.createContext({
-  name: 'John Doe',
+  name: 'John Doe'
 });
 MyContext.displayName = 'counter';
 export default MyContext;
@@ -201,7 +201,7 @@ export default MyContext;
 ```js [context/index.js]
 import React from 'react';
 const MyContext = React.createContext({
-  name: '周末晚',
+  name: '周末晚'
 });
 MyContext.displayName = 'counter';
 export default MyContext;
@@ -220,7 +220,7 @@ export default class ChildCom1 extends Component {
           width: '300px',
           userSelect: 'none',
           margin: '10px',
-          padding: '10px',
+          padding: '10px'
         }}
       >
         ChildCom1
@@ -248,7 +248,7 @@ function ChildCom2() {
               width: '200px',
               userSelect: 'none',
               margin: '10px',
-              padding: '10px',
+              padding: '10px'
             }}
           >
             ChildCom2 --- name : {ctx.name}
@@ -275,7 +275,7 @@ function App() {
         width: '360px',
         userSelect: 'none',
         margin: '10px',
-        padding: '10px',
+        padding: '10px'
       }}
     >
       <div>App</div>
@@ -323,7 +323,7 @@ function ChildCom2() {
                     width: '200px',
                     userSelect: 'none',
                     margin: '10px',
-                    padding: '10px',
+                    padding: '10px'
                   }}
                 >
                   ChildCom2
@@ -359,7 +359,7 @@ function App() {
             width: '360px',
             userSelect: 'none',
             margin: '10px',
-            padding: '10px',
+            padding: '10px'
           }}
         >
           <div>App</div>

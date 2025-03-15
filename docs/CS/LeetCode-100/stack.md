@@ -19,7 +19,7 @@ var isValid = function (s) {
   const map = {
     '(': ')',
     '[': ']',
-    '{': '}',
+    '{': '}'
   };
   const stack = [];
   for (const item of s) {

@@ -336,7 +336,7 @@ class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      count: 0
     };
   }
 
@@ -403,7 +403,7 @@ class Counter extends React.Component {
       (prevState) => ({ count: prevState.count + 1 }),
       () => {
         console.log(this.state.count); // 加了 3
-      },
+      }
     );
     this.setState((prevState) => ({ count: prevState.count + 1 }));
     this.setState((prevState) => ({ count: prevState.count + 1 }));
@@ -525,7 +525,7 @@ class Welcome extends React.Component {
 }
 
 Welcome.defaultProps = {
-  name: 'Stranger',
+  name: 'Stranger'
 };
 
 export default Welcome;

@@ -50,13 +50,13 @@ module.exports = {
           {
             loader: './loaders/loader.js',
             options: {
-              needToReplace: '变量',
-            },
-          },
-        ],
-      },
-    ],
-  },
+              needToReplace: '变量'
+            }
+          }
+        ]
+      }
+    ]
+  }
 };
 ```
 
@@ -76,10 +76,10 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: ['./loaders/loader.js'],
-      },
-    ],
-  },
+        use: ['./loaders/loader.js']
+      }
+    ]
+  }
 };
 ```
 
@@ -91,10 +91,10 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: ['./loaders/loader1.js', './loaders/loader2.js'],
-      },
-    ],
-  },
+        use: ['./loaders/loader1.js', './loaders/loader2.js']
+      }
+    ]
+  }
 };
 ```
 
@@ -130,10 +130,10 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['./loaders/style-loader'],
-      },
-    ],
-  },
+        use: ['./loaders/style-loader']
+      }
+    ]
+  }
 };
 ```
 
@@ -170,7 +170,7 @@ function getBase64(buffer) {
 
 function getFilePath(buffer, name) {
   var filename = loaderUtil.interpolateName(this, name, {
-    content: buffer,
+    content: buffer
   });
   this.emitFile(filename, buffer);
   return filename;
@@ -198,13 +198,13 @@ module.exports = {
             loader: './loaders/img-loader.js',
             options: {
               limit: 3000, //3000字节以上使用图片，3000字节以内使用base64
-              filename: 'img-[contenthash:5].[ext]',
-            },
-          },
-        ],
-      },
-    ],
-  },
+              filename: 'img-[contenthash:5].[ext]'
+            }
+          }
+        ]
+      }
+    ]
+  }
 };
 ```
 
@@ -227,7 +227,7 @@ module.exports = {
 
 ```js
 var plugin = {
-  apply: function (compiler) {},
+  apply: function (compiler) {}
 };
 ```
 
@@ -245,7 +245,7 @@ var plugin = new MyPlugin();
 
 ```js
 module.exports = {
-  plugins: [new MyPlugin()],
+  plugins: [new MyPlugin()]
 };
 ```
 

@@ -125,18 +125,18 @@ const person = {
   legs: 2,
   walk() {
     console.log('walking');
-  },
+  }
 };
 
 const john = Object.create(person, {
   name: {
     value: 'John',
-    enumerable: true,
+    enumerable: true
   },
   age: {
     value: 18,
-    enumerable: true,
-  },
+    enumerable: true
+  }
 });
 console.log(john.__proto__ === person); // true
 ```
@@ -356,18 +356,18 @@ i.zhangsan();
      legs: 2,
      walk() {
        console.log('walking');
-     },
+     }
    };
 
    const john = Object.create(person, {
      name: {
        value: 'John',
-       enumerable: true,
+       enumerable: true
      },
      age: {
        value: 18,
-       enumerable: true,
-     },
+       enumerable: true
+     }
    });
    console.log(john.hasOwnProperty('name')); // true
    console.log(john.hasOwnProperty('arms')); // false

@@ -39,7 +39,7 @@ function createFireworks() {
     '30, 144, 255', // 湄南蓝色
     '100, 149, 237', // 天空蓝
     '72, 61, 139', // 暗蓝色
-    '138, 43, 226', // 紫色
+    '138, 43, 226' // 紫色
   ];
   const defaultConfig: FireworksConfig = {
     colors: defaultColors,
@@ -47,7 +47,7 @@ function createFireworks() {
     orbitRadius: { min: 60, max: 100 }, // 增大扩散半径
     circleRadius: { min: 7, max: 12 }, // 增大圆圈的半径
     diffuseRadius: { min: 80, max: 150 }, // 扩大粒子扩散范围
-    animeDuration: { min: 800, max: 1800 }, // 动画时长适中
+    animeDuration: { min: 800, max: 1800 } // 动画时长适中
   };
 
   let pointerX = 0;
@@ -75,7 +75,7 @@ function createFireworks() {
     const radius = [-1, 1][anime.random(0, 1)] * value;
     return {
       x: p.x + radius * Math.cos(angle),
-      y: p.y + radius * Math.sin(angle),
+      y: p.y + radius * Math.sin(angle)
     };
   }
 
@@ -99,7 +99,7 @@ function createFireworks() {
         ctx.fillStyle = this.color!;
         ctx.fill();
         ctx.restore();
-      },
+      }
     };
     return p;
   }
@@ -120,7 +120,7 @@ function createFireworks() {
         ctx.strokeStyle = this.color!;
         ctx.stroke();
         ctx.globalAlpha = 1;
-      },
+      }
     };
     return p;
   }
@@ -151,7 +151,7 @@ function createFireworks() {
         radius: 0,
         duration: anime.random(defaultConfig.animeDuration.min, defaultConfig.animeDuration.max),
         easing: 'easeOutExpo',
-        update: renderParticle,
+        update: renderParticle
       })
       .add(
         {
@@ -161,13 +161,13 @@ function createFireworks() {
           alpha: {
             value: 0,
             easing: 'linear',
-            duration: anime.random(600, 800),
+            duration: anime.random(600, 800)
           },
           duration: anime.random(1200, 1800),
           easing: 'easeOutExpo',
-          update: renderParticle,
+          update: renderParticle
         },
-        0,
+        0
       );
   }
 
@@ -175,7 +175,7 @@ function createFireworks() {
     duration: Number.POSITIVE_INFINITY,
     update: () => {
       ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
-    },
+    }
   });
 
   document.addEventListener('mousedown', (e) => {

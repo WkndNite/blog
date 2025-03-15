@@ -28,7 +28,7 @@ import React, { Component } from 'react';
 
 export default class App extends Component {
   state = {
-    value: 'test content',
+    value: 'test content'
   };
 
   handleChange = (event) => {
@@ -56,7 +56,7 @@ import React, { Component } from 'react';
 export default class App extends Component {
   state = {
     value1: '',
-    value2: '',
+    value2: ''
   };
 
   handleChange = (event) => {
@@ -64,12 +64,12 @@ export default class App extends Component {
     switch (name) {
       case 'one':
         this.setState({
-          value1: event.target.value.toUpperCase(),
+          value1: event.target.value.toUpperCase()
         });
         break;
       case 'two':
         this.setState({
-          value2: event.target.value.replace(/\D/g, ''),
+          value2: event.target.value.replace(/\D/g, '')
         });
         break;
       default:
@@ -93,7 +93,7 @@ import React, { Component } from 'react';
 
 export default class App extends Component {
   state = {
-    value: '',
+    value: ''
   };
 
   handleChange = (event) => {
@@ -117,7 +117,7 @@ import React, { Component } from 'react';
 
 export default class App extends Component {
   state = {
-    selectedOption: null,
+    selectedOption: null
   };
 
   handleChange = (index) => {
@@ -153,8 +153,8 @@ export default class App extends Component {
       { content: 'CSS', checked: false },
       { content: 'JavaScript', checked: false },
       { content: 'React', checked: false },
-      { content: 'Vue', checked: false },
-    ],
+      { content: 'Vue', checked: false }
+    ]
   };
 
   handleChange = (index) => {
@@ -185,7 +185,7 @@ import React, { Component } from 'react';
 
 export default class App extends Component {
   state = {
-    value: 'balance',
+    value: 'balance'
   };
 
   handleChange = (e) => {
@@ -321,12 +321,12 @@ import React, { Component } from 'react';
 
 export default class App extends Component {
   state = {
-    count: 0,
+    count: 0
   };
 
   increment = () => {
     this.setState({
-      count: this.state.count + 1,
+      count: this.state.count + 1
     });
   };
 

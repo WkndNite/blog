@@ -58,7 +58,7 @@ interface Person {
 }
 const p1: person = {
   name: '周末晚',
-  age: '22',
+  age: '22'
 };
 
 interface RandomKey {
@@ -67,7 +67,7 @@ interface RandomKey {
 const obj: RandomKey = {
   a: 'hello',
   b: 'world',
-  c: 'typeScript',
+  c: 'typeScript'
 };
 ```
 
@@ -104,7 +104,7 @@ const obj: RandomKey = {
    const stu: Student = {
      name: '周末晚',
      age: '22',
-     grade: '60',
+     grade: '60'
    };
    ```
 

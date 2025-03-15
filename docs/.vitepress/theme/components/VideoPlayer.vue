@@ -19,7 +19,7 @@ export default {
     platform: { type: String, default: '' }, // 平台标识：bilibili/youtube/local
     width: { type: String, default: '100%' }, // 宽度
     height: { type: String, default: '400' }, // 高度
-    poster: { type: String, default: '' }, // 本地视频封面
+    poster: { type: String, default: '' } // 本地视频封面
   },
   computed: {
     isLocal() {
@@ -28,14 +28,14 @@ export default {
     platformUrl() {
       const map = {
         bilibili: `https://player.bilibili.com/player.html?bvid=${this.src}&autoplay=0`,
-        youtube: `https://www.youtube.com/embed/${this.src}`,
+        youtube: `https://www.youtube.com/embed/${this.src}`
       };
       return map[this.platform];
     },
     source() {
       return this.src.startsWith('/') ? this.src : `/${this.src}`;
-    },
-  },
+    }
+  }
 };
 </script>
 

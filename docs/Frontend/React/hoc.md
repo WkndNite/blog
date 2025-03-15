@@ -44,7 +44,7 @@ tags:
 const mixinDefaultProps = {};
 const ExampleComponent = React.createClass({
   mixins: [mixinDefaultProps],
-  render: function () {},
+  render: function () {}
 });
 ```
 

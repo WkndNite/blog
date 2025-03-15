@@ -23,8 +23,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
+    path: path.resolve(__dirname, 'dist')
+  }
 };
 ```
 
@@ -38,13 +38,13 @@ module.exports = {
 
 ```js [字符串]
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.js'
 };
 ```
 
 ```js [数组]
 module.exports = {
-  entry: ['./src/index.js', './src/other.js'],
+  entry: ['./src/index.js', './src/other.js']
 };
 ```
 
@@ -52,8 +52,8 @@ module.exports = {
 module.exports = {
   entry: {
     main: './src/index.js',
-    other: './src/other.js',
-  },
+    other: './src/other.js'
+  }
 };
 ```
 
@@ -94,11 +94,11 @@ module.exports = {
     entry: {
       pageA: './src/pageA/index.js',
       pageB: './src/pageB/index.js',
-      pageC: ['./src/pageC/index1.js', './src/pageC/index2.js'],
+      pageC: ['./src/pageC/index1.js', './src/pageC/index2.js']
     },
     output: {
-      filename: '[name].[chunkhash:8].js',
-    },
+      filename: '[name].[chunkhash:8].js'
+    }
   };
   ```
 
@@ -131,8 +131,8 @@ module.exports = {
   module.exports = {
     entry: './src/index.js',
     output: {
-      filename: '[name].[chunkhash:8].js',
-    },
+      filename: '[name].[chunkhash:8].js'
+    }
   };
   ```
 
@@ -170,7 +170,7 @@ module.exports = {
   module.exports = {
     entry: './src/index.js',
     output: {
-      filename: '[name].[chunkhash:8].js',
-    },
+      filename: '[name].[chunkhash:8].js'
+    }
   };
   ```

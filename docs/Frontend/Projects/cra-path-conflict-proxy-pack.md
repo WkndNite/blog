@@ -26,16 +26,16 @@ module.exports = function (app) {
     '/res',
     createProxyMiddleware({
       target: 'http://localhost:7001/res',
-      changeOrigin: true,
-    }),
+      changeOrigin: true
+    })
   );
 
   app.use(
     '/api',
     createProxyMiddleware({
       target: 'http://localhost:7001/api',
-      changeOrigin: true,
-    }),
+      changeOrigin: true
+    })
   );
 
   app.use(
@@ -43,8 +43,8 @@ module.exports = function (app) {
     createProxyMiddleware({
       target: 'http://localhost:7001/static',
       changeOrigin: true,
-      ws: true,
-    }),
+      ws: true
+    })
   );
 };
 ```

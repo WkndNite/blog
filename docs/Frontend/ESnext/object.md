@@ -22,13 +22,13 @@ const sayHello = function () {
 const person = {
   name: name,
   age: age,
-  sayHello: sayHello,
+  sayHello: sayHello
 };
 
 const person2 = {
   name,
   age,
-  sayHello,
+  sayHello
 };
 ```
 
@@ -37,12 +37,12 @@ const person2 = {
 ```js
 const MyMath = {
   sum: function (a, b) {},
-  random: function (min, max) {},
+  random: function (min, max) {}
 };
 
 const MyMath2 = {
   sum(a, b) {},
-  random(min, max) {},
+  random(min, max) {}
 };
 ```
 
@@ -76,11 +76,11 @@ const arr2 = [1, ...arr, 5];
 ```js
 const user = {
   name: 'monica',
-  age: 18,
+  age: 18
 };
 const user2 = {
   ...user,
-  name: 'lisa',
+  name: 'lisa'
 };
 ```
 
@@ -93,14 +93,14 @@ const user = {
   name: 'monica',
   age: 18,
   addr: {
-    city: 'Beijing',
-  },
+    city: 'Beijing'
+  }
 };
 
 const {
   name,
   age,
-  addr: { city },
+  addr: { city }
 } = user;
 ```
 
@@ -125,7 +125,7 @@ let b = 2;
 const users = [
   { name: 'monica', age: 18 },
   { name: 'lisa', age: 20 },
-  { name: 'lucy', age: 22 },
+  { name: 'lucy', age: 22 }
 ];
 
 for (const { name, age } of users) {
@@ -140,7 +140,7 @@ for (const { name, age } of users) {
 ```js
 const user = {
   name: 'monica',
-  age: 18,
+  age: 18
 };
 ```
 
@@ -179,7 +179,7 @@ ES 5 提供了一系列的 API，针对属性描述符进行操作。
      value: 'lisa',
      writable: false,
      configurable: false,
-     enumerable: true,
+     enumerable: true
    });
    ```
 
@@ -190,7 +190,7 @@ ES 5 提供了一系列的 API，针对属性描述符进行操作。
 ```js
 const user = {
   name: 'monica',
-  age: 18,
+  age: 18
 };
 
 Object.defineProperty(user, 'name', {
@@ -199,7 +199,7 @@ Object.defineProperty(user, 'name', {
   },
   set(value) {
     console.log('set name', value);
-  },
+  }
 });
 
 console.log(user.name); // defaultName
@@ -220,7 +220,7 @@ console.log(user.name); // defaultName
 ```js
 const user = {
   name: 'monica',
-  age: 18,
+  age: 18
 };
 
 const keys = Object.keys(user);
@@ -244,7 +244,7 @@ console.log(obj); // {name: 'monica', age: 18}
 ```js
 const user = {
   name: 'monica',
-  age: 18,
+  age: 18
 };
 
 Object.freeze(user);

@@ -53,7 +53,7 @@ function buildTree(preOrder, inOrder) {
   return {
     data: root,
     left: buildTree(preOrderLeft, inOrderLeft),
-    right: buildTree(preOrderRight, inOrderRight),
+    right: buildTree(preOrderRight, inOrderRight)
   };
 }
 ```
@@ -75,7 +75,7 @@ function buildTree(inOrder, postOrder) {
   return {
     data: root,
     left: buildTree(inOrderLeft, postOrderLeft),
-    right: buildTree(inOrderRight, postOrderRight),
+    right: buildTree(inOrderRight, postOrderRight)
   };
 }
 ```

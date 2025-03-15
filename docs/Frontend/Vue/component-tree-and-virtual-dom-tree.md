@@ -62,9 +62,9 @@ date: 2025-01-20
 export default {
   data() {
     return {
-      msg: 'Hello Vue 1.0',
+      msg: 'Hello Vue 1.0'
     };
-  },
+  }
 };
 </script>
 ```

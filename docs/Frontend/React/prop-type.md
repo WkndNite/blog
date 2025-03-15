@@ -50,7 +50,7 @@ ChildCom.propTypes = {
       return new Error('Invalid prop `' + propName + '` supplied to' + ' `' + componentName + '`. Validation failed.');
     }
   },
-  age: PropTypes.number,
+  age: PropTypes.number
 };
 
 export default ChildCom;
@@ -101,7 +101,7 @@ ChildCom.propTypes = {
     if (typeof propValue[key] !== 'number') {
       return new Error('Invalid prop `' + propFullName + '` supplied to `' + componentName + '`. Expected `number`.');
     }
-  }),
+  })
 };
 
 export default ChildCom;
@@ -142,7 +142,7 @@ function ChildCom(props) {
 }
 
 ChildCom.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element.isRequired
 };
 
 export default ChildCom;
@@ -191,7 +191,7 @@ function ChildCom(props) {
 }
 
 ChildCom.defaultProps = {
-  name: '默认值',
+  name: '默认值'
 };
 
 export default ChildCom;

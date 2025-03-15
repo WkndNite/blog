@@ -56,7 +56,7 @@ function Modal() {
         left: 'calc(50% - 225px)',
         top: 'calc(50% - 125px)',
         textAlign: 'center',
-        lineHeight: '250px',
+        lineHeight: '250px'
       }}
     >
       Modal
@@ -93,7 +93,7 @@ function App() {
     <>
       <div
         style={{
-          position: 'relative',
+          position: 'relative'
         }}
       >
         <button onClick={() => setIsShow(!isShow)}>Show Modal</button>
@@ -121,12 +121,12 @@ function Modal() {
         left: 'calc(50% - 225px)',
         top: 'calc(50% - 125px)',
         textAlign: 'center',
-        lineHeight: '250px',
+        lineHeight: '250px'
       }}
     >
       Modal
     </div>,
-    document.getElementById('modal'),
+    document.getElementById('modal')
   );
 }
 

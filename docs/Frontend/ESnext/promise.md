@@ -60,7 +60,7 @@ pro.then(
   },
   (reason) => {
     // onRejected 函数，当任务失败后，会自动运行该函数，reason 为任务失败的相关原因
-  },
+  }
 );
 ```
 

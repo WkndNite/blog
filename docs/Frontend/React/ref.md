@@ -218,7 +218,7 @@ export default class App extends Component {
     super();
     this.comRef = React.createRef();
     this.state = {
-      show: true,
+      show: true
     };
   }
 
@@ -233,7 +233,7 @@ export default class App extends Component {
         <button
           onClick={() =>
             this.setState({
-              show: !this.state.show,
+              show: !this.state.show
             })
           }
         >
@@ -519,7 +519,7 @@ function ChildCom1(props, ref) {
   useImperativeHandle(ref, () => ({
     click: () => {
       console.log(childRef.current);
-    },
+    }
   }));
 
   function clickHandle() {

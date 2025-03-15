@@ -40,7 +40,7 @@ function ChildCom1() {
       style={{
         width: '400px',
         height: '400px',
-        backgroundColor: 'lightblue',
+        backgroundColor: 'lightblue'
       }}
       onMouseMove={mouseMoveHandler}
     >
@@ -60,12 +60,12 @@ import React, { useState } from 'react';
 function ChildCom2() {
   const [points, setPoints] = useState({
     x: 0,
-    y: 0,
+    y: 0
   });
   const mouseMoveHandler = (e) => {
     setPoints({
       x: e.clientX,
-      y: e.clientY,
+      y: e.clientY
     });
   };
   return (
@@ -75,7 +75,7 @@ function ChildCom2() {
         height: '400px',
         backgroundColor: 'lightgreen',
         position: 'relative',
-        overflow: 'hidden',
+        overflow: 'hidden'
       }}
       onMouseMove={mouseMoveHandler}
     >
@@ -88,7 +88,7 @@ function ChildCom2() {
           position: 'absolute',
           left: points.x - 450 - 15,
           top: points.y - 15,
-          borderRadius: '50%',
+          borderRadius: '50%'
         }}
       ></div>
     </div>
@@ -109,7 +109,7 @@ function App() {
       style={{
         width: '850px',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'space-between'
       }}
     >
       <ChildCom1 />
@@ -139,18 +139,18 @@ import React, { useState } from 'react';
 function MouseMove(props) {
   const [points, setPoints] = useState({
     x: 0,
-    y: 0,
+    y: 0
   });
   const mouseMoveHandler = (e) => {
     setPoints({
       x: e.clientX,
-      y: e.clientY,
+      y: e.clientY
     });
   };
   return props.render
     ? props.render({
         points,
-        mouseMoveHandler,
+        mouseMoveHandler
       })
     : null;
 }
@@ -167,7 +167,7 @@ function ChildCom1(props) {
       style={{
         width: '400px',
         height: '400px',
-        backgroundColor: 'lightblue',
+        backgroundColor: 'lightblue'
       }}
       onMouseMove={props.mouseMoveHandler}
     >
@@ -192,7 +192,7 @@ function ChildCom2(props) {
         height: '400px',
         backgroundColor: 'lightgreen',
         position: 'relative',
-        overflow: 'hidden',
+        overflow: 'hidden'
       }}
       onMouseMove={props.mouseMoveHandler}
     >
@@ -205,7 +205,7 @@ function ChildCom2(props) {
           position: 'absolute',
           left: props.points.x - 450 - 15,
           top: props.points.y - 15,
-          borderRadius: '50%',
+          borderRadius: '50%'
         }}
       ></div>
     </div>
@@ -227,7 +227,7 @@ function App() {
       style={{
         width: '850px',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'space-between'
       }}
     >
       <MouseMove render={(props) => <ChildCom1 {...props} />} />
@@ -255,18 +255,18 @@ import React, { useState } from 'react';
 function MouseMove(props) {
   const [points, setPoints] = useState({
     x: 0,
-    y: 0,
+    y: 0
   });
   const mouseMoveHandler = (e) => {
     setPoints({
       x: e.clientX,
-      y: e.clientY,
+      y: e.clientY
     });
   };
   return props.children
     ? props.children({
         points,
-        mouseMoveHandler,
+        mouseMoveHandler
       })
     : null;
 }
@@ -286,7 +286,7 @@ function App() {
       style={{
         width: '850px',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'space-between'
       }}
     >
       <MouseMove>{(props) => <ChildCom1 {...props} />}</MouseMove>
@@ -313,12 +313,12 @@ function withMouseMove(Component) {
   return function EnhancedComponent() {
     const [points, setPoints] = useState({
       x: 0,
-      y: 0,
+      y: 0
     });
     const mouseMoveHandler = (e) => {
       setPoints({
         x: e.clientX,
-        y: e.clientY,
+        y: e.clientY
       });
     };
     return <Component points={points} mouseMoveHandler={mouseMoveHandler} />;
@@ -343,7 +343,7 @@ function App() {
       style={{
         width: '850px',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'space-between'
       }}
     >
       <NewChildCom1 />

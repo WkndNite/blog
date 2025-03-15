@@ -26,7 +26,7 @@ class RefImpl<T> {
 
   constructor(
     value: T,
-    public readonly __v_isRef: boolean,
+    public readonly __v_isRef: boolean
   ) {
     this._rawValue = __v_isShallow ? value : toRaw(value);
     this._value = __v_isShallow ? value : toReactive(value);
@@ -52,7 +52,7 @@ function createReactiveObject(
   isReadonly: boolean,
   baseHandlers: ProxyHandler<any>,
   collectionHandlers: ProxyHandler<any>,
-  proxyMap: WeakMap<Target, any>,
+  proxyMap: WeakMap<Target, any>
 ) {
   // ...
   const proxy = new Proxy(target, targetType === TargetType.COLLECTION ? collectionHandlers : baseHandlers);
@@ -112,7 +112,7 @@ function deepProxy(obj) {
       console.log('delete', key);
       delete target[key];
       return true;
-    },
+    }
   });
 }
 
@@ -148,8 +148,8 @@ console.log(state.a); // get a ---> undefined
 state.a = 1; // set a
 state.a = {
   b: {
-    c: 100,
-  },
+    c: 100
+  }
 }; // set a
 console.log('====================');
 console.log(state.a.b.c); // get a ---> get b ---> get c ---> 100

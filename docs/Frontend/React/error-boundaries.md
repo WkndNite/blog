@@ -22,7 +22,7 @@ function App() {
     <div
       style={{
         padding: '20px',
-        border: '1px solid black',
+        border: '1px solid black'
       }}
     >
       APP
@@ -45,7 +45,7 @@ function ChildCom1() {
       style={{
         width: '300px',
         height: '300px',
-        border: '1px solid black',
+        border: '1px solid black'
       }}
     >
       ChildCom1
@@ -66,7 +66,7 @@ function ChildCom2() {
       style={{
         width: '300px',
         height: '300px',
-        border: '1px solid black',
+        border: '1px solid black'
       }}
     >
       ChildCom2
@@ -118,7 +118,7 @@ export default class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hasError: false,
+      hasError: false
     };
   }
 
@@ -154,7 +154,7 @@ function ChildCom1() {
       style={{
         width: '300px',
         height: '300px',
-        border: '1px solid black',
+        border: '1px solid black'
       }}
     >
       ChildCom1
