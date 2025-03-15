@@ -13,4 +13,4 @@ author: false
 - [入口与出口配置](./entry-output.md)
 - [Loaders 与 Plugins](./loaders-plugins.md)
 - [Webpack 如何区分环境？](./env.md)
-- [一些细节配置补充](./detail.md)
+- [一些细节配置补充](./details.md)
