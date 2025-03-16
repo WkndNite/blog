@@ -29,6 +29,10 @@
     "prefix": "danger",
     "body": [":::danger", "$1", ":::"]
   },
+  "insert collapse js code": {
+    "prefix": "detailjs",
+    "body": [":::details", "```js", "$1", "```", ":::"]
+  },
   "insert js code": {
     "prefix": "jscode",
     "body": ["```js", "$2", "```"]

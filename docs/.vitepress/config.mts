@@ -258,6 +258,10 @@ export default defineConfig({
             {
               text: '二叉树',
               link: '/CS/programmercarl/tree'
+            },
+            {
+              text: '动态规划',
+              link: '/CS/programmercarl/dp'
             }
           ]
         }
