@@ -629,6 +629,10 @@ export default defineConfig({
             {
               text: '数据类型的转换',
               link: '/Interview/JavaScript/type-conversion'
+            },
+            {
+              text: 'this 指向',
+              link: '/Interview/JavaScript/this'
             }
           ]
         },

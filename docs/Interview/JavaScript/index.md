@@ -12,3 +12,4 @@ author: false
 - [JavaScript 中的包装类型](./wrapper.md)
 - [原型和原型链](./prototype.md)
 - [数据类型的转换](./type-conversion.md)
+- [this 指向](./this.md)
