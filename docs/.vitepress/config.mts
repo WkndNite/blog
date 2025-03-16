@@ -79,10 +79,6 @@ export default defineConfig({
           {
             text: '数据结构与算法',
             link: '/CS/DSA'
-          },
-          {
-            text: '代码随想录',
-            link: '/CS/programmercarl'
           }
         ]
       },
@@ -248,16 +244,6 @@ export default defineConfig({
             {
               text: '前端必会算法（三）',
               link: '/CS/DSA/frontend-3'
-            }
-          ]
-        },
-        {
-          text: '代码随想录',
-          collapsed: false,
-          items: [
-            {
-              text: '二叉树',
-              link: '/CS/programmercarl/tree'
             }
           ]
         }
