@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { computed } from 'vue';
 import { slugify } from '@mdit-vue/shared';
+import { computed } from 'vue';
 
-import MNavLink from './MNavLink.vue';
 import type { NavLink } from '../utils/types';
+import MNavLink from './MNavLink.vue';
 
 const props = defineProps<{
   title: string;

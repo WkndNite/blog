@@ -1,11 +1,11 @@
 import BlogTheme from '@sugarat/theme';
-import Fireworks from './components/Fireworks.vue';
-import './style.scss';
-import { h } from 'vue';
 import { ShareButton } from '@theojs/lumen';
-import VideoPlayer from './components/VideoPlayer.vue';
 import { useData } from 'vitepress';
+import { h } from 'vue';
+import Fireworks from './components/Fireworks.vue';
 import MNavLinks from './components/MNavLinks.vue';
+import VideoPlayer from './components/VideoPlayer.vue';
+import './style.scss';
 
 export default {
   ...BlogTheme,

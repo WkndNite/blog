@@ -3,8 +3,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import anime from 'animejs';
+import { onMounted } from 'vue';
 
 interface MinMax {
   min: number;

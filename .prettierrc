@@ -4,5 +4,6 @@
   "printWidth": 80,
   "tabWidth": 2,
   "embeddedLanguageFormatting": "auto",
-  "bracketSpacing": true
+  "bracketSpacing": true,
+  "plugins": ["prettier-plugin-organize-imports"]
 }

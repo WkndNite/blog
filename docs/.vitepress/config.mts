@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress';
-import { blogTheme } from './blog-theme';
 import { SponsorPlugin } from 'vitepress-plugin-sponsor';
+import { blogTheme } from './blog-theme';
 export default defineConfig({
   cleanUrls: true,
   markdown: {
