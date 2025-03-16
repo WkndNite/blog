@@ -14,3 +14,6 @@ author: false
 - [Loaders 与 Plugins](./loaders-plugins.md)
 - [Webpack 如何区分环境？](./env.md)
 - [一些细节配置补充](./details.md)
+- [Webpack 常用扩展](./extension.md)
+- [开发服务器](./dev-server.md)
+- [Webpack 内置插件](./builtin-plugins.md)

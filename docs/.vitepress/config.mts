@@ -79,6 +79,10 @@ export default defineConfig({
           {
             text: '数据结构与算法',
             link: '/CS/DSA'
+          },
+          {
+            text: '代码随想录',
+            link: '/CS/programmercarl'
           }
         ]
       },
@@ -246,6 +250,16 @@ export default defineConfig({
               link: '/CS/DSA/frontend-3'
             }
           ]
+        },
+        {
+          text: '代码随想录',
+          collapsed: false,
+          items: [
+            {
+              text: '二叉树',
+              link: '/CS/programmercarl/tree'
+            }
+          ]
         }
       ],
       '/Frontend/': [
@@ -372,6 +386,18 @@ export default defineConfig({
             {
               text: '一些细节配置补充',
               link: '/Frontend/Webpack/details'
+            },
+            {
+              text: 'Webpack 常用扩展',
+              link: '/Frontend/Webpack/extension'
+            },
+            {
+              text: '开发服务器',
+              link: '/Frontend/Webpack/dev-server'
+            },
+            {
+              text: 'Webpack 内置插件',
+              link: '/Frontend/Webpack/builtin-plugins'
             }
           ]
         },

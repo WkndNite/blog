@@ -2,8 +2,7 @@
 date: 2025-03-06 10:23:12
 description: 忍够了 VS Code 的字体了吗？
 tags:
-  - 前端
-  - vscode
+  - VScode
   - 字体美化教程
 ---
 
