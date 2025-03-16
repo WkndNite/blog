@@ -49,7 +49,7 @@ const MyContext = React.createContext();
 export default MyContext;
 ```
 
-```JavaScriptx [ChildCom1.jsx]
+```JavaScript [ChildCom1.jsx]
 import React, { Component } from 'react';
 import ChildCom2 from './ChildCom2';
 import ChildCom3 from './ChildCom3';
@@ -75,7 +75,7 @@ export default class ChildCom1 extends Component {
 }
 ```
 
-```JavaScriptx [ChildCom2.jsx]
+```JavaScript [ChildCom2.jsx]
 import React from 'react';
 import MyContext from '../context';
 
@@ -108,7 +108,7 @@ function ChildCom2() {
 export default ChildCom2;
 ```
 
-```JavaScriptx [ChildCom3.jsx]
+```JavaScript [ChildCom3.jsx]
 import React, { Component } from 'react';
 import MyContext from '../context';
 
@@ -133,7 +133,7 @@ export default class ChildCom3 extends Component {
 }
 ```
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import React, { useState } from 'react';
 import MyContext from './context';
 import ChildCom1 from './components/ChildCom1';
@@ -207,7 +207,7 @@ MyContext.displayName = 'counter';
 export default MyContext;
 ```
 
-```JavaScriptx [ChildCom1.jsx]
+```JavaScript [ChildCom1.jsx]
 import React, { Component } from 'react';
 import ChildCom2 from './ChildCom2';
 
@@ -231,7 +231,7 @@ export default class ChildCom1 extends Component {
 }
 ```
 
-```JavaScriptx [ChildCom2.jsx]
+```JavaScript [ChildCom2.jsx]
 import React from 'react';
 import MyContext from '../context';
 
@@ -262,7 +262,7 @@ function ChildCom2() {
 export default ChildCom2;
 ```
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import React from 'react';
 import MyContext from './context';
 import ChildCom1 from './components/ChildCom1';
@@ -305,7 +305,7 @@ export const MyContext1 = React.createContext();
 export const MyContext2 = React.createContext();
 ```
 
-```JavaScriptx [ChildCom2.jsx]
+```JavaScript [ChildCom2.jsx]
 import React from 'react';
 import { MyContext1, MyContext2 } from '../context';
 
@@ -344,7 +344,7 @@ function ChildCom2() {
 export default ChildCom2;
 ```
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import React from 'react';
 import { MyContext1, MyContext2 } from './context';
 import ChildCom1 from './components/ChildCom1';
@@ -389,7 +389,7 @@ export default App;
 
 例如：
 
-```JavaScriptx [ChildCom2.jsx]
+```JavaScript [ChildCom2.jsx]
 import React from 'react';
 import { MyContext1 } from '../context';
 

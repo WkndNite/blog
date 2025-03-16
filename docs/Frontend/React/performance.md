@@ -52,7 +52,7 @@ export default class App extends Component {
 
 :::code-group
 
-```JavaScriptx [shouldComponentUpdate]
+```JavaScript [shouldComponentUpdate]
 import React, { Component } from 'react';
 
 function ObjectEqual(obj1, obj2) {
@@ -109,7 +109,7 @@ export default class App extends Component {
 }
 ```
 
-```JavaScriptx [PureComponent]
+```JavaScript [PureComponent]
 import React, { PureComponent } from 'react';
 
 export default class App extends PureComponent {
@@ -160,7 +160,7 @@ React.PureComponent 中的 shouldComponentUpdate 方法是浅比较，如果对�
 
 下面展示了一个深层数据结构发生变化的例子：
 
-```JavaScriptx
+```JavaScript
 import React, { PureComponent } from 'react';
 
 export default class App extends PureComponent {
@@ -199,7 +199,7 @@ export default class App extends PureComponent {
 修改以上代码也可以达到你期望的效果：
 :::code-group
 
-```JavaScriptx [Solution 1]
+```JavaScript [Solution 1]
 import React, { PureComponent } from 'react';
 
 export default class App extends PureComponent {
@@ -306,7 +306,7 @@ export default App;
 
 :::code-group
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import React, { useState } from 'react';
 import ChildCom from './ChildCom';
 
@@ -326,7 +326,7 @@ function App() {
 export default App;
 ```
 
-```JavaScriptx [ChildCom.jsx]
+```JavaScript [ChildCom.jsx]
 import React from 'react';
 
 function ChildCom(props) {
@@ -356,7 +356,7 @@ export default ChildCom;
 
 React.memo 是一个高阶组件，可以在 props 不变的情况下阻止组件重新渲染。
 
-```JavaScriptx
+```JavaScript
 import React from 'react';
 
 function ChildCom(props) {
@@ -443,7 +443,7 @@ export default React.memo(MyComponent, areEqual);
 }
 ```
 
-```JavaScriptx [ChildCom1.jsx]
+```JavaScript [ChildCom1.jsx]
 import { useState } from 'react';
 function ChildCom1() {
   const [counter, setCounter] = useState(0);
@@ -466,7 +466,7 @@ function ChildCom1() {
 export default ChildCom1;
 ```
 
-```JavaScriptx [ChildCom2.jsx]
+```JavaScript [ChildCom2.jsx]
 import { useState } from 'react';
 function ChildCom2() {
   const [counter, setCounter] = useState(0);
@@ -489,7 +489,7 @@ function ChildCom2() {
 export default ChildCom2;
 ```
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import { useState } from 'react';
 import ChildCom1 from './ChildCom1';
 import ChildCom2 from './ChildCom2';
@@ -527,7 +527,7 @@ export default App;
 
 :::code-group
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import { useState } from 'react';
 import ChildCom1 from './ChildCom1';
 import ChildCom2 from './ChildCom2';
@@ -556,7 +556,7 @@ function App() {
 export default App;
 ```
 
-```JavaScriptx [ChildCom1.jsx]
+```JavaScript [ChildCom1.jsx]
 function ChildCom1(props) {
   console.log('ChildCom1 渲染了');
   return (
@@ -577,7 +577,7 @@ function ChildCom1(props) {
 export default ChildCom1;
 ```
 
-```JavaScriptx [ChildCom2.jsx]
+```JavaScript [ChildCom2.jsx]
 function ChildCom2(props) {
   console.log('ChildCom2 渲染了');
   return (
@@ -604,7 +604,7 @@ export default ChildCom2;
 
 首先，我们就会想到 React.memo 来阻止一些重新渲染，代码如下：
 
-```JavaScriptx
+```JavaScript
 import React from 'react';
 function ChildCom1(props) {
   console.log('ChildCom1 渲染了');
@@ -630,7 +630,7 @@ export default React.memo(ChildCom1);
 
 :::code-group
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import { useState } from 'react';
 import ChildCom1 from './ChildCom1';
 import ChildCom2 from './ChildCom2';
@@ -664,7 +664,7 @@ function App() {
 export default App;
 ```
 
-```JavaScriptx [ChildCom1.jsx]
+```JavaScript [ChildCom1.jsx]
 import React from 'react';
 function ChildCom1(props) {
   console.log('ChildCom1 渲染了');
@@ -697,7 +697,7 @@ export default React.memo(ChildCom1);
 
 此时，就需要用到 `useCallback` 来缓存函数，代码如下：
 
-```JavaScriptx
+```JavaScript
 import React, { useState, useCallback } from 'react';
 import ChildCom1 from './ChildCom1';
 import ChildCom2 from './ChildCom2';
@@ -749,7 +749,7 @@ const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 
 某些时候，组件中某些值需要根据状态进行一个二次计算（类似于 Vue 中的计算属性），由于函数组件一旦重新渲染，就会重新执行整个函数，这就导致之前的二次计算也会重新执行一次，例如：
 
-```JavaScriptx
+```JavaScript
 import React, { useState } from 'react';
 
 function App() {
@@ -784,7 +784,7 @@ export default App;
 
 此时，我们就可以使用 `useMemo` 来缓存这个值，代码如下：
 
-```JavaScriptx
+```JavaScript
 import React, { useState, useMemo } from 'react';
 
 function App() {

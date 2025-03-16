@@ -128,7 +128,7 @@ console.table(element1);
 
 :::code-group
 
-```JavaScriptx [类组件.jsx]
+```JavaScript [类组件.jsx]
 class SomeComponent extends React.Component {
   render() {
     return <div>Hello, world!</div>;
@@ -136,7 +136,7 @@ class SomeComponent extends React.Component {
 }
 ```
 
-```JavaScriptx [函数组件.jsx]
+```JavaScript [函数组件.jsx]
 function SomeComponent() {
   return <div>Hello, world!</div>;
 }
@@ -150,13 +150,13 @@ function SomeComponent() {
 
 在 React 中，绑定事件的写法如下：
 
-```JavaScriptx :no-line-numbers
+```JavaScript :no-line-numbers
 <button onClick={handleClick}>Click me</button>
 ```
 
 在 React 中无法像 Vue 通过 `return false` 来阻止默认行为，需要使用 `e.preventDefault()` 来阻止。
 
-```JavaScriptx
+```JavaScript
 function handleClick(e) {
   e.preventDefault();
 }
@@ -168,7 +168,7 @@ function handleClick(e) {
 
 如果是类组件，那么事件处理函数需要写作一个类方法：
 
-```JavaScriptx
+```JavaScript
 class SomeComponent extends React.Component {
   handleClick(e) {
     e.preventDefault();
@@ -190,7 +190,7 @@ class SomeComponent extends React.Component {
 
 :::code-group
 
-```JavaScriptx [不调整this]
+```JavaScript [不调整this]
 class SomeComponent extends React.Component {
   handleClick() {
     console.log(this); // undefined
@@ -202,7 +202,7 @@ class SomeComponent extends React.Component {
 }
 ```
 
-```JavaScriptx [修改函数定义]
+```JavaScript [修改函数定义]
 class SomeComponent extends React.Component {
   handleClick = () => {
     console.log(this);
@@ -214,7 +214,7 @@ class SomeComponent extends React.Component {
 }
 ```
 
-```JavaScriptx [修改回调]
+```JavaScript [修改回调]
 class SomeComponent extends React.Component {
   handleClick() {
     console.log(this);
@@ -226,7 +226,7 @@ class SomeComponent extends React.Component {
 }
 ```
 
-```JavaScriptx [bind - 1]
+```JavaScript [bind - 1]
 class SomeComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -265,7 +265,7 @@ this 的修正只针对类组件！
 
 在循环中，通常我们会为事件处理函数传递额外的参数。例如，若 id 是你要删除的那一行的 ID，以下两种方式都可以向事件处理函数传递参数。
 
-```JavaScriptx
+```JavaScript
 <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
 <button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
 ```
@@ -274,7 +274,7 @@ this 的修正只针对类组件！
 
 当然，上面的方式仍然是面向类组件的写法，对于函数组件可以这样写：
 
-```JavaScriptx
+```JavaScript
 function App() {
   const content = (
     <button className="greeting" onClick={handleClick('Hello, world!')}>
@@ -295,7 +295,7 @@ export default App;
 
 所以，我们需要将 `handleClick` 函数包裹在一个箭头函数中，这样箭头函数中的代码只有当按钮被点击时才会执行。
 
-```JavaScriptx
+```JavaScript
 function App() {
   const content = (
     <button className="greeting" onClick={() => handleClick('Hello, world!')}>
@@ -316,7 +316,7 @@ export default App;
 
 早期类组件被称之为有状态组件，就是因为在类组件中能够维护组件数据。
 
-```JavaScriptx
+```JavaScript
 class SomeComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -334,7 +334,7 @@ class SomeComponent extends React.Component {
 
 不应该直接去修改 state 的值，而是通过 setState 方法来修改。
 
-```JavaScriptx
+```JavaScript
 import React from 'react';
 class Counter extends React.Component {
   constructor(props) {
@@ -384,7 +384,7 @@ export default Counter;
 ::::details
 :::code-group
 
-```JavaScriptx [回调地狱.jsx] {5}
+```JavaScript [回调地狱.jsx] {5}
 class Counter extends React.Component {
   // ...
   increment = () => {
@@ -399,7 +399,7 @@ class Counter extends React.Component {
 }
 ```
 
-```JavaScriptx [函数式更新.jsx] {7}
+```JavaScript [函数式更新.jsx] {7}
 class Counter extends React.Component {
   // ...
   increment = () => {
@@ -428,7 +428,7 @@ class Counter extends React.Component {
 
 :::code-group
 
-```JavaScriptx [类组件.jsx]
+```JavaScript [类组件.jsx]
 class Welcome extends React.Component {
   // constructor(props) {
   //     super(props);
@@ -449,7 +449,7 @@ function App() {
 }
 ```
 
-```JavaScriptx [函数组件.jsx]
+```JavaScript [函数组件.jsx]
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
@@ -478,7 +478,7 @@ function App() {
 
 :::code-group
 
-```JavaScriptx [props.key 实现]
+```JavaScript [props.key 实现]
 function Button(props) {
   return <button>{props.text}</button>;
 }
@@ -492,7 +492,7 @@ function App() {
 }
 ```
 
-```JavaScriptx [props.children 实现]
+```JavaScript [props.children 实现]
 function Button(props) {
   return <button>{props.children}</button>;
 }
@@ -516,7 +516,7 @@ function App() {
 
 :::code-group
 
-```JavaScriptx [类组件.jsx]
+```JavaScript [类组件.jsx]
 import React from 'react';
 
 class Welcome extends React.Component {
@@ -535,7 +535,7 @@ Welcome.defaultProps = {
 export default Welcome;
 ```
 
-```JavaScriptx [函数组件.jsx]
+```JavaScript [函数组件.jsx]
 // Before
 function Heading({text}) {
   return <h1>{text}</h1>;
@@ -558,7 +558,7 @@ function Heading_2(props){
 
 关于 props 的类型检查，从 React v15.5 开始，移入到了 prop-types 库中。但是从 React v19 开始，官方移除了 propType 检查，建议迁移到 TypeScript 或其他类型检查解决方案。
 
-```JavaScriptx
+```JavaScript
 // Before
 import PropTypes from 'prop-types';
 
@@ -580,7 +580,7 @@ interface Props {
 
 :::code-group
 
-```JavaScriptx [Welcome.jsx]
+```JavaScript [Welcome.jsx]
 function Welcome(props) {
   function subClick() {
     props.parentClick('params from child');
@@ -596,7 +596,7 @@ function Welcome(props) {
 export default Welcome;
 ```
 
-```JavaScriptx [App.js]
+```JavaScript [App.js]
 import Welcome from './components/Welcome';
 
 function parentClick(params) {
@@ -627,7 +627,7 @@ params received by parent: params from child
 下面是一个简单的示例，不包括复杂情况，比如数字类型验证等。
 :::code-group
 
-```JavaScriptx [App.js]
+```JavaScript [App.js]
 import { useState } from 'react';
 import Money from './components/Money';
 
@@ -656,7 +656,7 @@ function App() {
 export default App;
 ```
 
-```JavaScriptx [Money.jsx]
+```JavaScript [Money.jsx]
 function Money(props) {
   function handleChange(e) {
     props.transform(props.type, e.target.value);

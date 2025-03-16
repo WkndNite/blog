@@ -80,7 +80,7 @@ const ExampleComponent = React.createClass({
 
 :::code-group
 
-```JavaScriptx [ChildCom1.jsx]
+```JavaScript [ChildCom1.jsx]
 import React, { useEffect } from 'react';
 import { formatDate } from '../utils/tools';
 function ChildCom1(props) {
@@ -104,7 +104,7 @@ function ChildCom1(props) {
 export default ChildCom1;
 ```
 
-```JavaScriptx [ChildCom2.jsx]
+```JavaScript [ChildCom2.jsx]
 import React, { useEffect } from 'react';
 import { formatDate } from '../utils/tools';
 
@@ -153,7 +153,7 @@ export default App;
 
 :::code-group
 
-```JavaScriptx [ChildCom1.jsx]
+```JavaScript [ChildCom1.jsx]
 function ChildCom1(props) {
   return (
     <>
@@ -166,7 +166,7 @@ function ChildCom1(props) {
 export default ChildCom1;
 ```
 
-```JavaScriptx [ChildCom2.jsx]
+```JavaScript [ChildCom2.jsx]
 function ChildCom2(props) {
   return (
     <>

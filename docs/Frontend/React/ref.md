@@ -30,7 +30,7 @@ tags:
 
 示例如下：
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import React, { Component } from 'react';
 
 export default class App extends Component {
@@ -74,7 +74,7 @@ export default class App extends Component {
 
 示例如下：
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import React, { Component } from 'react';
 
 export default class App extends Component {
@@ -109,7 +109,7 @@ export default class App extends Component {
 
 ::::code-group
 
-```JavaScriptx [ChildCom1.jsx]
+```JavaScript [ChildCom1.jsx]
 import React, { Component } from 'react';
 
 export default class ChildCom1 extends Component {
@@ -206,7 +206,7 @@ Ref 转发是一个可选特性，允许某些组件接收 ref 并向下传递�
 
 :::code-group
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import React, { Component } from 'react';
 
 import withLogin from './HOC/withLog';
@@ -276,7 +276,7 @@ function withLog(Com) {
 export default withLog;
 ```
 
-```JavaScriptx [ChildCom1.jsx]
+```JavaScript [ChildCom1.jsx]
 import React, { Component } from 'react';
 
 export default class ChildCom1 extends Component {
@@ -358,7 +358,7 @@ export default withLog;
 
 在函数组件中，官方为我们提供了新的 useRef 这个 Hook 来进行关联，但是也可以使用 createRef API，示例如下：
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import React from 'react';
 
 function App() {

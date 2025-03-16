@@ -128,7 +128,7 @@ cover: https://redux.js.org/img/redux.svg
 
    :::code-group
 
-   ```JavaScriptx [Input.jsx] {2,7}
+   ```JavaScript [Input.jsx] {2,7}
    import React, { useState } from 'react';
    import { addListAction } from '../redux/actions';
 
@@ -162,7 +162,7 @@ cover: https://redux.js.org/img/redux.svg
    }
    ```
 
-   ```JavaScriptx [List.jsx] {2,15,31,37}
+   ```JavaScript [List.jsx] {2,15,31,37}
    import React from 'react';
    import { deleteListAction, updateListAction } from '../redux/actions';
 
@@ -335,7 +335,7 @@ root.render(
 );
 ```
 
-```JavaScriptx [Input.jsx] {2,3,7,23-25}
+```JavaScript [Input.jsx] {2,3,7,23-25}
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../redux/todoSlice';
@@ -372,7 +372,7 @@ export default function Input(props) {
 }
 ```
 
-```JavaScriptx [List.jsx] {2,3,6,7,33,39}
+```JavaScript [List.jsx] {2,3,6,7,33,39}
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteTodo, changeTodo } from '../redux/todoSlice';

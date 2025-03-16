@@ -26,7 +26,7 @@ Render Props 实际上本身并非什么新语法，而是指一种在 React 组
 
 :::code-group
 
-```JavaScriptx [ChildCom1.jsx]
+```JavaScript [ChildCom1.jsx]
 import React, { useState } from 'react';
 
 function ChildCom1() {
@@ -54,7 +54,7 @@ function ChildCom1() {
 export default ChildCom1;
 ```
 
-```JavaScriptx [ChildCom2.jsx]
+```JavaScript [ChildCom2.jsx]
 import React, { useState } from 'react';
 
 function ChildCom2() {
@@ -98,7 +98,7 @@ function ChildCom2() {
 export default ChildCom2;
 ```
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import React from 'react';
 import ChildCom1 from './components/ChildCom1';
 import ChildCom2 from './components/ChildCom2';
@@ -133,7 +133,7 @@ export default App;
 
 :::code-group
 
-```JavaScriptx [MouseMove.jsx]
+```JavaScript [MouseMove.jsx]
 import React, { useState } from 'react';
 
 function MouseMove(props) {
@@ -158,7 +158,7 @@ function MouseMove(props) {
 export default MouseMove;
 ```
 
-```JavaScriptx [ChildCom1.jsx]
+```JavaScript [ChildCom1.jsx]
 import React, { useState } from 'react';
 
 function ChildCom1(props) {
@@ -181,7 +181,7 @@ function ChildCom1(props) {
 export default ChildCom1;
 ```
 
-```JavaScriptx [ChildCom2.jsx]
+```JavaScript [ChildCom2.jsx]
 import React, { useState } from 'react';
 
 function ChildCom2(props) {
@@ -215,7 +215,7 @@ function ChildCom2(props) {
 export default ChildCom2;
 ```
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import React from 'react';
 import MouseMove from './components/MouseMove';
 import ChildCom1 from './components/ChildCom1';
@@ -249,7 +249,7 @@ export default App;
 
 :::code-group
 
-```JavaScriptx [MouseMove.jsx]
+```JavaScript [MouseMove.jsx]
 import React, { useState } from 'react';
 
 function MouseMove(props) {
@@ -274,7 +274,7 @@ function MouseMove(props) {
 export default MouseMove;
 ```
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import React from 'react';
 import MouseMove from './components/MouseMove';
 import ChildCom1 from './components/ChildCom1';
@@ -328,7 +328,7 @@ function withMouseMove(Component) {
 export default withMouseMove;
 ```
 
-```JavaScriptx [App.jsx]
+```JavaScript [App.jsx]
 import React from 'react';
 
 import withMouseMove from './HOC/withMouseMove';

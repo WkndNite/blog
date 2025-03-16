@@ -39,7 +39,7 @@
   },
   "insert jsx code": {
     "prefix": "jsxcode",
-    "body": ["```JavaScriptx", "$2", "```"]
+    "body": ["```JavaScript", "$2", "```"]
   },
   "insert css code": {
     "prefix": "csscode",
