@@ -11,7 +11,7 @@ date: 2025-01-01
 
 ## 逗号运算符
 
-```js
+```JavaScript
 let x = 1;
 (x = x++ * 2), x++ * 2, x++ * 2;
 console.log(x); // 4

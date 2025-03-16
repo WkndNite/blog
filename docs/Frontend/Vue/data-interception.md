@@ -57,7 +57,7 @@ date: 2025-01-20
    属性描述符分为**数据描述符**和**访问器描述符**，二者是互斥的。`value`、`writable`、`enumerable`、`configurable` 是数据描述符，`get`、`set` 是访问器描述符。
    :::
 
-   ```js
+   ```JavaScript
    const obj = {};
    Object.defineProperty(obj, 'name', {
      value: '张三',
@@ -83,7 +83,7 @@ date: 2025-01-20
 
    :::code-group
 
-   ```js [Object.defineProperty]
+   ```JavaScript [Object.defineProperty]
    const obj = {};
    let data = 'Some data';
    Object.defineProperty(obj, 'data', {
@@ -102,7 +102,7 @@ date: 2025-01-20
    console.log(obj.data); // Intercepted when reading data, New data
    ```
 
-   ```js [Proxy]
+   ```JavaScript [Proxy]
    const obj = {
      data: 'some data'
    };
@@ -127,7 +127,7 @@ date: 2025-01-20
 
    :::code-group
 
-   ```js [Object.defineProperty]
+   ```JavaScript [Object.defineProperty]
    const data = {
      level1: {
        level2: {
@@ -179,7 +179,7 @@ date: 2025-01-20
    // 43
    ```
 
-   ```js [Proxy]
+   ```JavaScript [Proxy]
    const data = {
      level1: {
        level2: {
@@ -233,7 +233,7 @@ date: 2025-01-20
 
    Vue 无法检测 property 的添加或移除。由于 Vue 会在初始化实例时对 property 执行 getter/setter 转化，所以 property 必须在 data 对象上存在才能让 Vue 将它转换为响应式的。例如：
 
-   ```js
+   ```JavaScript
    var vm = new Vue({
      data: {
        a: 1
@@ -248,19 +248,19 @@ date: 2025-01-20
 
    对于已经创建的实例，Vue 不允许动态添加根级别的响应式 property。但是，可以使用 Vue.set(object, propertyName, value) 方法向嵌套对象添加响应式 property。例如，对于：
 
-   ```js
+   ```JavaScript
    Vue.set(vm.someObject, 'b', 2);
    ```
 
    您还可以使用 vm.$set 实例方法，这也是全局 Vue.set 方法的别名：
 
-   ```js
+   ```JavaScript
    this.$set(this.someObject, 'b', 2);
    ```
 
    有时你可能需要为已有对象赋值多个新 property，比如使用 Object.assign() 或 \_.extend()。但是，这样添加到对象上的新 property 不会触发更新。在这种情况下，你应该用原对象与要混合进去的对象的 property 一起创建一个新的对象。
 
-   ```js
+   ```JavaScript
    // 代替 `Object.assign(this.someObject, { a: 1, b: 2 })`
    this.someObject = Object.assign({}, this.someObject, { a: 1, b: 2 });
    ```

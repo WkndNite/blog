@@ -8,7 +8,7 @@ tag:
 
 ## context
 
-```js
+```JavaScript
 module.exports = {
   context: path.resolve(__dirname, 'src')
 };
@@ -18,7 +18,7 @@ module.exports = {
 
 ## output.library(Target)
 
-```js
+```JavaScript
 module.exports = {
   output: {
     library: 'MyLibrary',
@@ -44,7 +44,7 @@ module.exports = {
 
 ## module.noParse
 
-```js
+```JavaScript
 module.exports = {
   module: {
     noParse: /jquery|lodash/
@@ -58,7 +58,7 @@ module.exports = {
 
 ### modules
 
-```js
+```JavaScript
 module.exports = {
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules']
@@ -70,7 +70,7 @@ module.exports = {
 
 ### extensions
 
-```js
+```JavaScript
 module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.vue']
@@ -82,7 +82,7 @@ module.exports = {
 
 ### alias
 
-```js
+```JavaScript
 module.exports = {
   resolve: {
     alias: {
@@ -96,7 +96,7 @@ module.exports = {
 
 ## externals
 
-```js
+```JavaScript
 module.exports = {
   externals: {
     lodash: {
@@ -113,7 +113,7 @@ module.exports = {
 
 ## stats
 
-```js
+```JavaScript
 module.exports = {
   stats: 'errors-only'
 };

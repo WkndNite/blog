@@ -19,7 +19,7 @@ date: 2025-01-17
 
 :::code-group
 
-```js [组合式 API]
+```JavaScript [组合式 API]
 // UserCard.js
 import { defineComponent, h } from 'vue';
 import styles from './UserCard.module.css';
@@ -52,7 +52,7 @@ import UserCard from './UserCard.js';
 // ...
 ```
 
-```js [选项式 API]
+```JavaScript [选项式 API]
 // UserCard.js
 import { h } from 'vue';
 import styles from './UserCard.module.css';
@@ -111,7 +111,7 @@ import UserCard from './UserCard.js';
 
 实际上，模板编译其需要对上面的字符串进行操作，最终生成如下结果：
 
-```js
+```JavaScript
 function render() {
   return h('div', [h('h1', { id: someId }, 'Hello')]);
 }
@@ -128,7 +128,7 @@ function render() {
 
 模板编译器大致结构如此：
 
-```js
+```JavaScript
 function compiler(template) {
   const ast = parser(template);
   transform(ast);
@@ -156,7 +156,7 @@ function compiler(template) {
 
 3. 首先是解析器，拿到这个字符串之后对字符串进行解析，得到一个一个的 token，大致如下：
 
-   ```js
+   ```JavaScript
    [
      { type: 'tag', name: 'div' },
      { type: 'tag', name: 'p' },
@@ -175,7 +175,7 @@ function compiler(template) {
 
 4. 另外，解析器需要根据得到的 token 来生成模板 AST：
 
-   ```js
+   ```JavaScript
    {
        "type": "Root",
        "children": [
@@ -215,7 +215,7 @@ function compiler(template) {
 
 5. 接下来是转换器，将模板 AST 转换为 JS AST：
 
-   ```js
+   ```JavaScript
    {
        "type": "FunctionDecl",
        "id": { "type": "Identifier", "name": "render" },
@@ -256,7 +256,7 @@ function compiler(template) {
 
 6. 最后，生成器将 JS AST 转换为渲染函数：
 
-   ```js
+   ```JavaScript
    function render() {
      return h('div', [h('p', 'Vue'), h('p', 'React')]);
    }

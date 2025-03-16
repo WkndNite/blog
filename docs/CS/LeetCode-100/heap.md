@@ -11,7 +11,7 @@ tags:
 
 ## 215. 数组中的第K个最大元素
 
-```js
+```JavaScript
 /**
  * @param {number[]} nums
  * @param {number} k

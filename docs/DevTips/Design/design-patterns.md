@@ -18,7 +18,7 @@ tags:
 
 简单工厂模式是一种创建型设计模式，它提供了一种创建对象的方式，而不需要暴露对象的创建逻辑。简单工厂模式通过一个工厂类来创建对象，这个工厂类根据传入的参数来决定创建哪种对象。
 
-```js
+```JavaScript
 class Car {
   drive() {
     console.log('Driving a car');
@@ -54,7 +54,7 @@ vehicle2.ride(); // Riding a bike
 
 工厂方法模式定义了一个创建对象的接口，但由子类决定要实例化的类是哪一个。工厂方法让类的实例化推迟到子类。
 
-```js
+```JavaScript
 class Car {
   drive() {
     console.log('Driving a car');
@@ -98,7 +98,7 @@ bike.ride(); // Riding a bike
 
 抽象工厂模式提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。
 
-```js
+```JavaScript
 class ProductA {
   constructor(name) {
     this.name = name;
@@ -130,7 +130,7 @@ class AbstractFactory {
 
 原型模式通过复制现有的实例来创建新的对象，而不是通过实例化类。
 
-```js
+```JavaScript
 class Prototype {
   constructor(name) {
     this.name = name;
@@ -146,7 +146,7 @@ class Prototype {
 
 建造者模式将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。
 
-```js
+```JavaScript
 class Product {
   constructor() {
     this.parts = [];
@@ -180,7 +180,7 @@ class Builder {
 
 适配器模式将一个类的接口转换成客户希望的另一个接口，使得原本由于接口不兼容而不能一起工作的类可以一起工作。
 
-```js
+```JavaScript
 class OldInterface {
   specificRequest() {
     return 'Old Interface';
@@ -202,7 +202,7 @@ class Adapter {
 
 桥接模式将抽象部分与它的实现部分分离，使它们都可以独立地变化。
 
-```js
+```JavaScript
 class Abstraction {
   constructor(implementor) {
     this.implementor = implementor;
@@ -224,7 +224,7 @@ class ConcreteImplementor {
 
 组合模式将对象组合成树形结构以表示“部分-整体”的层次结构，使得用户对单个对象和组合对象的使用具有一致性。
 
-```js
+```JavaScript
 class Component {
   operation() {}
 }
@@ -255,7 +255,7 @@ class Composite extends Component {
 
 装饰模式动态地给对象添加一些额外的职责，就增加功能来说，装饰模式相比生成子类更为灵活。
 
-```js
+```JavaScript
 class Component {
   operation() {
     return 'Component';
@@ -278,7 +278,7 @@ class Decorator extends Component {
 
 外观模式为子系统中的一组接口提供一个一致的界面，此模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。
 
-```js
+```JavaScript
 class SubsystemA {
   operation() {
     return 'SubsystemA';
@@ -307,7 +307,7 @@ class Facade {
 
 享元模式通过共享技术来有效地支持大量细粒度的对象。
 
-```js
+```JavaScript
 class Flyweight {
   constructor(sharedState) {
     this.sharedState = sharedState;
@@ -332,7 +332,7 @@ class FlyweightFactory {
 
 代理模式为其他对象提供一种代理以控制对这个对象的访问。
 
-```js
+```JavaScript
 class RealSubject {
   request() {
     return 'RealSubject';
@@ -358,7 +358,7 @@ class Proxy {
 
 责任链模式为请求创建了一个接收者对象的链，这些接收者依次处理请求，直到有一个接收者处理它为止。
 
-```js
+```JavaScript
 class Handler {
   setNext(handler) {
     this.nextHandler = handler;
@@ -378,7 +378,7 @@ class Handler {
 
 命令模式将一个请求封装为一个对象，从而使您可以用不同的请求对客户进行参数化。
 
-```js
+```JavaScript
 class Command {
   execute() {}
 }
@@ -405,7 +405,7 @@ class Receiver {
 
 解释器模式为语言创建解释器，通常由语言的语法和语法分析来定义。
 
-```js
+```JavaScript
 class Context {
   constructor(input) {
     this.input = input;
@@ -428,7 +428,7 @@ class TerminalExpression extends Expression {
 
 迭代器模式提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象的内部表示。
 
-```js
+```JavaScript
 class Iterator {
   constructor(collection) {
     this.collection = collection;
@@ -449,7 +449,7 @@ class Iterator {
 
 中介者模式定义一个对象，该对象封装了一组对象如何交互。
 
-```js
+```JavaScript
 class Mediator {
   notify(sender, event) {}
 }
@@ -501,7 +501,7 @@ class Colleague2 extends Colleague {
 
 备忘录模式在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。
 
-```js
+```JavaScript
 class Memento {
   constructor(state) {
     this.state = state;
@@ -545,7 +545,7 @@ class Caretaker {
 
 观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。
 
-```js
+```JavaScript
 class Subject {
   constructor() {
     this.observers = [];
@@ -569,7 +569,7 @@ class Observer {
 
 状态模式允许对象在内部状态改变时改变它的行为，对象看起来好像修改了它的类。
 
-```js
+```JavaScript
 class Context {
   constructor(state) {
     this.state = state;
@@ -607,7 +607,7 @@ class ConcreteStateB extends State {
 
 策略模式定义了一系列算法，并将每一个算法封装起来，而且使它们还可以相互替换。
 
-```js
+```JavaScript
 class Context {
   constructor(strategy) {
     this.strategy = strategy;
@@ -643,7 +643,7 @@ class ConcreteStrategyB extends Strategy {
 
 模板方法模式定义了一个操作中的算法的骨架，而将一些步骤延迟到子类中。
 
-```js
+```JavaScript
 class AbstractClass {
   templateMethod() {
     this.primitiveOperation1();
@@ -669,7 +669,7 @@ class ConcreteClass extends AbstractClass {
 
 访问者模式表示一个作用于某对象结构中的各元素的操作，它使你可以在不改变各元素的类的前提下定义作用于这些元素的新操作。
 
-```js
+```JavaScript
 class Visitor {
   visit(element) {}
 }

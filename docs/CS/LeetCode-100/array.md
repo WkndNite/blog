@@ -11,7 +11,7 @@ tags:
 
 ## 53. 最大子数组和
 
-```js
+```JavaScript
 var maxSubArray = function (nums) {
   let pre = 0,
     result = nums[0];
@@ -25,7 +25,7 @@ var maxSubArray = function (nums) {
 
 ## 56. 合并区间
 
-```js
+```JavaScript
 /**
  * @param {number[][]} intervals
  * @return {number[][]}

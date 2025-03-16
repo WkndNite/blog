@@ -11,7 +11,7 @@ tags:
 
 ## 94. 二叉树的中序遍历
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -39,7 +39,7 @@ var inorderTraversal = function (root) {
 
 ## 104. 二叉树的最大深度
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -60,7 +60,7 @@ var maxDepth = function (root) {
 
 ## 226. 翻转二叉树
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -82,7 +82,7 @@ var invertTree = function (root) {
 
 ## 101. 对称二叉树
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -109,7 +109,7 @@ var isSymmetric = function (root) {
 
 ## 543. 二叉树的直径
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -139,7 +139,7 @@ var diameterOfBinaryTree = function (root) {
 
 ## 102. 二叉树的层序遍历
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -174,7 +174,7 @@ var levelOrder = function (root) {
 
 ## 108. 将有序数组转换为二叉搜索树
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -199,7 +199,7 @@ var sortedArrayToBST = function (nums) {
 
 ## 98. 验证二叉搜索树
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {

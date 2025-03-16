@@ -10,7 +10,7 @@ tags:
 
 所有的 webpack 内置插件都作为 webpack 的静态属性存在的，使用下面的方式即可创建一个插件对象：
 
-```js
+```JavaScript
 const webpack = require('webpack');
 new webpack.插件名(options);
 ```
@@ -19,7 +19,7 @@ new webpack.插件名(options);
 
 全局常量定义插件，使用该插件通常定义一些常量值，例如：
 
-```js
+```JavaScript
 new webpack.DefinePlugin({
   PI: `Math.PI`, // PI = Math.PI
   VERSION: `"1.0.0"`, // VERSION = "1.0.0"
@@ -33,7 +33,7 @@ new webpack.DefinePlugin({
 
 它可以为每个 chunk 生成的文件头部添加一行注释，一般用于添加作者、公司、版权等信息。
 
-```js
+```JavaScript
 new webpack.BannerPlugin({
   banner: `
   hash:[hash]
@@ -49,7 +49,7 @@ new webpack.BannerPlugin({
 
 自动加载模块，而不必到处 import 或 require：
 
-```js
+```JavaScript
 new webpack.ProvidePlugin({
   $: 'jquery',
   _: 'lodash'
@@ -58,7 +58,7 @@ new webpack.ProvidePlugin({
 
 然后在我们任意源码中：
 
-```js
+```JavaScript
 $('#item');
 _.drop([1, 2, 3], 2);
 ```

@@ -23,7 +23,7 @@ cover: https://cdn-icons-png.flaticon.com/512/10303/10303238.png
 ::::details
 :::code-group
 
-```jsx [基本的受控组件]
+```JavaScriptx [基本的受控组件]
 import React, { Component } from 'react';
 
 export default class App extends Component {
@@ -54,7 +54,7 @@ export default class App extends Component {
 }
 ```
 
-```jsx [对用户输入内容进行控制]
+```JavaScriptx [对用户输入内容进行控制]
 import React, { Component } from 'react';
 
 export default class App extends Component {
@@ -104,7 +104,7 @@ export default class App extends Component {
 }
 ```
 
-```jsx [文本域]
+```JavaScriptx [文本域]
 import React, { Component } from 'react';
 
 export default class App extends Component {
@@ -134,7 +134,7 @@ export default class App extends Component {
 }
 ```
 
-```jsx [单选框]
+```JavaScriptx [单选框]
 import React, { Component } from 'react';
 
 export default class App extends Component {
@@ -171,7 +171,7 @@ export default class App extends Component {
 }
 ```
 
-```jsx [多选框]
+```JavaScriptx [多选框]
 import React, { Component } from 'react';
 
 export default class App extends Component {
@@ -213,7 +213,7 @@ export default class App extends Component {
 }
 ```
 
-```jsx [下拉列表]
+```JavaScriptx [下拉列表]
 import React, { Component } from 'react';
 
 export default class App extends Component {
@@ -251,7 +251,7 @@ export default class App extends Component {
 ::::details
 :::code-group
 
-```jsx [基本的非受控组件]
+```JavaScriptx [基本的非受控组件]
 import React, { Component } from 'react';
 
 export default class App extends Component {
@@ -275,7 +275,7 @@ export default class App extends Component {
 }
 ```
 
-```jsx [上传文件]
+```JavaScriptx [上传文件]
 import React, { Component } from 'react';
 
 export default class App extends Component {
@@ -349,7 +349,7 @@ Hooks 的出现，首先解决了以下问题：
 
 - 告别令人疑惑的生命周期，相同的代码可能会在不同的生命周期出现。
 
-```jsx [App.jsx]
+```JavaScriptx [App.jsx]
 import React, { Component } from 'react';
 
 export default class App extends Component {
@@ -411,7 +411,7 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
 
    :::code-group
 
-   ```jsx [基本使用]
+   ```JavaScriptx [基本使用]
    import React, { useState } from 'react';
 
    export default function App() {
@@ -430,7 +430,7 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    }
    ```
 
-   ```jsx [声明多个状态]
+   ```JavaScriptx [声明多个状态]
    import React, { useState } from 'react';
 
    export default function App() {
@@ -466,7 +466,7 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
 
    :::code-group
 
-   ```jsx [基本使用]
+   ```JavaScriptx [基本使用]
    import React, { useState, useEffect } from 'react';
 
    export default function App() {
@@ -485,7 +485,7 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    }
    ```
 
-   ```jsx [执行清理工作] {13,14}
+   ```JavaScriptx [执行清理工作] {13,14}
    import React, { useState, useEffect } from 'react';
 
    export default function App() {
@@ -519,7 +519,7 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    }
    ```
 
-   ```jsx [无依赖-数据请求]
+   ```JavaScriptx [无依赖-数据请求]
    import React, { useState, useEffect } from 'react';
 
    function mockApi() {
@@ -549,7 +549,7 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    }
    ```
 
-   ```jsx [无依赖-多状态]
+   ```JavaScriptx [无依赖-多状态]
    import React, { useState, useEffect } from 'react';
 
    export default function App() {
@@ -577,7 +577,7 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
    }
    ```
 
-   ```jsx [依赖数组] {11,12}
+   ```JavaScriptx [依赖数组] {11,12}
    import React, { useState, useEffect } from 'react';
 
    export default function App() {
@@ -618,7 +618,7 @@ React 中内置了一些实用的 Hook，并且随着 React 版本的更新，Ho
 
 :::code-group
 
-```jsx [useMyBook.jsx]
+```JavaScriptx [useMyBook.jsx]
 import React, { useState } from 'react';
 
 export default function useMyBook() {
@@ -627,7 +627,7 @@ export default function useMyBook() {
 }
 ```
 
-```jsx [App.jsx]
+```JavaScriptx [App.jsx]
 import useMyBook from './useMyBook';
 
 export default function App() {

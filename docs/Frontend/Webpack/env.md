@@ -12,7 +12,7 @@ tags:
 
 为了更好的适应这种要求，webpack 允许配置不仅可以是一个对象，还可以是一个函数。
 
-```js
+```JavaScript
 module.exports = (env) => {
   return {
     //配置内容
@@ -24,7 +24,7 @@ module.exports = (env) => {
 
 在调用 webpack 函数时，webpack 会向函数传入一个参数 env，该参数的值来自于 webpack 命令中给 env 指定的值，例如：
 
-```js
+```JavaScript
 npx webpack --env abc # env: "abc"
 
 npx webpack --env.abc # env: {abc:true}

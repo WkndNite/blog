@@ -11,7 +11,7 @@ tags:
 
 ## 35. 搜索插入位置
 
-```js
+```JavaScript
 /**
  * @param {number[]} nums
  * @param {number} target

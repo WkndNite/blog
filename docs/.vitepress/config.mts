@@ -615,8 +615,20 @@ export default defineConfig({
               link: '/Interview/JavaScript/let-var-const'
             },
             {
+              text: 'JavaScript 数据类型',
+              link: '/Interview/JavaScript/data-type'
+            },
+            {
+              text: 'JavaScript 中的包装类型',
+              link: '/Interview/JavaScript/wrapper'
+            },
+            {
               text: '原型和原型链',
               link: '/Interview/JavaScript/prototype'
+            },
+            {
+              text: '数据类型的转换',
+              link: '/Interview/JavaScript/type-conversion'
             }
           ]
         },

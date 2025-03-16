@@ -13,7 +13,7 @@ tags:
 
 :::details
 
-```js
+```JavaScript
 /**
  * @param {number} n
  * @return {number}
@@ -33,7 +33,7 @@ var fib = function (n) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * @param {number} n
  * @return {number}
@@ -55,7 +55,7 @@ var climbStairs = function (n) {
 
 :::details
 
-```js
+```JavaScript
 
 ```
 
@@ -65,7 +65,7 @@ var climbStairs = function (n) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * @param {number} m
  * @param {number} n
@@ -88,7 +88,7 @@ var uniquePaths = function (m, n) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * @param {number[][]} obstacleGrid
  * @return {number}

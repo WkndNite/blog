@@ -17,7 +17,7 @@ NaN 和 Infinity 在位运算中都会被当作 0 来处理。
 
 ## 按位与
 
-```js
+```JavaScript
 console.log(1 & 1); // 1
 console.log(1 & 0); // 0
 console.log(0 & 0); // 0
@@ -25,7 +25,7 @@ console.log(0 & 0); // 0
 
 ## 按位或
 
-```js
+```JavaScript
 console.log(1 | 1); // 1
 console.log(1 | 0); // 1
 console.log(0 | 0); // 0
@@ -33,7 +33,7 @@ console.log(0 | 0); // 0
 
 ## 按位异或
 
-```js
+```JavaScript
 console.log(1 ^ 1); // 0
 console.log(1 ^ 0); // 1
 console.log(1 ^ 2); // 3
@@ -43,7 +43,7 @@ console.log(1 ^ 2); // 3
 
 ## 按位非
 
-```js
+```JavaScript
 console.log(~1); // -2
 console.log(~0); // -1
 console.log(~NaN); // -1
@@ -72,14 +72,14 @@ console.log(~NaN); // -1
 
 ### 左移
 
-```js
+```JavaScript
 console.log(1 << 1); // 2
 console.log(1 << 2); // 4
 ```
 
 ### 右移
 
-```js
+```JavaScript
 console.log(1 >> 1); // 0
 console.log(1 >> 2); // 0
 ```
@@ -93,7 +93,7 @@ console.log(1 >> 2); // 0
 
 ### 全右位移
 
-```js
+```JavaScript
 console.log(1 >>> 1); // 0
 console.log(1 >>> 2); // 0
 console.log(-1 >>> 1); // 2147483647

@@ -11,7 +11,7 @@ tags:
 
 ## 20. 有效的括号
 
-```js
+```JavaScript
 /**
  * @param {string} s
  * @return {boolean}

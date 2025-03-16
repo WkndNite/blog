@@ -13,7 +13,7 @@ tags:
 
 :::details
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -51,7 +51,7 @@ var levelOrder = function (root) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -89,7 +89,7 @@ var levelOrderBottom = function (root) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -127,7 +127,7 @@ var rightSideView = function (root) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -168,7 +168,7 @@ var averageOfLevels = function (root) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * // Definition for a _Node.
  * function _Node(val,children) {
@@ -205,7 +205,7 @@ var levelOrder = function (root) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -243,7 +243,7 @@ var largestValues = function (root) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * // Definition for a _Node.
  * function _Node(val, left, right, next) {
@@ -284,7 +284,7 @@ var connect = function (root) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -309,7 +309,7 @@ var maxDepth = function (root) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -338,7 +338,7 @@ var minDepth = function (root) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -364,7 +364,7 @@ var invertTree = function (root) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -395,7 +395,7 @@ var isSameTree = function (p, q) {
 
 :::details
 
-```js
+```JavaScript
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {

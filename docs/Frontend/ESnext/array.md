@@ -12,7 +12,7 @@ tags:
 
 示例一：
 
-```js
+```JavaScript
 for (let i = 0; i < arr.length; i++) {
   const item = arr[i];
   console.log(item);
@@ -25,7 +25,7 @@ for (const item of arr) {
 
 示例二：
 
-```js
+```JavaScript
 const elements = document.querySelectorAll('.item');
 for (const elem of elements) {
   // ...

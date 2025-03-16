@@ -10,7 +10,7 @@ tags:
 
 ## 链表的逆置
 
-```js
+```JavaScript
 function reverse(node) {
   let previous = null;
   let current = node;
@@ -26,7 +26,7 @@ function reverse(node) {
 
 ## 冒泡排序
 
-```js
+```JavaScript
 function bubbleSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     let flag = false;
@@ -44,7 +44,7 @@ function bubbleSort(arr) {
 
 ## 选择排序
 
-```js
+```JavaScript
 function selectionSort2(arr) {
   for (let i = 0; i < arr.length; i++) {
     let minIndex = i;
@@ -61,7 +61,7 @@ function selectionSort2(arr) {
 
 ## 简单快速排序
 
-```js
+```JavaScript
 function quickSort(arr) {
   if (arr.length <= 1) return arr;
   let leader = arr[0];
@@ -82,7 +82,7 @@ function quickSort(arr) {
 
 ## 标准快速排序
 
-```js
+```JavaScript
 function quickSort(arr, left = 0, right = arr.length - 1) {
   if (left >= right) return;
   let i = left;

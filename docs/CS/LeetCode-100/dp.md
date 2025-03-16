@@ -11,7 +11,7 @@ tags:
 
 ## 70. 爬楼梯
 
-```js
+```JavaScript
 /**
  * @param {number} n
  * @return {number}
@@ -27,7 +27,7 @@ var climbStairs = function (n) {
 
 ## 118. 杨辉三角
 
-```js
+```JavaScript
 /**
  * @param {number} numRows
  * @return {number[][]}
@@ -47,7 +47,7 @@ var generate = function (numRows) {
 
 ## 198. 打家劫舍
 
-```js
+```JavaScript
 /**
  * @param {number[]} nums
  * @return {number}

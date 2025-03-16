@@ -85,7 +85,7 @@ export function reactive(target: Object) {
 
 :::details 判断哪些操作会被拦截
 
-```js
+```JavaScript
 class RefImpl {
   #value;
   constructor(value) {

@@ -22,7 +22,7 @@ tags:
 
 > 高阶组件是参数为组件，返回值为新组件的函数。
 >
-> ```js :no-line-numbers
+> ```JavaScript :no-line-numbers
 > const EnhancedComponent = higherOrderComponent(WrappedComponent);
 > ```
 
@@ -40,7 +40,7 @@ tags:
 
 早期的 React 采用的是 mixins 来解决这种横切关注点相关的问题。Mixins 的原理可以简单理解为将一个 minxin 对象上的方法增加到组件上。
 
-```js
+```JavaScript
 const mixinDefaultProps = {};
 const ExampleComponent = React.createClass({
   mixins: [mixinDefaultProps],
@@ -80,7 +80,7 @@ const ExampleComponent = React.createClass({
 
 :::code-group
 
-```jsx [ChildCom1.jsx]
+```JavaScriptx [ChildCom1.jsx]
 import React, { useEffect } from 'react';
 import { formatDate } from '../utils/tools';
 function ChildCom1(props) {
@@ -104,7 +104,7 @@ function ChildCom1(props) {
 export default ChildCom1;
 ```
 
-```jsx [ChildCom2.jsx]
+```JavaScriptx [ChildCom2.jsx]
 import React, { useEffect } from 'react';
 import { formatDate } from '../utils/tools';
 
@@ -129,7 +129,7 @@ function ChildCom2(props) {
 export default ChildCom2;
 ```
 
-```js [App.js]
+```JavaScript [App.js]
 import ChildCom1 from './components/ChildCom1';
 import ChildCom2 from './components/ChildCom2';
 
@@ -153,7 +153,7 @@ export default App;
 
 :::code-group
 
-```jsx [ChildCom1.jsx]
+```JavaScriptx [ChildCom1.jsx]
 function ChildCom1(props) {
   return (
     <>
@@ -166,7 +166,7 @@ function ChildCom1(props) {
 export default ChildCom1;
 ```
 
-```jsx [ChildCom2.jsx]
+```JavaScriptx [ChildCom2.jsx]
 function ChildCom2(props) {
   return (
     <>
@@ -179,7 +179,7 @@ function ChildCom2(props) {
 export default ChildCom2;
 ```
 
-```js [withLog.js]
+```JavaScript [withLog.js]
 // ./src/HOC/withLog.js
 import React, { useEffect } from 'react';
 import { formatDate } from '../utils/tools';
@@ -201,7 +201,7 @@ export default function withLog(WrappedComponent) {
 }
 ```
 
-```js [App.js]
+```JavaScript [App.js]
 import { useState } from 'react';
 import ChildCom1 from './components/ChildCom1';
 import ChildCom2 from './components/ChildCom2';
@@ -241,7 +241,7 @@ export default App;
 高阶组件还可以进行嵌套操作，比如我有两段公共逻辑，但是这两段公共逻辑写在一个高阶组件中又不太合适，因此我们就可以拆分成两个高阶组件，例如我们新增一个 withTimer 的高阶组件。
 :::code-group
 
-```js [withTimer.js]
+```JavaScript [withTimer.js]
 import { useEffect, useState } from 'react';
 
 export default function withTimer(WrappedComponent) {
@@ -262,7 +262,7 @@ export default function withTimer(WrappedComponent) {
 }
 ```
 
-```js [App.js]
+```JavaScript [App.js]
 import ChildCom1 from './components/ChildCom1';
 import withLog from './HOC/withLog';
 import withTimer from './HOC/withTimer';
@@ -290,7 +290,7 @@ export default App;
 
 例如在 react-redux 中的 connect 用法，这里 connect 明显返回的就是一个高阶组件，之后开发者可以传入自己的组件进行组件强化。
 
-```js
+```JavaScript
 connect()(MyComponent);
 connect(mapState)(MyComponent);
 connect(mapState, null, mergeProps, options)(MyComponent);

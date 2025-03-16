@@ -11,7 +11,7 @@ tags:
 
 ## 1. 两数之和
 
-```js
+```JavaScript
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -31,7 +31,7 @@ var twoSum = function (nums, target) {
 
 ## 49. 字母异位词分组
 
-```js
+```JavaScript
 /**
  * @param {string[]} strs
  * @return {string[][]}
@@ -52,7 +52,7 @@ var groupAnagrams = function (strs) {
 
 ## 128. 最长连续序列
 
-```js
+```JavaScript
 /**
  * @param {number[]} nums
  * @return {number}

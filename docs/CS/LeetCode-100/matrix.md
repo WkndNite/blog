@@ -11,7 +11,7 @@ tags:
 
 ## 73. 矩阵置零
 
-```js
+```JavaScript
 /**
  * @param {number[][]} matrix
  * @return {void} Do not return anything, modify matrix in-place instead.

@@ -28,7 +28,7 @@ tags:
 
 :::code-group
 
-```js [ChildCom.jsx]
+```JavaScript [ChildCom.jsx]
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -63,7 +63,7 @@ ChildCom.propTypes = {
 export default ChildCom;
 ```
 
-```js [App.js]
+```JavaScript [App.js]
 import ChildCom from './components/ChildCom';
 
 function App() {
@@ -91,7 +91,7 @@ export default App;
 
 :::code-group
 
-```js [ChildCom.jsx]
+```JavaScript [ChildCom.jsx]
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -122,7 +122,7 @@ ChildCom.propTypes = {
 export default ChildCom;
 ```
 
-```js [App.js]
+```JavaScript [App.js]
 import ChildCom from './components/ChildCom';
 
 function App() {
@@ -143,7 +143,7 @@ export default App;
 
 :::code-group
 
-```jsx [ChildCom.jsx]
+```JavaScriptx [ChildCom.jsx]
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -163,7 +163,7 @@ ChildCom.propTypes = {
 export default ChildCom;
 ```
 
-```js [App.js]
+```JavaScript [App.js]
 import ChildCom from './components/ChildCom';
 
 function App() {
@@ -193,7 +193,7 @@ export default App;
 
 :::code-group
 
-```jsx [ChildCom.jsx]
+```JavaScriptx [ChildCom.jsx]
 import React from 'react';
 
 function ChildCom(props) {
@@ -212,7 +212,7 @@ ChildCom.defaultProps = {
 export default ChildCom;
 ```
 
-```js [App.js]
+```JavaScript [App.js]
 import ChildCom from './components/ChildCom';
 
 function App() {

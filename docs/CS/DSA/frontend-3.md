@@ -10,7 +10,7 @@ tags:
 
 ## Prim 算法
 
-```js
+```JavaScript
 function Prim(points, distance, start) {
   const result = [];
   result.push(start);
@@ -46,7 +46,7 @@ function Prim(points, distance, start) {
 
 ## Kruskal 算法
 
-```js
+```JavaScript
 function Kruskal(points, edges) {
   const result = [];
   const parent = new Map();
@@ -89,7 +89,7 @@ function union(parent, rank, root1, root2) {
 
 ## 构建二叉搜索树
 
-```js
+```JavaScript
 function buildBST(arr) {
   function _insert(node, val) {
     if (!node) return new Node(val);
@@ -114,7 +114,7 @@ function buildBST(arr) {
 
 ![alt](./assets/rotate.excalidraw.png)
 
-```js
+```JavaScript
 function rightRotate(root) {
   if (!root || !root.left) return root;
   const newRoot = root.left;

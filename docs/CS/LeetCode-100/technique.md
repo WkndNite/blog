@@ -10,7 +10,7 @@ tags:
 
 ## 136. 只出现一次的数字
 
-```js
+```JavaScript
 /**
  * @param {number[]} nums
  * @return {number}
@@ -26,7 +26,7 @@ var singleNumber = function (nums) {
 
 ## 169. 多数元素
 
-```js
+```JavaScript
 /**
  * @param {number[]} nums
  * @return {number}

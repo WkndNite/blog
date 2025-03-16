@@ -18,7 +18,7 @@ tags:
 
 ## 出口配置
 
-```js
+```JavaScript
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -36,19 +36,19 @@ module.exports = {
 
 :::code-group
 
-```js [字符串]
+```JavaScript [字符串]
 module.exports = {
   entry: './src/index.js'
 };
 ```
 
-```js [数组]
+```JavaScript [数组]
 module.exports = {
   entry: ['./src/index.js', './src/other.js']
 };
 ```
 
-```js [对象]
+```JavaScript [对象]
 module.exports = {
   entry: {
     main: './src/index.js',
@@ -89,7 +89,7 @@ module.exports = {
 
 - webpack 配置
 
-  ```js
+  ```JavaScript
   module.exports = {
     entry: {
       pageA: './src/pageA/index.js',
@@ -127,7 +127,7 @@ module.exports = {
 
 - webpack 配置
 
-  ```js
+  ```JavaScript
   module.exports = {
     entry: './src/index.js',
     output: {
@@ -166,7 +166,7 @@ module.exports = {
 
 - webpack 配置
 
-  ```js
+  ```JavaScript
   module.exports = {
     entry: './src/index.js',
     output: {

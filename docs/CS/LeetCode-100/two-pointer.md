@@ -11,7 +11,7 @@ tags:
 
 ## 283. 移动零
 
-```js [283. 移动零.js]
+```JavaScript [283. 移动零.js]
 /**
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
@@ -31,7 +31,7 @@ var moveZeroes = function (nums) {
 
 ## 11. 盛最多水的容器
 
-```js
+```JavaScript
 /**
  * @param {number[]} height
  * @return {number}
@@ -53,7 +53,7 @@ var maxArea = function (height) {
 
 ## 15. 三数之和
 
-```js
+```JavaScript
 /**
  * @param {number[]} nums
  * @return {number[][]}

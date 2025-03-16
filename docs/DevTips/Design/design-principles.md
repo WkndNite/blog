@@ -14,7 +14,7 @@ date: 2024-12-28
 
 单一职责原则指出，一个类应该只有一个引起它变化的原因。换句话说，一个类应该仅有一个职责。遵循这一原则可以使类更易于理解、维护和扩展。
 
-```js
+```JavaScript
 class User {
   constructor(name, email) {
     this.name = name;
@@ -37,7 +37,7 @@ class UserRepository {
 
 开放封闭原则指出，软件实体（类、模块、函数等）应该对扩展开放，对修改封闭。这意味着我们应该能够扩展一个类的行为，而不需要修改现有的代码。
 
-```js
+```JavaScript
 class Shape {
   area() {
     throw new Error('This method must be overridden');
@@ -72,7 +72,7 @@ class Circle extends Shape {
 
 里氏替换原则指出，子类必须能够替换其基类，并且程序的行为不会改变。遵循这一原则可以确保继承体系的正确性和一致性。
 
-```js
+```JavaScript
 class Bird {
   fly() {
     console.log('Flying');
@@ -94,7 +94,7 @@ class Ostrich extends Bird {
 
 接口隔离原则指出，客户端不应该被迫依赖于它们不使用的方法。换句话说，一个类对另一个类的依赖应该建立在最小的接口上。
 
-```js
+```JavaScript
 class Printer {
   print() {
     throw new Error('This method must be overridden');
@@ -121,7 +121,7 @@ class AllInOnePrinter extends Printer {
 
 依赖倒置原则指出，高层模块不应该依赖于低层模块，二者都应该依赖于抽象。抽象不应该依赖于细节，细节应该依赖于抽象。遵循这一原则可以减少类之间的耦合，提高系统的灵活性和可维护性。
 
-```js
+```JavaScript
 class Database {
   connect() {
     throw new Error('This method must be overridden');
@@ -153,7 +153,7 @@ userService.connectToDatabase(); // Connecting to MySQL
 
 迪米特法则指出，一个对象应该对其他对象有最少的了解。换句话说，一个对象不应该知道它操作的对象的内部细节。遵循这一原则可以减少类之间的耦合，提高系统的模块化程度。
 
-```js
+```JavaScript
 class Engine {
   start() {
     console.log('Engine started');
@@ -178,7 +178,7 @@ car.start(); // Engine started
 
 合成复用原则指出，应该尽量使用对象组合，而不是继承来达到复用的目的。组合可以使系统更加灵活，降低类之间的耦合度。
 
-```js
+```JavaScript
 class Engine {
   start() {
     console.log('Engine started');
@@ -204,7 +204,7 @@ car.start(); // Engine started
 
 最少知识原则指出，一个对象应该对其他对象有最少的了解。换句话说，一个对象不应该知道它操作的对象的内部细节。
 
-```js
+```JavaScript
 class Engine {
   start() {
     console.log('Engine started');
@@ -229,7 +229,7 @@ car.start(); // Engine started
 
 最小意外原则指出，一个类应该只做它被设计为做的事情，不应该有意外的行为。遵循这一原则可以使类更易于理解、维护和扩展。
 
-```js
+```JavaScript
 class Calculator {
   add(a, b) {
     return a + b;
@@ -244,7 +244,7 @@ console.log(calculator.add(1, 2)); // 3
 
 重用原则指出，应该尽量重用现有的代码，而不是重复编写相同的代码。重用可以减少代码的复杂性，提高代码的可维护性。
 
-```js
+```JavaScript
 class MathOperations {
   add(a, b) {
     return a + b;
@@ -264,7 +264,7 @@ console.log(mathOps.subtract(5, 3)); // 2
 
 简单原则指出，一个类应该只有一个引起它变化的原因。换句话说，一个类应该仅有一个职责。遵循这一原则可以使类更易于理解、维护和扩展。
 
-```js
+```JavaScript
 class User {
   constructor(name, email) {
     this.name = name;

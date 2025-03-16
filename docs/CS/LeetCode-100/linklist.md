@@ -11,7 +11,7 @@ tags:
 
 ## 160. 相交链表
 
-```js
+```JavaScript
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -60,7 +60,7 @@ var getIntersectionNode = function (headA, headB) {
 
 ## 206. 反转链表
 
-```js
+```JavaScript
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -86,7 +86,7 @@ var reverseList = function (head) {
 
 ## 234. 回文链表
 
-```js
+```JavaScript
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -121,7 +121,7 @@ var isPalindrome = function (head) {
 
 ## 141. 环形链表
 
-```js
+```JavaScript
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -152,7 +152,7 @@ var hasCycle = function (head) {
 
 ## 142. 环形链表 II
 
-```js
+```JavaScript
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -189,7 +189,7 @@ var detectCycle = function (head) {
 
 ## 21. 合并两个有序链表
 
-```js
+```JavaScript
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {

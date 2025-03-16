@@ -18,7 +18,7 @@ tags:
 
 **在项目的** `src` **目录新建** `setupProxy.js`，下附对应文件代码。
 
-```js [setupProxy.js]
+```JavaScript [setupProxy.js]
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function (app) {
@@ -113,7 +113,7 @@ bun run eject
 
 之后，在弹射出来的 `config/webpack.config.js` 中作出如下修改：
 
-```js [webpack.config.js] :line-numbers=204
+```JavaScript [webpack.config.js] :line-numbers=204
 output: {
     // The build folder.
     path: paths.appBuild,

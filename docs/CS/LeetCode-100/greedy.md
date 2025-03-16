@@ -11,7 +11,7 @@ tags:
 
 ## 121. 买卖股票的最佳时机
 
-```js
+```JavaScript
 /**
  * @param {number[]} prices
  * @return {number}
@@ -29,7 +29,7 @@ var maxProfit = function (prices) {
 
 ## 55. 跳跃游戏
 
-```js
+```JavaScript
 /**
  * @param {number[]} nums
  * @return {boolean}
@@ -56,7 +56,7 @@ var canJump = function (nums) {
 
 ## 45. 跳跃游戏 II
 
-```js
+```JavaScript
 /**
  * @param {number[]} nums
  * @return {number}

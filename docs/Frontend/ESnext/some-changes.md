@@ -32,7 +32,7 @@ ES6 建议不再使用 var 定义变量，而是使用 let 定义变量，const 
 
 注意，在 for 循环中使用 let 定义变量，变量所在的作用域是循环体，因此在循环外不能使用。另外，for 循环会对该变量做特殊处理，让每次循环使用的都是一个独立的循环变量，这可以解决 JS 由来已久的问题。
 
-```js
+```JavaScript
 for (var i = 0; i < 13; i++) {
   setTimeout(function () {
     console.log(i);
@@ -60,7 +60,7 @@ for (let i = 0; i < 13; i++) {
 
 ES7 新增语法，使用 `**` 表示幂运算。
 
-```js :no-line-numbers
+```JavaScript :no-line-numbers
 console.log(2 ** 3); // 8
 ```
 
@@ -84,13 +84,13 @@ console.log(2 ** 3); // 8
 
 ES6 提供了一种新的字符串字面量的书写方式，即模板字符串，写法为：
 
-```js
+```JavaScript
 `字符串内容`;
 ```
 
 模板字符串可以轻松地实现换行和拼接：
 
-```js
+```JavaScript
 const s = `hello
 world`;
 console.log(s);
@@ -107,7 +107,7 @@ console.log(s2); // 姓名：张三，年龄：18
 
 通常，我们可以用模板字符串拼接 HTML。
 
-```js
+```JavaScript
 const s = `
   <div>
     <h1>${title}</h1>

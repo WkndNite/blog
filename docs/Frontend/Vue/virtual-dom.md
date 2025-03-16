@@ -69,7 +69,7 @@ date: 2025-01-16
 
 5. **Web 开发者**在进行开发的时候，就可以在 JS 文件中数额写如下代码：
 
-   ```js
+   ```JavaScript
    const i = 1;
    document.createElement('div');
    ```
@@ -82,7 +82,7 @@ date: 2025-01-16
 
 假设在 JS 层面，我们写了一个如下代码：
 
-```js
+```JavaScript
 document.appendChild('div');
 ```
 
@@ -96,7 +96,7 @@ document.appendChild('div');
 
 在 Vue 中，可以通过一个 [h 函数](https://cn.vuejs.org/api/render-function.html#h)来创建虚拟 DOM，如下：
 
-```js
+```JavaScript
 import { h } from 'vue';
 const vnode = h('div', { class: 'red' }, [
   h('h1', 'hello world'),
@@ -121,7 +121,7 @@ console.log(vnode);
 
 1. 先来回顾早期的开发模式。在最早期的时候，前端开发人员需要手动操作 DOM，比如：
 
-   ```js
+   ```JavaScript
    const newDiv = document.createElement('div');
    const newContent = document.createTextNode('hello world');
    newDiv.appendChild(newContent);
@@ -154,7 +154,7 @@ console.log(vnode);
    如果采用传统的操作节点的方式，那么需要如下代码：
    :::details
 
-   ```js
+   ```JavaScript
    var app = document.getElementById('app');
 
    var messageDiv = document.createElement('div');
@@ -196,7 +196,7 @@ console.log(vnode);
 
    如果使用 innerHTML，那么只需要如下代码：
 
-   ```js
+   ```JavaScript
    app.innerHTML = `
      <div class="message">
        <div class="info">
@@ -220,7 +220,7 @@ console.log(vnode);
 
    实际上无论是使用虚拟 DOM 还是使用 innerHTML，在初始化的时候性能是相差无几的。虚拟 DOM 的长处，实际上是在 DOM 更新的时候。
 
-   ```js
+   ```JavaScript
    document.addEventListener('DOMContentLoaded', () => {
      const contentDiv = document.getElementById('content');
      const updateBtn = document.getElementById('updateBtn');

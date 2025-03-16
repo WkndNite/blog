@@ -32,7 +32,7 @@ cover: https://redux.js.org/img/redux.svg
 
    :::code-group
 
-   ```js [index.js] {4,8,10-12}
+   ```JavaScript [index.js] {4,8,10-12}
    import React from 'react';
    import ReactDOM from 'react-dom/client';
    import App from './App';
@@ -47,7 +47,7 @@ cover: https://redux.js.org/img/redux.svg
    });
    ```
 
-   ```js [App.jsx] {17,18}
+   ```JavaScript [App.jsx] {17,18}
    import List from './components/List';
    import Input from './components/Input';
    import './css/App.css';
@@ -128,7 +128,7 @@ cover: https://redux.js.org/img/redux.svg
 
    :::code-group
 
-   ```jsx [Input.jsx] {2,7}
+   ```JavaScriptx [Input.jsx] {2,7}
    import React, { useState } from 'react';
    import { addListAction } from '../redux/actions';
 
@@ -162,7 +162,7 @@ cover: https://redux.js.org/img/redux.svg
    }
    ```
 
-   ```jsx [List.jsx] {2,15,31,37}
+   ```JavaScriptx [List.jsx] {2,15,31,37}
    import React from 'react';
    import { deleteListAction, updateListAction } from '../redux/actions';
 
@@ -217,7 +217,7 @@ cover: https://redux.js.org/img/redux.svg
 
    :::code-group
 
-   ```js [store.js] {5,6,9}
+   ```JavaScript [store.js] {5,6,9}
    import { createStore } from 'redux';
 
    import { todoReducer } from './reducers';
@@ -229,13 +229,13 @@ cover: https://redux.js.org/img/redux.svg
    );
    ```
 
-   ```js [actionType.js]
+   ```JavaScript [actionType.js]
    export const ADD = 'ADD';
    export const DELETE = 'DELETE';
    export const CHANGE = 'CHANGE';
    ```
 
-   ```js [actions.js]
+   ```JavaScript [actions.js]
    import { ADD, DELETE, CHANGE } from './actionType';
 
    export const addListAction = (payload) => ({
@@ -254,7 +254,7 @@ cover: https://redux.js.org/img/redux.svg
    });
    ```
 
-   ```js [reducers.js]
+   ```JavaScript [reducers.js]
    import { ADD, DELETE, CHANGE } from './actionType';
 
    let defaultState = {
@@ -319,7 +319,7 @@ Redux 是一个独立的第三方库，之后 React 在 Redux 的基础上推出
 
 :::code-group
 
-```js [index.js] {4,5,10,12}
+```JavaScript [index.js] {4,5,10,12}
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -335,7 +335,7 @@ root.render(
 );
 ```
 
-```jsx [Input.jsx] {2,3,7,23-25}
+```JavaScriptx [Input.jsx] {2,3,7,23-25}
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../redux/todoSlice';
@@ -372,7 +372,7 @@ export default function Input(props) {
 }
 ```
 
-```jsx [List.jsx] {2,3,6,7,33,39}
+```JavaScriptx [List.jsx] {2,3,6,7,33,39}
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteTodo, changeTodo } from '../redux/todoSlice';
@@ -423,7 +423,7 @@ export default function List() {
 }
 ```
 
-```js [store.js]
+```JavaScript [store.js]
 import { configureStore } from '@reduxjs/toolkit';
 import todoListReducer from './todoSlice';
 
@@ -434,7 +434,7 @@ export default configureStore({
 });
 ```
 
-```js [todoSlice.js]
+```JavaScript [todoSlice.js]
 import { createSlice } from '@reduxjs/toolkit';
 
 export const todoSlice = createSlice({

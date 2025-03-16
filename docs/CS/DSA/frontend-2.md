@@ -10,7 +10,7 @@ tags:
 
 ## 二叉树的遍历
 
-```js
+```JavaScript
 function preOrder(node) {
   if (node) {
     console.log(node.data);
@@ -38,7 +38,7 @@ function postOrder(node) {
 
 ## 前序中序还原二叉树
 
-```js
+```JavaScript
 function buildTree(preOrder, inOrder) {
   if (!preOrder.length || !inOrder.length) return null;
   const root = preOrder[0];
@@ -60,7 +60,7 @@ function buildTree(preOrder, inOrder) {
 
 ## 中序后序还原二叉树
 
-```js
+```JavaScript
 function buildTree(inOrder, postOrder) {
   if (!inOrder.length || !postOrder.length) return null;
   const root = postOrder[postOrder.length - 1];
@@ -82,7 +82,7 @@ function buildTree(inOrder, postOrder) {
 
 ## 二叉树的比较
 
-```js
+```JavaScript
 function CompareTree(root1, root2) {
   if (root1 === root2) return true;
   if (!root1 || !root2) return false;
@@ -96,7 +96,7 @@ function CompareTree(root1, root2) {
 
 ## 可对称二叉树比较
 
-```js
+```JavaScript
 function CompareTree(root1, root2) {
   if (root1 === root2) return true;
   if (!root1 || !root2) return false;
@@ -113,7 +113,7 @@ function CompareTree(root1, root2) {
 
 ## 二叉树的 diff 算法
 
-```js
+```JavaScript
 function diffTree(root1, root2) {
   const diffList = [];
   if (root1 === root2) return diffList;

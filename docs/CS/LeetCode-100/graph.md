@@ -11,7 +11,7 @@ tags:
 
 ## 200. 岛屿数量
 
-```js
+```JavaScript
 /**
  * @param {character[][]} grid
  * @return {number}

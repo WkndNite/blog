@@ -12,7 +12,7 @@ tags:
 
 示例 1：
 
-```js
+```JavaScript
 const name = 'monica';
 const age = 18;
 const sayHello = function () {
@@ -34,7 +34,7 @@ const person2 = {
 
 示例 2：
 
-```js
+```JavaScript
 const MyMath = {
   sum: function (a, b) {},
   random: function (min, max) {}
@@ -50,14 +50,14 @@ const MyMath2 = {
 
 示例 1：
 
-```js
+```JavaScript
 const arr = [1, 2, 3, 4, 5];
 Math.max(...arr);
 ```
 
 示例 2：
 
-```js
+```JavaScript
 const obj1 = { a: 1, b: 2 };
 const obj2 = { c: 3, d: 4 };
 
@@ -66,14 +66,14 @@ const obj3 = { ...obj1, ...obj2 };
 
 示例 3：
 
-```js
+```JavaScript
 const arr = [2, 3, 4];
 const arr2 = [1, ...arr, 5];
 ```
 
 示例 4：
 
-```js
+```JavaScript
 const user = {
   name: 'monica',
   age: 18
@@ -88,7 +88,7 @@ const user2 = {
 
 示例 1：
 
-```js
+```JavaScript
 const user = {
   name: 'monica',
   age: 18,
@@ -106,14 +106,14 @@ const {
 
 示例 2：
 
-```js
+```JavaScript
 const array = [1, 2, 3, 4, 5];
 const [a, b, c, d, e] = array;
 ```
 
 示例 3：
 
-```js
+```JavaScript
 let a = 1;
 let b = 2;
 [a, b] = [b, a];
@@ -121,7 +121,7 @@ let b = 2;
 
 示例 4：
 
-```js
+```JavaScript
 const users = [
   { name: 'monica', age: 18 },
   { name: 'lisa', age: 20 },
@@ -137,7 +137,7 @@ for (const { name, age } of users) {
 
 对于对象中的每个成员，JS 使用属性描述符来描述它们：
 
-```js
+```JavaScript
 const user = {
   name: 'monica',
   age: 18
@@ -146,7 +146,7 @@ const user = {
 
 上面的对象，在 JS 内部被描述为：
 
-```js
+```JavaScript
 {
     name:{
         value:'monica',
@@ -167,14 +167,14 @@ ES 5 提供了一系列的 API，针对属性描述符进行操作。
 
 1. `Object.getOwnPropertyDescriptor(obj, prop)`
 
-   ```js
+   ```JavaScript
    const desc = Object.getOwnPropertyDescriptor(user, 'name');
    console.log(desc);
    ```
 
 2. `Object.defineProperty(obj, prop, descriptor)`
 
-   ```js
+   ```JavaScript
    Object.defineProperty(user, 'name', {
      value: 'lisa',
      writable: false,
@@ -187,7 +187,7 @@ ES 5 提供了一系列的 API，针对属性描述符进行操作。
 
 属性描述符中有两个特殊配置，分别为 `get` 和 `set`，通过它们，可以把属性的取值和赋值变为方法调用。
 
-```js
+```JavaScript
 const user = {
   name: 'monica',
   age: 18
@@ -217,7 +217,7 @@ console.log(user.name); // defaultName
 
 `Object.fromEntries(arr)`：把二维数组转换为对象。
 
-```js
+```JavaScript
 const user = {
   name: 'monica',
   age: 18
@@ -241,7 +241,7 @@ console.log(obj); // {name: 'monica', age: 18}
 
 `Object.isFrozen(obj)`：判断对象是否被冻结。
 
-```js
+```JavaScript
 const user = {
   name: 'monica',
   age: 18
@@ -262,7 +262,7 @@ console.log(user.name); // monica
 - NaN 和 NaN 相等。
 - +0 和 -0 不相等。
 
-```js
+```JavaScript
 console.log(Object.is(NaN, NaN)); // true
 console.log(Object.is(+0, -0)); // false
 ```

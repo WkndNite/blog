@@ -31,15 +31,15 @@
   },
   "insert collapse js code": {
     "prefix": "detailjs",
-    "body": [":::details", "```js", "$1", "```", ":::"]
+    "body": [":::details", "```JavaScript", "$1", "```", ":::"]
   },
   "insert js code": {
     "prefix": "jscode",
-    "body": ["```js", "$2", "```"]
+    "body": ["```JavaScript", "$2", "```"]
   },
   "insert jsx code": {
     "prefix": "jsxcode",
-    "body": ["```jsx", "$2", "```"]
+    "body": ["```JavaScriptx", "$2", "```"]
   },
   "insert css code": {
     "prefix": "csscode",

@@ -13,7 +13,7 @@ tags:
 
 渲染，英文为 `render`。在前端人员经常使用的 Vue 或者 React 等诸如此类的框架，渲染的目的就是得到框架想要的 `Virtual DOM`。而在浏览器这一部分，渲染的含义就是把字符串转换为像素信息，显示在屏幕上。我们可以将 render 理解为这样一个样貌：
 
-```js
+```JavaScript
 function render(html) {
   // ...
   return pixels;

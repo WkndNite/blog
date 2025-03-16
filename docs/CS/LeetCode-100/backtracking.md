@@ -11,7 +11,7 @@ tags:
 
 ## 46. 全排列
 
-```js
+```JavaScript
 /**
  * @param {number[]} nums
  * @return {number[][]}
@@ -41,7 +41,7 @@ var permute = function (nums) {
 
 ## 78. 子集
 
-```js
+```JavaScript
 /**
  * @param {number[]} nums
  * @return {number[][]}
@@ -65,7 +65,7 @@ var subsets = function (nums) {
 
 ## 17. 电话号码的字母组合
 
-```js
+```JavaScript
 /**
  * @param {string} digits
  * @return {string[]}
