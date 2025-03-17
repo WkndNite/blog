@@ -62,8 +62,14 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: '计算机基础',
+    title: '面试必备',
     items: [
+      {
+        title: '前端面试派',
+        link: 'https://www.mianshipai.com/',
+        desc: '双越老师联合精英博主 大厂面试流程开源免费',
+        icon: 'https://www.mianshipai.com/favicon.ico'
+      },
       {
         title: 'LeetCode Hot 100',
         link: 'https://leetcode.cn/studyplan/top-100-liked/',

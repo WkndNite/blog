@@ -107,6 +107,10 @@ export default defineConfig({
             link: '/Frontend/Webpack'
           },
           {
+            text: '工程化',
+            link: '/Frontend/Engineering'
+          },
+          {
             text: 'Vue',
             link: '/Frontend/Vue'
           },
@@ -402,6 +406,24 @@ export default defineConfig({
             {
               text: 'Webpack 内置插件',
               link: '/Frontend/Webpack/builtin-plugins'
+            }
+          ]
+        },
+        {
+          text: '前端工程化',
+          collapsed: false,
+          items: [
+            {
+              text: 'CSS 工程化概述',
+              link: '/Frontend/Engineering/CSS-Engineering'
+            },
+            {
+              text: '利用 Webpack 拆分 CSS',
+              link: '/Frontend/Engineering/Webpack-Split-CSS'
+            },
+            {
+              text: '解决类名冲突',
+              link: 'Frontend/Engineering/CSS-Name-Conflict'
             }
           ]
         },

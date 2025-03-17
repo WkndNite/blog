@@ -37,6 +37,8 @@ tags:
 
    ![alt](./assets/2020-01-09-12-35-05.png)
 
+   > AST在线测试工具：https://astexplorer.net/
+
 3. 产生 chunk assets
 
    在第二步完成后，chunk 中会产生一个模块列表，列表中包含了模块 id 和模块转换后的代码。
