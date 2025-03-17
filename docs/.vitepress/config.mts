@@ -423,7 +423,7 @@ export default defineConfig({
             },
             {
               text: '解决类名冲突',
-              link: 'Frontend/Engineering/CSS-Name-Conflict'
+              link: '/Frontend/Engineering/CSS-Name-Conflict'
             }
           ]
         },
