@@ -42,9 +42,9 @@ module.exports = {
 
 :::info 配置生成的文件名
 
-同`output.filename`的含义一样，即根据 chunk 生成的样式文件名。
+同 `output.filename` 的含义一样，即根据 chunk 生成的样式文件名。
 
-配置生成的文件名，例如`[name].[contenthash:5].css`。
+配置生成的文件名，例如 `[name].[contenthash:5].css`。
 
 默认情况下，每个 chunk 对应一个 css 文件。
 
