@@ -637,6 +637,10 @@ export default defineConfig({
             {
               text: 'this 指向',
               link: '/Interview/JavaScript/this'
+            },
+            {
+              text: '垃圾回收与内存泄漏',
+              link: '/Interview/JavaScript/gc'
             }
           ]
         },

@@ -14,3 +14,4 @@ author: false
 - [原型和原型链](./prototype.md)
 - [数据类型的转换](./type-conversion.md)
 - [this 指向](./this.md)
+- [垃圾回收与内存泄漏](./gc.md)
