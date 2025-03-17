@@ -459,3 +459,38 @@ body {
 安装 vscode 的插件 `stylelint` 即可，它会读取你工程中的配置文件，按照配置进行实时报错。
 
 > 实际上，如果你拥有了 `stylelint` 插件，可以不需要在 postcss 中使用该插件了。
+
+## 在 Webpack 中使用
+
+在 webpack 中使用 postcss，需要安装 `postcss-loader`。
+
+```sh [npm] :no-line-numbers
+npm install postcss-loader --save-dev
+```
+
+在 webpack 的配置文件中，添加 postcss-loader：
+
+```JavaScript
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  mode: 'development',
+  devtool: 'source-map',
+  module: {
+    rules: [
+      {
+        test: /\.pcss$/,
+        use: ['style-loader', 'css-loader?modules', 'postcss-loader']
+      }
+    ]
+  },
+  devServer: {
+    open: true
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html'
+    })
+  ]
+};
+```
