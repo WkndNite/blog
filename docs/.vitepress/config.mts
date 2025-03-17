@@ -623,6 +623,10 @@ export default defineConfig({
               link: '/Interview/JavaScript/wrapper'
             },
             {
+              text: '运算符',
+              link: '/Interview/JavaScript/operator'
+            },
+            {
               text: '原型和原型链',
               link: '/Interview/JavaScript/prototype'
             },

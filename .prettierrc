@@ -5,5 +5,6 @@
   "tabWidth": 2,
   "embeddedLanguageFormatting": "auto",
   "bracketSpacing": true,
+  "semi": true,
   "plugins": ["prettier-plugin-organize-imports"]
 }
