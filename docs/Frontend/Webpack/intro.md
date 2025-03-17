@@ -1,6 +1,6 @@
 ---
 date: 2025-03-07 16:31:44
-description: 难道我是一名工程化大师？
+description: 最终还是走上了工程化这条不归路
 tags:
   - Webpack
   - 前端

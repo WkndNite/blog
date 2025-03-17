@@ -424,6 +424,14 @@ export default defineConfig({
             {
               text: '解决类名冲突',
               link: '/Frontend/Engineering/CSS-Name-Conflict'
+            },
+            {
+              text: '解决重复样式的问题',
+              link: '/Frontend/Engineering/CSS-Repeat'
+            },
+            {
+              text: '谈一谈 Post CSS',
+              link: '/Frontend/Engineering/PostCSS'
             }
           ]
         },

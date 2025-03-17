@@ -1,6 +1,6 @@
 ---
 date: 2025-03-06 10:23:12
-description: 忍够了 VS Code 的字体了吗？
+description: 忍够了 VS Code 的字体 终于换上了鸿蒙
 tags:
   - VScode
   - 字体美化教程

@@ -31,7 +31,7 @@ CSS-loader 的作用，就是将 CSS 代码转换为 JS 代码。
 
 经过 CSS-loader 转换后变成 JS 代码：
 
-```JS
+```JavaScript
 module.exports = `.red{
     color:"#f40";
 }`;
@@ -50,7 +50,7 @@ module.exports = `.red{
 
 经过 CSS-loader 转换后变成 JS 代码：
 
-```JS
+```JavaScript
 var import1 = require('./bg.png');
 module.exports = `.red{
     color:"#f40";
@@ -60,7 +60,7 @@ module.exports = `.red{
 
 这样一来，经过 Webpack 的后续处理，会把依赖 `./bg.png` 添加到模块列表，然后再将代码转换为：
 
-```JS
+```JavaScript
 var import1 = __Webpack_require__('./src/bg.png');
 module.exports = `.red{
     color:"#f40";
@@ -80,7 +80,7 @@ module.exports = `.red{
 
 会转换为：
 
-```JS
+```JavaScript
 var import1 = require('./reset.CSS');
 var import2 = require('./bg.png');
 module.exports = `${import1}
@@ -111,7 +111,7 @@ style-loader 可以将 CSS-loader 转换后的代码进一步处理，将 CSS-lo
 
 经过 CSS-loader 转换后变成 JS 代码：
 
-```JS
+```JavaScript
 module.exports = `.red{
     color:"#f40";
 }`;
@@ -119,7 +119,7 @@ module.exports = `.red{
 
 经过 style-loader 转换后变成：
 
-```JS
+```JavaScript
 module.exports = `.red{
     color:"#f40";
 }`;
