@@ -664,6 +664,18 @@ export default defineConfig({
             {
               text: 'CSRF 和 XSS',
               link: '/Interview/Network/csrf-xss'
+            },
+            {
+              text: 'SSL、TLS 和 HTTPS',
+              link: '/Interview/Network/ssl-tls-https'
+            },
+            {
+              text: '网络性能优化',
+              link: '/Interview/Network/performance-optimization'
+            },
+            {
+              text: 'WebSocket',
+              link: '/Interview/Network/websocket'
             }
           ]
         },
