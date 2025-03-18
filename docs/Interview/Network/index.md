@@ -11,3 +11,6 @@ author: false
 - [常见的请求方法](./request-method.md)
 - [Cookie](./cookie.md)
 - [cookie、sessionStorage、localStorage的区别](./cookie-storage-difference.md)
+- [加密算法](./encryption.md)
+- [JWT](./jwt.md)
+- [同源与跨域](./same-origin-cross-domain.md)

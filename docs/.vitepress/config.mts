@@ -260,6 +260,10 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
+              text: '链表',
+              link: '/CS/programmercarl/linkedList'
+            },
+            {
               text: '二叉树',
               link: '/CS/programmercarl/tree'
             },
@@ -623,6 +627,18 @@ export default defineConfig({
             {
               text: 'cookie 和 storage 的区别',
               link: '/Interview/Network/cookie-storage-difference'
+            },
+            {
+              text: '加密算法',
+              link: '/Interview/Network/encryption'
+            },
+            {
+              text: 'JWT',
+              link: '/Interview/Network/jwt'
+            },
+            {
+              text: '同源与跨域',
+              link: '/Interview/Network/same-origin-cross-domain'
             }
           ]
         },
