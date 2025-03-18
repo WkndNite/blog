@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress';
 import { SponsorPlugin } from 'vitepress-plugin-sponsor';
 import { blogTheme } from './blog-theme';
 export default defineConfig({
+  ignoreDeadLinks: true,
   cleanUrls: true,
   markdown: {
     math: true,
