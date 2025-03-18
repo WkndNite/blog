@@ -676,6 +676,10 @@ export default defineConfig({
             {
               text: 'WebSocket',
               link: '/Interview/Network/websocket'
+            },
+            {
+              text: '缓存',
+              link: '/Interview/Network/cache'
             }
           ]
         },
