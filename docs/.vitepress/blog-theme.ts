@@ -1,6 +1,7 @@
 import { getThemeConfig } from '@sugarat/theme/node';
 
 const blogTheme = getThemeConfig({
+  mermaid: true,
   footer: {
     version: false,
     copyright: 'MIT License | 周末晚',

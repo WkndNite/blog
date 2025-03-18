@@ -640,6 +640,30 @@ export default defineConfig({
             {
               text: '同源与跨域',
               link: '/Interview/Network/same-origin-cross-domain'
+            },
+            {
+              text: 'HTTP 各版本',
+              link: '/Interview/Network/http-version'
+            },
+            {
+              text: '域名和 DNS',
+              link: '/Interview/Network/domain-dns'
+            },
+            {
+              text: '输入 URL 到页面展示',
+              link: '/Interview/Network/url-to-page'
+            },
+            {
+              text: 'Session',
+              link: '/Interview/Network/session'
+            },
+            {
+              text: 'TCP 协议',
+              link: '/Interview/Network/tcp'
+            },
+            {
+              text: 'CSRF 和 XSS',
+              link: '/Interview/Network/csrf-xss'
             }
           ]
         },
