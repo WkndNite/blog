@@ -60,6 +60,12 @@ const blogTheme = getThemeConfig({
         des: '基于 VitePress 的个人前端导航页面模板',
         avatar: 'https://fe-nav.netlify.app/logo.png',
         url: 'https://fe-nav.netlify.app/'
+      },
+      {
+        nickname: '.Han',
+        des: '运气是计划之外的东西',
+        avatar: 'https://q1.qlogo.cn/g?b=qq&nk=1655466387&s=640',
+        url: 'https://www.vvhan.com/'
       }
     ],
     random: true,
