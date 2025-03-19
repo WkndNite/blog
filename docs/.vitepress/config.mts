@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress';
+import { AnnouncementPlugin } from 'vitepress-plugin-announcement';
 import { SponsorPlugin } from 'vitepress-plugin-sponsor';
 import { blogTheme } from './blog-theme';
+
 export default defineConfig({
   ignoreDeadLinks: true,
   cleanUrls: true,
@@ -775,6 +777,23 @@ export default defineConfig({
         type: 'simple',
         aliPayQR: '/aliPayQR.jpg',
         weChatQR: '/weChatPayQR.jpg'
+      }),
+      AnnouncementPlugin({
+        title: '公告',
+        body: [
+          { type: 'text', content: '👇 微信 👇' },
+          {
+            type: 'image',
+            src: '/wechat.png'
+          },
+          {
+            type: 'text',
+            content: '欢迎私信交流'
+          }
+        ],
+        duration: 1500,
+        twinkle: true,
+        mobileMinify: true
       })
     ]
   }
