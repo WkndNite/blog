@@ -168,6 +168,10 @@ export default defineConfig({
           {
             text: '手搓代码',
             link: '/Interview/diy'
+          },
+          {
+            text: '面试经验',
+            link: '/Interview/Experience'
           }
         ]
       },
