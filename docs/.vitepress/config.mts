@@ -25,7 +25,7 @@ export default defineConfig({
   extends: blogTheme,
   lang: 'zh-cn',
   title: '周末晚的岛屿',
-  description: '基于粥里有勺糖提供主题所搭建的周末晚的博客',
+  description: '宁鸣而死 不默而生',
   lastUpdated: true,
   head: [
     [
@@ -50,7 +50,7 @@ export default defineConfig({
       'link',
       {
         rel: 'stylesheet',
-        href: 'https://chinese-fonts-cdn.deno.dev/packages/yozai/dist/Yozai-Medium/result.css'
+        href: 'https://chinese-fonts-cdn.deno.dev/packages/moon-stars-kai/dist/MoonStarsKaiHW-Bold/result.css'
       }
     ]
   ],
@@ -527,6 +527,10 @@ export default defineConfig({
             {
               text: '组件渲染时的性能优化',
               link: '/Frontend/React/performance'
+            },
+            {
+              text: '前端框架的理解',
+              link: '/Frontend/React/framework'
             }
           ]
         },

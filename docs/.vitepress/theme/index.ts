@@ -1,7 +1,6 @@
 import BlogTheme from '@sugarat/theme';
 import { ShareButton } from '@theojs/lumen';
-import Lenis from 'lenis';
-import { inBrowser, useData } from 'vitepress';
+import { useData } from 'vitepress';
 import { h } from 'vue';
 import Fireworks from './components/Fireworks.vue';
 import MNavLinks from './components/MNavLinks.vue';
@@ -36,23 +35,23 @@ export default {
     ctx.app.component('Fireworks', Fireworks);
     ctx.app.component('ShareButton', ShareButton);
     ctx.app.component('VideoPlayer', VideoPlayer);
-    if (inBrowser) {
-      const lenis = new Lenis();
-      const lenisInit = (time: number) => {
-        lenis.raf(time);
-        requestAnimationFrame(lenisInit);
-      };
-      lenis.on('scroll', () => {
-        if (
-          window.scrollY + window.innerHeight >=
-          document.documentElement.scrollHeight
-        ) {
-          lenis.stop();
-          lenis.start();
-        }
-      });
+    // if (inBrowser) {
+    //   const lenis = new Lenis();
+    //   const lenisInit = (time: number) => {
+    //     lenis.raf(time);
+    //     requestAnimationFrame(lenisInit);
+    //   };
+    //   lenis.on('scroll', () => {
+    //     if (
+    //       window.scrollY + window.innerHeight >=
+    //       document.documentElement.scrollHeight
+    //     ) {
+    //       lenis.stop();
+    //       lenis.start();
+    //     }
+    //   });
 
-      requestAnimationFrame(lenisInit);
-    }
+    //   requestAnimationFrame(lenisInit);
+    // }
   }
 };

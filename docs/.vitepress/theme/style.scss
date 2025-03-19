@@ -15,8 +15,8 @@
 }
 
 body {
-  font-family: 'Yozai Medium';
-  font-weight: '400';
+  font-family: 'Moon Stars Kai HW';
+  font-weight: '700';
   cursor: url('./assets/default.cur'), auto;
 }
 
@@ -26,6 +26,9 @@ strong {
 
 .MathJax {
   overflow-y: hidden;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 /* 浅色模式变量 */
