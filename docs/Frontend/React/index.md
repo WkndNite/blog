@@ -16,6 +16,8 @@ author: false
 - [Context](./context.md)
 - [Render Props](./render-props.md)
 - [Portals](./portals.md)
+- [错误边界](./error-boundaries.md)
+- [Ref](./ref.md)
 - [组件渲染时的性能优化](./performance.md)
 - [前端框架的理解](./framework-comprehension.md)
 - [React 和 Vue 描述页面的区别](./react-vs-vue.md)

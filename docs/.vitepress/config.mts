@@ -525,6 +525,14 @@ export default defineConfig({
               link: '/Frontend/React/portals'
             },
             {
+              text: '错误边界',
+              link: '/Frontend/React/error-boundaries'
+            },
+            {
+              text: 'Ref',
+              link: '/Frontend/React/ref'
+            },
+            {
               text: '组件渲染时的性能优化',
               link: '/Frontend/React/performance'
             },

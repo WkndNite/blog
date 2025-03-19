@@ -12,7 +12,7 @@ tags:
 
 :::code-group
 
-```JavaScript [App.jsx]
+```JSX [App.jsx]
 import React from 'react';
 import ChildCom1 from './components/ChildCom1';
 import ChildCom2 from './components/ChildCom2';
@@ -35,7 +35,7 @@ function App() {
 export default App;
 ```
 
-```JavaScript [ChildCom1.jsx]
+```JSX [ChildCom1.jsx]
 import React from 'react';
 import ChildCom3 from './ChildCom3';
 
@@ -57,7 +57,7 @@ function ChildCom1() {
 export default ChildCom1;
 ```
 
-```JavaScript [ChildCom2.jsx]
+```JSX [ChildCom2.jsx]
 import React from 'react';
 
 function ChildCom2() {
@@ -77,7 +77,7 @@ function ChildCom2() {
 export default ChildCom2;
 ```
 
-```JavaScript [ChildCom3.jsx] {3}
+```JSX [ChildCom3.jsx] {3}
 import React from 'react';
 
 function getData() {}
@@ -111,7 +111,7 @@ export default ChildCom3;
 
 :::code-group
 
-```JavaScript [ErrorBoundary.jsx]
+```JSX [ErrorBoundary.jsx]
 import React, { Component } from 'react';
 
 export default class ErrorBoundary extends Component {
@@ -143,7 +143,7 @@ export default class ErrorBoundary extends Component {
 }
 ```
 
-```JavaScript [ChildCom1.jsx]
+```JSX [ChildCom1.jsx]
 import React from 'react';
 import ChildCom3 from './ChildCom3';
 import ErrorBoundary from './ErrorBoundary';
