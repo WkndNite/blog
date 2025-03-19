@@ -791,7 +791,7 @@ export default defineConfig({
             content: '欢迎私信交流'
           }
         ],
-        duration: 1500,
+        duration: -1,
         twinkle: true,
         mobileMinify: true
       })
