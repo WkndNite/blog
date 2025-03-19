@@ -530,11 +530,19 @@ export default defineConfig({
             },
             {
               text: '前端框架的理解',
-              link: '/Frontend/React/framework'
+              link: '/Frontend/React/framework-comprehension'
             },
             {
               text: 'React 和 Vue 描述页面的区别',
               link: '/Frontend/React/react-vs-vue'
+            },
+            {
+              text: '前端框架的分类',
+              link: '/Frontend/React/framework-classification'
+            },
+            {
+              text: '虚拟 DOM',
+              link: '/Frontend/React/virtual-dom'
             }
           ]
         },

@@ -82,7 +82,7 @@ date: 2025-01-16
 
 假设在 JS 层面，我们写了一个如下代码：
 
-```JavaScript
+```JavaScript :no-line-numbers
 document.appendChild('div');
 ```
 
@@ -94,7 +94,7 @@ document.appendChild('div');
 
 理论上来讲，无论你用什么样子的结构，只要你将文档结构能够展示出来，这种结果后就是一种虚拟 DOM。**然而，理论与现实总是有差距的，实际上也只有 JavaScript 对象适合做这个事情。**
 
-在 Vue 中，可以通过一个 [h 函数](https://cn.vuejs.org/api/render-function.html#h)来创建虚拟 DOM，如下：
+在 Vue 中，可以通过一个 [h 函数](https://cn.vuejs.org/api/render-function.html#h) 来创建虚拟 DOM，如下：
 
 ```JavaScript
 import { h } from 'vue';
@@ -147,7 +147,7 @@ console.log(vnode);
 
 2. 虽然上述的方式是性能最高的，但是在实际开发中，开发者往往更倾向于更加方便的方式。
 
-   ```html
+   ```html :no-line-numbers
    <div id="app"></div>
    ```
 
@@ -163,13 +163,13 @@ console.log(vnode);
    var infoDiv = document.createElement('div');
    infoDiv.className = 'info';
 
-   var nameSpan = document.createElement('span');
-   nameSpan.textContent = '张三';
-   infoDiv.appendChild(nameSpan);
+   var namemark = document.createElement('mark');
+   namemark.textContent = '张三';
+   infoDiv.appendChild(namemark);
 
-   var dataSpan = document.createElement('span');
-   dataSpan.textContent = '2022-01-01';
-   infoDiv.appendChild(dataSpan);
+   var datamark = document.createElement('mark');
+   datamark.textContent = '2022-01-01';
+   infoDiv.appendChild(datamark);
 
    messageDiv.appendChild(infoDiv);
 
@@ -200,8 +200,8 @@ console.log(vnode);
    app.innerHTML = `
      <div class="message">
        <div class="info">
-         <span>张三</span>
-         <span>2022-01-01</span>
+         <mark>张三</mark>
+         <mark>2022-01-01</mark>
        </div>
        <p>hello world</p>
        <div class="btn">
@@ -229,8 +229,8 @@ console.log(vnode);
        contentDiv.innerHTML = `
                <div class="message">
                    <div class="info">
-                       <span>李四</span>
-                       <span>2022-01-02</span>
+                       <mark>李四</mark>
+                       <mark>2022-01-02</mark>
                    </div>
                    <p>hello vue3</p>
                    <div class="btn">
@@ -250,7 +250,7 @@ console.log(vnode);
    - 总结：使用虚拟 DOM 是为了防止重渲染时候的性能恶化。
      :::
 
-4. **从更深层次思考，虚拟 DOM 还有哪些好处？**
+4. <mark>从更深层次思考，虚拟 DOM 还有哪些好处？</mark>
 
    - 跨平台性
 
