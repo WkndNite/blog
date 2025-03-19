@@ -1,6 +1,5 @@
 import BlogTheme from '@sugarat/theme';
 import { ShareButton } from '@theojs/lumen';
-import Lenis from 'lenis';
 import { useData } from 'vitepress';
 import { h } from 'vue';
 import Fireworks from './components/Fireworks.vue';
@@ -8,22 +7,6 @@ import MNavLinks from './components/MNavLinks.vue';
 import VideoPlayer from './components/VideoPlayer.vue';
 import './style.scss';
 
-const lenis = new Lenis();
-const lenisInit = (time) => {
-  lenis.raf(time);
-  requestAnimationFrame(lenisInit);
-};
-lenis.on('scroll', () => {
-  if (
-    window.scrollY + window.innerHeight >=
-    document.documentElement.scrollHeight
-  ) {
-    lenis.stop();
-    lenis.start();
-  }
-});
-
-requestAnimationFrame(lenisInit);
 export default {
   ...BlogTheme,
   Layout: (props: any) => {

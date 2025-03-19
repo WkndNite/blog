@@ -52,6 +52,27 @@ export default defineConfig({
         rel: 'stylesheet',
         href: 'https://chinese-fonts-cdn.deno.dev/packages/yozai/dist/Yozai-Medium/result.css'
       }
+    ],
+    [
+      'script',
+      {},
+      `
+      const lenis = new Lenis();
+      const lenisInit = (time) => {
+        lenis.raf(time);
+        requestAnimationFrame(lenisInit);
+      };
+      lenis.on('scroll', () => {
+        if (
+          window.scrollY + window.innerHeight >=
+          document.documentElement.scrollHeight
+        ) {
+          lenis.stop();
+          lenis.start();
+        }
+      });
+      requestAnimationFrame(lenisInit);
+      `
     ]
   ],
   themeConfig: {
