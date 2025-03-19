@@ -16,7 +16,7 @@ cover: https://cdn-icons-png.flaticon.com/512/10303/10303238.png
 
 ## 项目搭建
 
-```bash
+```Bash
 npx create-react-app my-app
 cd my-app
 npm start
@@ -28,7 +28,7 @@ npm start
 
 JSX 是一种 JavaScript 的语法扩展。在 React 中，我们使用 JSX 来描述 UI 界面。
 
-```JavaScript
+```JSX
 function App() {
   return (
     <div>
@@ -40,7 +40,7 @@ function App() {
 
 也可以把 JSX 单独提取出来：
 
-```JavaScript
+```JSX
 function App() {
   const element = <h1>Hello, world!</h1>;
   return element;
@@ -49,7 +49,7 @@ function App() {
 
 官方建议用 `()` 包裹 JSX：
 
-```JavaScript
+```JSX
 function App() {
   const list = (
     <ul>
@@ -95,7 +95,7 @@ React.createElement(type, [props], [...children]);
 
 例如，如下的两种代码作用完全相同：
 
-```JavaScript
+```JSX
 const element1 = <h1 className="greeting">Hello, world!</h1>;
 
 const element2 = React.createElement(
@@ -107,7 +107,7 @@ const element2 = React.createElement(
 
 看到这里，就能明白以下输出结果的原因了：
 
-```JavaScript
+```JSX
 const element1 = <h1 className="greeting">Hello, world!</h1>;
 console.table(element1);
 ```
@@ -128,7 +128,7 @@ console.table(element1);
 
 :::code-group
 
-```JavaScript [类组件.jsx]
+```JSX [类组件.jsx]
 class SomeComponent extends React.Component {
   render() {
     return <div>Hello, world!</div>;
@@ -136,7 +136,7 @@ class SomeComponent extends React.Component {
 }
 ```
 
-```JavaScript [函数组件.jsx]
+```JSX [函数组件.jsx]
 function SomeComponent() {
   return <div>Hello, world!</div>;
 }
@@ -150,13 +150,13 @@ function SomeComponent() {
 
 在 React 中，绑定事件的写法如下：
 
-```JavaScript :no-line-numbers
+```JSX :no-line-numbers
 <button onClick={handleClick}>Click me</button>
 ```
 
 在 React 中无法像 Vue 通过 `return false` 来阻止默认行为，需要使用 `e.preventDefault()` 来阻止。
 
-```JavaScript
+```JSX
 function handleClick(e) {
   e.preventDefault();
 }
@@ -168,7 +168,7 @@ function handleClick(e) {
 
 如果是类组件，那么事件处理函数需要写作一个类方法：
 
-```JavaScript
+```JSX
 class SomeComponent extends React.Component {
   handleClick(e) {
     e.preventDefault();
@@ -190,7 +190,7 @@ class SomeComponent extends React.Component {
 
 :::code-group
 
-```JavaScript [不调整this]
+```JSX [不调整this]
 class SomeComponent extends React.Component {
   handleClick() {
     console.log(this); // undefined
@@ -202,7 +202,7 @@ class SomeComponent extends React.Component {
 }
 ```
 
-```JavaScript [修改函数定义]
+```JSX [修改函数定义]
 class SomeComponent extends React.Component {
   handleClick = () => {
     console.log(this);
@@ -214,7 +214,7 @@ class SomeComponent extends React.Component {
 }
 ```
 
-```JavaScript [修改回调]
+```JSX [修改回调]
 class SomeComponent extends React.Component {
   handleClick() {
     console.log(this);
@@ -226,7 +226,7 @@ class SomeComponent extends React.Component {
 }
 ```
 
-```JavaScript [bind - 1]
+```JSX [bind - 1]
 class SomeComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -243,7 +243,7 @@ class SomeComponent extends React.Component {
 }
 ```
 
-```JavaScript [bind - 2]
+```JSX [bind - 2]
 class SomeComponent extends React.Component {
   handleClick() {
     console.log(this);
@@ -265,7 +265,7 @@ this 的修正只针对类组件！
 
 在循环中，通常我们会为事件处理函数传递额外的参数。例如，若 id 是你要删除的那一行的 ID，以下两种方式都可以向事件处理函数传递参数。
 
-```JavaScript
+```JSX
 <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
 <button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
 ```
@@ -274,7 +274,7 @@ this 的修正只针对类组件！
 
 当然，上面的方式仍然是面向类组件的写法，对于函数组件可以这样写：
 
-```JavaScript
+```JSX
 function App() {
   const content = (
     <button className="greeting" onClick={handleClick('Hello, world!')}>
@@ -295,7 +295,7 @@ export default App;
 
 所以，我们需要将 `handleClick` 函数包裹在一个箭头函数中，这样箭头函数中的代码只有当按钮被点击时才会执行。
 
-```JavaScript
+```JSX
 function App() {
   const content = (
     <button className="greeting" onClick={() => handleClick('Hello, world!')}>
@@ -316,7 +316,7 @@ export default App;
 
 早期类组件被称之为有状态组件，就是因为在类组件中能够维护组件数据。
 
-```JavaScript
+```JSX
 class SomeComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -334,7 +334,7 @@ class SomeComponent extends React.Component {
 
 不应该直接去修改 state 的值，而是通过 setState 方法来修改。
 
-```JavaScript
+```JSX
 import React from 'react';
 class Counter extends React.Component {
   constructor(props) {
@@ -384,7 +384,7 @@ export default Counter;
 ::::details
 :::code-group
 
-```JavaScript [回调地狱.jsx] {5}
+```JSX [回调地狱.jsx] {5}
 class Counter extends React.Component {
   // ...
   increment = () => {
@@ -399,7 +399,7 @@ class Counter extends React.Component {
 }
 ```
 
-```JavaScript [函数式更新.jsx] {7}
+```JSX [函数式更新.jsx] {7}
 class Counter extends React.Component {
   // ...
   increment = () => {
@@ -428,7 +428,7 @@ class Counter extends React.Component {
 
 :::code-group
 
-```JavaScript [类组件.jsx]
+```JSX [类组件.jsx]
 class Welcome extends React.Component {
   // constructor(props) {
   //     super(props);
@@ -449,7 +449,7 @@ function App() {
 }
 ```
 
-```JavaScript [函数组件.jsx]
+```JSX [函数组件.jsx]
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
@@ -478,7 +478,7 @@ function App() {
 
 :::code-group
 
-```JavaScript [props.key 实现]
+```JSX [props.key 实现]
 function Button(props) {
   return <button>{props.text}</button>;
 }
@@ -492,7 +492,7 @@ function App() {
 }
 ```
 
-```JavaScript [props.children 实现]
+```JSX [props.children 实现]
 function Button(props) {
   return <button>{props.children}</button>;
 }
@@ -516,7 +516,7 @@ function App() {
 
 :::code-group
 
-```JavaScript [类组件.jsx]
+```JSX [类组件.jsx]
 import React from 'react';
 
 class Welcome extends React.Component {
@@ -535,7 +535,7 @@ Welcome.defaultProps = {
 export default Welcome;
 ```
 
-```JavaScript [函数组件.jsx]
+```JSX [函数组件.jsx]
 // Before
 function Heading({text}) {
   return <h1>{text}</h1>;
@@ -558,7 +558,7 @@ function Heading_2(props){
 
 关于 props 的类型检查，从 React v15.5 开始，移入到了 prop-types 库中。但是从 React v19 开始，官方移除了 propType 检查，建议迁移到 TypeScript 或其他类型检查解决方案。
 
-```JavaScript
+```JSX
 // Before
 import PropTypes from 'prop-types';
 
@@ -580,7 +580,7 @@ interface Props {
 
 :::code-group
 
-```JavaScript [Welcome.jsx]
+```JSX [Welcome.jsx]
 function Welcome(props) {
   function subClick() {
     props.parentClick('params from child');
@@ -656,7 +656,7 @@ function App() {
 export default App;
 ```
 
-```JavaScript [Money.jsx]
+```JSX [Money.jsx]
 function Money(props) {
   function handleChange(e) {
     props.transform(props.type, e.target.value);

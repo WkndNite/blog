@@ -53,7 +53,7 @@ tags:
 
 在实际开发中，只需要对开发服务器稍加配置即可完成。
 
-```js
+```JavaScript
 // vue 的开发服务器代理配置
 // vue.config.js
 module.exports = {
@@ -123,7 +123,7 @@ module.exports = {
 
 下面是一些例子：
 
-```js
+```JavaScript
 // 简单请求
 fetch('http://crossdomain.com/api/news');
 
@@ -161,7 +161,7 @@ fetch('http://crossdomain.com/api/news', {
 
    比如，在页面`http://my.com/index.html`中有以下代码造成了跨域
 
-   ```js
+   ```JavaScript
    // 简单请求
    fetch('http://crossdomain.com/api/news');
    ```
@@ -225,7 +225,7 @@ fetch('http://crossdomain.com/api/news', {
 
 比如，在页面 `http://my.com/index.html` 中有以下代码造成了跨域。
 
-```js
+```JavaScript
 // 需要预检的请求
 fetch('http://crossdomain.com/api/user', {
   method: 'POST', // post 请求
@@ -328,7 +328,7 @@ fetch('http://crossdomain.com/api/user', {
 
 不过可以通过简单的配置就可以实现附带 cookie：
 
-```js
+```JavaScript
 // xhr
 var xhr = new XMLHttpRequest();
 xhr.withCredentials = true;

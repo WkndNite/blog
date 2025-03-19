@@ -12,13 +12,13 @@ tags:
 
 ## 安装
 
-```bash :no-line-numbers
+```Bash :no-line-numbers
 npm install webpack-dev-server --save-dev
 ```
 
 ## 执行命令
 
-```bash :no-line-numbers
+```Bash :no-line-numbers
 npx webpack-dev-server
 ```
 

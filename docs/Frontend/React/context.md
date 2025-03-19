@@ -49,7 +49,7 @@ const MyContext = React.createContext();
 export default MyContext;
 ```
 
-```JavaScript [ChildCom1.jsx]
+```JSX [ChildCom1.jsx]
 import React, { Component } from 'react';
 import ChildCom2 from './ChildCom2';
 import ChildCom3 from './ChildCom3';
@@ -75,7 +75,7 @@ export default class ChildCom1 extends Component {
 }
 ```
 
-```JavaScript [ChildCom2.jsx]
+```JSX [ChildCom2.jsx]
 import React from 'react';
 import MyContext from '../context';
 
@@ -108,7 +108,7 @@ function ChildCom2() {
 export default ChildCom2;
 ```
 
-```JavaScript [ChildCom3.jsx]
+```JSX [ChildCom3.jsx]
 import React, { Component } from 'react';
 import MyContext from '../context';
 
@@ -133,7 +133,7 @@ export default class ChildCom3 extends Component {
 }
 ```
 
-```JavaScript [App.jsx]
+```JSX [App.jsx]
 import React, { useState } from 'react';
 import MyContext from './context';
 import ChildCom1 from './components/ChildCom1';
@@ -179,7 +179,7 @@ export default App;
 
 如果安装了 React Developer Tools，那么在 components 选项卡中可以看到组件树结构，默认的名字就为 Context.Provider 和 Context.Consumer，可以通过 displayName 来显式地修改名字。
 
-```JavaScript
+```JSX
 import React from 'react';
 const MyContext = React.createContext({
   name: 'John Doe'
@@ -207,7 +207,7 @@ MyContext.displayName = 'counter';
 export default MyContext;
 ```
 
-```JavaScript [ChildCom1.jsx]
+```JSX [ChildCom1.jsx]
 import React, { Component } from 'react';
 import ChildCom2 from './ChildCom2';
 
@@ -231,7 +231,7 @@ export default class ChildCom1 extends Component {
 }
 ```
 
-```JavaScript [ChildCom2.jsx]
+```JSX [ChildCom2.jsx]
 import React from 'react';
 import MyContext from '../context';
 
@@ -262,7 +262,7 @@ function ChildCom2() {
 export default ChildCom2;
 ```
 
-```JavaScript [App.jsx]
+```JSX [App.jsx]
 import React from 'react';
 import MyContext from './context';
 import ChildCom1 from './components/ChildCom1';
@@ -305,7 +305,7 @@ export const MyContext1 = React.createContext();
 export const MyContext2 = React.createContext();
 ```
 
-```JavaScript [ChildCom2.jsx]
+```JSX [ChildCom2.jsx]
 import React from 'react';
 import { MyContext1, MyContext2 } from '../context';
 
@@ -344,7 +344,7 @@ function ChildCom2() {
 export default ChildCom2;
 ```
 
-```JavaScript [App.jsx]
+```JSX [App.jsx]
 import React from 'react';
 import { MyContext1, MyContext2 } from './context';
 import ChildCom1 from './components/ChildCom1';
@@ -389,7 +389,7 @@ export default App;
 
 例如：
 
-```JavaScript [ChildCom2.jsx]
+```JSX [ChildCom2.jsx]
 import React from 'react';
 import { MyContext1 } from '../context';
 

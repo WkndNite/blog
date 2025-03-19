@@ -138,6 +138,12 @@ const blogTheme = getThemeConfig({
         tags: ['React', 'Ant Design']
       }
     ]
+  },
+  groupIcon: {
+    customIcon: {
+      '.php': 'vscode-icons:file-type-php',
+      '.jsx': 'vscode-icons:file-type-reactjs'
+    }
   }
 });
 

@@ -98,7 +98,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJpYXQiOjE1ODc1NDgyMTV9.BC
 
 它的格式是一个 `json` 对象，如下：
 
-```json
+```JSON
 {
   "alg": "HS256",
   "typ": "JWT"
@@ -122,7 +122,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJpYXQiOjE1ODc1NDgyMTV9.BC
 
 浏览器提供了 `btoa` 函数，可以完成这个操作：
 
-```js
+```JavaScript
 window.btoa(
   JSON.stringify({
     alg: 'HS256',
@@ -134,7 +134,7 @@ window.btoa(
 
 同样的，浏览器也提供了`atob`函数，可以对其进行解码：
 
-```js
+```JavaScript
 window.atob('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9');
 // 得到字符串：{"alg":"HS256","typ":"JWT"}
 ```
@@ -147,7 +147,7 @@ window.atob('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9');
 
 这部分是 jwt 的主体信息，它仍然是一个 JSON 对象，它可以包含以下内容：
 
-```json
+```JSON
 {
   "ss"："发行者",
   "iat"："发布时间",
@@ -179,7 +179,7 @@ window.atob('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9');
 
 比如，下面的 json 对象仍然是一个有效的 payload：
 
-```json
+```JSON
 {
   "foo": "bar",
   "iat": 1587548215
@@ -190,7 +190,7 @@ window.atob('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9');
 
 最终，payload 部分和 header 一样，需要通过 `base64 url` 编码得到：
 
-```js
+```JavaScript
 window.btoa(
   JSON.stringify({
     foo: 'bar',
@@ -210,7 +210,7 @@ window.btoa(
 
 则第三部分就是用对称加密算法 `HS256` 对字符串 `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJpYXQiOjE1ODc1NDgyMTV9` 进行加密，当然你得指定一个秘钥，比如 `shhhhh`
 
-```js
+```JavaScript
 HS256(
   `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJpYXQiOjE1ODc1NDgyMTV9`,
   'shhhhh'

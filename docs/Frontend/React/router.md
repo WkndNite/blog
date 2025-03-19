@@ -30,7 +30,7 @@ cover: https://reactrouter.com/splash/hero-3d-logo.dark.webp
 
 通过下面的命令可以快速搭建一个本地服务器，只需要把需要的数据存放在 `server/db.json` 中：
 
-```bash
+```Bash
 mkdir server
 npm init -y
 npm i json-server

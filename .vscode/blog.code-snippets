@@ -60,5 +60,9 @@
   "index navigate": {
     "prefix": "index",
     "body": ["---", "hidden: true", "date: false", "author: false", "---"]
+  },
+  "insert image": {
+    "prefix": "blog-image",
+    "body": ["![alt](./assets$1)"]
   }
 }

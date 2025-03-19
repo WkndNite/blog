@@ -49,7 +49,7 @@ cz-vinyl 是一个基于 [cz-customizable](https://github.com/leonardoanalista/c
 npm install -g cz-vinyl
 ```
 
-```bash
+```Bash
 //.czrc
 // 全局配置"C:\Users\lenovo\.czrc"
 { "path": "cz-vinyl" }

@@ -22,7 +22,7 @@ Git 是一个分布式版本控制系统，它是由 Linus Torvalds 在 2005 年
 
 下面这些是比较常用的命令，能够让你从初始化一个 Git 仓库或克隆别人的仓库起步，到提交代码、远程同步。这便完成了一个最基本的 Git 工作流程。
 
-```bash
+```Bash
 git clone url-example # 克隆远程仓库
 git init # 初始化一个 Git 仓库
 git add 1.txt  # 添加文件到暂存区
@@ -39,7 +39,7 @@ git push # 推送代码到远程仓库
 
 1. 你可以通过下面的命令**查看或者切换分支**。
 
-   ```bash
+   ```Bash
    git branch # 查看本地分支
    git branch -a # 查看所有分支，包括远程分支
    git branch new_branch # 创建新分支
@@ -49,13 +49,13 @@ git push # 推送代码到远程仓库
 
 2. 你可以通过下面的命令**查看你的提交历史**。默认情况输出的是最近的提交，参数的含义顾名思义。当然，我仍然推荐通过 UI 界面查看提交历史。
 
-   ```bash
+   ```Bash :no-line-numbers
    git log --oneline --graph --all # 查看分支的历史
    ```
 
 3. 如果你发现自己的代码写错了，想要回到之前的版本，你也可以通过 Git **回退版本**。
 
-   ```bash
+   ```Bash
    git reset (--soft | --mixed | --hard) [commit]
    # commit 可以是 commit id，也可以是 HEAD^，HEAD~6 这样的相对引用
    ```
@@ -68,13 +68,13 @@ git push # 推送代码到远程仓库
 
 4. 那在你回退版本之后，你又后悔了，想要回到之后的版本，你可以通过 Git **查看新版本历史**。
 
-   ```bash
+   ```Bash :no-line-numbers
    git reflog
    ```
 
 5. 在前面通过 reset 你可以实现让暂存区的工作返回到你的工作区，那如何直接丢弃你工作区的修改呢？你可以通过下面的命令**丢弃工作区的修改**。
 
-   ```bash
+   ```Bash :no-line-numbers
    git checkout -- file
    ```
 
@@ -82,7 +82,7 @@ git push # 推送代码到远程仓库
 
 6. 当然，在团队协作过程中，你是一定会用到合并他人的分支的。你可以通过下面的命令**合并分支**。
 
-   ```bash
+   ```Bash :no-line-numbers
    git merge another_branch
    ```
 
@@ -93,13 +93,13 @@ git push # 推送代码到远程仓库
 
 7. 既然 pull 命令需要切换到他人分支使用，那如何在自己的分支拉取他人分支的代码呢？
 
-   ```bash
+   ```Bash :no-line-numbers
    git fetch origin remote_another_branch:local_another_branch
    ```
 
 8. 在和远程仓库交互之前，需要先配置远程仓库的地址。你可以通过下面的命令**配置远程仓库的地址**。
 
-   ```bash
+   ```Bash :no-line-numbers
    git remote add origin url-example
    ```
 
@@ -107,7 +107,7 @@ git push # 推送代码到远程仓库
 
 9. 可以通过栈命令**暂存工作区的修改**。
 
-   ```bash
+   ```Bash
    git stash
    git checkout another_branch
    # do something
@@ -117,7 +117,7 @@ git push # 推送代码到远程仓库
 
 10. 在和远程仓库交互的过程中，我们可能会遇到**分支跟踪**的问题，可能在你拉取的时候，也可能在你推送的时候。建议提前设置分支跟踪。
 
-    ```bash
+    ```Bash :no-line-numbers
     git branch --set-upstream-to=origin/remote_branch local_branch
     ```
 
@@ -125,14 +125,14 @@ git push # 推送代码到远程仓库
 
 1. `git switch` 和 `git restore` 命令是在 Git 2.23 版本中引入的，用来替代 `git checkout` 命令。
 
-   ```bash
+   ```Bash
    git switch another_branch
    git swithc -c new_branch
    git switch -c new_branch --track origin/remote_branch
    git switch - # 切换到上一个分支
    ```
 
-   ```bash
+   ```Bash
    git restore file
    git restore --source=commit_id file
    git restore --staged file
@@ -143,7 +143,7 @@ git push # 推送代码到远程仓库
 
 2. `git worktree` 命令是在 Git 2.5 版本中引入的，用来管理多个工作目录下的多个分支，开发者可以借助这个命令同时开发多个分支。
 
-   ```bash
+   ```Bash
    git worktree add dir_path another_branch
    git worktree list
    git worktree remove dir_path
@@ -152,7 +152,7 @@ git push # 推送代码到远程仓库
 
 3. `git sparse-checkout` 命令是在 Git 2.25 版本中引入的，用来配置仓库的工作区，可以通过这个命令只拉取仓库的部分文件。其中，set 命令之后可以列出多个你想要检索拉取的路径，也可以分多次调用。
 
-   ```bash
+   ```Bash
    git sparse-checkout init # 启用 sparse-checkout
    git sparse-checkout set dir/
    git sparse-checkout list
@@ -162,7 +162,7 @@ git push # 推送代码到远程仓库
 
 4. `git range-diff` 命令是在 Git 2.19 版本中引入的，用来比较两个 commit 之间的差异。
 
-   ```bash
+   ```Bash
    git range-diff A~n..A B~n..B # 比较i两个分支上的最近的 n 个提交
    git range-diff A..B C..D # 更常见的用法 直接指定两个范围
    ```
@@ -175,7 +175,7 @@ git push # 推送代码到远程仓库
    - incremental-repack 逐步重新打包对象以优化存储
    - prefetch 预先获取远程分支的新数据 以加速未来的克隆和拉取操作
 
-   ```bash
+   ```Bash
    git maintenance start # 启用自动维护
    git maintenance stop # 禁用自动维护
    git maintenance run # 执行所有配置的维护任务
@@ -185,7 +185,7 @@ git push # 推送代码到远程仓库
 
    也可以将维护任务配置到 `.git/config` 文件中。
 
-   ```bash
+   ```Bash
    [maintenance "daily"]
        task = prefetch
        task = loose-objects
@@ -199,7 +199,7 @@ git push # 推送代码到远程仓库
 
 6. `git log --remerge-diff` 命令是在 Git 2.35 版本中引入的，通过重播记录的合并策略重建合并提交，并展示该合并引入的确切更改。这对于调试合并冲突或审查复杂的合并历史非常有用。
 
-   ```bash
+   ```Bash :no-line-numbers
    git log --remerge-diff
    ```
 
@@ -217,7 +217,7 @@ git push # 推送代码到远程仓库
 
    为了方便你的操作，可以直接将变基拉取设置为默认行为。
 
-   ```bash
+   ```Bash
    git config --global pull.rebase true
    git config --global rebase.autoStash true
    ```

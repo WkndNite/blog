@@ -22,7 +22,7 @@ tags:
 
 > 高阶组件是参数为组件，返回值为新组件的函数。
 >
-> ```JavaScript :no-line-numbers
+> ```JSX :no-line-numbers
 > const EnhancedComponent = higherOrderComponent(WrappedComponent);
 > ```
 
@@ -40,7 +40,7 @@ tags:
 
 早期的 React 采用的是 mixins 来解决这种横切关注点相关的问题。Mixins 的原理可以简单理解为将一个 minxin 对象上的方法增加到组件上。
 
-```JavaScript
+```JSX
 const mixinDefaultProps = {};
 const ExampleComponent = React.createClass({
   mixins: [mixinDefaultProps],
@@ -80,7 +80,7 @@ const ExampleComponent = React.createClass({
 
 :::code-group
 
-```JavaScript [ChildCom1.jsx]
+```JSX [ChildCom1.jsx]
 import React, { useEffect } from 'react';
 import { formatDate } from '../utils/tools';
 function ChildCom1(props) {
@@ -104,7 +104,7 @@ function ChildCom1(props) {
 export default ChildCom1;
 ```
 
-```JavaScript [ChildCom2.jsx]
+```JSX [ChildCom2.jsx]
 import React, { useEffect } from 'react';
 import { formatDate } from '../utils/tools';
 
@@ -153,7 +153,7 @@ export default App;
 
 :::code-group
 
-```JavaScript [ChildCom1.jsx]
+```JSX [ChildCom1.jsx]
 function ChildCom1(props) {
   return (
     <>
@@ -166,7 +166,7 @@ function ChildCom1(props) {
 export default ChildCom1;
 ```
 
-```JavaScript [ChildCom2.jsx]
+```JSX [ChildCom2.jsx]
 function ChildCom2(props) {
   return (
     <>

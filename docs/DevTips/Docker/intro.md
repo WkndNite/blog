@@ -26,7 +26,7 @@ tags:
 
 ### 包管理工具的预先安装与更新
 
-```bash
+```Bash
 uname -r
 yun install yum-utils
 yum makecache --refresh
@@ -38,13 +38,13 @@ yum makecache --refresh
 如果你的服务器或者本地环境之前有过 Docker，可以选择跳过这一步或者先卸载之前的 Docker。
 :::
 
-```bash
+```Bash
 yum install docker-ce docker-ce-cli containerd.io
 ```
 
 ### 配置镜像加速器
 
-```bash
+```Bash
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 
@@ -59,13 +59,13 @@ sudo systemctl restart docker
 
 ### 验证 Docker 是否安装成功
 
-```bash
+```Bash
 docker --version
 ```
 
 ### 测试镜像以及容器
 
-```bash
+```Bash
 docker pull hello-world
 docker run hello-world
 ```

@@ -47,7 +47,7 @@ cover: https://redux.js.org/img/redux.svg
    });
    ```
 
-   ```JavaScript [App.jsx] {17,18}
+   ```JSX [App.jsx] {17,18}
    import List from './components/List';
    import Input from './components/Input';
    import './css/App.css';
@@ -128,7 +128,7 @@ cover: https://redux.js.org/img/redux.svg
 
    :::code-group
 
-   ```JavaScript [Input.jsx] {2,7}
+   ```JSX [Input.jsx] {2,7}
    import React, { useState } from 'react';
    import { addListAction } from '../redux/actions';
 
@@ -162,7 +162,7 @@ cover: https://redux.js.org/img/redux.svg
    }
    ```
 
-   ```JavaScript [List.jsx] {2,15,31,37}
+   ```JSX [List.jsx] {2,15,31,37}
    import React from 'react';
    import { deleteListAction, updateListAction } from '../redux/actions';
 
@@ -311,7 +311,7 @@ Redux 是一个独立的第三方库，之后 React 在 Redux 的基础上推出
 
 另外，Redux 官方推出了 [Redux Toolkit](https://redux-toolkit.js.org/) 来简化整个 Redux 的使用。因此现在在 React 应用中，状态管理库的使用一般都是 **React Redux + Redux Toolkit**。
 
-```bash
+```Bash
  npm install @reduxjs/toolkit react-redux
 ```
 
@@ -335,7 +335,7 @@ root.render(
 );
 ```
 
-```JavaScript [Input.jsx] {2,3,7,23-25}
+```JSX [Input.jsx] {2,3,7,23-25}
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../redux/todoSlice';
@@ -372,7 +372,7 @@ export default function Input(props) {
 }
 ```
 
-```JavaScript [List.jsx] {2,3,6,7,33,39}
+```JSX [List.jsx] {2,3,6,7,33,39}
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteTodo, changeTodo } from '../redux/todoSlice';
