@@ -1,6 +1,5 @@
 ---
 date: 2025-03-19 15:42:04
-cover: https://picx.zhimg.com/v2-0bd48c51b6d1a4e3bdd1f834b555b257_720w.jpg?source=172ae18b
 tags:
   - React
   - 前端
