@@ -744,6 +744,16 @@ export default defineConfig({
               link: '/Interview/diy/promise'
             }
           ]
+        },
+        {
+          text: '面试经验',
+          collapsed: false,
+          items: [
+            {
+              text: '小米暑期实习一面',
+              link: '/Interview/interview/250319xiaomi'
+            }
+          ]
         }
       ]
     }

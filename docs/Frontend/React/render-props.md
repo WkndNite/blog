@@ -300,13 +300,14 @@ export default App;
 
 :::
 
-### 什么时候使用 Render Props
+## 什么时候使用 Render Props
 
 复习一下之前学习过的高阶组件，以下是相同的实现效果对应的代码：
 
 :::code-group
 
 ```JavaScript [withMouseMove.js]
+
 import { useState } from 'react';
 
 function withMouseMove(Component) {
