@@ -810,7 +810,7 @@ export default defineConfig({
           items: [
             {
               text: '小米暑期实习一面',
-              link: '/Interview/interview/250319xiaomi'
+              link: '/Interview/Experience/250319xiaomi'
             }
           ]
         }
