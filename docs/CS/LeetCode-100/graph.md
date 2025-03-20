@@ -45,3 +45,47 @@ var numIslands = function (grid) {
   return count;
 };
 ```
+
+## 994. 腐烂的橘子
+
+```JavaScript
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+var orangesRotting = function (grid) {
+    if (!grid.length || !grid.flat().includes(1)) return 0;
+    const rows = grid.length;
+    const columns = grid[0].length;
+    let queue = [];
+    let fresh = 0;
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < columns; j++) {
+            if (grid[i][j] === 1) {
+                fresh++;
+            } else if (grid[i][j]) {
+                queue.push([i, j])
+            }
+        }
+    }
+
+    let result = 0;
+    while (fresh && queue.length) {
+        result++;
+        const temp = queue;
+        queue = [];
+        for (const [x, y] of temp) {
+            for (const [i, j] of [[x - 1, y], [x + 1, y], [x, y - 1], [x, y + 1]]) {
+                if (i >= 0 && i < rows && j >= 0 && j < columns && grid[i][j] === 1) {
+                    fresh--;
+                    grid[i][j] = 2;
+                    queue.push([i, j])
+                }
+            }
+        }
+    }
+    return fresh ? -1 : result
+
+
+};
+```
