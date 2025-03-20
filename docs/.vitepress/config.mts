@@ -130,7 +130,7 @@ export default defineConfig({
             link: '/Frontend/Projects'
           },
           {
-            text: '前端杂谈',
+            text: '杂谈',
             link: '/Frontend/Others/some'
           }
         ]
