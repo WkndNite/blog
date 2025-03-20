@@ -90,7 +90,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '前端学习',
+        text: '前端漫谈',
         items: [
           { text: 'CSS', link: '/Frontend/CSS' },
           {
@@ -128,6 +128,10 @@ export default defineConfig({
           {
             text: 'Debug',
             link: '/Frontend/Projects'
+          },
+          {
+            text: '前端杂谈',
+            link: '/Frontend/Others/some'
           }
         ]
       },
@@ -583,6 +587,16 @@ export default defineConfig({
             {
               text: 'React Toast UI sourcemap 报错',
               link: '/Frontend/Projects/toastui-parse-sourcemap'
+            }
+          ]
+        },
+        {
+          text: '前端杂谈',
+          collapsed: false,
+          items: [
+            {
+              text: '别瞅了 就这一篇',
+              link: '/Frontend/Others/some'
             }
           ]
         }
