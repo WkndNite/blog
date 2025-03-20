@@ -1,6 +1,8 @@
 import BlogTheme from '@sugarat/theme';
 import { ShareButton } from '@theojs/lumen';
-import { useData } from 'vitepress';
+import 'nprogress-v2/dist/index.css';
+import { NProgress } from 'nprogress-v2/dist/index.js';
+import { inBrowser, useData } from 'vitepress';
 import { h } from 'vue';
 import Fireworks from './components/Fireworks.vue';
 import MNavLinks from './components/MNavLinks.vue';
@@ -35,23 +37,14 @@ export default {
     ctx.app.component('Fireworks', Fireworks);
     ctx.app.component('ShareButton', ShareButton);
     ctx.app.component('VideoPlayer', VideoPlayer);
-    // if (inBrowser) {
-    //   const lenis = new Lenis();
-    //   const lenisInit = (time: number) => {
-    //     lenis.raf(time);
-    //     requestAnimationFrame(lenisInit);
-    //   };
-    //   lenis.on('scroll', () => {
-    //     if (
-    //       window.scrollY + window.innerHeight >=
-    //       document.documentElement.scrollHeight
-    //     ) {
-    //       lenis.stop();
-    //       lenis.start();
-    //     }
-    //   });
-
-    //   requestAnimationFrame(lenisInit);
-    // }
+    if (inBrowser) {
+      NProgress.configure({ showSpinner: false });
+      ctx.router.onBeforePageLoad = () => {
+        NProgress.start();
+      };
+      ctx.router.onAfterPageLoad = () => {
+        NProgress.done();
+      };
+    }
   }
 };

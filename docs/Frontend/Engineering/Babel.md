@@ -233,12 +233,41 @@ console.log('foo');
 console.error('bar');
 ```
 
-编译后
+编译后：
 
-```JavaScript
-
+```JavaScript :no-line-numbers
+// empty
 ```
 
 ### `@babel/plugin-transform-runtime`
 
 用于提供一些公共的 API，这些 API 会帮助代码转换。
+
+## 在 Webpack 中使用 Babel
+
+:::code-group
+
+```JavaScript [webpack.config.js]
+module.exports = {
+    mode: "development",
+    devtool: "source-map",
+    module: {
+        rules: [
+            { test: /\.js$/, use: "babel-loader" }
+        ]
+    }
+}
+```
+
+```JSON [.babelrc]
+{
+    "presets": [
+        ["@babel/preset-env", {
+            "useBuiltIns": "usage",
+            "corejs": 3
+        }]
+    ]
+}
+```
+
+:::

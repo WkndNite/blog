@@ -142,7 +142,8 @@ const blogTheme = getThemeConfig({
   groupIcon: {
     customIcon: {
       '.php': 'vscode-icons:file-type-php',
-      '.jsx': 'vscode-icons:file-type-reactjs'
+      '.jsx': 'vscode-icons:file-type-reactjs',
+      '.babelrc': 'vscode-icons:file-type-babel'
     }
   }
 });
