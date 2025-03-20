@@ -762,6 +762,10 @@ export default defineConfig({
             {
               text: '垃圾回收与内存泄漏',
               link: '/Interview/JavaScript/gc'
+            },
+            {
+              text: '执行栈和执行上下文',
+              link: '/Interview/JavaScript/execution-context'
             }
           ]
         },
