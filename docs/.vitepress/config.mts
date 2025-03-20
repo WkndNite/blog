@@ -451,6 +451,10 @@ export default defineConfig({
             {
               text: 'Babel',
               link: '/Frontend/Engineering/Babel'
+            },
+            {
+              text: '性能优化',
+              link: '/Frontend/Engineering/Performance-Optimization'
             }
           ]
         },
@@ -589,7 +593,10 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Commit 规范', link: '/DevTips/Git/commit' },
-            { text: 'Git 新旧命令', link: '/DevTips/Git/git-command-new' },
+            {
+              text: 'Git 新旧命令',
+              link: '/DevTips/Git/git-command-new'
+            },
             {
               text: 'Git 大小写不敏感闹乌龙',
               link: '/DevTips/Git/git-ignorecase'
@@ -605,7 +612,10 @@ export default defineConfig({
               link: '/DevTips/Docker/preview'
             },
             { text: '简短的介绍', link: '/DevTips/Docker/intro' },
-            { text: '一些常用命令', link: '/DevTips/Docker/command' },
+            {
+              text: '一些常用命令',
+              link: '/DevTips/Docker/command'
+            },
             {
               text: 'Docker 通信',
               link: '/DevTips/Docker/communication'
@@ -616,8 +626,14 @@ export default defineConfig({
           text: '设计模式与设计原则',
           collapsed: false,
           items: [
-            { text: '设计模式', link: '/DevTips/Design/design-patterns' },
-            { text: '设计原则', link: '/DevTips/Design/design-principles' },
+            {
+              text: '设计模式',
+              link: '/DevTips/Design/design-patterns'
+            },
+            {
+              text: '设计原则',
+              link: '/DevTips/Design/design-principles'
+            },
             {
               text: '设计模式详解第一期 单例模式',
               link: '/DevTips/Design/design-patterns-singleton'
@@ -629,7 +645,12 @@ export default defineConfig({
         {
           text: '2020',
           collapsed: false,
-          items: [{ text: '菊次郎的夏天', link: '/Life/2020/kikujiro-summer' }]
+          items: [
+            {
+              text: '菊次郎的夏天',
+              link: '/Life/2020/kikujiro-summer'
+            }
+          ]
         },
         {
           text: '2021',
