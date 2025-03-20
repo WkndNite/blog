@@ -447,6 +447,10 @@ export default defineConfig({
             {
               text: '如何抽离 CSS 文件',
               link: '/Frontend/Engineering/CSS-Extract'
+            },
+            {
+              text: 'Babel',
+              link: '/Frontend/Engineering/Babel'
             }
           ]
         },
