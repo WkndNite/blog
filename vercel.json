@@ -9,6 +9,12 @@
           "value": "max-age=31536000, immutable"
         }
       ]
+    },
+    {
+      "source": "/feed.rss",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" }
+      ]
     }
   ]
 }
