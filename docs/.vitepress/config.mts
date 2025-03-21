@@ -37,6 +37,13 @@ export default defineConfig({
   lastUpdated: true,
   head: [
     [
+      'meta',
+      {
+        name: 'baidu-site-verification',
+        content: 'codeva-CxRAHCK2KM'
+      }
+    ],
+    [
       'script',
       {
         src: '//sdk.51.la/js-sdk-pro.min.js',
