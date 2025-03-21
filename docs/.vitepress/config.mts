@@ -95,7 +95,13 @@ export default defineConfig({
       }
     ],
     nav: [
-      { text: '导航站', link: '/Nav' },
+      {
+        text: '站点工具',
+        items: [
+          { text: '工具导航', link: '/Nav' },
+          { text: '流量管理', link: 'https://v6.51.la' }
+        ]
+      },
       {
         text: 'CS 基础',
         items: [
@@ -200,7 +206,7 @@ export default defineConfig({
             link: '/Interview/diy'
           },
           {
-            text: '面试经验',
+            text: '笔面经验',
             link: '/Interview/Experience'
           }
         ]
