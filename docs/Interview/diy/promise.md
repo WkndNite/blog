@@ -4,6 +4,8 @@ sticky: 100
 tags:
   - 面试
   - 前端
+  - Promise
+  - JavaScript
   - 手搓代码
 ---
 

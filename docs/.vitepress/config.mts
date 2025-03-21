@@ -853,6 +853,10 @@ export default defineConfig({
             {
               text: '手搓 Promise 全系列',
               link: '/Interview/diy/promise'
+            },
+            {
+              text: '数组方式解构对象',
+              link: '/Interview/diy/destructure'
             }
           ]
         },
