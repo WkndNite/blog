@@ -51,7 +51,7 @@ class MyPromise {
 
 这里应该不难理解。但是如果你亲自 coding，你会发现写到这里是会报错的。
 
-错误发生在我们对状态流转的修改部分，ES6 的 class 中遵循严格模式，因此 this 在这里指向了 `undefined。`
+错误发生在我们对状态流转的修改部分，ES6 的 class 中遵循严格模式，因此 this 在这里指向了 `undefined`。
 
 知道了问题在哪里，那你也应该已经想到怎么解决这个问题了。
 
@@ -224,9 +224,9 @@ console.log(`📦 p2 value: ${p2.getValue()}`);
 
 :::
 
-then 函数需要两个参数，分别是 `onFulfilled` 和 `onRejected，我们在传入一个参数的时候，相当于第二个参数是` `undefined`，并且这两个参数应该是函数。
+then 函数需要两个参数，分别是 `onFulfilled` 和 `onRejected`，我们在传入一个参数的时候，相当于第二个参数是 `undefined`，并且这两个参数应该是函数。
 
-同时，会返回一个新的 Promise，这个 Promise 的状态和值取决于 onFulfilled 和 onRejected 的执行结果。
+同时，会返回一个新的 `Promise`，这个 Promise 的状态和值取决于 onFulfilled 和 onRejected 的执行结果。
 
 我们可以轻而易举实现这样的基本需求：
 
@@ -244,7 +244,7 @@ then(onFulfilled, onRejected) {
 
 至此，其实已经基本完成了我给的 Tip 中的前两点，接下来是时候思考一下函数体该负责做什么了——我们需要把传入的回调函数放在微队列中，等待一个合适的时机去执行。
 
-看到这里，建议你先去后文阅读[关于微队列的实现](#实现微队列)，然后再回来接着继续看。
+看到这里，建议你先去后文阅读[关于微队列的实现](#关于微队列的实现)，然后再回来接着继续看。
 
 ### 关于微队列的实现
 
