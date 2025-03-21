@@ -563,6 +563,10 @@ export default defineConfig({
             {
               text: '虚拟 DOM',
               link: '/Frontend/React/virtual-dom'
+            },
+            {
+              text: 'React 整体架构',
+              link: '/Frontend/React/react-architecture'
             }
           ]
         },

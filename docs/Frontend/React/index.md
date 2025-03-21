@@ -23,3 +23,4 @@ author: false
 - [React 和 Vue 描述页面的区别](./react-vs-vue.md)
 - [前端框架的分类](./framework-classification.md)
 - [虚拟 DOM](./virtual-dom.md)
+- [React 整体架构](./react-architecture.md)

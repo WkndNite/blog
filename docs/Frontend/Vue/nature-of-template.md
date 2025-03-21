@@ -175,7 +175,7 @@ function compiler(template) {
 
 4. 另外，解析器需要根据得到的 token 来生成模板 AST：
 
-   ```JavaScript
+   ```JSON
    {
        "type": "Root",
        "children": [
