@@ -24,3 +24,4 @@ author: false
 - [前端框架的分类](./framework-classification.md)
 - [虚拟 DOM](./virtual-dom.md)
 - [React 整体架构](./react-architecture.md)
+- [React 渲染流程](./render-process.md)

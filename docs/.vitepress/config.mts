@@ -567,6 +567,10 @@ export default defineConfig({
             {
               text: 'React 整体架构',
               link: '/Frontend/React/react-architecture'
+            },
+            {
+              text: 'React 渲染流程',
+              link: '/Frontend/React/render-process'
             }
           ]
         },
