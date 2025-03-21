@@ -4,7 +4,7 @@ const blogTheme = getThemeConfig({
   mermaid: true,
   footer: {
     version: false,
-    copyright: 'MIT License | 周末晚',
+    copyright: 'MIT License | 周末晚的岛屿',
     icpRecord: {
       name: '晋ICP备2024052317号',
       link: 'https://beian.miit.gov.cn/'

@@ -1,7 +1,15 @@
 import { defineConfig } from 'vitepress';
 import { AnnouncementPlugin } from 'vitepress-plugin-announcement';
+import { RSSOptions, RssPlugin } from 'vitepress-plugin-rss';
 import { SponsorPlugin } from 'vitepress-plugin-sponsor';
 import { blogTheme } from './blog-theme';
+
+const baseUrl = 'https://blog.wkndnite-tech.cn';
+const RSS: RSSOptions = {
+  title: '周末晚的岛屿',
+  baseUrl,
+  copyright: 'MIT License | 周末晚'
+};
 
 export default defineConfig({
   ignoreDeadLinks: true,
@@ -853,6 +861,7 @@ export default defineConfig({
       noExternal: ['dayjs']
     },
     plugins: [
+      RssPlugin(RSS),
       // 打赏插件
       SponsorPlugin({
         /**
