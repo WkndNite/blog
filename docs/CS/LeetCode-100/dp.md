@@ -66,3 +66,25 @@ var rob = function (nums) {
   return dp[nums.length - 1];
 };
 ```
+
+## 300. 最长递增子序列
+
+```JavaScript
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var lengthOfLIS = function (nums) {
+   const length = nums.length;
+   if(length<=1)return length;
+   const dp = Array.from({length},()=>1);
+   for(let i = 0;i < length;i++){
+    for(let j = 0;j<i;j++){
+        if(nums[i]>nums[j]){
+            dp[i] = Math.max(dp[i],1+dp[j])
+        }
+    }
+   }
+   return Math.max(...dp)
+};
+```

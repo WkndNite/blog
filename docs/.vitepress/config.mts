@@ -31,6 +31,15 @@ export default defineConfig({
     [
       'script',
       {
+        src: '//sdk.51.la/js-sdk-pro.min.js',
+        charset: 'UTF-8',
+        id: 'LA_COLLECT'
+      }
+    ],
+    ['script', {}, 'LA.init({id:"3LcRCF8GiASfiv30",ck:"3LcRCF8GiASfiv30"})'],
+    [
+      'script',
+      {
         async: '',
         src: 'https://www.googletagmanager.com/gtag/js?id=G-095CYQ2P6C'
       }
