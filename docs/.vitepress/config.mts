@@ -98,7 +98,7 @@ export default defineConfig({
       {
         text: '站点工具',
         items: [
-          { text: '工具导航', link: '/Nav' },
+          { text: '导航集锦', link: '/Nav' },
           { text: '流量管理', link: 'https://v6.51.la' }
         ]
       },
