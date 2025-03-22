@@ -120,7 +120,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '前端漫谈',
+        text: '前端漫游',
         items: [
           { text: 'CSS', link: '/Frontend/CSS' },
           {
@@ -166,7 +166,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '开发工具',
+        text: '软技能',
         items: [
           {
             text: 'Git',
@@ -181,13 +181,13 @@ export default defineConfig({
             link: '/DevTips/Design'
           },
           {
-            text: '开发杂谈',
+            text: '开发工具',
             link: '/DevTips/Others'
           }
         ]
       },
       {
-        text: '面试备战',
+        text: '校招备战',
         items: [
           {
             text: '网络',
