@@ -146,12 +146,7 @@ export const NAV_DATA: NavData[] = [
         desc: '基于 Promise 的 HTTP 客户端',
         icon: 'https://axios-http.com/assets/favicon.ico'
       },
-      {
-        title: 'Electron',
-        link: 'https://www.electronjs.org',
-        desc: '使用 JavaScript、HTML 和 CSS 构建跨平台的桌面应用程序',
-        icon: 'https://www.electronjs.org/zh/assets/img/logo.svg'
-      },
+
       {
         title: 'AI SDK',
         link: 'https://sdk.vercel.ai/',
@@ -161,7 +156,7 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: '图标库',
+    title: 'UI 资源',
     items: [
       {
         icon: 'https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg',
@@ -192,10 +187,15 @@ export const NAV_DATA: NavData[] = [
         link: 'https://yesicon.app/',
         desc: '192 Open-Source Icon Sets',
         icon: 'https://yesicon.app/favicon.svg'
+      },
+      {
+        title: 'Uiverse',
+        link: 'https://uiverse.io/',
+        desc: '充满创意和设计感的组件库',
+        icon: 'https://uiverse.io/favicon.ico'
       }
     ]
   },
-
   {
     title: 'CSS 相关',
     items: [
@@ -231,7 +231,6 @@ export const NAV_DATA: NavData[] = [
       }
     ]
   },
-
   {
     title: 'React 生态',
     items: [
@@ -398,7 +397,17 @@ export const NAV_DATA: NavData[] = [
       }
     ]
   },
-
+  {
+    title: '跨端开发',
+    items: [
+      {
+        title: 'Electron',
+        link: 'https://www.electronjs.org',
+        desc: '使用 JavaScript、HTML 和 CSS 构建跨平台的桌面应用程序',
+        icon: 'https://www.electronjs.org/zh/assets/img/logo.svg'
+      }
+    ]
+  },
   {
     title: '可视化',
     items: [
@@ -586,7 +595,6 @@ export const NAV_DATA: NavData[] = [
       }
     ]
   },
-
   {
     title: '社区博客',
     items: [
