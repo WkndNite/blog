@@ -177,7 +177,7 @@ export default defineConfig({
             link: '/DevTips/Docker'
           },
           {
-            text: '设计模式与设计原则',
+            text: '开发范式',
             link: '/DevTips/Design'
           },
           {
@@ -629,7 +629,7 @@ export default defineConfig({
           ]
         },
         {
-          text: '前端杂谈',
+          text: '杂谈',
           collapsed: false,
           items: [
             {
@@ -675,7 +675,7 @@ export default defineConfig({
           ]
         },
         {
-          text: '设计模式与设计原则',
+          text: '开发范式',
           collapsed: false,
           items: [
             {
@@ -861,7 +861,7 @@ export default defineConfig({
           ]
         },
         {
-          text: '面试经验',
+          text: '笔面经验',
           collapsed: false,
           items: [
             {
