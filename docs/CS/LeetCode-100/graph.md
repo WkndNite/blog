@@ -89,3 +89,47 @@ var orangesRotting = function (grid) {
 
 };
 ```
+
+## 207. 课程表
+
+```JavaScript
+/**
+ * @param {number} numCourses
+ * @param {number[][]} prerequisites
+ * @return {boolean}
+ */
+var canFinish = function (numCourses, prerequisites) {
+    const inDegree = new Array(numCourses).fill(0);
+    const map = new Map();
+    for(let i = 0;i < prerequisites.length;i++){
+        const from = prerequisites[i][1];
+        const to = prerequisites[i][0];
+        inDegree[to]++;
+        const arr = map.get(from);
+        if(arr){
+            map.set(from,[...arr,to])
+        }else{
+            map.set(from,[to])
+        }
+    }
+
+    const queue = [];
+    for(let i = 0;i < numCourses;i++){
+        if(!inDegree[i])queue.push(i)
+    }
+
+    let count = 0;
+    while(queue.length){
+        const selected = queue.shift();
+        count++;
+        const laterCourses = map.get(selected);
+        if(laterCourses && laterCourses.length){
+            for(const to of laterCourses){
+                inDegree[to]--;
+                if(!inDegree[to])queue.push(to)
+            }
+        }
+    }
+    return count === numCourses;
+};
+```

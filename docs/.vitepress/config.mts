@@ -867,6 +867,14 @@ export default defineConfig({
             {
               text: '小米暑期实习一面',
               link: '/Interview/Experience/250319xiaomi'
+            },
+            {
+              text: '腾讯音乐暑期实习初试',
+              link: '/Interview/Experience/250320txyy'
+            },
+            {
+              text: '美团暑期实习笔试',
+              link: '/Interview/Experience/250322meituan'
             }
           ]
         }

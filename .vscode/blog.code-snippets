@@ -29,6 +29,10 @@
     "prefix": "danger",
     "body": [":::danger", "$1", ":::"]
   },
+  "important": {
+    "prefix": "important",
+    "body": ["> [!Important] $1", "> "]
+  },
   "insert collapse js code": {
     "prefix": "detailjs",
     "body": [":::details", "```JavaScript", "$1", "```", ":::"]
