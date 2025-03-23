@@ -875,6 +875,10 @@ export default defineConfig({
             {
               text: '美团暑期实习笔试',
               link: '/Interview/Experience/250322meituan'
+            },
+            {
+              text: '拼多多暑期实习笔试',
+              link: '/Interview/Experience/250323pdd'
             }
           ]
         }
