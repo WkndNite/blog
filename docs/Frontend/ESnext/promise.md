@@ -128,7 +128,7 @@ pro.then(处理1).then(处理2).catch(处理3);
 
 有了统一的处理方式，ES 官方就可以对其进一步优化。
 
-ES7 推出了两个关键字 `async` 和 `await`，用于更加优雅的表达 Promise。
+ES2017 推出了两个关键字 `async` 和 `await`，用于更加优雅的表达 Promise。
 
 ### async
 

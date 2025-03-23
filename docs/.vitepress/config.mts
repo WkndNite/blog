@@ -391,6 +391,10 @@ export default defineConfig({
             {
               text: 'Promise',
               link: '/Frontend/ESnext/promise'
+            },
+            {
+              text: 'ESnext 特性一览',
+              link: '/Frontend/ESnext/overview'
             }
           ]
         },
