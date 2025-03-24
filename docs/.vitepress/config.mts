@@ -605,6 +605,14 @@ export default defineConfig({
             {
               text: 'React 渲染流程',
               link: '/Frontend/React/render-process'
+            },
+            {
+              text: 'Fiber 双缓冲',
+              link: '/Frontend/React/fiber-double-buffer'
+            },
+            {
+              text: '图解 diff 算法',
+              link: '/Frontend/React/diff-algorithm'
             }
           ]
         },

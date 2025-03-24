@@ -25,3 +25,5 @@ author: false
 - [虚拟 DOM](./virtual-dom.md)
 - [React 整体架构](./react-architecture.md)
 - [React 渲染流程](./render-process.md)
+- [Fiber 双缓冲](./fiber-double-buffer.md)
+- [图解 diff 算法](./diff-algorithm.md)
