@@ -75,7 +75,7 @@ JSX 看起来可能比较像模板语言，但事实上它完全是在 JavaScrip
   > 如果属性值是表达式，那么需要用 `{}` 包裹起来。
 - 在设置元素样式的时候，需要使用 `style={}` 并传入一个对象。
   > 注意，样式名需要使用驼峰命名法，例如 `font-size` 需要写成 `fontSize`。
-- JSX 中 `class` 属性需要写成 `className`，因为 `class` 是 JavaScr ipt 的保留字。
+- JSX 中 `class` 属性需要写成 `className`，因为 `class` 是 JavaScript 的保留字。
 - 注释需要用 `{/* */}` 包裹起来。
 - JSX 中可以书写数组，数组会被自动展开。
 
