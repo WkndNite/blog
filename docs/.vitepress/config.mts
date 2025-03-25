@@ -855,6 +855,14 @@ export default defineConfig({
             {
               text: '执行栈和执行上下文',
               link: '/Interview/JavaScript/execution-context'
+            },
+            {
+              text: '作用域与作用域链',
+              link: '/Interview/JavaScript/scope-chain'
+            },
+            {
+              text: '事件循环',
+              link: '/Interview/JavaScript/event-loop'
             }
           ]
         },

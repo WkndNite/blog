@@ -16,3 +16,5 @@ author: false
 - [this 指向](./this.md)
 - [垃圾回收与内存泄漏](./gc.md)
 - [执行栈和执行上下文](./execution-context.md)
+- [作用域和作用域链](./scope-chain.md)
+- [事件循环](./event-loop.md)
