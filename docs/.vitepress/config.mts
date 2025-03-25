@@ -869,6 +869,14 @@ export default defineConfig({
             {
               text: '数组方式解构对象',
               link: '/Interview/diy/destructure'
+            },
+            {
+              text: '手撕事件总线',
+              link: '/Interview/diy/event-bus'
+            },
+            {
+              text: '大文件上传',
+              link: '/Interview/diy/big-file-upload'
             }
           ]
         },

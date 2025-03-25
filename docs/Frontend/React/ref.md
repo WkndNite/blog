@@ -404,7 +404,7 @@ export default App;
 
 - useRef 是 hooks 的一种，一般用于 function 组件，而 createRef 一般用于 class 组件。
 
-- 由 useRef 创建的 ref 对象在组件的整个生命周期内都不会改变，但是由 createRef 创建的 ref 对象，组件每更新一次，*ref*对象就会被重新创建。
+- 由 useRef 创建的 ref 对象在组件的整个生命周期内都不会改变，但是由 createRef 创建的 ref 对象，组件每更新一次，ref 对象就会被重新创建。
 
 实际上，就是因为在函数式组件中使用 createRef 创建 ref 时存在弊端，组件每次更新，ref 对象就会被重新创建，所以出现了 useRef 来解决这个问题。
 

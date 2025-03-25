@@ -173,13 +173,13 @@ export default ChildCom1;
 在上面的代码中，我们就创建了一个错误边界组件。该组件有一个 `getDerivedStateFromError` 静态方法以及 `componentDidCatch` 实例方法，这两个方法都会在组件渲染出错时调用，但是略有区别，具体的区别如下：
 
 - `getDerivedStateFromError` 静态方法：
-  - 运行时间点：渲染自组建的过程中，发生错误之后，在更新页面之前。
+  - 运行时间点：渲染子组件的过程中，发生错误之后，在更新页面之前。
   - **注意：只有子组件发生错误，才会运行该函数。**
   - 该函数返回一个对象，React 会将该对象的属性覆盖掉当前组件的 state。
   - 参数：错误对象。
   - 通常，该函数用于改变状态。
 - `componentDidCatch` 实例方法：
-  - 运行时间点：渲染自子组件的过程中，发生错误，更新页面之后，由于其运行时间点比较靠后，因此不太会在该函数中改变状态。
+  - 运行时间点：渲染子组件的过程中，发生错误，更新页面之后，由于其运行时间点比较靠后，因此不太会在该函数中改变状态。
   - 通常，该函数用于记录错误消息。
 
 > 最佳实践，使用 static getDerivedStateFromError(error) 来渲染备用 UI，使用 componentDidCatch(error, errorInfo) 来记录错误信息。
