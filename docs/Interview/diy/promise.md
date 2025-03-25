@@ -718,13 +718,118 @@ function delay(duration) {
 
 ### catch 和 finally
 
+```JavaScript
+catch(onRejected) {
+  return this.then(null, onRejected);
+}
+
+finally(onSettled) {
+  return this.then(
+    (data) => {
+      onSettled();
+      return data;
+    },
+    (reason) => {
+      onSettled();
+      throw reason;
+    }
+  );
+}
+
+// OR
+Promise.prototype.catch = (onRejected) => {
+  return this.then(null, onRejected);
+}
+```
+
 ### resolve 和 reject
+
+```JavaScript
+static resolve(data) {
+  if (data instanceof MyPromise) {
+    return data;
+  }
+  return new MyPromise((resolve, reject) => {
+    if (isPromise(data)) {
+      data.then(resolve, reject);
+    } else {
+      resolve(data);
+    }
+  });
+}
+
+static reject(reason) {
+  return new MyPromise((resolve, reject) => {
+    reject(reason);
+  });
+}
+```
 
 ### Promise.all
 
+```JavaScript
+static all(promises) {
+  return new MyPromise((resolve, reject) => {
+    try {
+      const results = [];
+      let count = 0;
+      let fulfilledCount = 0;
+      for (const promise of promises) {
+        let index = count;
+        count++;
+        MyPromise.resolve(promise).then((data) => {
+          fulfilledCount++;
+          results[index] = data;
+          if (count === fulfilledCount) {
+            resolve(results);
+          }
+        }, reject);
+      }
+      if (count === 0) {
+        resolve([]);
+      }
+    } catch (e) {
+      reject(e);
+      console.error(e);
+    }
+  });
+}
+```
+
 ### Promise.race
 
+```JavaScript
+static race(promises) {
+  return new MyPromise((resolve, reject) => {
+    for (const promise of promises) {
+      MyPromise.resolve(promise).then(resolve, reject);
+    }
+  });
+}
+```
+
 ### Promise.allSettled
+
+```JavaScript
+static allSettled(promises) {
+  const ps = [];
+  for (const promise of promises) {
+    ps.push(
+      MyPromise.resolve(promise).then(
+        (value) => ({
+          status: FULFILLED,
+          value,
+        }),
+        (reason) => ({
+          status: REJECTED,
+          reason,
+        })
+      )
+    );
+  }
+  return MyPromise.all(ps);
+}
+```
 
 ## 总结
 
