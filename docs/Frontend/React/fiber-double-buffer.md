@@ -114,7 +114,7 @@ workInProgress.alternate = current;
 
 现在假设有这么一个结构：
 
-```html
+```HTML
 <body>
   <div id="root"></div>
 </body>

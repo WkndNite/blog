@@ -24,7 +24,7 @@ tags:
 
 1. 通过 `vertical-align:middle` 实现垂直居中。
 
-   ```css
+   ```CSS
    .container {
      width: 500px;
      height: 300px;
@@ -59,7 +59,7 @@ tags:
 
    平白无故添加一个无意义的参考元素不怎么好，我们可以去除作为参考的兄弟元素，转为给父元素添加一个伪元素，如下：
 
-   ```css
+   ```CSS
    .container {
      width: 500px;
      height: 300px;
@@ -86,7 +86,7 @@ tags:
 
    这种方式需要设置父元素为相对定位，子元素为绝对定位，然后配合 margin-left 为负的盒子高度一半来实现垂直居中。
 
-   ```css
+   ```CSS
    .container {
      width: 500px;
      height: 300px;
@@ -109,7 +109,7 @@ tags:
 
    可以通过定位配合 transform 也可以实现垂直居中。
 
-   ```css
+   ```CSS
    .container {
      width: 500px;
      height: 300px;
@@ -129,7 +129,7 @@ tags:
 
 5. 通过 `flex` 实现垂直居中。
 
-   ```css
+   ```CSS
    .container {
      width: 500px;
      height: 300px;
@@ -147,7 +147,7 @@ tags:
 
 6. 可以通过 `flex + margin` 实现垂直居中。
 
-   ```css
+   ```CSS
    .container {
      width: 500px;
      height: 300px;
@@ -165,7 +165,7 @@ tags:
 
 7. 通过 `grid` 实现垂直居中。
 
-   ```css
+   ```CSS
    .container {
      width: 500px;
      height: 300px;

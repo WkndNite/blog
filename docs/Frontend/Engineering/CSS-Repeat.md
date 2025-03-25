@@ -78,7 +78,7 @@ lessc index.less index.css
 
 可以看到编译之后的代码：
 
-```css
+```CSS
 .redColor {
   color: #f40;
 }

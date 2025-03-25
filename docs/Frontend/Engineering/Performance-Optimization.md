@@ -319,7 +319,7 @@ _.isArray($('.red'));
 
 1. 在页面中手动引入公共模块。
 
-   ```html
+   ```HTML
    <script src="./dll/jquery.js"></script>
    <script src="./dll/lodash.js"></script>
    ```

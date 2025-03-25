@@ -262,7 +262,7 @@ app.68297cd8.css
 
 比如，页面中引入了一个 css 资源 `app.css`，它可能的引入方式是：
 
-```html :no-line-numbers
+```HTML :no-line-numbers
 <link href="/app.css?v=1.0.0" />
 ```
 
@@ -270,7 +270,7 @@ app.68297cd8.css
 
 当服务器的版本发生变化时，可以给予新的版本号，让 html 中的路径发生变动。
 
-```html :no-line-numbers
+```HTML :no-line-numbers
 <link href="/app.css?v=1.0.1" />
 ```
 

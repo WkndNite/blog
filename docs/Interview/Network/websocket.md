@@ -133,7 +133,7 @@ wss://mysite.com/path
 
 请求头如下：
 
-```css
+```CSS
 Connection: Upgrade /* 嘿，后续咱们别用HTTP了，升级吧 */
 Upgrade: WebSocket /* 我们把后续的协议升级为WebSocket */
 Sec-WebSocket-Version: 13 /* WebSocket协议版本就用13好吗？ */
@@ -142,7 +142,7 @@ Sec-WebSocket-Key: YWJzZmFkZmFzZmRhYw== /* 暗号：天王盖地虎 */
 
 服务器如果同意，就应该响应下面的消息：
 
-```css
+```CSS
 HTTP/1.1 101 Switching Protocols /* 换，马上换协议 */
 Connection: Upgrade /* 协议升级了 */
 Upgrade: WebSocket /* 升级到WebSocket */

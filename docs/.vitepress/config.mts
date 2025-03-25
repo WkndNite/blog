@@ -202,7 +202,7 @@ export default defineConfig({
             link: '/Interview/JavaScript'
           },
           {
-            text: '手搓代码',
+            text: '手撕代码',
             link: '/Interview/diy'
           },
           {
@@ -867,7 +867,7 @@ export default defineConfig({
           ]
         },
         {
-          text: '手搓代码',
+          text: '手撕代码',
           collapsed: false,
           items: [
             {
@@ -885,6 +885,14 @@ export default defineConfig({
             {
               text: '大文件上传',
               link: '/Interview/diy/big-file-upload'
+            },
+            {
+              text: '防抖和节流',
+              link: '/Interview/diy/debounce-throttle'
+            },
+            {
+              text: '函数柯里化',
+              link: '/Interview/diy/currying'
             }
           ]
         },

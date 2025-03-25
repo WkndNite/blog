@@ -137,7 +137,7 @@ function a() {}
 function b() {}
 ```
 
-```css
+```CSS
 .container {
 }
 .list {

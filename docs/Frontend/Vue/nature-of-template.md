@@ -273,7 +273,7 @@ function compiler(template) {
 ::::details 展开代码
 :::code-group
 
-```html [index.html]
+```HTML [index.html]
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -328,7 +328,7 @@ function compiler(template) {
 </html>
 ```
 
-```css [index.css]
+```CSS [index.css]
 .user-card {
   display: flex;
   align-items: center;

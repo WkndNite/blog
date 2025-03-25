@@ -113,7 +113,7 @@ module.exports = {
 
    例如：
 
-   ```css
+   ```CSS
    ::placeholder {
      color: red;
    }
@@ -121,7 +121,7 @@ module.exports = {
 
    该功能在不同的旧版本浏览器中需要书写为：
 
-   ```css
+   ```CSS
    ::-webkit-input-placeholder {
      color: red;
    }
@@ -227,7 +227,7 @@ module.exports = {
 
    在 `:root{}` 中定义常用变量，使用 `--` 前缀命名变量
 
-   ```css
+   ```CSS
    :root {
      --lightColor: #ddd;
      --darkColor: #333;
@@ -244,7 +244,7 @@ module.exports = {
 
    II. 自定义选择器
 
-   ```css
+   ```CSS
    @custom-selector :--heading h1, h2, h3, h4, h5, h6;
    @custom-selector :--enter :focus, :hover;
 
@@ -263,7 +263,7 @@ module.exports = {
 
    编译后
 
-   ```css
+   ```CSS
    a:focus,
    a:hover {
      color: #f40;
@@ -311,7 +311,7 @@ module.exports = {
 
    编译后
 
-   ```css
+   ```CSS
    .a {
      color: red;
    }
@@ -352,7 +352,7 @@ module.exports = {
 
 编译后
 
-```css
+```CSS
 .item {
   position: absolute;
   left: 50%;
@@ -368,7 +368,7 @@ module.exports = {
 
 该插件支持在源码中使用一些颜色函数。
 
-```css
+```CSS
 body {
   /* 使用颜色 #aabbcc，不做任何处理，等同于直接书写 #aabbcc */
   color: color(#aabbcc);
@@ -385,7 +385,7 @@ body {
 
 编译后
 
-```css
+```CSS
 body {
   color: rgb(170, 187, 204);
   color: rgba(170, 187, 204, 0.9);
@@ -426,7 +426,7 @@ body {
 
 此时，如果你的代码出现不规范的地方，编译时将会报出错误:
 
-```css
+```CSS
 body {
   background: #f4;
 }

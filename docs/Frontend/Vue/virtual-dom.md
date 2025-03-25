@@ -147,7 +147,7 @@ console.log(vnode);
 
 2. 虽然上述的方式是性能最高的，但是在实际开发中，开发者往往更倾向于更加方便的方式。
 
-   ```html :no-line-numbers
+   ```HTML :no-line-numbers
    <div id="app"></div>
    ```
 

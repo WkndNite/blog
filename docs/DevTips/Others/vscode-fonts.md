@@ -8,7 +8,7 @@ tags:
 
 # VS Code 字体美化教程
 
-```css [workbench.desktop.main.css]
+```CSS [workbench.desktop.main.css]
 .monaco-workbench.windows {
   font-family:
     Inter,

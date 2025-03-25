@@ -425,7 +425,7 @@ export default React.memo(MyComponent, areEqual);
 
 :::code-group
 
-```css [App.module.css]
+```CSS [App.module.css]
 .container {
   width: 500px;
   height: 200px;

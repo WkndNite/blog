@@ -73,7 +73,7 @@ cover: https://redux.js.org/img/redux.svg
    export default App;
    ```
 
-   ```css [App.css]
+   ```CSS [App.css]
    .container {
      width: fit-content;
    }
@@ -96,7 +96,7 @@ cover: https://redux.js.org/img/redux.svg
    }
    ```
 
-   ```html [index.html]
+   ```HTML [index.html]
    <!doctype html>
    <html lang="en">
      <head>

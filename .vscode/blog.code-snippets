@@ -47,11 +47,11 @@
   },
   "insert css code": {
     "prefix": "csscode",
-    "body": ["```css", "$2", "```"]
+    "body": ["```CSS", "$2", "```"]
   },
   "insert html code": {
     "prefix": "htmlcode",
-    "body": ["```html", "$2", "```"]
+    "body": ["```HTML", "$2", "```"]
   },
   "insert code group": {
     "prefix": "codegroup",

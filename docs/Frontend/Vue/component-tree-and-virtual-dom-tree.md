@@ -12,7 +12,7 @@ date: 2025-01-20
 
 在早期的时候，大家接触到的树就是 DOM 树。
 
-```html
+```HTML
 <div>
   <h1>Here is a list!</h1>
   <ul>

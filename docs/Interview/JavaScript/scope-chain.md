@@ -191,7 +191,7 @@ if (condition) {
 
 例如，以下代码在 JS 经常见到：
 
-```html
+```HTML
 <button>测试1</button>
 <button>测试2</button>
 <button>测试3</button>

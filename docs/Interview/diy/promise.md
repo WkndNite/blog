@@ -6,7 +6,7 @@ tags:
   - 前端
   - Promise
   - JavaScript
-  - 手搓代码
+  - 手撕代码
 ---
 
 # 手搓 Promise 全系列

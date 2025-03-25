@@ -64,7 +64,7 @@ tags:
 
 > 网格线可以像下面这样命名：
 >
-> ```css :no-line-numbers
+> ```CSS :no-line-numbers
 > grid-template-columns: [first] 100px [line2] 100px [line3] auto [end];
 > ```
 
@@ -74,7 +74,7 @@ tags:
 
 `grid-template-areas` 属性接受一个字符串，其中每个字符代表一个网格单元。字符串中的每个单词代表一个区域，区域之间用空格分隔。每个区域可以包含一个或多个网格单元。
 
-```css
+```CSS
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -92,7 +92,7 @@ tags:
 
 然后，grid 子项就可以使用 `grid-area` 属性来指定它们应该放置在哪个区域中。
 
-```css
+```CSS
 .header {
   grid-area: header;
 }
@@ -116,7 +116,7 @@ tags:
 
 可以给该属性传入行和列的值：
 
-```css
+```CSS
 .container {
   display: grid;
   grid-template: 1fr 1fr 1fr / repeat(3, 1fr);
@@ -125,7 +125,7 @@ tags:
 
 也可以传入区域名和行高列宽：
 
-```css
+```CSS
 .container {
   display: grid;
   grid-template: 'header header header' 50px 'sidebar content content' 1fr 'footer footer footer' 50px / 1fr 1fr 1fr;
@@ -142,7 +142,7 @@ tags:
 
 当你在网格容器中定义了 `grid-template-columns` 和 `grid-template-rows` 属性，但网格项的数量超过了定义的网格轨道数量时，浏览器会自动生成额外的网格轨道。这些额外的网格轨道被称为隐式网格。
 
-```css
+```CSS
 .container {
   display: grid;
   grid-template-columns: 100px 100px;
@@ -264,7 +264,7 @@ grid 属性的缩写规则比较复杂。它允许你同时设置以下属性：
 
 ## grid 项目区间范围设置属性
 
-```css
+```CSS
 .item-1 {
   /* 也可以传入负数表示倒着数 */
   grid-column-start: 1;
@@ -288,7 +288,7 @@ grid 属性的缩写规则比较复杂。它允许你同时设置以下属性：
 
 ## grid 项目对齐方式
 
-```css
+```CSS
 .item {
   justify-self: auto | normal | stretch | start | end | center | baseline;
   align-self: auto | normal | stretch | start | end | center | baseline;
