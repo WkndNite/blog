@@ -909,12 +909,32 @@ export default defineConfig({
               link: '/Interview/Experience/250320txyy'
             },
             {
+              text: '饿了么暑期实习笔试',
+              link: '/Interview/Experience/250321ele'
+            },
+            {
               text: '美团暑期实习笔试',
               link: '/Interview/Experience/250322meituan'
             },
             {
               text: '拼多多暑期实习笔试',
               link: '/Interview/Experience/250323pdd'
+            },
+            {
+              text: '腾讯音乐暑期实习复试',
+              link: '/Interview/Experience/250325txyy'
+            },
+            {
+              text: '快手暑期实习一面',
+              link: '/Interview/Experience/250326kuaishou'
+            },
+            {
+              text: '美团暑期实习初试',
+              link: '/Interview/Experience/250326meituan'
+            },
+            {
+              text: '百度日常实习一面',
+              link: '/Interview/Experience/250326baidu'
             }
           ]
         }
