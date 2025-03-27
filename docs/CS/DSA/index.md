@@ -9,3 +9,4 @@ author: false
 - [前端必会算法（一）](./frontend-1.md)
 - [前端必会算法（二）](./frontend-2.md)
 - [前端必会算法（三）](./frontend-3.md)
+- [排序算法](./sort.md)

@@ -84,7 +84,7 @@ function quickSort(arr) {
 
 ```JavaScript
 function quickSort(arr, left = 0, right = arr.length - 1) {
-  if (left >= right) return;
+  if (left >= right) return arr;
   let i = left;
   let j = right;
   const leader = arr[left];
