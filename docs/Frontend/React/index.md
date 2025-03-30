@@ -28,3 +28,4 @@ author: false
 - [Fiber 双缓冲](./fiber-double-buffer.md)
 - [图解 diff 算法](./diff-algorithm.md)
 - [Message Channel](./message-channel.md)
+- [Scheduler 调度普通任务](./scheduler-normal-task.md)

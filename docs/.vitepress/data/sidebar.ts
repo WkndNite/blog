@@ -405,6 +405,10 @@ export const sidebar = {
         {
           text: 'Message Channel',
           link: '/Frontend/React/message-channel'
+        },
+        {
+          text: 'Scheduler 调度普通任务',
+          link: '/Frontend/React/scheduler-normal-task'
         }
       ]
     },
