@@ -29,3 +29,5 @@ author: false
 - [图解 diff 算法](./diff-algorithm.md)
 - [Message Channel](./message-channel.md)
 - [Scheduler 调度普通任务](./scheduler-normal-task.md)
+- [Scheduler 调度延时任务](./scheduler-timeout-task.md)
+- [Hook 原理](./hook.md)

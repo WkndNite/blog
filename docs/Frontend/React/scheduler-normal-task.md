@@ -137,7 +137,7 @@ function unstable_scheduleCallback(priorityLevel, callback, options) {
 
 ![alt](./assets/2022-12-29-065931.png)
 
-- 不同的任务，最终调用的函数不一样
+- 不同的任务，最终调用的函数不一样：
   - 普通任务：requestHostCallback(flushWork)
   - 延时任务：requestHostTimeout(handleTimeout, startTime - currentTime);
 
@@ -189,8 +189,8 @@ if (typeof localSetImmediate === 'function') {
 }
 ```
 
-- requestHostCallback 主要就是调用了 schedulePerformWorkUntilDeadline
-- schedulePerformWorkUntilDeadline 一开始是 undefined，根据不同的环境选择不同的生成宏任务的方式
+- requestHostCallback 主要就是调用了 schedulePerformWorkUntilDeadline。
+- schedulePerformWorkUntilDeadline 一开始是 undefined，根据不同的环境选择不同的生成宏任务的方式。
 
 ## performWorkUntilDeadline
 
@@ -244,7 +244,7 @@ const performWorkUntilDeadline = () => {
 };
 ```
 
-- 该方法实际上主要就是在调用 scheduledHostCallback（flushWork），调用之后，返回一个布尔值，根据这个布尔值来判断是否还有剩余的任务，如果还有，就是用 messageChannel 进行一个宏任务的包装，放入到任务队列里面
+- 该方法实际上主要就是在调用 scheduledHostCallback（flushWork），调用之后，返回一个布尔值，根据这个布尔值来判断是否还有剩余的任务，如果还有，就是用 messageChannel 进行一个宏任务的包装，放入到任务队列里面。
 
 ## flushWork 和 workLoop
 
@@ -367,8 +367,8 @@ function workLoop(hasTimeRemaining, initialTime) {
 }
 ```
 
-- flushWork 主要就是在调用 workLoop
-- workLoop 首先有一个 while 循环，该 while 循环保证了能够从任务队列中不停的取任务出来
+- flushWork 主要就是在调用 workLoop。
+- workLoop 首先有一个 while 循环，该 while 循环保证了能够从任务队列中不停的取任务出来。
 
 ```JavaScript
 while (
@@ -379,7 +379,7 @@ while (
 }
 ```
 
-- 当然，不是说一直从任务队列里面取任务出来执行就完事儿，每次取出一个任务后，我们还需要一系列的判断
+- 当然，不是说一直从任务队列里面取任务出来执行就完事儿，每次取出一个任务后，我们还需要一系列的判断。
 
 ```JavaScript
 if (
@@ -390,10 +390,10 @@ if (
 }
 ```
 
-- currentTask.expirationTime > currentTime 表示任务还没有过期
-- hasTimeRemaining 代表是否有剩余时间
-- shouldYieldToHost 任务是否应该暂停，归还主线程
-- 如果进入 if，说明因为某些原因不能再执行任务，需要立即归还主线程，那么我们就跳出 while
+- currentTask.expirationTime > currentTime 表示任务还没有过期。
+- hasTimeRemaining 代表是否有剩余时间。
+- shouldYieldToHost 任务是否应该暂停，归还主线程。
+- 如果进入 if，说明因为某些原因不能再执行任务，需要立即归还主线程，那么我们就跳出 while。
 
 ## shouldYieldToHost
 
@@ -440,7 +440,7 @@ function shouldYieldToHost() {
 ```
 
 - 首先计算 timeElapsed，然后判断是否超时，没有的话就返回 false，表示不需要归还，否则就返回 true，表示需要归还。
-- frameInterval 默认设置的是 5ms
+- frameInterval 默认设置的是 5ms。
 
 ## advanceTimers
 

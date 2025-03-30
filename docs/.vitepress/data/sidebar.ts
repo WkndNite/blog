@@ -409,6 +409,14 @@ export const sidebar = {
         {
           text: 'Scheduler 调度普通任务',
           link: '/Frontend/React/scheduler-normal-task'
+        },
+        {
+          text: 'Scheduler 调度延时任务',
+          link: '/Frontend/React/scheduler-timeout-task'
+        },
+        {
+          text: 'Hook 原理',
+          link: '/Frontend/React/hook'
         }
       ]
     },
