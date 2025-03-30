@@ -415,6 +415,10 @@ export const sidebar = {
           link: '/Frontend/React/scheduler-timeout-task'
         },
         {
+          text: '最小堆',
+          link: '/Frontend/React/min-heap'
+        },
+        {
           text: 'Hook 原理',
           link: '/Frontend/React/hook'
         }

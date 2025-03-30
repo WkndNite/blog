@@ -76,7 +76,7 @@ export default defineConfig({
       'link',
       {
         rel: 'stylesheet',
-        href: 'https://chinese-fonts-cdn.deno.dev/packages/moon-stars-kai/dist/MoonStarsKaiHW-Bold/result.css'
+        href: 'https://chinese-fonts-cdn.deno.dev/packages/moon-stars-kai/dist/MoonStarsKai-Bold/result.css'
       }
     ]
   ],
