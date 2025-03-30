@@ -617,6 +617,10 @@ export default defineConfig({
             {
               text: '图解 diff 算法',
               link: '/Frontend/React/diff-algorithm'
+            },
+            {
+              text: 'Message Channel',
+              link: '/Frontend/React/message-channel'
             }
           ]
         },
