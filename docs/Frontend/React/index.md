@@ -27,5 +27,4 @@ author: false
 - [React 渲染流程](./render-process.md)
 - [Fiber 双缓冲](./fiber-double-buffer.md)
 - [图解 diff 算法](./diff-algorithm.md)
-- [Message Channel](./message-channel.md
-- )
+- [Message Channel](./message-channel.md)
