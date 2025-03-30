@@ -30,7 +30,7 @@ var NORMAL_PRIORITY_TIMEOUT = 5000;
 var LOW_PRIORITY_TIMEOUT = 10000;
 var IDLE_PRIORITY_TIMEOUT = maxSigned31BitInt;
 
-function unstable_scheduleCallback(priorityLevel, callback, options) {  // [!code focus]
+function unstable_scheduleCallback(priorityLevel, callback, options) {
   // 获取当前的时间
   var currentTime = getCurrentTime();
 
