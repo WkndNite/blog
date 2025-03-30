@@ -4,10 +4,8 @@ import 'nprogress-v2/dist/index.css';
 import { NProgress } from 'nprogress-v2/dist/index.js';
 import { inBrowser, useData } from 'vitepress';
 import { h } from 'vue';
-import Fireworks from './components/Fireworks.vue';
-import MNavLinks from './components/MNavLinks.vue';
-import VideoPlayer from './components/VideoPlayer.vue';
-import './style.scss';
+import { Fireworks, MNavLinks, VideoPlayer } from './components';
+import './styles/theme.scss';
 
 export default {
   ...BlogTheme,

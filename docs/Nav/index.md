@@ -10,7 +10,7 @@ date: 2025-03-11
 
 # 周末晚の导航站
 
-<style src="/.vitepress/theme/nav.scss"></style>
+<style src="/.vitepress/theme/styles/nav.scss"></style>
 
 <script setup>
 import { NAV_DATA } from '/.vitepress/theme/utils/data'
