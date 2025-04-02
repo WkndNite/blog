@@ -5,7 +5,7 @@ tags:
   - 前端
 ---
 
-# useState和useReducer
+# useState 和 useReducer
 
 > 面试题：useState 和 useReducer 有什么样的区别？
 

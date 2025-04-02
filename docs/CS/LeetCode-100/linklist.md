@@ -231,3 +231,40 @@ var mergeTwoLists = function (list1, list2) {
   return res.next;
 };
 ```
+
+## 24. 两两交换链表中的节点
+
+```JavaScript
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var swapPairs = function(head) {
+    if(!head||!head.next)return head;
+
+    const dummy = new ListNode(-Infinity);
+    dummy.next = head;
+
+    let prev = dummy;
+    while(prev.next && prev.next.next){
+        let first = prev.next;
+        let second = prev.next.next;
+        let third = prev.next.next.next;
+
+        prev.next = second;
+        second.next = first;
+        first.next = third
+
+        prev = first;
+    }
+
+    return dummy.next;
+};
+```
