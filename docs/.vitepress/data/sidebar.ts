@@ -38,7 +38,6 @@ for (const category of categories) {
   const categoryItems: Array<SidebarItem> = [];
   for (const file of files) {
     const indexPath = path.join(categoryPath, file, 'index.md');
-    // 从index.md中读取标题
     const content = fs.readFileSync(indexPath, 'utf-8');
     const title = getTitle(content);
     const list = getList(content);

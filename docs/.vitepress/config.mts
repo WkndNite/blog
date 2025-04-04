@@ -100,6 +100,11 @@ export default defineConfig({
     sidebar: sidebar
   },
   vite: {
+    resolve: {
+      alias: {
+        '@': '/docs'
+      }
+    },
     ssr: {
       noExternal: ['dayjs']
     },
