@@ -1,15 +1,23 @@
-// @ts-nocheck
 import fs from 'fs';
 import path from 'path';
 
-function getTitle(content) {
+type SidebarItem = {
+  text: string;
+  collapsed: boolean;
+  items: Array<{
+    text: string;
+    link: string;
+  }>;
+};
+
+function getTitle(content: string) {
   const match = content.match(/# (.+)/);
   return match
     ? match[0].replace('# ', '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
     : '标题显示错误';
 }
 
-function getList(content) {
+function getList(content: string) {
   const match = content.match(/- (.+)/g);
   return match ? match.map((item) => item.replace(/- /g, '')) : '列表显示错误';
 }
@@ -27,17 +35,20 @@ for (const category of categories) {
   const files = fs
     .readdirSync(categoryPath)
     .filter((file) => file !== 'index.md');
-  const categoryItems = [];
+  const categoryItems: Array<SidebarItem> = [];
   for (const file of files) {
     const indexPath = path.join(categoryPath, file, 'index.md');
     // 从index.md中读取标题
     const content = fs.readFileSync(indexPath, 'utf-8');
     const title = getTitle(content);
     const list = getList(content);
-    const obj = list.map((item) => ({
-      text: item.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
-      link: `/${category}/${file}/${item.replace(/\[([^\]]+)\]\((?:.*\/)?([^/.]+)\.\w+\)/g, '$2')}`
-    }));
+    let obj: { text: string; link: string }[] = [];
+    if (Array.isArray(list)) {
+      obj = list.map((item) => ({
+        text: item.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
+        link: `/${category}/${file}/${item.replace(/\[([^\]]+)\]\((?:.*\/)?([^/.]+)\.\w+\)/g, '$2')}`
+      }));
+    }
 
     categoryItems.push({
       text: title,
