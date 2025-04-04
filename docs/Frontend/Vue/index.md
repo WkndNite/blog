@@ -4,7 +4,7 @@ date: false
 author: false
 ---
 
-# [<span style="color:var(--vp-c-text-1)">Vue</span>](https://cn.vuejs.org/)
+# [Vue](https://cn.vuejs.org/)
 
 - [Vue3 里的 ref 和 reactive](./ref-reactive.md)
 - [谈一谈 Vue 中的虚拟 DOM](./virtual-dom.md)

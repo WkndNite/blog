@@ -65,7 +65,7 @@ export const nav = [
       },
       {
         text: '杂谈',
-        link: '/Frontend/Others/some'
+        link: '/Frontend/Others'
       }
     ]
   },
@@ -115,6 +115,6 @@ export const nav = [
       }
     ]
   },
-  { text: '个人作品', link: '/Works' },
-  { text: '生活随笔', link: '/Life/' }
+  { text: '生活感悟', items: [{ text: '随笔', link: '/Life/thought' }] },
+  { text: '个人作品', link: '/Works' }
 ];

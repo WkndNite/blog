@@ -4,7 +4,7 @@ date: false
 author: false
 ---
 
-# [<span style="color:var(--vp-c-text-1)">React</span>](https://zh-hans.react.dev/)
+# [React](https://zh-hans.react.dev/)
 
 - [字节 · 响应式系统与 React](./byte-react.md)
 - [React 核心概念（一）](./core-concepts-one.md)

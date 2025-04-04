@@ -13,5 +13,4 @@ author: false
 - [谈一谈 Post CSS](./PostCSS.md)
 - [如何抽离 CSS 文件](./CSS-Extract.md)
 - [Babel](./Babel.md)
-  <!-- - 类 async Babel -->
 - [性能优化](./Performance-Optimization.md)
