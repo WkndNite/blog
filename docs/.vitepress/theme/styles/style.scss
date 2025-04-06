@@ -20,6 +20,9 @@ body {
   font-weight: '700';
   cursor: url('./assets/default.cur'), auto;
   word-break: break-all;
+  -webkit-hyphens: auto; /* 针对 Safari 和 Chrome */
+  -moz-hyphens: auto; /* 针对 Firefox */
+  hyphens: auto; /* 标准属性 */
 }
 
 strong {
@@ -28,4 +31,8 @@ strong {
 
 .MathJax {
   overflow-y: hidden;
+}
+
+table {
+  white-space: nowrap;
 }

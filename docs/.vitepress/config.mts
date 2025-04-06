@@ -14,7 +14,6 @@ const RSS: RSSOptions = {
 };
 
 export default defineConfig({
-  ignoreDeadLinks: true,
   cleanUrls: true,
   markdown: {
     math: true,
@@ -33,7 +32,7 @@ export default defineConfig({
     codeCopyButtonTitle: '复制代码'
   },
   extends: blogTheme,
-  lang: 'zh-cn',
+  lang: 'en',
   title: '周末晚的岛屿',
   description: '宁鸣而死 不默而生',
   lastUpdated: true,

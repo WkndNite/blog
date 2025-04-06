@@ -68,5 +68,9 @@
   "insert image": {
     "prefix": "blog-image",
     "body": ["![alt](./assets$1)"]
+  },
+  "no-line-numbers": {
+    "prefix": "nln",
+    "body": [":no-line-numbers"]
   }
 }

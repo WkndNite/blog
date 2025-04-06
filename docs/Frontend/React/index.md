@@ -31,6 +31,8 @@ author: false
 - [Scheduler 调度普通任务](./scheduler-normal-task.md)
 - [Scheduler 调度延时任务](./scheduler-timeout-task.md)
 - [最小堆](./min-heap.md)
+- [React 中的位运算](./bitwise-operation.md)
+- [beginWork 工作流程](./beginwork-completework.md)
 - [Hook 原理](./hook.md)
 - [useState 和 useReducer](./useState-useReducer.md)
 - [effect 相关 Hooks](./effect-hooks.md)
