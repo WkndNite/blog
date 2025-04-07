@@ -51,7 +51,7 @@ for (const category of categories) {
 
     categoryItems.push({
       text: title,
-      collapsed: false,
+      collapsed: true,
       items: obj
     });
   }

@@ -26,19 +26,7 @@ export const nav = [
   {
     text: '前端漫游',
     items: [
-      { text: 'CSS', link: '/Frontend/CSS' },
-      {
-        text: 'JavaScript',
-        link: '/Frontend/JavaScript'
-      },
-      {
-        text: 'ESnext',
-        link: '/Frontend/ESnext'
-      },
-      {
-        text: 'TypeScript',
-        link: '/Frontend/TypeScript'
-      },
+      { text: '语言基础', link: '/Frontend/Basic' },
       {
         text: 'Webpack',
         link: '/Frontend/Webpack'
