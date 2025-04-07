@@ -44,7 +44,7 @@ function render(html) {
 
 ![alt](./assets/21160950_dbfee3fd-5e5d-4943-c1cd-ae97703f188d.png)
 
-对于这一部分，我在[另一篇文章](../CSS/computed.md)里已经有过说明，于是此处不再赘述。
+对于这一部分，我在[另一篇文章](/Frontend/Basic/computed)里已经有过说明，于是此处不再赘述。
 
 ### Layout
 
