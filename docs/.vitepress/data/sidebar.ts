@@ -23,7 +23,14 @@ function getList(content: string) {
 }
 
 const docsPath = path.resolve(__dirname, '../..');
-const filteredPathArray = ['index.md', '.vitepress', 'Nav', 'Works', 'public'];
+const filteredPathArray = [
+  'index.md',
+  '.vitepress',
+  'Nav',
+  'Works',
+  'public',
+  'Secret'
+];
 const categories = fs
   .readdirSync(docsPath)
   .filter((category) => !filteredPathArray.includes(category));

@@ -12,5 +12,5 @@ blog:
     - I would rather be lonely all my life than drift with the tide
   # 设置 inspiringTimeout 可以实现自动切换
   inspiringTimeout: 5000
-  pageSize: 9
+  pageSize: 12
 ---

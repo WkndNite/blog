@@ -651,7 +651,7 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: '开源共享',
+    title: '开源工具',
     items: [
       {
         title: 'Hello GitHub',
@@ -670,6 +670,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://fcb-docs.aiuo.net/',
         desc: '匿名口令分享文本，文件，像拿快递一样取文件',
         icon: 'https://fcb-docs.aiuo.net/logo_small.png'
+      },
+      {
+        title: 'ProcessOn',
+        link: 'https://www.processon.com/',
+        desc: '在线思维导图、流程图、原型图、UML、ER图、网络拓扑图',
+        icon: 'https://www.processon.com/favicon.ico'
       }
     ]
   }

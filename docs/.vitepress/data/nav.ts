@@ -6,23 +6,23 @@ export const nav = [
       { text: '流量管理', link: 'https://v6.51.la' }
     ]
   },
-  {
-    text: 'CS 基础',
-    items: [
-      {
-        text: 'LeetCode Hot 100',
-        link: '/CS/LeetCode-100'
-      },
-      {
-        text: '数据结构与算法',
-        link: '/CS/DSA'
-      },
-      {
-        text: '代码随想录',
-        link: '/CS/programmercarl'
-      }
-    ]
-  },
+  // {
+  //   text: 'CS 基础',
+  //   items: [
+  //     {
+  //       text: 'LeetCode Hot 100',
+  //       link: '/CS/LeetCode-100'
+  //     },
+  //     {
+  //       text: '数据结构与算法',
+  //       link: '/CS/DSA'
+  //     },
+  //     {
+  //       text: '代码随想录',
+  //       link: '/CS/programmercarl'
+  //     }
+  //   ]
+  // },
   {
     text: '前端漫游',
     items: [

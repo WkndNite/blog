@@ -13,6 +13,12 @@
     "lint": "textlint --fix .",
     "cz": "bun format && bun lint && git add . && git cz"
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git",
+      "useEmoji": true
+    }
+  },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "@sugarat/theme": "^0.5.4",
@@ -30,11 +36,14 @@
   "devDependencies": {
     "@mdit-vue/shared": "^2.1.3",
     "@theojs/lumen": "^5.4.0",
+    "cz-git": "^1.11.1",
     "markdown-it-mathjax3": "^4.3.2",
     "nprogress-v2": "^1.1.10",
     "pagefind": "^1.1.1",
     "prettier-plugin-organize-imports": "^4.1.0",
     "sass": "^1.76.0",
+    "textlint": "^14.6.0",
+    "textlint-rule-ja-space-between-half-and-full-width": "^2.4.2",
     "typescript": "^5.4.5",
     "vitepress": "^1.6.3",
     "vue-tsc": "^2.2.8"
