@@ -6,7 +6,7 @@ publish: false
 
 # 编译原理：90% 的人根本没懂却硬着头皮过了
 
-> [!NOTE] 这是什么样的一门课？
+> [!NOTE] 🤔 这是什么样的一门课？
 > 说它不难吧，它还确实难；可你要说它没用，那你说对了。
 >
 > 你问我考试怎么办？编译原理、编译原理，靠编呗。
@@ -23,7 +23,7 @@ publish: false
 
 ## 第一章 引论
 
-> [!Important] 重难点
+> [!Important] ⛺ 重难点
 > 重点：编译系统的结构和编译程序的生成
 >
 > 难点：编译程序的生成
@@ -40,7 +40,7 @@ publish: false
 
 编译程序就是完整地把一份代码转化为更接近底层的，比如高级程序语言被编译成汇编语言或者机器语言，可以类比为通篇翻译。
 
-:::tip
+:::tip 📌 提示
 
 1. 编译程序，再加上运行系统，就能组成编译系统。
 2. 这里只列出了这两种翻译程序，只是因为高级程序语言向可执行文件的转化包括这两种。下面再列出几种翻译程序：
@@ -54,7 +54,7 @@ publish: false
 
 ### 编译程序总体结构
 
-:::warning 注意
+:::warning ⚠️ 注意
 下面实际上说的是编译程序的流程，所以如果谈及程序结构，你应该说的是词法分析器、语法分析器……
 :::
 
@@ -75,7 +75,7 @@ publish: false
 
 > 事实上，可以把前三步划分进分析模块，中间两步划分为综合模块，最后两步是辅助模块。
 
-:::details 如果上面这几点还是没看懂，可以看下面这个具体的例子
+:::details 🌰 举个栗子
 
 1. 我们规定一段高级程序语言（如 C 语言）并对其做[词法分析](https://wgrape.github.io/lexer/?lang=c&codearea=editor)。
 
@@ -93,7 +93,7 @@ publish: false
 
 :::
 
-:::details 补充信息
+:::details 🔍 补充信息
 
 1. 中间代码的优点：简单规范、与机器无关、易于优化和转换；
 2. 关于代码优化的一些装\*用语：
@@ -133,7 +133,7 @@ publish: false
 
 ![alt text](./assets/4.png)
 
-:::details 下面的问答可能会有些烧脑，建议多次理解，如果还是不懂就请 GPT 大人吧……
+:::details 🌰 下面的问答可能会有些烧脑，建议多次理解，如果还是不懂就请 GPT 大人吧……
 
 🌶️ 如何生成一个编译程序？
 
@@ -180,3 +180,344 @@ C 语言编译器就是输入一段 C 语言，得到一个可执行。那我们
 | 输出 | 词法分析程序（C 程序）<br>yylex() 函数             | 语法分析程序（C 程序）<br>yyparse() 函数       |
 
 :::
+
+## 第二章 高级语言及其文法
+
+> [!Important] ⛺️ 重难点
+>
+> 重点：文法的定义与分类、CFG 的语法树及二义性、程序设计语言的定义
+>
+> 难点：程序设计语言的语义
+
+### 语言概述
+
+1. 语言是一定的群体用来进行信息交流的工具。
+
+   语言的基础包括 `字(最小单位)` 和 `规则(生成规则和理解规则)`。
+
+2. 自然语言和计算机语言的对比
+
+   | 语言种类 | 自然语言                         | 计算机语言                           |
+   | -------- | -------------------------------- | ------------------------------------ |
+   | 定义     | 人与人之间的通信工具             | 计算机系统间以及人与系统间的通信工具 |
+   | 特征     | 语法和语义不严格<br>不容易形式化 | 语法和语义严格<br>易于形式化         |
+
+3. 语言的描述方法分为 `自然语言描述` 和 `数学语言描述`（对照上面表格），前者自然方便且非形式化，后者严格准确且形式化。
+
+   综合二者优点，可以得到新的一种方法 —— `形式化描述`，其特点是：高度抽象、具有严格的理论基础和方便的计算机表示。
+
+4. 经过形式化的内容提取，一般的语言可以得到三部分，分别是 `语言`、`句子`、`单词`，含义分别为满足一定规则的句子集合、单词序列、字符串。
+
+   程序设计语言则分为四个部分，`程序设计语言`、`程序`、`语句` 和 `单词`。含义分别为组成程序的所有语句的集合、满足语法规则的语句序列、满足语法规则的单词序列、满足词法规则的字符串。
+
+5. 词法，单词的组成规则，可以通过 BNF 范式、正规式等描述；
+
+   语法，语句的组成规则，可以通过 BNF 范式、语法（描述）图等描述。
+
+6. 形式语言与自动机理论的产生和作用，这一 part 感觉没什么……
+
+   - 文法与自动机具有等价性。
+   - 巴克斯范式是上下文无关文法的一种表示方式。
+
+### 基本定义
+
+1. `字母表`，是一个非空有穷集合，其中元素被称为字母/字符，元素具有整体性和可辨认性。
+2. `字母表的乘积`，定义为所有元素之间的全排列。
+
+   $$ \Sigma_0 = \{0, 1\} $$
+   $$ \Sigma_1 = \{a, b\} $$
+   $$ \Sigma_0 = \{0a, 1a, 0b, 1b\} $$
+
+3. `字母表的幂`，定义为递归排列，0 次幂定义为空语句。
+
+   $$ \Sigma^0 = \{\varepsilon\} $$
+
+   $$
+   \Sigma^n = \Sigma^{n-1} \Sigma,\quad n \geq 1
+   $$
+
+   $$\Sigma_1^3 = \{000, 001, 010, 011, 100, 101, 110, 111\}$$
+
+4. `字母表的正闭包和克林闭包`，定义如下：
+
+   $$
+   \Sigma^+ = \bigcup_{n=1}^{\infty} \Sigma^n
+   $$
+
+   $$
+       \Sigma^* = \bigcup_{n=0}^{\infty} \Sigma^n = \Sigma^+ \cup \Sigma^0 = \Sigma^0 \cup \{\varepsilon\}
+   $$
+
+5. 设 $\Sigma$ 是一个字母表，$\forall x \in \Sigma^*$，$x$ 称作是字母表上的一个 `句子`，$\varepsilon$ 是 `空句子`。
+6. 设 $\Sigma$ 是一个字母表，$\forall x,y \in \Sigma^*,a \in \Sigma$，$xay$ 中的 $a$ 称作 $a$ 在该句子中的一个 `出现`。
+7. 设 $\Sigma$ 是一个字母表，$\forall x \in \Sigma^*$，句子 $x$ 中字符出现的总个数叫做该字符的 `长度`，记作 $\left| x \right|$。
+8. 设 $\Sigma$ 是一个字母表，$\forall x,y \in \Sigma^*$，$x,y$ 的 `并置/联结` 就是两个串直接相连的结果，记作 $xy$。
+9. 设 $\Sigma$ 是一个字母表，$\forall x,y,z \in \Sigma^*$：
+
+   如果 $x = yz$，$y$ 是 $x$ 的 `前缀`，$z$ 是 $x$ 的 `后缀`；
+
+   如果 $z \neq \varepsilon$，$y$ 是 $x$ 的 `真前缀`；如果 $y \neq \varepsilon$，$z$ 是 $x$ 的 `真后缀`。
+
+   > $前缀 = 真前缀 \cup 句子本身 \quad 后缀 = 真后缀 \cup 句子本身$
+
+10. 设 $\Sigma$ 是一个字母表，$\forall x,y,z,w,v \in \Sigma^*$：
+
+    如果 $x = yz, w = yv$，称 $y$ 是 $x$ 和 $w$ 的 `公共前缀`，公共前缀中最长的就是 `最大公共前缀`；
+
+    如果 $x = zy, w = vy$，称 $y$ 是 $x$ 和 $w$ 的 `公共后缀`，公共前缀中最长的就是 `最大公共后缀`。
+
+11. 设 $\Sigma$ 是一个字母表，$\forall w，x,y,z \in \Sigma^*$，如果 $w = xyz$，则称 $y$ 是 $w$ 的一个 `子串`。
+12. 设 $\Sigma$ 是一个字母表，$\forall t,u,v,w，x,y,z \in \Sigma^*$：
+
+    如果 $t = uvy,w = xyz$，则称 $y$ 是 $t$ 和 $w$ 的一个 `公共子串`;
+
+    同理，所有公共子串中最长的就是 `最大公共子串`。
+
+13. 设 $\Sigma$ 是一个字母表，$\forall L \subsetneq \Sigma^*$，$L$ 称作是字母表上的一个 `语言`，其中的元素就是 `句子`。
+
+### 文法的定义
+
+🔖 这一节主要分为两个 part，定义句子规则和使用句子规则。
+
+🔖 换句话说，`确定一套文法`，然后 `利用这套文法判断一个句子属于一种语言`。
+
+1. 文法的出现是为了实现语言结构的形式化描述，采用 $左部量 = 右部表达式$ 的赋值语句结构。
+2. `定义句子规则的语法组成`，又可以分为`开始符号`、`语法规则`、`非终结符号集` 和 `终结符号集`。
+3. `文法形式`，$G = (V, T, P, S)$：
+
+   V：非终结符号集，每个非终结符称为一个语法变量，代表某个语言的各种子结构；
+
+   T：语言的句子中出现的字符，$V \cap T = \emptyset$；
+
+   S：代表文法定义的语言，至少在左侧出现一次，$S \in V$；
+
+   P：产生式/定义式集合，定义各个语法成分的结构（组成规则）。元素形如 $\alpha \Rightarrow \beta$，表示 $\alpha$ 被定义为 $\beta$。其中，$\alpha \in (V \cup T)^+$，$\beta \in (V \cup T)^*$，且 $\alpha$ 中至少要有 $V$ 中一个元素出现。$\alpha$ 和 $\beta$ 分别被称为该产生式的左部和右部。
+
+4. `产生式是可以简写的`，$\alpha \Rightarrow \beta_1 \mid \beta_2 \mid \ldots \mid \beta_n$ 是 $\alpha \Rightarrow \beta_1, \alpha \Rightarrow \beta_2, \ldots, \alpha \Rightarrow \beta_n$ 的简写，$\beta_1, \beta_2, \ldots, \beta_n$ 称为 `候选式`。
+5. 对一个文法 $G = (V, T, P, S)$，可以只列出该文法的所有产生式，且所列的第一个产生式的左部是该文法的开始符号。
+6. 一般来讲，大写字母表示语法变量，小写字母表示终结符号。
+
+🔖 接下来就是 part two。
+
+1. 设 $G = (V, T, P, S)$ 是一个文法，如果 $\alpha \Rightarrow \beta \in P, \gamma, \delta \in (V \cup T)^*$，则称 $\gamma \alpha \delta$ 在 $G$ 中 `直接推导` 出 $\gamma \beta \delta$ ，$\gamma \beta \delta$ 在 $G$ 中 `直接归约` 出 $\gamma \alpha \delta$。记作 $\gamma \alpha \delta \xRightarrow[\scriptsize G]{} \gamma \beta \delta$, $\gamma \beta \delta \xLeftarrow[\scriptsize G]{} \gamma \alpha \delta$，意义明确时可以省略箭头下方的 $G$。
+
+   > 在不特别强调推导/归约的直接性时，`直接推导` 可以简称为 `推导或派生`，`直接归约` 可以简称为 `归约`。将 $\gamma \alpha \delta$ 中的 $\alpha$ 变成了 $\beta$（或相反），$\gamma$ 和 $\delta$ 都没有变化，所以又称将 $\alpha$ 推导成 $\beta$ 或 将 $\beta$ 归约成 $\alpha$。
+
+2. 若存在多步推导，比如 $\alpha_0 \Rightarrow \alpha_1 \Rightarrow \alpha_2 \Rightarrow \ldots \Rightarrow \alpha_n$，可以记作：
+
+   $$
+      \alpha_0 \xRightarrow{n} \alpha_n, \quad 恰好经过 n 步 推导
+   $$
+
+   $$
+      \alpha_0 \xRightarrow{+} \alpha_n, \quad 至少经过一步推导
+   $$
+
+   $$
+      \alpha_0 \xRightarrow{*} \alpha_n, \quad 经过了若干步推导且可为 0 次
+   $$
+
+3. 若存在多步归约……
+
+🔖 Part two 除了如何利用文法，还讲到了利用文法产生的是什么。
+
+1. 设 $G = (V，T，P，S)$ 是一个文法，对于 $\forall A \in V$，令 $L(A) = \left\{ x \mid A \xRightarrow[]{+} x,\ x \in T^* \right\}$，$L(A)$ 就是语法变量 $A$ 所代表的集合。
+2. 设 $G = (V，T，P，S)$ 是一个文法，令 $L(G) = \left\{ w \mid S \xRightarrow[]{*} w,\ w \in T^* \right\}$，$L(G)$ 就是文法 $G$ 所产生的 `语言`，$\forall w \in L(G)$，$w$ 称为 $G$ 产生的一个 `句子`。
+
+   > 显然，对于任意一个文法 $G$，$G$ 产生的语言 $L(G)$ 就是该文法的开始符号 $S$ 所代表的集合 $L(S)$。
+
+3. 设文法 $G = (V, T, P, S)$，对于 $\forall \alpha \in (V \cup T)^*$，如果 $S \xRightarrow{*} \alpha$，则称 $\alpha$ 是 $G$ 产生的一个 `句型`。
+
+   :::tip 📌 句子和句型的区别
+
+   1. 句子满足的条件是 $\forall w \in T^*$，而句型满足的条件是 $\forall \alpha \in (V \cup T)^*$ 。
+   2. 句子推导出的不包含语法变量，句型可能包含语法变量。
+   3. 句子一定是句型，句型不一定是句子。
+
+   :::
+
+### 文法的分类
+
+⚡️ 这一部分被称为 `乔姆斯基体系`。
+
+根据语言结构的复杂程度，可以分为 `0 型文法`、`1 型文法`、`2 型文法` 和 `3 型文法`，分别又被称作 `短语结构文法`、`上下文有关文法`、`上下文无关文法` 和 `正规文法`。
+
+:::info ⛽️ 语言结构的复杂程度
+
+1. 文法的复杂程度
+2. 分析方法的选择
+3. 这套文法能描述语言的能力强弱
+
+:::
+
+| 分类     | 0 型文法                                          | 1 型文法                                         | 2 型文法                             | 3型文法                                                       |
+| -------- | ------------------------------------------------- | ------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------- |
+| 名称     | PSG                                               | CSG                                              | CFG                                  | RG                                                            |
+| 语言类型 | PSL                                               | CSL                                              | CFL                                  | RL                                                            |
+| 定义     | 满足文法定义的要求                                | 右部长度不小于左部                               | 右部长度比左部大<br>左部是非终结符号 | 左线型文法或右线型文法                                        |
+| 文法形式 | $\alpha \Rightarrow \beta$                        | $\alpha A \beta \Rightarrow \alpha \gamma \beta$ | $A \Rightarrow \beta$                | $A \Rightarrow aB$<br>$A \Rightarrow a$<br>$A \Rightarrow Ba$ |
+| 左部限制 | $\alpha \in (V \cup T)^+$<br>且含至少一个非终结符 | 长度小                                           | 只能是单个非终结符 $A$               | 只能是单个非终结符 $A$                                        |
+| 右部限制 | 无                                                | 长度大或相等                                     | 任意符号串（可以为空串）             | 一个终结符和一个非终结符<br>或者只是一个终结符                |
+
+:::warning ⚠️ 注意
+必须是该文法中所有产生式都满足对应条件，才能被分入某一文法的分类中。
+:::
+
+:::tip 📌 和高级程序设计语言的关联
+
+1. CFG 能描述程序设计语言的多数语法成分。
+2. RL 能描述程序设计语言的多数单词。
+3. 左线性文法和右线性文法等价，只是识别句子的方向不同。
+4. 两种线型文法等价，进而对应的语言也等价。
+5. $RG \subset CFG \subset CSG \subset PSG,\quad RL \subset CFL \subset CSL \subset PSL$
+
+:::
+
+:::details 🌰 一些判断
+$G_1 : S \Rightarrow 0 \mid 1 \mid 00 \mid 11$
+
+$G_2 : S \Rightarrow A \mid B \mid AA \mid BB, \quad A \Rightarrow 0, \quad B \Rightarrow 1$
+
+$G_3 : S \Rightarrow 0 \mid 1 \mid 0A \mid 1B, \quad A \Rightarrow 0, \quad B \Rightarrow 1$
+
+$G_4 : S \Rightarrow A \mid B \mid BC, \quad A \Rightarrow 0, \quad B \Rightarrow 1,\quad C \Rightarrow 21,\quad C \Rightarrow 11,\quad C \Rightarrow 2$
+
+$G_5 : S \Rightarrow 0 \mid 0S$
+
+$G_6 : S \Rightarrow \varepsilon \mid 0S$
+
+$G_7 : S \Rightarrow \varepsilon \mid 00S111$
+
+$G_8 : A \Rightarrow aS \mid bS \mid cS \mid a \mid b \mid c$
+
+$G_9 :$
+
+$$
+S \Rightarrow 0A \mid 1B \mid 2C \mid 0SA \mid 1SB \mid 2SC
+$$
+
+$$
+0A \Rightarrow A0,\quad 1A \Rightarrow A1,\quad 2A \Rightarrow A2
+$$
+
+$$
+0B \Rightarrow B0,\quad 1B \Rightarrow B1,\quad 2B \Rightarrow B2
+$$
+
+$$
+0C \Rightarrow C0,\quad 1C \Rightarrow C1,\quad 2C \Rightarrow C2
+$$
+
+$G_10 :$
+
+$$
+S \Rightarrow aT \mid bT \mid cT
+$$
+
+$$
+T \Rightarrow \varepsilon \mid a \mid b \mid c \mid 0 \mid 1 \mid 2 \mid 3  \mid aT \mid bT \mid cT \mid 0T \mid 1T \mid 2T \mid 3T
+$$
+
+🔑 答案为 32323 32313。
+
+❗️ 注意 1/2/3 型文法允许空语句存在。
+:::
+
+:::details 🌰 构造语言 $\left\{ 123456 \right\}$ 的 $G_{left/right}$
+
+$G_{left} :$
+
+$$
+S_{left} \Rightarrow A_{left}6
+$$
+
+$$
+A_{left} \Rightarrow B_{left}5
+$$
+
+$$
+B_{left} \Rightarrow C_{left}4
+$$
+
+$$
+C_{left} \Rightarrow D_{left}3
+$$
+
+$$
+D_{left} \Rightarrow E_{left}2
+$$
+
+$$
+E_{left} \Rightarrow 1
+$$
+
+$G_{right} :$
+
+$$
+S_{right} \Rightarrow 1A_{lright}
+$$
+
+$$
+A_{lefright} \Rightarrow 2B_{lefright}
+$$
+
+$$
+B_{lefright} \Rightarrow 3C_{lefright}
+$$
+
+$$
+C_{lefright} \Rightarrow 4D_{lefright}
+$$
+
+$$
+D_{lefright} \Rightarrow 5E_{lefright}
+$$
+
+$$
+E_{lefright} \Rightarrow 6
+$$
+
+:::
+
+### CFG 语法树
+
+> 语法树存在的目的，是为了更清晰地表示文法的结构以及推导和归约的过程。
+
+1. `基本定义`：用树的形式表示句型的生成。树根就是开始符号，中间节点代表非终结符，叶节点可能是终结符或非终结符的一种。其中，每个推导都代表一个中间节点及其孩子集合。CFG 语法树又叫做分析树、推导树或者派生树。
+2. 设有 CFG 满足：
+
+   $$
+      G = (V, T, P, S)
+   $$
+
+   $$
+      \exists \alpha,\beta,\gamma \in (V \cup T)^* \quad 实现 \quad S \xRightarrow{*} \gamma A \beta \quad 且 \quad A \xRightarrow{+} \alpha
+   $$
+
+   则称 $\alpha$ 是句型 $\gamma \alpha \beta$ 相对于变量 $A$ 的 `短语`。
+
+   如果 $A \Rightarrow \alpha$，则称为 `直接短语`。
+
+3. 对于一个 CFG，$G$ 的 `最左直接短语` 叫做 `句柄`。
+
+   :::info ⛽️ 子树解释短语/直接短语/句柄
+
+   - 短语：一棵子树的所有叶子自左至右排列起来形成一个相对于子树根的短语。
+   - 直接短语：仅有父子两代的一棵子树，它的所有叶子自左至右排列起来所形成的符号串。
+   - 句柄：一个句型的分析树中最左那棵只有父子两代的子树的所有叶子的自左至右排列。
+
+   :::
+
+4. 基于最左/最右变量的推导可以被叫做 `最左/右推导`，分别与 `最右/左归约` 对应 ，过程中得到的句型叫做 `最左/右句型`。
+
+   > 最左归约也被称作 `规范归约`。
+
+   :::warning ⚠️ 注意
+   最左归约与最右归约针对的都是 **直接短语**！！！
+   :::
+
+5. 如果一个文法的句子存在两棵分析树，那么该句子是二义性的。如果一个文法包含二义性的句子，则称这个文法是二义性的。
+
+   <mark>通过提升一些运算符的优先级，可以达到消除二义性的目的。</mark>
+
+   <mark>但有的情况消除之后句式复杂，在能驾驭的情况下可以使用二义性句子。</mark>

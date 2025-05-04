@@ -72,5 +72,17 @@
   "no-line-numbers": {
     "prefix": "nln",
     "body": [":no-line-numbers"]
-  }
+  },
+  "latex":{
+    "prefix": "latex",
+    "body": ["$$", "$1", "$$"]
+  },
+    "inline-latex": {
+      "prefix": "ilx",
+      "body": ["$${1}$"]
+    },
+    "mark":{
+      "prefix": "mark",
+      "body": ["<mark>$1</mark>"]
+    },
 }
