@@ -29,7 +29,8 @@ const filteredPathArray = [
   'Nav',
   'Works',
   'public',
-  'Secret'
+  'Secret',
+  'CS'
 ];
 const categories = fs
   .readdirSync(docsPath)

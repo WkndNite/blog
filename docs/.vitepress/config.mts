@@ -70,7 +70,7 @@ export default defineConfig({
       gtag('config', 'G-095CYQ2P6C');
     `
     ],
-    ['link', { rel: 'icon', href: '/logo.svg' }],
+    ['link', { rel: 'icon', href: '/svg/logo.svg' }],
     [
       'link',
       {
@@ -88,7 +88,7 @@ export default defineConfig({
     sidebarMenuLabel: '相关文章',
     lastUpdatedText: '上次更新于',
 
-    logo: '/logo.svg',
+    logo: '/svg/logo.svg',
     socialLinks: [
       {
         icon: 'github',

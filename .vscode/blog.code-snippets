@@ -85,4 +85,8 @@
       "prefix": "mark",
       "body": ["<mark>$1</mark>"]
     },
+    "bilibili-video":{
+      "prefix":"bv",
+      "body": ["<VideoPlayer platform='bilibili' src='$1' episode='$2' />"]
+    }
 }

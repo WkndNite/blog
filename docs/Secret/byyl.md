@@ -185,9 +185,13 @@ C 语言编译器就是输入一段 C 语言，得到一个可执行。那我们
 
 > [!Important] ⛺️ 重难点
 >
-> 重点：文法的定义与分类、CFG 的语法树及二义性、程序设计语言的定义
+> 重点：文法的定义与分类、CFG 的语法树及二义性、程序设计语言的定义。
 >
-> 难点：程序设计语言的语义
+> 难点：程序设计语言的语义。
+
+:::warning ⚠️ 注意
+本章节开始后续书写的是 Latex 语法，$\rightarrow$ 和 $\Rightarrow$ 若有不对请多包涵，也可底部留言 or 联系修正。
+:::
 
 ### 语言概述
 
@@ -291,15 +295,15 @@ C 语言编译器就是输入一段 C 语言，得到一个可执行。那我们
 
    S：代表文法定义的语言，至少在左侧出现一次，$S \in V$；
 
-   P：产生式/定义式集合，定义各个语法成分的结构（组成规则）。元素形如 $\alpha \Rightarrow \beta$，表示 $\alpha$ 被定义为 $\beta$。其中，$\alpha \in (V \cup T)^+$，$\beta \in (V \cup T)^*$，且 $\alpha$ 中至少要有 $V$ 中一个元素出现。$\alpha$ 和 $\beta$ 分别被称为该产生式的左部和右部。
+   P：产生式/定义式集合，定义各个语法成分的结构（组成规则）。元素形如 $\alpha \rightarrow \beta$，表示 $\alpha$ 被定义为 $\beta$。其中，$\alpha \in (V \cup T)^+$，$\beta \in (V \cup T)^*$，且 $\alpha$ 中至少要有 $V$ 中一个元素出现。$\alpha$ 和 $\beta$ 分别被称为该产生式的左部和右部。
 
-4. `产生式是可以简写的`，$\alpha \Rightarrow \beta_1 \mid \beta_2 \mid \ldots \mid \beta_n$ 是 $\alpha \Rightarrow \beta_1, \alpha \Rightarrow \beta_2, \ldots, \alpha \Rightarrow \beta_n$ 的简写，$\beta_1, \beta_2, \ldots, \beta_n$ 称为 `候选式`。
+4. `产生式是可以简写的`，$\alpha \rightarrow \beta_1 \mid \beta_2 \mid \ldots \mid \beta_n$ 是 $\alpha \rightarrow \beta_1, \alpha \rightarrow \beta_2, \ldots, \alpha \rightarrow \beta_n$ 的简写，$\beta_1, \beta_2, \ldots, \beta_n$ 称为 `候选式`。
 5. 对一个文法 $G = (V, T, P, S)$，可以只列出该文法的所有产生式，且所列的第一个产生式的左部是该文法的开始符号。
 6. 一般来讲，大写字母表示语法变量，小写字母表示终结符号。
 
 🔖 接下来就是 part two。
 
-1. 设 $G = (V, T, P, S)$ 是一个文法，如果 $\alpha \Rightarrow \beta \in P, \gamma, \delta \in (V \cup T)^*$，则称 $\gamma \alpha \delta$ 在 $G$ 中 `直接推导` 出 $\gamma \beta \delta$ ，$\gamma \beta \delta$ 在 $G$ 中 `直接归约` 出 $\gamma \alpha \delta$。记作 $\gamma \alpha \delta \xRightarrow[\scriptsize G]{} \gamma \beta \delta$, $\gamma \beta \delta \xLeftarrow[\scriptsize G]{} \gamma \alpha \delta$，意义明确时可以省略箭头下方的 $G$。
+1. 设 $G = (V, T, P, S)$ 是一个文法，如果 $\alpha \rightarrow \beta \in P, \gamma, \delta \in (V \cup T)^*$，则称 $\gamma \alpha \delta$ 在 $G$ 中 `直接推导` 出 $\gamma \beta \delta$ ，$\gamma \beta \delta$ 在 $G$ 中 `直接归约` 出 $\gamma \alpha \delta$。记作 $\gamma \alpha \delta \xRightarrow[\scriptsize G]{} \gamma \beta \delta$, $\gamma \beta \delta \xLeftarrow[\scriptsize G]{} \gamma \alpha \delta$，意义明确时可以省略箭头下方的 $G$。
 
    > 在不特别强调推导/归约的直接性时，`直接推导` 可以简称为 `推导或派生`，`直接归约` 可以简称为 `归约`。将 $\gamma \alpha \delta$ 中的 $\alpha$ 变成了 $\beta$（或相反），$\gamma$ 和 $\delta$ 都没有变化，所以又称将 $\alpha$ 推导成 $\beta$ 或 将 $\beta$ 归约成 $\alpha$。
 
@@ -321,8 +325,8 @@ C 语言编译器就是输入一段 C 语言，得到一个可执行。那我们
 
 🔖 Part two 除了如何利用文法，还讲到了利用文法产生的是什么。
 
-1. 设 $G = (V，T，P，S)$ 是一个文法，对于 $\forall A \in V$，令 $L(A) = \left\{ x \mid A \xRightarrow[]{+} x,\ x \in T^* \right\}$，$L(A)$ 就是语法变量 $A$ 所代表的集合。
-2. 设 $G = (V，T，P，S)$ 是一个文法，令 $L(G) = \left\{ w \mid S \xRightarrow[]{*} w,\ w \in T^* \right\}$，$L(G)$ 就是文法 $G$ 所产生的 `语言`，$\forall w \in L(G)$，$w$ 称为 $G$ 产生的一个 `句子`。
+1. 设 $G = (V, T, P, S)$ 是一个文法，对于 $\forall A \in V$，令 $L(A) = \left\{ x \mid A \xRightarrow[]{+} x,\ x \in T^* \right\}$，$L(A)$ 就是语法变量 $A$ 所代表的集合。
+2. 设 $G = (V, T, P, S)$ 是一个文法，令 $L(G) = \left\{ w \mid S \xRightarrow[]{*} w,\ w \in T^* \right\}$，$L(G)$ 就是文法 $G$ 所产生的 `语言`，$\forall w \in L(G)$，$w$ 称为 $G$ 产生的一个 `句子`。
 
    > 显然，对于任意一个文法 $G$，$G$ 产生的语言 $L(G)$ 就是该文法的开始符号 $S$ 所代表的集合 $L(S)$。
 
@@ -355,7 +359,7 @@ C 语言编译器就是输入一段 C 语言，得到一个可执行。那我们
 | 名称     | PSG                                               | CSG                                              | CFG                                  | RG                                                            |
 | 语言类型 | PSL                                               | CSL                                              | CFL                                  | RL                                                            |
 | 定义     | 满足文法定义的要求                                | 右部长度不小于左部                               | 右部长度比左部大<br>左部是非终结符号 | 左线型文法或右线型文法                                        |
-| 文法形式 | $\alpha \Rightarrow \beta$                        | $\alpha A \beta \Rightarrow \alpha \gamma \beta$ | $A \Rightarrow \beta$                | $A \Rightarrow aB$<br>$A \Rightarrow a$<br>$A \Rightarrow Ba$ |
+| 文法形式 | $\alpha \rightarrow \beta$                        | $\alpha A \beta \rightarrow \alpha \gamma \beta$ | $A \rightarrow \beta$                | $A \rightarrow aB$<br>$A \rightarrow a$<br>$A \rightarrow Ba$ |
 | 左部限制 | $\alpha \in (V \cup T)^+$<br>且含至少一个非终结符 | 长度小                                           | 只能是单个非终结符 $A$               | 只能是单个非终结符 $A$                                        |
 | 右部限制 | 无                                                | 长度大或相等                                     | 任意符号串（可以为空串）             | 一个终结符和一个非终结符<br>或者只是一个终结符                |
 
@@ -374,48 +378,48 @@ C 语言编译器就是输入一段 C 语言，得到一个可执行。那我们
 :::
 
 :::details 🌰 一些判断
-$G_1 : S \Rightarrow 0 \mid 1 \mid 00 \mid 11$
+$G_1 : S \rightarrow 0 \mid 1 \mid 00 \mid 11$
 
-$G_2 : S \Rightarrow A \mid B \mid AA \mid BB, \quad A \Rightarrow 0, \quad B \Rightarrow 1$
+$G_2 : S \rightarrow A \mid B \mid AA \mid BB, \quad A \rightarrow 0, \quad B \rightarrow 1$
 
-$G_3 : S \Rightarrow 0 \mid 1 \mid 0A \mid 1B, \quad A \Rightarrow 0, \quad B \Rightarrow 1$
+$G_3 : S \rightarrow 0 \mid 1 \mid 0A \mid 1B, \quad A \rightarrow 0, \quad B \rightarrow 1$
 
-$G_4 : S \Rightarrow A \mid B \mid BC, \quad A \Rightarrow 0, \quad B \Rightarrow 1,\quad C \Rightarrow 21,\quad C \Rightarrow 11,\quad C \Rightarrow 2$
+$G_4 : S \rightarrow A \mid B \mid BC, \quad A \rightarrow 0, \quad B \rightarrow 1,\quad C \rightarrow 21,\quad C \rightarrow 11,\quad C \rightarrow 2$
 
-$G_5 : S \Rightarrow 0 \mid 0S$
+$G_5 : S \rightarrow 0 \mid 0S$
 
-$G_6 : S \Rightarrow \varepsilon \mid 0S$
+$G_6 : S \rightarrow \varepsilon \mid 0S$
 
-$G_7 : S \Rightarrow \varepsilon \mid 00S111$
+$G_7 : S \rightarrow \varepsilon \mid 00S111$
 
-$G_8 : A \Rightarrow aS \mid bS \mid cS \mid a \mid b \mid c$
+$G_8 : A \rightarrow aS \mid bS \mid cS \mid a \mid b \mid c$
 
 $G_9 :$
 
 $$
-S \Rightarrow 0A \mid 1B \mid 2C \mid 0SA \mid 1SB \mid 2SC
+S \rightarrow 0A \mid 1B \mid 2C \mid 0SA \mid 1SB \mid 2SC
 $$
 
 $$
-0A \Rightarrow A0,\quad 1A \Rightarrow A1,\quad 2A \Rightarrow A2
+0A \rightarrow A0,\quad 1A \rightarrow A1,\quad 2A \rightarrow A2
 $$
 
 $$
-0B \Rightarrow B0,\quad 1B \Rightarrow B1,\quad 2B \Rightarrow B2
+0B \rightarrow B0,\quad 1B \rightarrow B1,\quad 2B \rightarrow B2
 $$
 
 $$
-0C \Rightarrow C0,\quad 1C \Rightarrow C1,\quad 2C \Rightarrow C2
+0C \rightarrow C0,\quad 1C \rightarrow C1,\quad 2C \rightarrow C2
 $$
 
 $G_10 :$
 
 $$
-S \Rightarrow aT \mid bT \mid cT
+S \rightarrow aT \mid bT \mid cT
 $$
 
 $$
-T \Rightarrow \varepsilon \mid a \mid b \mid c \mid 0 \mid 1 \mid 2 \mid 3  \mid aT \mid bT \mid cT \mid 0T \mid 1T \mid 2T \mid 3T
+T \rightarrow \varepsilon \mid a \mid b \mid c \mid 0 \mid 1 \mid 2 \mid 3  \mid aT \mid bT \mid cT \mid 0T \mid 1T \mid 2T \mid 3T
 $$
 
 🔑 答案为 32323 32313。
@@ -428,53 +432,53 @@ $$
 $G_{left} :$
 
 $$
-S_{left} \Rightarrow A_{left}6
+S_{left} \rightarrow A_{left}6
 $$
 
 $$
-A_{left} \Rightarrow B_{left}5
+A_{left} \rightarrow B_{left}5
 $$
 
 $$
-B_{left} \Rightarrow C_{left}4
+B_{left} \rightarrow C_{left}4
 $$
 
 $$
-C_{left} \Rightarrow D_{left}3
+C_{left} \rightarrow D_{left}3
 $$
 
 $$
-D_{left} \Rightarrow E_{left}2
+D_{left} \rightarrow E_{left}2
 $$
 
 $$
-E_{left} \Rightarrow 1
+E_{left} \rightarrow 1
 $$
 
 $G_{right} :$
 
 $$
-S_{right} \Rightarrow 1A_{lright}
+S_{right} \rightarrow 1A_{lright}
 $$
 
 $$
-A_{lefright} \Rightarrow 2B_{lefright}
+A_{lefright} \rightarrow 2B_{lefright}
 $$
 
 $$
-B_{lefright} \Rightarrow 3C_{lefright}
+B_{lefright} \rightarrow 3C_{lefright}
 $$
 
 $$
-C_{lefright} \Rightarrow 4D_{lefright}
+C_{lefright} \rightarrow 4D_{lefright}
 $$
 
 $$
-D_{lefright} \Rightarrow 5E_{lefright}
+D_{lefright} \rightarrow 5E_{lefright}
 $$
 
 $$
-E_{lefright} \Rightarrow 6
+E_{lefright} \rightarrow 6
 $$
 
 :::
@@ -496,7 +500,7 @@ $$
 
    则称 $\alpha$ 是句型 $\gamma \alpha \beta$ 相对于变量 $A$ 的 `短语`。
 
-   如果 $A \Rightarrow \alpha$，则称为 `直接短语`。
+   如果 $A \rightarrow \alpha$，则称为 `直接短语`。
 
 3. 对于一个 CFG，$G$ 的 `最左直接短语` 叫做 `句柄`。
 
@@ -525,9 +529,9 @@ $$
 ## 第三章 词法分析
 
 > [!Important] ⛺ 重难点
-> 重点：词法分析器的输入、输出，用于识别符号的状态转移图的构造，根据状态转移图实现词法分析器
+> 重点：词法分析器的输入、输出，用于识别符号的状态转移图的构造，根据状态转移图实现词法分析器。
 >
-> 难点：词法的正规文法表示、正规表达式表示、状态转移图表示，以及它们之间的转换
+> 难点：词法的正规文法表示、正规表达式表示、状态转移图表示，以及它们之间的转换。
 
 ### 词法分析器的功能
 
@@ -607,4 +611,199 @@ $$
 
 ### 单词的描述
 
-……
+> 单词是程序设计语言的基本语法单位。
+>
+> 如果每类单词都看作一种语言，则大多数单词词法可以用正则文法来描述。
+
+- 正则文法（前面有，不展开了）。
+- 正则表达式（等价于文法但首选，不会的看 PPT）。
+- 互相转化（会正则表达式就不难，不写了）。
+- 有穷状态自动机 Finite Automaton
+
+  1. 是正则语言的另一种等价描述，是从语言识别的角度实现对相应语言的刻画。
+  2. 输入输出离散，状态有穷，当前状态 + 输入 -> 新状态。
+  3. 到目前状态为止输入组成的是语言的句子。
+  4. 一个确定的 Deterministic Finite Automaton 可以表示为 $M = (Q, \Sigma, \delta, q_0, F)$。
+
+     ![alt text](./assets/DFA.png)
+
+  5. `DFA 的表现形式`：转移函数、转移矩阵、转移图。
+
+     ![alt text](./assets/diagram.png)
+
+  6. `DFA M 所接受的语言` 可以通过递归的扩展得到。
+  7. DFA M 接受的语言可以表示为 $L(M) = \left\{ w \mid w \in \Sigma^*, 且 \delta(q_0, w) \in F \right\}$。
+  8. $L(M_1) = L(M_2)$ 可知 $M_1 \iff M_2$。
+  9. 非确定的有穷自动机 Nondeterministic Finite Automaton 表示形式和 DFA 无二。
+
+     ![alt text](./assets/NFA.png)
+
+  10. NFA 和 DFA 等价：设一个语言被一台 NFA 识别，那么必证明还存在一台 DFA 识别这个语言。
+
+      > 设 k 是 NFA 的状态数，则它有 $2^k$ 个状态子集，每一个子集对应模拟这台 NFA 的 DFA 必须记住的一种可能性，所以这台 DFA 会有 $2^k$ 个状态。
+
+      <!-- TODO: 证明 -->
+
+- 正则表达式和状态图等价，可互相转化。
+
+### 单词的识别
+
+#### 有穷状态自动机与单词识别的关系
+
+- 单词识别是按照字符逐步进行的。
+- 单词识别可以在有限步数内完成。
+- 单词识别过程中，识别程度相当于状态。
+- 有初始状态和终结状态。
+
+#### 常见的识别问题
+
+懒得写了看课件吧
+
+- 标识符
+- 关键字
+- 常数
+- 算符和分界符
+- 回退
+
+#### 状态转移图实现词法分析
+
+<!-- TODO： -->
+
+## 第四章 自顶向下的语法分析
+
+> [!Important] ⛺ 重难点
+> 重点：自顶向下分析的基本思想，预测分析器总体结构，预测分析表的构造，递归下降分析法基本思想，简单算术表达式的递归下降分析器。
+>
+> 难点：FIRST 和 FOLLOW 集的求法、相关理解以及在构造 LL(1) 分析表时的使用，递归子程序法中如何体现分析的结果。
+
+### 语法分析概述
+
+- 语法分析分为 `自顶向下` 和 `自底向上`，也就是正推和倒推。分别对应着文法产生语言的角度、自动机识别语言的角度。
+- 自顶向下有 `递归子程序法` 和 `预测分析法/LL(1)`，自底向上有 `算符优先分析法`、`LR(0)`、`SLR(1)`、`LR(1)`、`LALR(1)`。
+- 不同分析方法，构建 AST 方法也不同。
+
+### 自顶向下的问题和文法的改造
+
+🔖 引起的问题：
+
+- 二义性（改造文法引入新的变量 or 提升运算优先级）。
+- 左递归引起的无穷推导。
+- 回溯问题。
+
+![alt text](./assets/123123.png)
+
+🔖 文法改造看课件。
+
+### LL(1) 文法与预测分析法
+
+这一部分 PPT 比较抽象，而且没有 Select 定义，看下面第一个视频更好理解：
+
+<VideoPlayer platform="bilibili" src="BV1dL4y1H7T8" episode=22 />
+
+预测分析法非递归程序是如何生成的：
+
+<VideoPlayer platform='bilibili' src='BV1dL4y1H7T8' episode='24' />
+
+预测分析法中的错误处理：
+
+<VideoPlayer platform='bilibili' src='BV1dL4y1H7T8' episode='25' />
+
+### 递归下降分析法
+
+这一部分其实就是前面内容的递归版本：
+
+<VideoPlayer platform='bilibili' src='BV1dL4y1H7T8' episode='23' />
+
+## 第五章 自底向上的语法分析
+
+> [!Important] ⛺ 重难点
+> 重点：自底向上分析的基本思想，算符优先分析法的基本思想，简单算符优先分析法，LR 分析器的基本构造思想，LR 分析算法，规范句型活前缀及其识别器（DFA），LR(0) / SLR(1) / LR(1) 分析表的构造。
+>
+> 难点：FIRSTOP 和 LASTOP 的求法、算符优先关系的确定，算符优先分析表的构造，素短语与最左素短语的概念，规范句型活前缀，LR(0/1) 项目集闭包与项目集规范族，与句柄（识别）的关系。
+
+### 概述
+
+- 自底向上分析可以分为 `暴力破解法（Brute-Force）` 和 `移入归约法（Shift-Reduce）`。
+
+- 移入归约法/规范句型实验用过，此处不赘述，可通过 [该视频](https://www.bilibili.com/video/BV1dL4y1H7T8/?p=26&spm_id_from=888.80997.embed_other.whitelist&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38) 复习。
+
+- 优先法包括 `简单优先法` 和 `算符优先法`。
+
+### 算符优先分析法
+
+🔖 先给出 `算符文法` 的定义；
+
+如果文法 $G = (V, T, P, S)$ 中不存在形如 $A \rightarrow \alpha BC \beta$ 的产生式，则称该文法为算符文法。
+
+即：产生式右部不存在相邻的非终结符。
+
+🔖 算符文法仍然依赖最左归约，所以需要更完备的文法，首先先补充一个定义：
+
+假设 $G$ 是一个不含空产生式的文法，$A$、$B$、$C$ 都是该文法的语法变量，$G$ 的任何一对终结符 $a$ 和 $b$ 的 `优先关系` 定义如下：
+
+1. $a \equiv b$：当且仅当文法中含有形如 $A \rightarrow \ldots ab \ldots$ 或者 $A \rightarrow \ldots aBb \ldots$ 的产生式。简言之，两个终结符同时归约。
+2. $a \not< b$：当且仅当文法中含有形如 $A \rightarrow \ldots aB \ldots$ 的产生式，而且 $B \xRightarrow{+} b\ldots$ 或者 $B \xRightarrow{+} Cb\ldots$。简言之，$b$ 更早被归约。
+3. $a \not> b$：当且仅当文法中含有形如 $A \rightarrow \ldots Bb \ldots$ 的产生式，而且 $B \xRightarrow{+} a\ldots$ 或者 $B \xRightarrow{+} aC\ldots$。简言之，$a$ 更早被归约。
+4. $a$ 与 $b$ 无关系：当且仅当二者在该文法的任何句型中都不相邻。
+
+🔖 在算符文法的基础上，如果上述前三条关系中至多一点成立，则文法衍生为 `算符优先文法`。也就是说，需要满足两个条件：① 无空产生式；② 任意一对终结符至多存在一种优先关系。
+
+🔖 为了方便，需要构造 `算符优先矩阵`，关系二/三需要求出<u>B 派生的最左/右终结符集</u>，也就是 `FIRSTOP` 和 `LASTOP`：
+
+$$
+FIRSTOP(A) = \left\{ b \mid A \xRightarrow{+} b\ldots 或者 A \xRightarrow{+} Bb\ldots, b \in T, B \in V \right\}
+$$
+
+$$
+LASTOP(A) = \left\{ b \mid A \xRightarrow{+} b\ldots 或者 A \xRightarrow{+} bB\ldots, b \in T, B \in V \right\}
+$$
+
+![alt](./assets/firstop-lastop.png)
+
+🔖 算符优先文法仍不能正确识别句子，原因在于非终结符之间没有优先级，归约符号就会和产生式右部出入。不是真正的句柄，过程中这个所谓的“句柄”定义为 `最左素短语 LPP`。
+
+$S \xRightarrow{*} \alpha A \beta, A \xRightarrow{+} \gamma$，其中若$\gamma$ 至少含有一个终结符，并且不包含更小单位的短语，此时称 $\gamma$ 是句型 $\alpha A \beta$ 相对于语法变量 $A$ 的 `素短语`。
+
+接下来的问题是怎么找到最左素短语：
+
+![alt text](./assets/LPP.png)
+
+> 其实就是这个串优先级内部相等，外部高。
+
+![alt text](./assets/LPP2.png)
+
+🔖 优先矩阵相当于是用空间换准确性，可以通过定义 `优先函数` 压缩空间复杂度。
+
+移入归约相当于比较栈内外算符优先级，因此用 $f$ 和 $g$ 分别代表栈内优先函数和栈外优先函数：
+
+- $a \equiv b \Leftrightarrow f(a) = g(b)$
+- $a \not< b \Leftrightarrow f(a) < g(b)$
+- $a \not> b \Leftrightarrow f(a) > g(b)$
+
+1. 该方法弊端在于错误能力会降低，对于不存在的优先级比较，优先函数是可以比较的。
+2. 优先函数存在一个就存在无穷多个，有不同的方法可以构造。
+
+### LR 分析法
+
+[概述](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.videopod.episodes&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=27)
+
+- L：自左向右扫描输入符号；
+- R：构造最右推导的逆过程（最左归约）；
+- k：超前读入的字符个数，用于确定归约时用的产生式；
+- k = 1 时可以满足绝大多数高级程序设计语言的需求。
+
+![alt text](./assets/huoqianzhui.png)
+
+这一 part 可以直接看下面这些视频：
+
+- [LR0 分析基础](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=28)
+- [LR0 分析表构造](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=29)
+- 出现了移入归约/归约归约冲突，引入 [SLR](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=30)
+- SLR 仍然可能存在冲突，引入更强大的 [LR(1)](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=31)
+- 同心项目集概念导致状态数目过大，引入 [LALR](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=32)
+- [二义性文法](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=33)
+- [LR 分析中的错误处理](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=34)
+
+### Yacc
+
+$\ldots$
