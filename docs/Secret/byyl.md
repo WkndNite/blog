@@ -262,7 +262,9 @@ C 语言编译器就是输入一段 C 语言，得到一个可执行。那我们
 
    如果 $z \neq \varepsilon$，$y$ 是 $x$ 的 `真前缀`；如果 $y \neq \varepsilon$，$z$ 是 $x$ 的 `真后缀`。
 
-   > $前缀 = 真前缀 \cup 句子本身 \quad 后缀 = 真后缀 \cup 句子本身$
+   > $前缀 = 真前缀 \cup 句子本身$
+   >
+   > $后缀 = 真后缀 \cup 句子本身$
 
 10. 设 $\Sigma$ 是一个字母表，$\forall x,y,z,w,v \in \Sigma^*$：
 
@@ -373,7 +375,8 @@ C 语言编译器就是输入一段 C 语言，得到一个可执行。那我们
 2. RL 能描述程序设计语言的多数单词。
 3. 左线性文法和右线性文法等价，只是识别句子的方向不同。
 4. 两种线型文法等价，进而对应的语言也等价。
-5. $RG \subset CFG \subset CSG \subset PSG,\quad RL \subset CFL \subset CSL \subset PSL$
+5. $RG \subset CFG \subset CSG \subset PSG$
+6. $RL \subset CFL \subset CSL \subset PSL$
 
 :::
 
