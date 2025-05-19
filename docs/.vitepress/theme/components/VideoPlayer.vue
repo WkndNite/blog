@@ -12,8 +12,6 @@
       :src="platformUrl"
       frameborder="0"
       allowfullscreen
-      :width="width"
-      :height="height"
     ></iframe>
   </div>
 </template>
@@ -24,8 +22,6 @@ export default {
   props: {
     src: { type: String, required: true }, // 视频路径或ID
     platform: { type: String, default: '' }, // 平台标识：bilibili/youtube/local
-    width: { type: String, default: '100%' }, // 宽度
-    height: { type: String, default: '387' }, // 高度
     poster: { type: String, default: '' }, // 本地视频封面
     episode: { type: Number, default: 1 }, // 章节信息
     time: { type: Number, default: 0 } // 视频时间
@@ -49,15 +45,24 @@ export default {
 </script>
 
 <style scoped>
+
 .video-container {
-  margin: 20px 0;
-  border-radius: 8px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
   overflow: hidden;
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+iframe,
 video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
+
 </style>
