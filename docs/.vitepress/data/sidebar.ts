@@ -29,7 +29,6 @@ const filteredPathArray = [
   'Nav',
   'Works',
   'public',
-  'Secret',
   'CS'
 ];
 const categories = fs
