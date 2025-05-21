@@ -9,18 +9,6 @@ export const nav = [
   {
     text: '计算机基础',
     items: [
-      // {
-      //   text: 'LeetCode Hot 100',
-      //   link: '/CS/LeetCode-100'
-      // },
-      // {
-      //   text: '数据结构与算法',
-      //   link: '/CS/DSA'
-      // },
-      // {
-      //   text: '代码随想录',
-      //   link: '/CS/programmercarl'
-      // }
       {
         text:'编译原理',
         link: '/CS/Compiler'
@@ -107,6 +95,6 @@ export const nav = [
       }
     ]
   },
-  { text: '生活感悟', items: [{ text: '随笔', link: '/Life/thought' }] },
+  { text: '生活感悟', link: '/Life' },
   { text: '个人作品', link: '/Works' }
 ];
