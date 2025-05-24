@@ -11,19 +11,19 @@
   },
   "info": {
     "prefix": "info",
-    "body": [":::info", "$1", ":::"]
+    "body": [":::info ⛽️", "$1", ":::"]
   },
   "warning": {
     "prefix": "warning",
-    "body": [":::warning", "$1", ":::"]
+    "body": [":::warning ⚠️ 注意", "$1", ":::"]
   },
   "tip": {
     "prefix": "tip",
-    "body": [":::tip", "$1", ":::"]
+    "body": [":::tip 📌 提示", "$1", ":::"]
   },
   "details": {
     "prefix": "details",
-    "body": [":::details", "$1", ":::"]
+    "body": [":::details 🔍 补充信息", "$1", ":::"]
   },
   "danger": {
     "prefix": "danger",
@@ -88,5 +88,9 @@
     "bilibili-video":{
       "prefix":"bv",
       "body": ["<VideoPlayer platform='bilibili' src='$1' episode='$2' />"]
-    }
+    },
+    "quote":{
+      "prefix":"blog-quote",
+      "body": ["> $1"]
+    },
 }

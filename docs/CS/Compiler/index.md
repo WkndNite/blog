@@ -1,5 +1,6 @@
 ---
 date: 2025-05-01 18:21:02
+description: 计算机在编 我也在编
 outline: 2
 tag:
   - 编译原理
