@@ -60,7 +60,7 @@ tag:
 下面实际上说的是编译程序的流程，所以如果谈及程序结构，你应该说的是词法分析器、语法分析器……
 :::
 
-![alt](./assets/截屏2025-05-01%2019.49.29.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/%E6%88%AA%E5%B1%8F2025-05-01%2019.49.29.png)
 
 - `词法分析`，这一步交给词法分析器/扫描器，逐个字符串扫描转化为 Tokens，并进行符号表管理和错误记录（把你的高级语言程序转化为一个一个 kv 对）；
 - `语法分析`，这一步是语法分析器的任务，把 Tokens 转化为 AST，并记录过程中的错误（把单词对连成句子）；
@@ -83,15 +83,15 @@ tag:
 
    然后得到一些 kv 对，比如 `Map { keyword -> int, Float -> 928.2332 }`
 
-    <VideoPlayer platform="local" src="/videos/录屏2025-05-01 23.15.02.mov" />
+    <VideoPlayer platform="local" src="https://blog-1328542955.cos.ap-shanghai.myqcloud.com/%E5%BD%95%E5%B1%8F2025-05-01%2023.15.02.mov" />
 
 2. [语法制导翻译](https://astexplorer.net/)部分，我们会得到 AST，其中可能会涉及到一些文法规则和产生式的概念。
 
-   <VideoPlayer platform="local" src="/videos/录屏2025-05-01 23.34.59.mov" />
+   <VideoPlayer platform="local" src="https://blog-1328542955.cos.ap-shanghai.myqcloud.com/%E5%BD%95%E5%B1%8F2025-05-01%2023.34.59.mov" />
 
 3. [目标代码生成](https://godbolt.org/)。
 
-   ![alt text](./assets/2.png)
+   ![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2.png)
 
 :::
 
@@ -107,13 +107,13 @@ tag:
    - 性能分析数据应该是第一位，最后才是直觉。
 3. 代码生成允许是不同形式的：
 
-   ![alt](./assets/截屏2025-05-01%2020.13.46.png)
+   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/%E6%88%AA%E5%B1%8F2025-05-01%2020.13.46.png)
 
    目标代码从编译生成的目标文件（如 a.o、b.o），经过链接器合并生成可执行文件（ab），再由操作系统加载到进程虚拟地址空间。
 
    分别对应：模块结构的机器指令 → 可执行文件 → 内存中带虚拟地址的指令与数据段。
 
-   ![alt](./assets/image.png)
+   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image.png)
 
 :::
 
@@ -127,13 +127,13 @@ tag:
 6. 一般来说，分析工作可以单独作为一遍，代码的生成和优化各自作为一遍。
 7. 自己看图吧 ⬇️
 
-   ![alt text](./assets/3.png)
+   ![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/3.png)
 
    <mark>不同机器上前端可复用，相同机器不同语言后端可复用。</mark>
 
 ### 编译程序的生成
 
-![alt text](./assets/4.png)
+![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/4.png)
 
 :::details 🌰 下面的问答可能会有些烧脑，建议多次理解，如果还是不懂就请 GPT 大人吧……
 
@@ -630,18 +630,18 @@ $$
   3. 到目前状态为止输入组成的是语言的句子。
   4. 一个确定的 Deterministic Finite Automaton 可以表示为 $M = (Q, \Sigma, \delta, q_0, F)$。
 
-     ![alt text](./assets/DFA.png)
+     ![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/DFA.png)
 
   5. `DFA 的表现形式`：转移函数、转移矩阵、转移图。
 
-     ![alt text](./assets/diagram.png)
+     ![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/diagram.png)
 
   6. `DFA M 所接受的语言` 可以通过递归的扩展得到。
   7. DFA M 接受的语言可以表示为 $L(M) = \left\{ w \mid w \in \Sigma^*, 且 \delta(q_0, w) \in F \right\}$。
   8. $L(M_1) = L(M_2)$ 可知 $M_1 \iff M_2$。
   9. 非确定的有穷自动机 Nondeterministic Finite Automaton 表示形式和 DFA 无二。
 
-     ![alt text](./assets/NFA.png)
+     ![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/NFA.png)
 
   10. NFA 和 DFA 等价：设一个语言被一台 NFA 识别，那么必证明还存在一台 DFA 识别这个语言。
 
@@ -695,7 +695,7 @@ $$
 - 左递归引起的无穷推导。
 - 回溯问题。
 
-![alt text](./assets/123123.png)
+![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/123123.png)
 
 🔖 文法改造看课件。
 
@@ -763,7 +763,7 @@ $$
 LASTOP(A) = \left\{ b \mid A \xRightarrow{+} b\ldots 或者 A \xRightarrow{+} bB\ldots, b \in T, B \in V \right\}
 $$
 
-![alt](./assets/firstop-lastop.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/firstop-lastop.png)
 
 🔖 算符优先文法仍不能正确识别句子，原因在于非终结符之间没有优先级，归约符号就会和产生式右部出入。不是真正的句柄，过程中这个所谓的“句柄”定义为 `最左素短语 LPP`。
 
@@ -771,11 +771,11 @@ $S \xRightarrow{*} \alpha A \beta, A \xRightarrow{+} \gamma$，其中若$\gamma$
 
 接下来的问题是怎么找到最左素短语：
 
-![alt text](./assets/LPP.png)
+![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/LPP.png)
 
 > 其实就是这个串优先级内部相等，外部高。
 
-![alt text](./assets/LPP2.png)
+![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/LPP2.png)
 
 🔖 优先矩阵相当于是用空间换准确性，可以通过定义 `优先函数` 压缩空间复杂度。
 
@@ -797,7 +797,7 @@ $S \xRightarrow{*} \alpha A \beta, A \xRightarrow{+} \gamma$，其中若$\gamma$
 - k：超前读入的字符个数，用于确定归约时用的产生式；
 - k = 1 时可以满足绝大多数高级程序设计语言的需求。
 
-![alt text](./assets/huoqianzhui.png)
+![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/huoqianzhui.png)
 
 这一 part 可以直接看下面这些视频：
 
@@ -822,7 +822,7 @@ $\ldots$
 
 ### 语法制导翻译概述
 
-![alt text](./assets/end.png)
+![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/end.png)
 
 🔖 `语义分析器` 的主要任务是检查各个语法结构的静态语义，即验证语法正确的程序结构是否真正有意义，也称为 `静态语义分析` 或 `静态检查`：
 
@@ -947,13 +947,13 @@ $$
 - 过程名、过程体、过程调用/活动、形参实参、递归。
 - 传参方式：值传递/值结果传递/名传递/引用传递。主要区别在于实参代表的是左值/右值还是本身。
 
-![alt text](./assets/calc.png)
+![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/calc.png)
 
 ### 存储组织
 
 #### 内存划分
 
-![alt text](./assets/neicun.png)
+![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/neicun.png)
 
 #### 活动记录
 

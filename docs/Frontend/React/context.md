@@ -173,7 +173,7 @@ export default App;
 
 最后，我们来看一下效果：
 
-<VideoPlayer platform="local" src='videos/React App - Google Chrome 2025-03-07 10-24-01.mp4'/>
+<VideoPlayer platform="local" src='https://blog-1328542955.cos.ap-shanghai.myqcloud.com/React%20App%20-%20Google%20Chrome%202025-03-07%2010-24-01.mp4'/>
 
 ### displayName
 

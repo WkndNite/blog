@@ -125,7 +125,7 @@ export default App;
 
 实现的效果如下所示：
 
-<VideoPlayer platform="local" src="/videos/React App - Google Chrome 2025-03-07 12-51-00.mp4" />
+<VideoPlayer platform="local" src="https://blog-1328542955.cos.ap-shanghai.myqcloud.com/React%20App%20-%20Google%20Chrome%202025-03-07%2012-51-00.mp4" />
 
 但是仔细观察，你会发现两个组件的逻辑一模一样，只是渲染逻辑不同。
 

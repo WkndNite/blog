@@ -10,7 +10,7 @@ date: 2025-01-21
 
 ## 失败复现
 
-![部署失败截图](./assets/git-ignorecase-2.png)
+![部署失败截图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/git-ignorecase-2.png)
 
 ## 问题发现
 
@@ -19,7 +19,7 @@ date: 2025-01-21
 
 于是我去查看 Vercel 内部，发现 Vercel 内部的文件夹并没有做出重命名之后的更新。而这种 CI/CD 又是跟踪 GitHub 分支的，所以我的远程仓库没有更新——这就是根本原因！
 
-![项目结构对比](./assets/git-ignorecase-1.png)
+![项目结构对比](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/git-ignorecase-1.png)
 
 ## 问题解决
 

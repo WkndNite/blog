@@ -14,7 +14,7 @@ tags:
 
 ## Docker 环境搭建
 
-![Docker 环境搭建](./assets/docker-env-setup.excalidraw.png)
+![Docker 环境搭建](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/docker-env-setup.excalidraw.png)
 
 :::info
 这一步开始我在我的阿里云服务器上演示，操作系统是 CentOS。
@@ -38,7 +38,7 @@ yum makecache --refresh
 如果你的服务器或者本地环境之前有过 Docker，可以选择跳过这一步或者先卸载之前的 Docker。
 :::
 
-```Bash
+```Bash :no-line-numbers
 yum install docker-ce docker-ce-cli containerd.io
 ```
 
@@ -59,7 +59,7 @@ sudo systemctl restart docker
 
 ### 验证 Docker 是否安装成功
 
-```Bash
+```Bash :no-line-numbers
 docker --version
 ```
 

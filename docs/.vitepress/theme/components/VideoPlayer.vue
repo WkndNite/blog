@@ -2,7 +2,7 @@
   <div class="video-container">
     <!-- 本地视频 -->
     <video v-if="isLocal" controls :poster="poster">
-      <source :src="source" type="video/mp4" />
+      <source :src type="video/mp4" />
       您的浏览器不支持视频播放
     </video>
 
@@ -31,9 +31,6 @@ export default {
         youtube: `https://www.youtube.com/embed/${this.src}`
       };
       return map[this.platform];
-    },
-    source() {
-      return this.src.startsWith('/') ? this.src : `/${this.src}`;
     }
   }
 };

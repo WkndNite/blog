@@ -150,7 +150,7 @@ export default class App extends PureComponent {
 :::
 
 效果如下:
-<VideoPlayer platform="local" src="/videos/React App - Google Chrome 2025-03-08 15-14-35.mp4" />
+<VideoPlayer platform="local" src="https://blog-1328542955.cos.ap-shanghai.myqcloud.com/React%20App%20-%20Google%20Chrome%202025-03-07%2010-24-01.mp4" />
 
 :::warning
 React.PureComponent 中的 shouldComponentUpdate 方法是浅比较，如果对象中包含复杂的数据结构，可能会出现无法正确判断的情况，产生错误的比对结果。
@@ -194,7 +194,7 @@ export default class App extends PureComponent {
 
 效果如下：
 
-<VideoPlayer platform="local" src="/videos/React App - Google Chrome 2025-03-08 15-38-15.mp4" />
+<VideoPlayer platform="local" src="https://blog-1328542955.cos.ap-shanghai.myqcloud.com/React%20App%20-%20Google%20Chrome%202025-03-07%2010-24-01.mp4" />
 
 修改以上代码也可以达到你期望的效果：
 :::code-group
@@ -271,7 +271,7 @@ export default class App extends Component {
 
 效果如下：
 
-<VideoPlayer platform="local" src="/videos/React App - Google Chrome 2025-03-08 15-43-32.mp4" />
+<VideoPlayer platform="local" src="https://blog-1328542955.cos.ap-shanghai.myqcloud.com/React%20App%20-%20Google%20Chrome%202025-03-07%2010-24-01.mp4" />
 
 ## React.memo
 
@@ -298,7 +298,7 @@ export default App;
 
 我们还是从上面的例子入手，如果改成函数组件的话，可以得到以下效果：
 
-<VideoPlayer platform="local" src="/videos/React App - Google Chrome 2025-03-08 15-53-41.mp4" />
+<VideoPlayer platform="local" src="https://blog-1328542955.cos.ap-shanghai.myqcloud.com/React%20App%20-%20Google%20Chrome%202025-03-07%2010-24-01.mp4" />
 
 由此，我们可以得出结论，函数组件的状态不变不会像类组件一样出发重新渲染。而这，和 Fiber 的钩子执行时机有关，此处不做讨论。
 
@@ -352,7 +352,7 @@ export default ChildCom;
 
 运行代码，我们可以发现即使只改动父组件状态，子组件也会重新渲染：
 
-<VideoPlayer platform="local" src="/videos/React App - Google Chrome 2025-03-08 16-02-12.mp4" />
+<VideoPlayer platform="local" src="https://blog-1328542955.cos.ap-shanghai.myqcloud.com/React%20App%20-%20Google%20Chrome%202025-03-07%2010-24-01.mp4" />
 
 React.memo 是一个高阶组件，可以在 props 不变的情况下阻止组件重新渲染。
 
@@ -380,7 +380,7 @@ export default React.memo(ChildCom);
 
 终于，我们看到了期望的结果：
 
-<VideoPlayer platform="local" src="/videos/React App - Google Chrome 2025-03-08 16-06-06.mp4" />
+<VideoPlayer platform="local" src="https://blog-1328542955.cos.ap-shanghai.myqcloud.com/React%20App%20-%20Google%20Chrome%202025-03-08%2016-06-06.mp4" />
 
 :::warning
 React.memo 仅对 props 进行浅比较，如果 props 中有复杂对象，那么浅比较可能无法正确判断 props 是否改变。此处不在举例，情况与上文提及类组件浅比较类似。

@@ -6,7 +6,7 @@ date: 2020-02-10
 
 # 菊次郎的夏天 老流氓与孤单男孩的相互救赎
 
-![菊次郎的夏天](./assets/kikujiro-summer.jpg)
+![菊次郎的夏天](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/kikujiro-summer.jpg)
 
 肉体和灵魂，总要有一样在路上。我们都有着孤单的魂灵，然而人生中总有善良的人儿，愿与你同行，让你得以停留和栖息。
 

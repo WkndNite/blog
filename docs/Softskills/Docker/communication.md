@@ -51,7 +51,7 @@ docker exec -it tomcat-01 bash -c "ip addr"
 docker exec -it tomcat-02 bash -c "ip addr"
 ```
 
-![Tomcat 容器获取各自ip](./assets/tomcat-container-ip.png)
+![Tomcat 容器获取各自ip](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/tomcat-container-ip.png)
 
 如上图，我们可以得到到两个容器的 ip 地址，分别是 172.17.0.2 和 172.17.0.3。
 
@@ -64,7 +64,7 @@ docker exec -it tomcat-01 bash -c "ping -c 3 172.17.0.3"
 docker exec -it tomcat-02 bash -c "ping -c 3 172.17.0.2"
 ```
 
-![Tomcat 容器之间 ping 通](./assets/tomcat-container-ping.png)
+![Tomcat 容器之间 ping 通](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/tomcat-container-ping.png)
 
 如上图，我们可以看到两个容器之间是可以 ping 通的。
 
@@ -76,7 +76,7 @@ docker exec -it tomcat-02 bash -c "ping -c 3 172.17.0.2"
 ip addr
 ```
 
-![宿主机ip](./assets/host-ip.png)
+![宿主机ip](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/host-ip.png)
 
 如上图，我们可以看到宿主机的 ip 地址是 172.30.150.182。接下来我们分别在两个容器内部 ping 宿主机的 ip 地址，并在宿主机对容器的 ip 地址进行 ping 操作。
 
@@ -87,7 +87,7 @@ ping -c 3 172.17.0.2
 ping -c 3 172.17.0.3
 ```
 
-![Tomcat 容器与宿主机之间 ping 通](./assets/tomcat-container-host-ping.png)
+![Tomcat 容器与宿主机之间 ping 通](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/tomcat-container-host-ping.png)
 
 如上图，我们可以看到容器与宿主机之间也是可以 ping 通的。
 
@@ -108,7 +108,7 @@ ping -c 3 172.17.0.3
 docker network ls
 ```
 
-![Docker 网络列表](./assets/docker-network-list.png)
+![Docker 网络列表](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/docker-network-list.png)
 
 看上面这张图，在对应前面宿主机的 ip 图，是不是就明白 br 接口对应哪个容器了呢？
 
@@ -132,7 +132,7 @@ docker exec -it tomcat-03 bash -c "ping -c 3 tomcat-01"
 docker exec -it tomcat-01 bash -c "ping -c 3 tomcat-03"
 ```
 
-![--link 参数](./assets/docker-container-link.png)
+![--link 参数](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/docker-container-link.png)
 
 :::tip
 --link 参数的作用是让容器之间能够互相通信，但是只能做到单向通信，即容器 1 可以 ping 容器 2，但是容器 2 不能 ping 容器 1。究其本质，其实是通过--link 可以在容器的 hosts 文件中添加一条记录，我们也可以进入容器内部通过 `cat /etc/hosts` 命令查看。
@@ -170,7 +170,7 @@ docker run -d -P --name tomcat-05 --net mynet tomcat-01
 docker network inspect mynet
 ```
 
-![自定义网络](./assets/docker-network-custom.png)
+![自定义网络](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/docker-network-custom.png)
 
 接下来，我们分别在两个容器内部 ping 对方的 ip 地址，看是否能够 ping 通。重点来了！**此时，我们通过容器名也是可以 ping 通的！**
 
@@ -181,7 +181,7 @@ docker exec -it tomcat-04 bash -c "ping -c 3 tomcat-05"
 docker exec -it tomcat-05 bash -c "ping -c 3 tomcat-04"
 ```
 
-![自定义网络 ping 通](./assets/docker-network-custom-ping.png)
+![自定义网络 ping 通](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/docker-network-custom-ping.png)
 
 如上图，我们可以看到两个容器之间是可以 ping 通的。
 
@@ -203,7 +203,7 @@ docker network inspect mynet
 docker network inspect bridge
 ```
 
-![不同网络之间通信](./assets/docker-network-connect.png)
+![不同网络之间通信](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/docker-network-connect.png)
 
 此时，我们用 tomcat-01 和 tomcat-02 分别对 tomcat-04 进行 ping，看是否能够 ping 通。
 
@@ -213,4 +213,4 @@ docker exec -it tomcat-02 bash -c "ping -c 3 tomcat-04"
 docker exec -it tomcat-02 bash -c "ping -c 3 192.168.0.2"
 ```
 
-![不同网络之间通信 ping 通](./assets/docker-network-connect-ping.png)
+![不同网络之间通信 ping 通](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/docker-network-connect-ping.png)

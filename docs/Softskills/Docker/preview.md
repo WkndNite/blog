@@ -39,7 +39,7 @@ tags:
 
 通过蓝绿发布的方式发布应用，减少发布过程中，服务停止的时间，从而进一步减少工作时间。
 
-![蓝绿发布示意图](./assets/blue-green-release.excalidraw.png)
+![蓝绿发布示意图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/blue-green-release.excalidraw.png)
 
 > **蓝绿发布**是一种持续部署的方式，通过将新版本的服务部署到一个全新的环境中，然后将流量逐渐切换到新环境中，从而实现零停机发布。
 
@@ -76,7 +76,7 @@ K8S 是由 Google 设计，基于 Google 内部的 Borg 系统，是一个开源
 - K8S 的**自动发现和负载均衡**，不需要修改应用程序来使用不熟悉的服务发现机制。Kubernetes 会自动为容器提供自己的 IP 地址和一个 DNS 名称，其他容器可以使用该名称来发现和通信，借此在容器之间实现负载均衡。
 - K8S 的**滚动升级和一键回滚**，是指在升级应用程序时，Kubernetes 会逐步将新版本的容器替换旧版本的容器，如果发现新版本的容器有问题，可以通过一键回滚，将新版本的容器替换为旧版本的容器。
 
-![K8S 架构图](./assets/k8s-architecture.excalidraw.png)
+![K8S 架构图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/k8s-architecture.excalidraw.png)
 
 ## 云原生技术栈的概念和技术
 
@@ -92,7 +92,7 @@ K8S 是由 Google 设计，基于 Google 内部的 Borg 系统，是一个开源
 
 容器存储层的生存周期和容器一样，容器消亡，容器存储层也就随之消亡。因此，任何保存在容器存储层的信息都会随容器删除而丢失。如果需要让容器存储层中的信息持久化，可以通过数据卷（Volume）来实现。
 
-![容器和虚拟机架构图对比](./assets/container-vs-vm.excalidraw.png)
+![容器和虚拟机架构图对比](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/container-vs-vm.excalidraw.png)
 
 ### 容器和虚拟化
 
