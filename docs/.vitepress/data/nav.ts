@@ -58,7 +58,7 @@ export const nav = [
       },
       {
         text: '编译原理',
-        link: '/Softskills/Compilation'
+        link: '/Softskills/Compiler'
       }
     ]
   },
