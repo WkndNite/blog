@@ -7,12 +7,7 @@
     </video>
 
     <!-- 平台嵌入视频 -->
-    <iframe
-      v-else
-      :src="platformUrl"
-      frameborder="0"
-      allowfullscreen
-    ></iframe>
+    <iframe v-else :src="platformUrl" frameborder="0" allowfullscreen></iframe>
   </div>
 </template>
 
@@ -45,7 +40,6 @@ export default {
 </script>
 
 <style scoped>
-
 .video-container {
   position: relative;
   width: 100%;
@@ -64,5 +58,4 @@ video {
   width: 100%;
   height: 100%;
 }
-
 </style>

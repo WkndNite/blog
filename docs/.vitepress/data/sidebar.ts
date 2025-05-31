@@ -10,122 +10,139 @@ type SidebarItem = {
   }>;
 };
 
-/**
- * @description 从 index.md 中获取 H1 标题
- */
-function getTitle(content: string) {
-  const match = content.match(/# (.+)/);
-  return match
-    ? match[0].replace('# ', '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-    : '标题显示错误';
-}
+type Sidebar = Record<string, SidebarItem[]>;
 
-/**
- * @description 从 index.md 中获取超链接列表
- */
-function getList(content: string): string[] {
-  const match = content.match(/- (.+)/g);
-  if (!match) {
-    console.warn('列表匹配失败');
-    return [];
-  }
-  return match.map((item) => item.replace(/- /g, ''));
-}
+const parseIndexMd = (filePath: string) => {
+  const content = fs.readFileSync(filePath, 'utf-8');
+  const titleMatch = content.match(/# (.+)/);
+  const title = titleMatch
+    ? titleMatch[1].replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    : path.basename(filePath, '.md');
 
+  const hrefList = (content.match(/- (.+)/g) || []).map((item) =>
+    item.replace(/- /g, '')
+  );
 
-/**
- * @description 将 Markdown 链接列表转换为 sidebar item 数组
- * @param list - Markdown 链接数组
- * @param category - 分类名，docs 下的一级目录
- * @param subCategory - 当前子文件夹名，若为 index 说明一级目录下无二级目录，则不拼接 subCategory
- * @returns Sidebar 里某一具体类下的列表
- */
-function transformLinkToSidebarItem(
-  list: string[],
-  category: string,
-  subCategory: string
-): { text: string; link: string }[] {
-  if (!Array.isArray(list)) {
-    return [];
-  }
+  return { title, hrefList };
+};
 
+const transformLinkToSidebarItem = (list: string[], basePath: string) => {
   return list.map((item) => {
     const match = item.match(/\[([^\]]+)\]\((?:.*\/)?([^/]+)\.\w+\)/);
-    // 匹配文章标题
     const text = match?.[1] ?? item;
-    // 匹配文章链接
     const slug = match?.[2] ?? item;
 
-    // 如果是 index，不拼接 file
-    const path = subCategory === 'index'
-      ? `/${category}/${slug}`
-      : `/${category}/${subCategory}/${slug}`;
-
-    return { text, link: path };
+    return {
+      text,
+      link: `${basePath}/${slug}`
+    };
   });
-}
+};
 
+const detectDirectoryType = (dirPath: string) => {
+  const children = fs.readdirSync(dirPath);
 
-// 最终目标 生成的 Sidebar 配置
-const sidebar:Record<string,SidebarItem[]> = {};
+  const onlySubDirs = children.every((file) =>
+    fs.statSync(path.join(dirPath, file)).isDirectory()
+  );
 
-// 硬编码 和项目结构相关 找 docs 目录路径
-const docsPath = path.resolve(__dirname, '../..');
-const filteredPathArray = [
-  'index.md',
-  '.vitepress',
-  'Nav',
-  'Works',
-  'public',
-  'CS',
-  'Life'
-];
+  const hasIndex = children.includes('index.md');
+  const hasOtherMd = children.some((file) => file.endsWith('.md'));
 
-// 对于 Life 这样的单层文件夹直接读取 index.md 生成侧边栏
-const singleLayerCategories = ['Life'];
+  if (!onlySubDirs && hasIndex) return 'single';
+  if (onlySubDirs) return 'double';
+  if (!onlySubDirs && !hasIndex && hasOtherMd) return 'mixed';
+  return 'unknown';
+};
 
-const categories = fs
-  .readdirSync(docsPath)
-  .filter((category) => !filteredPathArray.includes(category));
+const generateSidebarItems = (dirPath: string, category: string) => {
+  const type = detectDirectoryType(dirPath);
+  const items: SidebarItem[] = [];
 
-
-for (const category of categories) {
-  const categoryPath = path.join(docsPath, category);
-  const files = fs
-    .readdirSync(categoryPath)
-    .filter((file) => file !== 'index.md');
-  const categoryItems: Array<SidebarItem> = [];
-  for (const file of files) {
-    const indexPath = path.join(categoryPath, file, 'index.md');
-    const content = fs.readFileSync(indexPath, 'utf-8');
-    const title = getTitle(content);
-    const list = getList(content);
-
-    categoryItems.push({
+  if (type === 'single') {
+    const indexPath = path.join(dirPath, 'index.md');
+    const { title, hrefList } = parseIndexMd(indexPath);
+    items.push({
       text: title,
-      collapsed: true,
-      items: transformLinkToSidebarItem(list, category, file)
+      collapsed: false,
+      items: transformLinkToSidebarItem(hrefList, `/${category}`)
     });
+  } else if (type === 'double' || type === 'mixed') {
+    // 处理子目录
+    const subDirs = fs
+      .readdirSync(dirPath)
+      .filter((file) => fs.statSync(path.join(dirPath, file)).isDirectory());
+
+    for (const subDir of subDirs) {
+      const subDirPath = path.join(dirPath, subDir);
+      const indexPath = path.join(subDirPath, 'index.md');
+
+      if (fs.existsSync(indexPath)) {
+        const { title, hrefList } = parseIndexMd(indexPath);
+        items.push({
+          text: title,
+          collapsed: false,
+          items: transformLinkToSidebarItem(hrefList, `/${category}/${subDir}`)
+        });
+      }
+    }
+
+    // 处理混合目录中的单个文件
+    if (type === 'mixed') {
+      const singleFiles = fs
+        .readdirSync(dirPath)
+        .filter((file) => {
+          const fullPath = path.join(dirPath, file);
+          return (
+            fs.statSync(fullPath).isFile() &&
+            file.endsWith('.md') &&
+            file !== 'index.md'
+          );
+        })
+        .map((file) => {
+          const filePath = path.join(dirPath, file);
+          const { title } = parseIndexMd(filePath);
+          return {
+            text: title,
+            link: `/${category}/${path.basename(file, '.md')}`
+          };
+        });
+
+      if (singleFiles.length > 0) {
+        items.push({
+          text: '碎片集锦',
+          collapsed: false,
+          items: singleFiles
+        });
+      }
+    }
+  } else {
+    console.warn(`未知目录类型: ${dirPath}`);
   }
-  sidebar[`/${category}/`] = categoryItems;
-}
 
+  return items;
+};
 
+// 只需要处理这些指定目录
+const TARGET_DIRECTORIES = ['Life', 'Frontend', 'Interview', 'Softskills'];
 
-for(const category of singleLayerCategories) {
+const sidebar: Sidebar = {};
+const docsPath = path.resolve(__dirname, '../..');
+
+TARGET_DIRECTORIES.forEach((category) => {
   const categoryPath = path.join(docsPath, category);
-  const indexPath = path.join(categoryPath, 'index.md');
-  const content = fs.readFileSync(indexPath, 'utf-8');
 
-  const title = getTitle(content);
-  const list = getList(content);
+  if (!fs.existsSync(categoryPath)) {
+    console.warn(`目录不存在: ${categoryPath}`);
+    return;
+  }
 
-  sidebar[`/${category}/`] = [
-    {
-      text: title,
-      collapsed: true,
-      items: transformLinkToSidebarItem(list, category, 'index')
-    }];
-}
+  if (!fs.statSync(categoryPath).isDirectory()) {
+    console.warn(`路径不是目录: ${categoryPath}`);
+    return;
+  }
+
+  sidebar[`/${category}/`] = generateSidebarItems(categoryPath, category);
+});
 
 export { sidebar };

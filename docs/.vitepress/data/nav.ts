@@ -6,15 +6,7 @@ export const nav = [
       { text: '流量管理', link: 'https://v6.51.la' }
     ]
   },
-  {
-    text: '计算机基础',
-    items: [
-      {
-        text:'编译原理',
-        link: '/CS/Compiler'
-      }
-    ]
-  },
+
   {
     text: '前端漫游',
     items: [
@@ -54,19 +46,19 @@ export const nav = [
     items: [
       {
         text: 'Git',
-        link: '/DevTips/Git'
+        link: '/Softskills/Git'
       },
       {
         text: 'Docker',
-        link: '/DevTips/Docker'
+        link: '/Softskills/Docker'
       },
       {
         text: '开发范式',
-        link: '/DevTips/Design'
+        link: '/Softskills/Design'
       },
       {
-        text: '开发工具',
-        link: '/DevTips/Others'
+        text: '编译原理',
+        link: '/Softskills/Compilation'
       }
     ]
   },
