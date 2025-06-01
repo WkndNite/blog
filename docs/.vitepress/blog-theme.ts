@@ -111,12 +111,12 @@ const blogTheme = getThemeConfig({
         url: 'https://lowcode.maozi.io',
         cover: {
           urls: [
-            '/works/PixPin_2025-03-12_21-09-40.png',
-            '/works/PixPin_2025-03-12_21-12-19.png',
-            '/works/PixPin_2025-03-12_21-20-24.png',
-            '/works/PixPin_2025-03-12_21-21-04.png'
+            'https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-12_21-09-40.png',
+            'https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-12_21-12-19.png',
+            'https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-12_21-20-24.png',
+            'https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-12_21-21-04.png'
           ],
-          layout: 'list'
+          layout: 'swiper'
         },
         tags: ['Vue3', 'Pinia', 'TypeScript']
       },
@@ -130,10 +130,10 @@ const blogTheme = getThemeConfig({
         url: 'https://github.com/WkndNite/coder-station',
         cover: {
           urls: [
-            '/works/b41cbd6999f93adb61e5fd56adf40af.png',
-            '/works/94cdbed03feedbb78a9ee5e26890360.png'
+            'https://blog-1328542955.cos.ap-shanghai.myqcloud.com/b41cbd6999f93adb61e5fd56adf40af.png',
+            'https://blog-1328542955.cos.ap-shanghai.myqcloud.com/94cdbed03feedbb78a9ee5e26890360.png'
           ],
-          layout: 'list'
+          layout: 'swiper'
         },
         tags: ['React', 'Ant Design']
       }

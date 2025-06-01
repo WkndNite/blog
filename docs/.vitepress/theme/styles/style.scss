@@ -40,3 +40,15 @@ table {
 code {
   font-family: inherit;
 }
+
+/* 默认适用于大屏（桌面）端 */
+.works {
+  width: 900px;
+}
+
+/* 手机端（最大宽度 382px）适配 */
+@media (max-width: 400px) {
+  .works {
+    width: 100%;
+  }
+}
