@@ -19,7 +19,7 @@ tags:
 1. 下载 [数据集](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/retail.dat)。
 2. 安装 Docker 环境：
 
-   - CentOS 系统可以看我之前写过的 [Docker 环境搭建](http://localhost:5173/Softskills/Docker/intro#docker-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA)。
+   - CentOS 系统可以看我之前写过的 [Docker 环境搭建](/Softskills/Docker/intro#docker-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA)。
    - Ubuntu 系统和上面类似，包管理器不同，可自行百度。
    - Win 和 Mac 下载 [应用](https://www.docker.com/) 即可。
 
