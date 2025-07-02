@@ -14,13 +14,13 @@ tags:
 
 在项目内引入 `toastui.editor`，并使用其 `Editor` 组件，在开发过程中遇到如下报错：
 
-![image](./assets/bug1.png)
+![image](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/bug1.png)
 
 ## 解决方案
 
 需要在 `package.json` 中修改项目启动脚本命令：
 
-![image](./assets/bug1-solution.png)
+![image](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/bug1-solution.png)
 
 :::warning
 注意，在 `&&` 前并没有空格，是因为如果加上空格会导致该环境变量有尾随空格。
@@ -28,4 +28,4 @@ tags:
 
 ## 成功效果
 
-![image](./assets/bug1-success.png)
+![image](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/bug1-success.png)

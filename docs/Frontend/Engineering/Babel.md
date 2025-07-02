@@ -20,7 +20,7 @@ tags:
 
 babel 一词来自于希伯来语，直译为巴别塔。
 
-![alt](./assets/2020-02-07-10-12-01.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-02-07-10-12-01.png)
 
 巴别塔象征的统一的国度、统一的语言。
 
@@ -28,11 +28,11 @@ babel 一词来自于希伯来语，直译为巴别塔。
 
 babel 的出现，就是用于解决这样的问题，它是一个编译器，可以把不同标准书写的语言，编译为统一的、能被各种浏览器识别的语言。
 
-![alt](./assets/2020-02-07-10-25-56.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-02-07-10-25-56.png)
 
 由于语言的转换工作灵活多样，babel 的做法和 postcss、webpack 差不多，它本身仅提供一些分析功能，真正的转换需要依托于插件完成。
 
-![alt](./assets/2020-02-07-10-27-30.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-02-07-10-27-30.png)
 
 ### babel的安装
 

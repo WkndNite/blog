@@ -49,7 +49,7 @@ tags:
 
 这样的工具，叫 **构建工具**。
 
-![构建工具示意图](./assets/build-tool.excalidraw.png)
+![构建工具示意图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/build-tool.png)
 
 这样一来，开发者就可以专注于业务开发，而不用担心运行时遇到的问题。而构建工具，则负责将开发时态的代码转换为运行时态的代码。
 

@@ -21,17 +21,17 @@ PostCss 就是基于这样的理念出现的。
 
 PostCss 类似于一个编译器，可以将样式源码编译成最终的 CSS 代码。
 
-![alt](./assets/2020-02-04-14-31-33.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-02-04-14-31-33.png)
 
 看上去是不是和 LESS、SASS 一样呢？
 
 但 PostCss 和 LESS、SASS 的思路不同，它其实只做一些代码分析之类的事情，将分析的结果交给插件，具体的代码转换操作是插件去完成的。
 
-![alt](./assets/2020-02-04-14-37-51.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-02-04-14-37-51.png)
 
 官方的一张图更能说明 postcss 的处理流程：
 
-![alt](./assets/postcss.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/postcss.png)
 
 > 这一点有点像webpack，webpack本身仅做依赖分析、抽象语法树分析，其他的操作是靠插件和加载器完成的。
 
@@ -432,7 +432,7 @@ body {
 }
 ```
 
-![alt](./assets/2020-02-05-14-37-11.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-02-05-14-37-11.png)
 
 发生了两处错误：
 

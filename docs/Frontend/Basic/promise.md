@@ -20,11 +20,11 @@ Promise A+ 规定：
 
 1. 所有的异步场景，都可以看作是一个异步任务，每个异步任务，在 JS 中应该表现为一个 **对象**，该对象称之为 **Promise 对象**，也叫做任务对象。
 
-   ![alt](./assets/20210618154556.png)
+   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20210618154556.png)
 
 2. 每个任务对象，都应该有两个阶段、三个状态。
 
-   ![alt](./assets/20210618155145.png)
+   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20210618155145.png)
 
    根据常理，它们之间存在以下逻辑：
 
@@ -34,11 +34,11 @@ Promise A+ 规定：
 
 3. `挂起 -> 完成`，称之为 `resolve`；`挂起 -> 失败` 称之为 `reject`。任务完成时，可能有一个相关数据；任务失败时，可能有一个失败原因。
 
-   ![alt](./assets/20210618160538.png)
+   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20210618160538.png)
 
 4. 可以针对任务进行后续处理，针对完成状态的后续处理称之为 `onFulfilled`，针对失败的后续处理称之为 `onRejected。`
 
-   ![alt](./assets/20210618161125.png)
+   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20210618161125.png)
 
 ## Promise API
 
@@ -74,7 +74,7 @@ pro.then(
 
 ## 链式调用
 
-![image-20210621103501094](./assets/20210621103501.png)
+![image-20210621103501094](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20210621103501.png)
 
 1. then 方法必定会返回一个新的 Promise。
 

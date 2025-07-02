@@ -22,7 +22,7 @@ tags:
 
 渲染区域，由某个 HTML 元素创建，以下元素会在其内部创建 BFC 区域：
 
-![alt](./assets/PixPin_2025-03-14_14-26-07.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-14_14-26-07.png)
 
 - 不同的 BFC 区域在渲染时互不干扰。
 

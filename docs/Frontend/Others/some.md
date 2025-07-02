@@ -19,4 +19,4 @@ tags:
 
 一些应用示例：
 
-![alt](./assets/PixPin_2025-03-20_23-10-37.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-20_23-10-37.png)

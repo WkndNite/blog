@@ -77,7 +77,7 @@ CSS module 遵循以下思路解决类名冲突问题：
 4. 同 JS 的变量一样，每个 CSS 模块文件中难以出现冲突的类名，冲突的类名往往发生在不同的 CSS 模块文件中。
 5. 只需要保证构建工具在合并样式代码后不会出现类名冲突即可。
 
-![alt](./assets/2020-01-31-13-54-37.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-31-13-54-37.png)
 
 ## 实现原理
 
@@ -85,13 +85,13 @@ CSS module 遵循以下思路解决类名冲突问题：
 
 CSS-loader 的实现方式如下：
 
-![alt](./assets/2020-01-31-14-00-56.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-31-14-00-56.png)
 
 原理极其简单，开启了 CSS module 后，CSS-loader 会将样式中的类名进行转换，转换为一个唯一的 hash 值。
 
 由于 hash 值是根据模块路径和类名生成的，因此，不同的 CSS 模块，哪怕具有相同的类名，转换后的 hash 值也不一样。
 
-![alt](./assets/2020-01-31-14-04-11.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-31-14-04-11.png)
 
 ## 如何应用样式
 
@@ -99,7 +99,7 @@ CSS module 带来了一个新的问题：源代码的类名和最终生成的类
 
 为了解决这个问题，CSS-loader 会导出原类名和最终类名的对应关系，该关系是通过一个对象描述的。
 
-![alt](./assets/2020-01-31-14-08-49.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-31-14-08-49.png)
 
 这样一来，我们就可以在 JS 代码中获取到 CSS 模块导出的结果，从而应用类名了。
 

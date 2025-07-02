@@ -14,11 +14,11 @@ tags:
 
 如果到处和导入使用的是同一种模块化标准，打包后的效果和之前学习的模块化没有任何差异。
 
-![image](./assets/same-module-standard.excalidraw.png)
+![image](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/same-module-standard.png)
 
 ## 不同模块化标准
 
-![image](./assets/diff-module-standard.excalidraw.png)
+![image](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/diff-module-standard.png)
 
 ## 最佳实践
 

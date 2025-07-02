@@ -32,37 +32,37 @@ function render(html) {
 
 这一步的最终目标就是为了得到 DOM 树和 CSSOM 树。
 
-![alt](./assets/21160950_e1108f5c-7d86-4cb8-a17b-f3a9744d6e2a.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/21160950_e1108f5c-7d86-4cb8-a17b-f3a9744d6e2a.png)
 
-![alt](./assets/21160950_3ff8fcf6-0637-4f4a-86ff-fb37500274c3.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/21160950_3ff8fcf6-0637-4f4a-86ff-fb37500274c3.png)
 
 在解析 HTML 的过程中，如果遇到了 CSS 和 JS 外部文件，将会如下操作：
 
-![alt](./assets/21160950_93bd310e-74d6-4dd9-bbb3-6322d42e65b0.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/21160950_93bd310e-74d6-4dd9-bbb3-6322d42e65b0.png)
 
 ### Recalculate Style
 
-![alt](./assets/21160950_dbfee3fd-5e5d-4943-c1cd-ae97703f188d.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/21160950_dbfee3fd-5e5d-4943-c1cd-ae97703f188d.png)
 
 对于这一部分，我在[另一篇文章](/Frontend/Basic/computed)里已经有过说明，于是此处不再赘述。
 
 ### Layout
 
-![alt](./assets/21160950_3040d4fc-c208-4389-b90f-093074c778e9.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/21160950_3040d4fc-c208-4389-b90f-093074c778e9.png)
 
 此时，我们需要注意 DOM 树 和 Layout 树不一定是一一对应的：
 
 - `display: none` 的节点没有几何信息，因此不会生成到布局树中。
 
-  ![alt](./assets/21160950_c647b2b3-bd4f-4ed6-edba-a3edc3304add.png)
+  ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/21160950_c647b2b3-bd4f-4ed6-edba-a3edc3304add.png)
 
 - `伪元素` 虽然不存在于 DOM 树中，但它们拥有几何信息，因此会生成到布局树中。
 
-  ![alt](./assets/21160950_b04df79f-5c39-48ec-c9b0-3c2275e76c3c.png)
+  ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/21160950_b04df79f-5c39-48ec-c9b0-3c2275e76c3c.png)
 
 - `匿名行盒` 和 `匿名块盒` 不会出现在 DOM 树中，但它们拥有几何信息，因此会生成到布局树中。
 
-  ![alt](./assets/21160950_372fc39d-57f9-4778-a0ba-8c5424e76efb.png)
+  ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/21160950_372fc39d-57f9-4778-a0ba-8c5424e76efb.png)
 
 :::warning
 

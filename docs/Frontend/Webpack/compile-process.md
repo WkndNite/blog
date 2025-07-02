@@ -33,11 +33,11 @@ tags:
 
 2. 构建所有依赖模块
 
-   ![image](./assets/2020-01-09-12-32-38.png)
+   ![image](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-09-12-32-38.png)
 
-   ![alt](./assets/2020-01-09-12-35-05.png)
+   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-09-12-35-05.png)
 
-   > AST在线测试工具：https://astexplorer.net/
+   > AST在线测试工具：<https://astexplorer.net/>
 
 3. 产生 chunk assets
 
@@ -45,27 +45,27 @@ tags:
 
    接下来，Webpack 会根据配置为 chunk 生成一个资源列表，即 chunk assets，资源列表可以理解为是生成到最终文件的文件名和文件内容。
 
-   ![alt](./assets/2020-01-09-12-39-16.png)
+   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-09-12-39-16.png)
 
    > chunk hash 是根据所有 chunk assets 的内容生成的一个 hash 字符串。
 
-   ![image](./assets/2020-01-09-12-43-52.png)
+   ![image](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-09-12-43-52.png)
 
 4. 合并 chunk assets
 
    将多个 chunk 的 assets 合并到一起，并产生一个总的 hash。
 
-   ![alt](./assets/2020-01-09-12-47-43.png)
+   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-09-12-47-43.png)
 
 ## 输出阶段
 
 此步骤非常简单，Webpack 将利用 node 中的 fs 模块，根据编译产生的总的 assets，生成相应的文件。
 
-![alt](./assets/2020-01-09-12-54-34.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-09-12-54-34.png)
 
 ## 总过程
 
-![alt](./assets/2020-01-09-15-51-07.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-09-15-51-07.png)
 
 ## 涉及术语
 

@@ -195,4 +195,4 @@ $$
 
 在 Flex 布局中，gap 是一个用于设置项目之间的间隙的属性。它是 row-gap 和 column-gap 的简写形式，用于定义主轴和交叉轴上的间隙大小。 具体来说，gap 属性接受一个长度值，表示项目之间的间隙大小。可以使用一个值来同时设置主轴和交叉轴上的间隙，也可以使用两个值分别设置主轴和交叉轴上的间隙。
 
-![alt](./assets/flex-gap.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/flex-gap.png)

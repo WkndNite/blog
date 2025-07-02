@@ -23,11 +23,11 @@ tags:
 
 预编译器的原理很简单，即使用一种更加优雅的方式来书写样式代码，通过一个编译器，将其转换为可被浏览器识别的传统 css 代码。
 
-![alt](./assets/2020-02-03-11-48-45.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-02-03-11-48-45.png)
 
 目前，最流行的预编译器有 `LESS` 和 `SASS`。
 
-![alt](./assets/2020-02-03-11-50-05.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-02-03-11-50-05.png)
 
 > less官网：<http://lesscss.org/>
 >
