@@ -178,4 +178,4 @@ const obj: RandomKey = {
 3. `@types`：三方库 TS 类型包
 4. `tsconfig.json`：定义 TS 的配置。
 
-![泛型约束 API](./assets/TS-test.png)
+![泛型约束 API](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/TS-test.png)

@@ -169,11 +169,11 @@ tags:
 
 当使用`webpack-dev-server`时，考虑代码改动到效果呈现的过程：
 
-![alt](assets/2020-02-21-14-20-49.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-02-21-14-20-49.png)
 
 而使用了热替换后，流程发生了变化：
 
-![alt](assets/2020-02-21-14-22-32.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-02-21-14-22-32.png)
 
 我们可以通过以下修改应用热更新：
 
