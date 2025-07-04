@@ -75,7 +75,7 @@ date: 2025-01-20
    - `handler`：定义代理对象的行为。
    - 返回值：返回的就是一个代理对象，之后外部对属性的读写都是针对代理对象来做的。
 
-   ![Proxy](./assets/proxy.excalidraw.png)
+   ![Proxy](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/proxy.excalidraw.png)
 
 ### 两者共同点
 

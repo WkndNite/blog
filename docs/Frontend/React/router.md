@@ -12,11 +12,11 @@ cover: https://reactrouter.com/splash/hero-3d-logo.dark.webp
 
 早期的时候并不存在前端路由，那个时候只有后端路由，类似下图：
 
-![早期路由](./assets/router1.excalidraw.png)
+![早期路由](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/router1.excalidraw.png)
 
 后来，随着单页面应用的流行，整个 Web 应用只存在一个页面，通过 JS 来调整模块显示不同的内容，类似于下图：
 
-![单页面应用路由](./assets/router2.excalidraw.png)
+![单页面应用路由](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/router2.excalidraw.png)
 
 可以看到，所谓的前端路由实际上是协调当前页面显示什么模块。那么单页面应用，还存在后端路由吗？实际上也是存在的，后端路由负责返回对应的数据。
 

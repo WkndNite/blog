@@ -24,7 +24,7 @@ tags:
 
 也就是说，只要我们有一种方式，能够将真实 DOM 的层次结构描述出来，那么这就是一个虚拟 DOM。
 
-![alt](./assets/2023-02-23-034001.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2023-02-23-034001.png)
 
 在 React 中，React 团队使用的是 JS 对象来对 DOM 结构进行一个描述。但是很多人会直接把 JS 对象和虚拟 DOM 划等号，这种理解是不太准确的，比较片面的。
 
@@ -120,7 +120,7 @@ UI = f(state) 这个公式进一步进行拆分可以拆分成两步：
 
 经过 Babel 编译后结果如下：
 
-![alt](./assets/2022-12-26-075736.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2022-12-26-075736.png)
 
 在源码中 createElement 方法如下：
 

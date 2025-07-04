@@ -118,7 +118,7 @@ function render() {
 ```
 
 模板编译器在对字符串进行编译的时候，是一点一点转换而来的。
-![模板编译](./assets/template-compiler.excalidraw.png)
+![模板编译](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/template-compiler.excalidraw.png)
 
 - 解析器：负责将模板字符串解析为对应的模板抽象语法树（AST）。
 - 转换器：负责将模板的抽象语法树转换为 JS AST。

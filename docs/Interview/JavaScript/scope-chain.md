@@ -111,7 +111,7 @@ innerSay(); // 脚本错误
 
 我们看个例子，用泡泡来比喻作用域可能好理解一点：
 
-![alt](./assets/2021-10-01-151740.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2021-10-01-151740.png)
 
 最后输出的结果为 2、4、12
 

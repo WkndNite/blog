@@ -88,4 +88,4 @@ function handleTimeout(currentTime) {
 
 Scheduler 这一块儿大致的流程图如下：
 
-![alt](./assets/2022-12-30-023505.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2022-12-30-023505.png)

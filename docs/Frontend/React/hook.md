@@ -270,7 +270,7 @@ function App() {
 
 当上面的函数组件第一次进行初始化后，就会形成一个 hook 的链表：
 
-![alt](./assets/2023-03-03-031041.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2023-03-03-031041.png)
 
 接下来我们来看一下更新，更新的时候会执行 updateXXX 对应的方法，相关的代码如下：
 
@@ -410,7 +410,7 @@ function App({ showNumber }) {
 
 那么此时在进行复用的时候就会报错：
 
-![alt](./assets/2023-03-03-072611.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2023-03-03-072611.png)
 
 第二次复用的时候，发现 hook 的类型不同， useState !==useRef，那么就会直接报错。因此开发的时候一定要注意 hook 顺序的一致性。
 

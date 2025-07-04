@@ -29,7 +29,7 @@ tags:
 
 比如下面的聊天场景
 
-![image-20211028160932756](./assets/20211028160932.png)
+![image-20211028160932756](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211028160932.png)
 
 由于 HTTP 协议是请求-响应模式，请求必须在前，响应必须在后，这就导致了服务器无法「主动」的把消息告诉客户端。
 
@@ -102,7 +102,7 @@ Note right of 服务器: 一段时间后...
 
 伴随着 HTML5 出现的 WebSocket，从 **协议** 上赋予了服务器主动推送消息的能力。
 
-![alt](./assets/20211028171840.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211028171840.png)
 
 从上图可以看出：
 

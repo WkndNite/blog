@@ -11,13 +11,13 @@ tags:
 
 之前在学习事件循环的时候，大家看得更多的是下面这张图：
 
-![alt](./assets/2022-12-29-021951.gif)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2022-12-29-021951.gif)
 
 首先会执行同步代码，同步代码执行的时候，如果遇到异步代码，就会放到 WebApis 里面进行执行，当 WebApis 执行完毕之后，会将结果放入到 task queue（任务队列），同步代码执行完毕后，就会从任务队列中会获取一个一个的任务进行执行。
 
 如果将事件循环和浏览器渲染结合到一起，大致就是下面这张图：
 
-![alt](./assets/2022-12-29-022329.gif)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2022-12-29-022329.gif)
 
 我们可以看出，每一次事件循环，会从任务队列里面获取一个任务来执行。
 
@@ -27,16 +27,16 @@ tags:
 
 `requestAnimationFrame Api` 是在每一次重新渲染之前执行，这个 API 的出现，就是专门拿来做动画的。以前我们做动画，用的更多的是 setInterval 或者 setTimeout，但是这些 API 本意不是拿来做动画的。使用 requestAnimationFrame Api 做动画，最大的优点就是频率是和浏览器重新渲染的频率一致。
 
-![alt](./assets/2022-12-29-023954.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2022-12-29-023954.png)
 
 requestAnimationFrame 就不会存在这个问题，因为它是在渲染之前，保证了和浏览器渲染是同频
 
-![alt](./assets/2022-12-29-024236.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2022-12-29-024236.png)
 微任务：如果微任务队列里面存在任务，那么事件循环会在循环一次的时候，将整个微任务队列清空。
 
 每一次事件循环时这几种任务的区别，如下图：
 
-![alt](./assets/2022-12-29-024700.gif)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2022-12-29-024700.gif)
 
 ## MessageChannel 详细
 
@@ -121,7 +121,7 @@ fn();
 
 执行结果部分截图如下：
 
-![alt](./assets/2022-12-29-031030.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2022-12-29-031030.png)
 正因为这个原因，所以 react 团队没有选择使用 setTimeout 来产生任务，因为 4ms 的时间的浪费还是不可忽视的。
 
 requestAnimationFrame 也不合适，因为这个只能在重新渲染之前，才能够执行一次，而如果我们包装成一个任务，放入到任务队列中，那么只要没到重新渲染的时间，就可以一直从任务队列里面获取任务来执行。

@@ -12,7 +12,7 @@ tags:
 
 回顾登录的流程：
 
-![alt](./assets/image-20200417161950450.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200417161950450.png)
 
 接下来的问题是：这个出入证（令牌）里面到底存啥？
 
@@ -66,7 +66,7 @@ authorization: bearer jwt令牌
 
 它们的完整交互流程是非常简单清晰的。
 
-![image-20200422172837190](./assets/image-20200422172837190.png)
+![image-20200422172837190](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200422172837190.png)
 
 ## 令牌的组成
 

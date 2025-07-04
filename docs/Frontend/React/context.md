@@ -19,7 +19,7 @@ tags:
 
 正常来讲，SPA 中的组件会形成一个像组件树一样的结构，当内部组件和组件之间要进行数据传递时，就免不了一层一层先传递到共同的父组件，然后再一层一层传递下去。
 
-![组件树](./assets/context-1.excalidraw.png)
+![组件树](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/context-1.excalidraw.png)
 
 假设 subComA-1 组件的状态数据要传递给 subComB-2 组件，应该怎么做？
 
@@ -169,7 +169,7 @@ export default App;
 
 整体的组件树结构图如下：
 
-![context](./assets/context-base.excalidraw.png)
+![context](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/context-base.excalidraw.png)
 
 最后，我们来看一下效果：
 
@@ -190,7 +190,7 @@ export default MyContext;
 
 效果如图：
 
-![displayName](./assets/PixPin_2025-03-07_10-50-13.png)
+![displayName](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-07_10-50-13.png)
 
 ### 默认值
 
@@ -377,7 +377,7 @@ export default App;
 
 效果图如下：
 
-![效果图](./assets/PixPin_2025-03-07_11-16-54.png)
+![效果图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-07_11-16-54.png)
 
 :::tip
 如果在多个上下文环境中，出现了同名的属性，那么会按照上下文环境从里到外的顺序进行覆盖。

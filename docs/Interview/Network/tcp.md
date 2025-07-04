@@ -8,17 +8,17 @@ tags:
 
 # TCP 协议
 
-![image-20211008163417521](./assets/model5.excalidraw.png)
+![image-20211008163417521](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/model5.excalidraw.png)
 
-![image-20211008163458168](./assets/en-de-capsulation.png)
+![image-20211008163458168](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/en-de-capsulation.png)
 
 ## TCP 收发数据流程
 
-![alt-text](./assets/20211021122224.png)
+![alt-text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211021122224.png)
 
 ### 分段发送
 
-![alt-text](./assets/20211021123315.png)
+![alt-text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211021123315.png)
 
 ### 可靠传输
 
@@ -26,7 +26,7 @@ tags:
 
 为了解决数据报丢失、数据报错乱等问题，TCP 协议要求：**接收方收到数据报后，必须对数据报进行确认！**
 
-![alt](./assets/20211021124852.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211021124852.png)
 
 - seq：表示这次数据报的序号。
 - ACK：表示这次数据报是一个确认数据报。
@@ -40,7 +40,7 @@ TCP 协议要实现数据的收发，必须要先建立连接。
 
 连接的本质其实就是双方各自开辟的一块儿内存空间，空间中主要是数据缓冲区和一些变量。
 
-![alt](./assets/20211021125708.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211021125708.png)
 
 **连接建立的过程需要经过三次数据报传输，因此称之为三次握手。**
 
@@ -54,7 +54,7 @@ TCP 协议要实现数据的收发，必须要先建立连接。
 >
 > 结束
 
-![alt](./assets/20211021131710.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211021131710.png)
 
 ## 连接的销毁（四次挥手）
 
@@ -72,11 +72,11 @@ TCP 协议要实现数据的收发，必须要先建立连接。
 >
 > 结束
 
-![alt](./assets/20211021143028.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211021143028.png)
 
 ## HTTP 和 TCP 的关系
 
-![alt-text](./assets/20211021134242.png)
+![alt-text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211021134242.png)
 
 HTTP 协议是对内容格式的规定，它 **使用** 了 TCP 协议完成消息的可靠传输。
 

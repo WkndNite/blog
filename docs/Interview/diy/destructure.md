@@ -23,7 +23,7 @@ tags:
 
 首先，你可以尝试去运行如上代码，会得到这样一个结果：
 
-![alt](./assets/PixPin_2025-03-21_23-11-04.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-21_23-11-04.png)
 
 这里我不展开描述，只解释下面几个概念，你可以参阅 ECMAScipt 官方文档 [关于解构](https://262.ecma-international.org/13.0/#sec-well-known-symbols)。
 

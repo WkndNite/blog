@@ -12,7 +12,7 @@ tags:
 
 > JavaScript 中如何进行数据类型的转换？
 
-![alt](./assets/微信图片_20250316212409.jpg)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/微信图片_20250316212409.jpg)
 
 ## 数据类型转换介绍
 

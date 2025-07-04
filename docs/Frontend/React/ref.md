@@ -51,7 +51,7 @@ export default class App extends Component {
 
 在上面的代码中，我们在 input 上面挂了一个 ref 属性，对应的值为 inputRef，之后查看组件实例，就可以看到该组件实例中的 refs 里面就保存了该 input 的 DOM 元素。
 
-![ref 最早的用法](./assets/string-refs.png)
+![ref 最早的用法](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/string-refs.png)
 
 然后我们就可以像之前一样进行 DOM 元素的操作了。例如在上面的示例中，我们进行了聚焦的操作。
 
@@ -64,7 +64,7 @@ export default class App extends Component {
 
 至于为什么 String 类型的 Refs 会被废弃，主要是以下几个方面原因：
 
-![为什么 String 类型的 Refs 会被废弃](./assets/ref-problems.png)
+![为什么 String 类型的 Refs 会被废弃](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/ref-problems.png)
 
 参阅地址：<https://github.com/facebook/react/pull/8333#issuecomment-271648615>
 
@@ -99,11 +99,11 @@ export default class App extends Component {
 
 在上面的代码中，我们创建 Ref 不再是通过字符串的形式，而是采用的 createRef 这个静态方法创建了一个 Ref 对象，并在组件实例上面新增了一个 inputRef 属性来保存这个 Ref 对象。
 
-![createRef API](./assets/createRef.png)
+![createRef API](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/createRef.png)
 
 **createRef** 这个方法本质也很简单，就是返回了一个 **{ current : null }** 的对象，下面是 createRef 的源码：
 
-![createRef 源码](./assets/2022-11-30-055424.png)
+![createRef 源码](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2022-11-30-055424.png)
 
 除了在 JSX 中关联 Ref，我们还可以直接关联一个类组件，这样就可以直接调用该组件内部的方法。例如：
 
@@ -346,7 +346,7 @@ export default withLog;
 
 那么 React.forwardRef 究竟做了啥呢？源码如下：
 
-![React.forwardRef 源码](./assets/2022-11-30-055526.png)
+![React.forwardRef 源码](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2022-11-30-055526.png)
 
 可以看到，实际上 forwardRef 这个静态方法实际上也就是返回一个 elementType 的对象而已，该对象包含一个 render 方法，也就是我们在使用 React.forwardRef 时传入的渲染函数。
 
@@ -394,7 +394,7 @@ function App() {
 export default App;
 ```
 
-![效果图](./assets/PixPin_2025-03-06_22-22-19.png)
+![效果图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-06_22-22-19.png)
 
 :::tip
 如上图所示，在页面重新渲染后，inputRef1 会重新 create，因此输出仍为 null；而 inputRef2 是挂载在 FiberNode 上的，因此能直接拿到最新的值。

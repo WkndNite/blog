@@ -21,7 +21,7 @@ tags:
 
 客户端缓存的原理如下：
 
-![image-20200430202446870](./assets/image-20200430202446870.png)
+![image-20200430202446870](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200430202446870.png)
 
 > 这只是一个简易的原理图，实际情况可能有差异。
 
@@ -72,7 +72,7 @@ Last-Modified: Thu, 30 Apr 2020 08:16:31 GMT
 
 这一次的记录非常重要，它为以后浏览器要不要去请求服务器提供了各种依据。
 
-![image-20200430210430455](./assets/image-20200430210430455.png)
+![image-20200430210430455](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200430210430455.png)
 
 ### 来自客户端的缓存指令
 
@@ -87,9 +87,9 @@ Last-Modified: Thu, 30 Apr 2020 08:16:31 GMT
 
 以上两个验证会导致浏览器产生不同的行为。
 
-![image-20200430212052228](./assets/image-20200430212052228.png)
+![image-20200430212052228](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200430212052228.png)
 
-![image-20200430214301507](./assets//image-20200430214301507.png)
+![image-20200430214301507](https://blog-1328542955.cos.ap-shanghai.myqcloud.com//image-20200430214301507.png)
 
 要验证是否有匹配的缓存非常简单，只需要验证当前的请求方法 `GET` 和当前的请求路径 `/index.js` 是否有对应的缓存存在即可。
 
@@ -160,7 +160,7 @@ If-None-Match: W/"121-171ca289ebf"
 
 它们完整的交互过程如下：
 
-![image-20200430225326001](./assets/image-20200430225326001.png)
+![image-20200430225326001](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200430225326001.png)
 
 ## 细节
 
@@ -202,7 +202,7 @@ Expires: Thu, 30 Apr 2020 23:38:38 GMT
 
 具体的有效期设置，按照下面的流程进行：
 
-![image-20200501075337464](./assets/image-20200501075337464.png)
+![image-20200501075337464](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200501075337464.png)
 
 例如，当 `max-age` 设置为 0 时，缓存立即过期
 
@@ -222,7 +222,7 @@ Expires: Thu, 30 Apr 2020 23:38:38 GMT
 
 在 `Chrome` 浏览器中调试时，如果勾选了 `Disable cache`，则发送的请求中会附带该信息
 
-![image-20200501080330131](./assets/image-20200501080330131.png)
+![image-20200501080330131](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200501080330131.png)
 
 ### Vary
 
@@ -236,7 +236,7 @@ Expires: Thu, 30 Apr 2020 23:38:38 GMT
 
 正确的做法如下：
 
-![image-20200501082103089](./assets/image-20200501082103089.png)
+![image-20200501082103089](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200501082103089.png)
 
 ### 使用版本号或 hash
 
@@ -284,7 +284,7 @@ app.68297cd8.css
 
 服务器无法知道客户端到底有没有像浏览器那样缓存文件，它只管根据请求的情况来决定如何响应。
 
-![image-20200501083702987](./assets/image-20200501083702987.png)
+![image-20200501083702987](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200501083702987.png)
 
 很多后端语言搭建的服务器都会自带自己的默认缓存规则，当然也支持不同程度的修改。
 
@@ -292,8 +292,8 @@ app.68297cd8.css
 
 浏览器在发出请求时会判断要不要使用缓存。
 
-![image-20200501084258712](./assets/image-20200501084258712.png)
+![image-20200501084258712](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200501084258712.png)
 
 当收到服务器响应时，会自动根据缓存指令进行处理。
 
-![image-20200501084559394](./assets/image-20200501084559394.png)
+![image-20200501084559394](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200501084559394.png)

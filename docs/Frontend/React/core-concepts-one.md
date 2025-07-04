@@ -112,7 +112,7 @@ const element1 = <h1 className="greeting">Hello, world!</h1>;
 console.table(element1);
 ```
 
-![React.createElement()](./assets/React.createElement.png)
+![React.createElement()](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/React.createElement.png)
 
 之所以输出的并不是我们希望看到的结果，是因为最终输出的其实是经过 Babel 调用 `React.createElement()` 函数生成的对象。这些对象（虚拟 DOM）被称为 React 元素，它们描述了应该在屏幕上看到的内容。
 

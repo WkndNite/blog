@@ -73,7 +73,7 @@ function App() {
 
 结构如下图所示：
 
-![alt](./assets/2023-03-07-025835.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2023-03-07-025835.png)
 
 ## 工作流程
 

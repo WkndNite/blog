@@ -56,7 +56,7 @@ window.onresize = function () {
 
 再考虑一个搜索的场景（例如百度），当我在一个文本框中输入文字（键盘按下事件）时，需要将文字发送到服务器，并从服务器得到搜索结果，这样的话，用户直接输入搜索文字就可以了，不用再去点搜索按钮，可以提升用户体验，类似于下面的效果：
 
-![alt](./assets/2021-10-01-014859.gif)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2021-10-01-014859.gif)
 
 上面的效果，我没有点击搜索按钮，也没有按回车键，只是写了一些搜索的文字而已。
 
@@ -122,7 +122,7 @@ txt.onkeyup = (event) => {
 
 效果如下：
 
-![alt](./assets/2021-10-01-020722.gif)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2021-10-01-020722.gif)
 
 ## 函数节流
 
@@ -176,7 +176,7 @@ txt.onkeyup = (event) => {
 
    效果如下：
 
-   ![alt](./assets/2021-10-01-022740.gif)
+   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2021-10-01-022740.gif)
 
 2. 设置定时器
 

@@ -25,11 +25,11 @@ tags:
 
 <mark>同源策略是指，若页面的源和页面运行过程中加载的源不一致时，出于安全考虑，浏览器会对跨域的资源访问进行一些限制。</mark>
 
-![image-20210916104747296](./assets/20210916104747.png)
+![image-20210916104747296](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20210916104747.png)
 
 同源策略对 AJAX 的跨域限制的最为凶狠，默认情况下，它不允许 AJAX 访问跨域资源。
 
-![image-20210916105741041](./assets/20210916105741.png)
+![image-20210916105741041](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20210916105741.png)
 
 所以，我们通常所说的跨域问题，就是同源策略对 AJAX 产生的影响。
 
@@ -49,7 +49,7 @@ tags:
 
 因此，只需要在开发环境使用代理解决跨域即可，这种代理又称之为开发代理。
 
-![image-20210916125008693](./assets/20210916125008.png)
+![image-20210916125008693](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20210916125008.png)
 
 在实际开发中，只需要对开发服务器稍加配置即可完成。
 
@@ -76,7 +76,7 @@ module.exports = {
 
 它的总体思路是：<mark>如果浏览器要跨域访问服务器的资源，需要获得服务器的允许。</mark>
 
-![image-20200421152122793](./assets/image-20200421152122793.png)
+![image-20200421152122793](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200421152122793.png)
 
 而要知道，一个请求可以附带很多信息，从而会对服务器造成不同程度的影响。
 
@@ -210,7 +210,7 @@ fetch('http://crossdomain.com/api/news', {
 
    下图简述了整个交互过程
 
-   ![image-20200421162846480](./assets/image-20200421162846480.png)
+   ![image-20200421162846480](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200421162846480.png)
 
 ### 需要预检的请求
 
@@ -320,7 +320,7 @@ fetch('http://crossdomain.com/api/user', {
 
    下图简述了整个交互过程
 
-   ![image-20200421165913320](./assets/image-20200421165913320.png)
+   ![image-20200421165913320](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image-20200421165913320.png)
 
 ### 附带身份凭证的请求
 
@@ -371,6 +371,6 @@ Access-Control-Expose-Headers: authorization, a, b
 
 JSONP 的做法是：当需要跨域请求时，不使用 AJAX，转而生成一个 script 元素去请求服务器，由于浏览器并不阻止 script 元素的请求，这样请求可以到达服务器。服务器拿到请求后，响应一段 JS 代码，这段代码实际上是一个函数调用，调用的是客户端预先生成好的函数，并把浏览器需要的数据作为参数传递到函数中，从而间接的把数据传递给客户端。
 
-![image-20210916151516184](./assets/20210916151516.png)
+![image-20210916151516184](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20210916151516.png)
 
 JSONP 有着明显的缺点，即其只能支持 GET 请求。

@@ -20,7 +20,7 @@ tags:
 - 如何运输？可能的方案：自行车、汽车、火车、高铁、飞机、火箭
 
 这就形成了一个分层结构：
-![分层图](./assets/cola.excalidraw.png)
+![分层图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/cola.excalidraw.png)
 
 从常理出发，我们可以得到以下结论：
 
@@ -31,15 +31,15 @@ tags:
 
 ## 五层网络模型图
 
-![五层网络模型](./assets/model5.excalidraw.png)
+![五层网络模型](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/model5.excalidraw.png)
 
 ## 数据的封装和解封装
 
-![数据的封装和解封装](./assets/en-de-capsulation.png)
+![数据的封装和解封装](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/en-de-capsulation.png)
 
 ## 四层、五层、七层
 
-![网络模型](./assets/models.excalidraw.png)
+![网络模型](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/models.excalidraw.png)
 
 ## 面试题
 

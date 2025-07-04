@@ -71,11 +71,11 @@ export default Modal;
 
 运行代码，可以发现模态框渲染位置是在 App 组件内。然而，使用过组件库的经验告诉我们，模态框的元素位置一般会脱离父组件而存在。
 
-![效果图](./assets/PixPin_2025-03-07_14-20-32.png)
+![效果图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-07_14-20-32.png)
 
 你可能觉得这无伤大雅，但是如果你在父组件加上了一些样式，如果这些样式也被应用到模态框上，那么可能会出现一些意想不到的问题，比如设置 App 组件定位为 relative，那么模态框的位置就会变得非常奇怪。
 
-![效果图](./assets/PixPin_2025-03-07_14-19-59.png)
+![效果图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-07_14-19-59.png)
 
 ## 使用 Portals
 
@@ -137,7 +137,7 @@ export default Modal;
 
 在上面的代码中，我们要将渲染的视图作为 createPortal 方法的第一个参数，而第二个参数用于指定要渲染到哪个 DOM 元素中。
 
-![效果图](./assets/PixPin_2025-03-07_14-19-29.png)
+![效果图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-07_14-19-29.png)
 
 其实，根据官方的介绍，Portals 的典型用例适当父组件有 overflow: hidden 或 z-index 样式，但是你需要子组件能够在视觉上“跳出”其容器。例如，对话框、悬浮卡以及提示框。
 
@@ -147,7 +147,7 @@ export default Modal;
 
 以上面的例子为例，我们可以看到即使模态框已经如此渲染，但在组件树中仍然处于根组件内部。
 
-![效果图](./assets/PixPin_2025-03-07_14-31-19.png)
+![效果图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-07_14-31-19.png)
 
 但是在 React 中事件冒泡是按照组件结构来进行冒泡的，你会发现事件冒泡到了根组件，而不仅仅是模态框。
 

@@ -521,7 +521,7 @@ export default App;
 
 此时在我们的应用中，**各个组件内部维护了自身的数据，组件内部数据的更新并不会影响到同级组件和祖级组件**。效果如下：
 
-![效果图](./assets/PixPin_2025-03-08_16-46-25.png)
+![效果图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-08_16-46-25.png)
 
 接着，我们做出如下修改：
 
@@ -691,7 +691,7 @@ export default React.memo(ChildCom1);
 
 运行如上代码，我们会发现这样一个奇怪的效果：
 
-![效果](./assets/PixPin_2025-03-08_16-56-08.png)
+![效果](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-08_16-56-08.png)
 
 原因是此时再去点击增加按钮，父组件会重新渲染，但是生成了的 test 函数并非之前的，进而导致传递的 props 也会发生改变。
 
@@ -780,7 +780,7 @@ export default App;
 
 我们可以发现，尽管总和不变，只是输入文本框内容，也会引起页面的重新渲染（包括总和函数重新调用）。
 
-![useMemo](./assets/PixPin_2025-03-08_17-10-50.png)
+![useMemo](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-08_17-10-50.png)
 
 此时，我们就可以使用 `useMemo` 来缓存这个值，代码如下：
 

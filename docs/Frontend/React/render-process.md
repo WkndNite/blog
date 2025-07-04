@@ -32,7 +32,7 @@ const UI = commit(state); // 根据上一步计算出来的 state 渲染出 UI
 
 每个阶段对应不同的组件：
 
-![alt](./assets/2023-02-23-101849.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2023-02-23-101849.png)
 
 - 调度器（Scheduer）：调度任务，为任务排序优先级，让优先级高的任务先进入到 Reconciler。
 - 协调器（Reconciler）：生成 Fiber 对象，收集副作用，找出哪些节点发生了变化，打上不同的 flags，著名的 diff 算法也是在这个组件中执行的。
@@ -66,7 +66,7 @@ export default () => {
 
 如下图所示：
 
-![alt](./assets/2023-02-23-103449.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2023-02-23-103449.png)
 
 ## 调度器
 
@@ -203,7 +203,7 @@ function performUnitOfWork(fiberNode) {
 
 最后我们来看一张图：
 
-![alt](./assets/2023-02-24-031518.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2023-02-24-031518.png)
 
 ## 渲染器
 
@@ -217,7 +217,7 @@ Renderer 工作的阶段被称之为 commit 阶段。该阶段会将各种副作
 - Mutation 阶段
 - Layout 阶段
 
-![alt](./assets/2023-03-02-090354.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2023-03-02-090354.png)
 
 ## 真题解答
 

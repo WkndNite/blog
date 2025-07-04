@@ -25,13 +25,13 @@ date: 2025-01-20
 
 上面的 HTML 结构就会形成一个 DOM 树结构：
 
-![DOM 树](./assets/ctavt-1.excalidraw.png)
+![DOM 树](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/ctavt-1.excalidraw.png)
 
 实际上，**组件的本质就是对一组 DOM 进行复用**。
 
 假设我们将上面的 DOM 结构封装成一个组件 Fruit，该组件就可以用到其他的组件里面，组件和组件之间就形成了树结构，这就是 **组件树**。而每个组件的背后，对应的是一组虚拟 DOM。虚拟 DOM 的背后又是真实 DOM 的映射。
 
-![组件树](./assets/ctavt-2.excalidraw.png)
+![组件树](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/ctavt-2.excalidraw.png)
 
 接下来明确定义：
 
@@ -72,7 +72,7 @@ export default {
 - 优点：这种设计的好处在于能够精准地知道哪个数据发生了变化。
 - 缺点：当应用足够复杂的时候，一个应用里面会包含大量的组件，而这种设计又会导致一个组件对应多个 watcher，这样的设计是非常消耗资源的。
 
-![Vue 1.x 响应式](./assets/ctavt-3.excalidraw.png)
+![Vue 1.x 响应式](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/ctavt-3.excalidraw.png)
 
 于是从 Vue 2.0 开始，引入了虚拟 DOM。2.0 的响应式有一个非常大的变动，将 watcher 的力度放大到了组件级别。也就是说，一个组件对应一个 watcher。
 
@@ -80,7 +80,7 @@ export default {
 
 这个时候，虚拟 DOM 就派上用场了。通过对组件内部的虚拟 DOM 进行 diff，就可以知道哪些节点需要更新。
 
-![Vue 2.x 响应式](./assets/ctavt-4.excalidraw.png)
+![Vue 2.x 响应式](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/ctavt-4.excalidraw.png)
 
 Vue 3 的响应式在架构上面是没有改变的，仍然是响应式 + 虚拟 DOM：
 

@@ -44,7 +44,7 @@ JavaScript 运行时首先会进入全局环境，对应会生成全局上下文
 
 要简单理解栈的存取方式，我们可以通过类比乒乓球盒子来分析。如下图：
 
-![alt](./assets/2021-10-02-060310.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2021-10-02-060310.png)
 
 栈遵循先进后出，后进先出的规则，或称 LIFO（Last In First Out）规则。
 
@@ -83,7 +83,7 @@ foo();
 
 对应图解如下：
 
-![alt](./assets/2021-10-02-060848.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2021-10-02-060848.png)
 
 :::warning 执行上下文的数量限制（堆栈溢出）
 

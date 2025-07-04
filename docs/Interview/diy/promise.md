@@ -328,7 +328,7 @@ console.log(3)
 
 那么，浏览器如何实现一个微队列呢？浏览器里有一个 API 叫 `MutationObserver`，它能够监听 DOM 变化，当 DOM 变化时，会在微队列执行回调函数：
 
-![alt](./assets/PixPin_2025-03-21_16-14-16.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-21_16-14-16.png)
 
 既然两种环境基本概念都搞定了，我们就可以实现这样的微队列代码：
 

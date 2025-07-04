@@ -17,7 +17,7 @@ TLS（Transport Layer Security），传输层安全性协议。
 
 HTTPS（Hyper Text Transfer Protocol over SecureSocket Layer），建立在 SSL 协议之上的 HTTP 协议。
 
-![alt text](assets/20211025160927.png)
+![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211025160927.png)
 
 ## 面试题
 

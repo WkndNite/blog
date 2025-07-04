@@ -17,7 +17,7 @@ tags:
 
 我们可以通过 `slice` 方法将文件按字节分割，得到 `Blob` 对象，并将其输出观察：
 
-![alt](./assets/PixPin_2025-03-25_15-04-23.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-25_15-04-23.png)
 
 ## 分片上传
 
@@ -27,7 +27,7 @@ tags:
 
 效果如下：
 
-![alt](./assets/PixPin_2025-03-25_15-07-45.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-25_15-07-45.png)
 
 :::info
 文件分片很快，无论你文件多大都会瞬间成功。这是因为，分片仅仅只是一次数学运算，File 和 Blob 都不涉及文件数据。
@@ -49,7 +49,7 @@ tags:
 
 效果如下：
 
-![alt](./assets/PixPin_2025-03-25_15-25-57.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/PixPin_2025-03-25_15-25-57.png)
 
 我们接下来把它封装成异步函数，因为这样的操作是消耗时间的：
 

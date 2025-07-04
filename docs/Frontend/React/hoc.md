@@ -32,7 +32,7 @@ tags:
 
 那么，什么叫做对组件 **公共逻辑** 进行 **横向抽离** 呢？
 
-![示意图](./assets/hoc-before.excalidraw.png)
+![示意图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/hoc-before.excalidraw.png)
 
 假设我们这里有三个组件，每个组件有一部分 **公共逻辑**，一部分该组件自身的 **业务逻辑**，那么很明显，每个组件都书写一遍这样的公共逻辑是不划算的。
 
@@ -72,7 +72,7 @@ const ExampleComponent = React.createClass({
 
 之后 React 推出了高阶组件的抽离方式，如下图所示：
 
-![示意图](./assets/hoc-after.excalidraw.png)
+![示意图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/hoc-after.excalidraw.png)
 
 在高阶组件中，接收一个组件作为参数，然后在高阶组件中会返回一个新组件，新组件中会将公共逻辑附加上去，传入的组件一般为新组件的视图。
 
@@ -282,7 +282,7 @@ export default App;
 
 :::
 
-![高阶组件嵌套效果图](./assets/hoc.png)
+![高阶组件嵌套效果图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/hoc.png)
 
 ## 高阶组件的现状
 

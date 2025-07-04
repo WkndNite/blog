@@ -24,7 +24,7 @@ cover: https://redux.js.org/img/redux.svg
 - 没有 Dispatcher，而是在 Store 中集成了 dispatch 方法，store.dispatch() 是 View 发出 Action 的唯一途径。
 - 支持使用中间件管理异步数据流。
 
-![Redux 数据流](./assets/redux.excalidraw.png)
+![Redux 数据流](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/redux.excalidraw.png)
 
 ## ToDos Demo
 
@@ -475,4 +475,4 @@ export const { addTodo, deleteTodo, changeTodo } = todoSlice.actions;
 
 一般来讲，当数据发生变化时，不仅仅是前端的状态库要更新数据，服务器端也要对应的对数据进行更新，此时的更新流程如下：
 
-![后端交互流程图](./assets/redux-backend.excalidraw.png)
+![后端交互流程图](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/redux-backend.excalidraw.png)

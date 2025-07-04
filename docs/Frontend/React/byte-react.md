@@ -13,7 +13,7 @@ cover: https://cdn-icons-png.flaticon.com/128/2497/2497631.png
 - 移动端原生应用开发，如 Instagram、Discord、Oculus。
 - 结合 Electron，进行桌面应用开发。
 
-![FaxJS](./assets/FaxJS.png)
+![FaxJS](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/FaxJS.png)
 
 2010 年，Facebook 在其 php 生态中引入 xhp 框架，首次引入了组合式组件的思想，启发了后来的 React 的设计。
 

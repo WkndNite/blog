@@ -108,17 +108,17 @@ function Counter() {
 
 该应用由三个组件组成：
 
-![alt](./assets/2023-02-22-081811.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2023-02-22-081811.png)
 
 A 组件是整个应用的根组件，在这个根组件中，有一个自变量 a，a 的变化会导致 UI 的重新渲染。
 
-![alt](./assets/2023-02-22-082329.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2023-02-22-082329.png)
 
 上图表示在 A 组件中引入了一个因变量 b，A 组件中的自变量 a 的改变会导致因变量 b 的改变，而这个因变量 b 又作为 props 传递到了子组件 B 当中。
 
 B 组件中也有一个自变量 c，在该组件中还接收从父组件 A 传递过来的 props b，最终在 UI 中渲染 b + c。
 
-![alt](./assets/2023-02-22-083204.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2023-02-22-083204.png)
 
 在组件 C 中，接收从根组件 A 传递过来的数据 a，从而 a 变成 C 组件的一个自变量。
 

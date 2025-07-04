@@ -16,7 +16,7 @@ tags:
 
 缺点：在网络中需要分发密钥，增加了密钥被窃取的风险。
 
-![alt](./assets/20211021150521.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211021150521.png)
 
 ## 非对称加密
 
@@ -26,7 +26,7 @@ tags:
 
 缺点：仅能一方进行解密。
 
-![alt](./assets/20211021151158.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211021151158.png)
 
 ## 摘要/哈希/散列
 
@@ -36,7 +36,7 @@ tags:
 
 缺点：无法解密。
 
-![alt](./assets/20211021151642.png)
+![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20211021151642.png)
 
 ## 面试题
 
