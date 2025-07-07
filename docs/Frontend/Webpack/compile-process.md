@@ -33,9 +33,9 @@ tags:
 
 2. 构建所有依赖模块
 
-   ![image](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-09-12-32-38.png)
+   ![webpack-chunk-process](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/webpack-chunk-process.png)
 
-   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-09-12-35-05.png)
+   ![webpack-chunk-entry](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/webpack-chunk-entry.png)
 
    > AST在线测试工具：<https://astexplorer.net/>
 
@@ -45,17 +45,17 @@ tags:
 
    接下来，Webpack 会根据配置为 chunk 生成一个资源列表，即 chunk assets，资源列表可以理解为是生成到最终文件的文件名和文件内容。
 
-   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-09-12-39-16.png)
+   ![webpack-chunk-to-assets](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/webpack-chunk-to-assets.png)
 
    > chunk hash 是根据所有 chunk assets 的内容生成的一个 hash 字符串。
 
-   ![image](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-09-12-43-52.png)
+   ![webpack-chunk-hash](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/webpack-chunk-hash.png)
 
 4. 合并 chunk assets
 
    将多个 chunk 的 assets 合并到一起，并产生一个总的 hash。
 
-   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2020-01-09-12-47-43.png)
+   ![webpack-chunk-merge](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/webpack-chunk-merge.png)
 
 ## 输出阶段
 

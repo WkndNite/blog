@@ -54,7 +54,7 @@ tag:
 
 :::
 
-### 编译程序总体结构
+`### 编译程序总体结构
 
 :::warning ⚠️ 注意
 下面实际上说的是编译程序的流程，所以如果谈及程序结构，你应该说的是词法分析器、语法分析器……
@@ -91,7 +91,7 @@ tag:
 
 3. [目标代码生成](https://godbolt.org/)。
 
-   ![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2.png)
+   ![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/generate-target-code.png)
 
 :::
 
@@ -113,7 +113,7 @@ tag:
 
    分别对应：模块结构的机器指令 → 可执行文件 → 内存中带虚拟地址的指令与数据段。
 
-   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/image.png)
+   ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/compilation.png)
 
 :::
 
@@ -695,7 +695,7 @@ $$
 - 左递归引起的无穷推导。
 - 回溯问题。
 
-![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/123123.png)
+![alt text](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/left-recursive.png)
 
 🔖 文法改造看课件。
 
@@ -880,8 +880,8 @@ $$
 
 ### 语句的翻译
 
-- 声明，反正课件很复杂，我看的是 [Here](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=44)。
-- 赋值，[here](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=45)。
+- 声明，反正课件很复杂，我看的是 [声明语句的翻译](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=44)。
+- 赋值，[赋值语句的翻译](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=45)。
 - [控制结构的翻译](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=47)
 - [布尔表达式的翻译](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.player.switch&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=48)
 - [switch 翻译](https://www.bilibili.com/video/BV1dL4y1H7T8?spm_id_from=333.788.videopod.episodes&bvid=BV1dL4y1H7T8&vd_source=022528d1041a35d8bd3e483293259e38&p=52)
