@@ -7,7 +7,7 @@ tags:
 
 # 贪心算法
 
-一个只包含小写字母的字符串，每次操作可以将两个相同的字母删除，然后在字符串的末尾新增任意一个小写字母。请问最少需要多少次操作，才能使字符串中所有的字母都不相同。第一行是一个整数 N，表示后续会有 N 个字符串，每个字符串占一行。对于输入的每一个字符串，你需要输出该字符串所需的最少操作次数，每个输出占一行。<el-tag type="success">毫无技巧的纯粹地贪</el-tag>
+[26.不相同的字符串](https://kamacoder.com/problempage.php?pid=1026)<el-tag type="success">毫无技巧的纯粹地贪</el-tag>
 
 :::details 🔍 展开代码
 
@@ -70,7 +70,7 @@ function deal(_str) {
 
 :::
 
-子序列是原数组中一些元素的有序集合，这些元素按照它们在原数组中的出现顺序进行选择，但不一定要相邻。现在给定一个数组 array，需要你找出该数组的最长增长子序列的长度。第一行是一个整数 N，表示后续会有 N 行输入。每个数组占一行。对于输入的每个数组，你需要输出其该数组最长子序列的长度。每个输出占一行。<el-tag type="success">动态规划 or 二分贪心</el-tag>
+[27.最长递增子序列](https://kamacoder.com/problempage.php?pid=1027)<el-tag type="success">动态规划 or 二分贪心</el-tag>
 
 ::::details 🔍 展开代码
 
@@ -145,3 +145,33 @@ function deal(arr) {
 :::
 
 ::::
+
+[455.分发饼干](https://leetcode.cn/problems/assign-cookies/) <el-tag type="success">EZ</el-tag>
+
+:::details 🔍 展开代码
+
+```JavaScript
+/**
+ * @param {number[]} g
+ * @param {number[]} s
+ * @return {number}
+ */
+var findContentChildren = function (g, s) {
+    g.sort((a, b) => a - b);
+    s.sort((a, b) => a - b);
+    let cnt = 0;
+    let child = 0;
+    let cookie = 0;
+
+    while(child < g.length && cookie < s.length){
+        if(s[cookie]>=g[child]){
+            cnt++;
+            child++;
+        }
+        cookie++;
+    }
+    return cnt;
+};
+```
+
+:::
