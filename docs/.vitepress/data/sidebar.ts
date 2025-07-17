@@ -145,5 +145,4 @@ TARGET_DIRECTORIES.forEach((category) => {
   sidebar[`/${category}/`] = generateSidebarItems(categoryPath, category);
 });
 
-console.log('生成的侧边栏:', JSON.stringify(sidebar, null, 2));
 export { sidebar };

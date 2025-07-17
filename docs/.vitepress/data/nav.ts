@@ -20,6 +20,10 @@ export const nav = [
         link: '/Frontend/Engineering'
       },
       {
+        text: 'NodeJS',
+        link: '/Frontend/NodeJS'
+      },
+      {
         text: 'Vue',
         link: '/Frontend/Vue'
       },
