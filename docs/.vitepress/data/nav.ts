@@ -86,6 +86,10 @@ export const nav = [
         link: '/Interview/JavaScript'
       },
       {
+        text:'TypeScript',
+        link: '/Interview/TypeScript'
+      },
+      {
         text: '手撕代码',
         link: '/Interview/diy'
       },
