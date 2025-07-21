@@ -1,5 +1,6 @@
 ---
 date: 2025-07-17 17:08:13
+title: Type Challenges
 tags:
   - TypeScript
   - Type Challenges

@@ -9,3 +9,4 @@ author: false
 
 - [贪心算法](./Greedy.md)
 - [动态规划](./Dp.md)
+- [哈希表](./Hash.md)
