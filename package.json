@@ -41,6 +41,7 @@
     "nprogress-v2": "^1.1.10",
     "pagefind": "^1.1.1",
     "prettier-plugin-organize-imports": "^4.1.0",
+    "rimraf": "^6.0.1",
     "sass": "^1.76.0",
     "textlint": "^14.6.0",
     "textlint-rule-ja-space-between-half-and-full-width": "^2.4.2",
