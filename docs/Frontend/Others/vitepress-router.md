@@ -16,4 +16,4 @@ tags:
 
 在 Vite 构建的项目里，我们通过 `import.meta.glob` 来实现一个手写约定式路由，Webpack 通过 `require.context`。而在 Vitepress 会更容易，因为不需要考虑开发环境和生产环境的差异，生成侧边栏配置的过程全部运行在 Node 环境，因此只需如下配置：
 
-<<< @/.vitepress/data/sidebar.ts
+<<< @/.vitepress/configs/sidebar.ts
