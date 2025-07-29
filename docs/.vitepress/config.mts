@@ -3,8 +3,8 @@ import { AnnouncementPlugin } from 'vitepress-plugin-announcement';
 import { RSSOptions, RssPlugin } from 'vitepress-plugin-rss';
 import { SponsorPlugin } from 'vitepress-plugin-sponsor';
 import { blogTheme } from './blog-theme';
-import { nav } from './data/nav';
-import { sidebar } from './data/sidebar';
+import { nav } from './configs/nav';
+import { sidebar } from './configs/sidebar';
 
 const baseUrl = 'https://blog.wkndnite-tech.cn';
 const RSS: RSSOptions = {
@@ -70,14 +70,7 @@ export default defineConfig({
       gtag('config', 'G-095CYQ2P6C');
     `
     ],
-    ['link', { rel: 'icon', href: '/svg/logo.svg' }],
-    [
-      'link',
-      {
-        rel: 'stylesheet',
-        href: 'https://chinese-fonts-cdn.deno.dev/packages/moon-stars-kai/dist/MoonStarsKai-Bold/result.css'
-      }
-    ]
+    ['link', { rel: 'icon', href: '/svg/logo.svg' }]
   ],
   themeConfig: {
     outline: {

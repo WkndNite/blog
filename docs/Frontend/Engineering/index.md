@@ -14,4 +14,4 @@ author: false
 - [如何抽离 CSS 文件](./CSS-Extract.md)
 - [Babel](./Babel.md)
 - [性能优化](./Performance-Optimization.md)
-- [微前端](./Micro-Frontend.md)
+- [前端架构的演进](./architecture.md)

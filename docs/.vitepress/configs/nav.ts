@@ -86,7 +86,7 @@ export const nav = [
         link: '/Interview/JavaScript'
       },
       {
-        text:'TypeScript',
+        text: 'TypeScript',
         link: '/Interview/TypeScript'
       },
       {

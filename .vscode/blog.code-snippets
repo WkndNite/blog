@@ -43,7 +43,7 @@
   },
   "insert jsx code": {
     "prefix": "jsxcode",
-    "body": ["```JavaScript", "$2", "```"]
+    "body": ["```JSX", "$2", "```"]
   },
   "insert css code": {
     "prefix": "csscode",
@@ -73,24 +73,32 @@
     "prefix": "nln",
     "body": [":no-line-numbers"]
   },
-  "latex":{
+  "latex": {
     "prefix": "latex",
     "body": ["$$", "$1", "$$"]
   },
-    "inline-latex": {
-      "prefix": "ilx",
-      "body": ["$${1}$"]
-    },
-    "mark":{
-      "prefix": "mark",
-      "body": ["<mark>$1</mark>"]
-    },
-    "bilibili-video":{
-      "prefix":"bv",
-      "body": ["<VideoPlayer platform='bilibili' src='$1' episode='$2' />"]
-    },
-    "quote":{
-      "prefix":"blog-quote",
-      "body": ["> $1"]
-    },
+  "inline-latex": {
+    "prefix": "ilx",
+    "body": ["$${1}$"]
+  },
+  "mark": {
+    "prefix": "mark",
+    "body": ["<mark>$1</mark>"]
+  },
+  "bilibili-video": {
+    "prefix": "bv",
+    "body": ["<VideoPlayer platform='bilibili' src='$1' episode='$2' />"]
+  },
+  "quote": {
+    "prefix": "blog-quote",
+    "body": ["> $1"]
+  },
+  "tscode": {
+    "prefix": "tscode",
+    "body": ["```TypeScript", "$1", "```"]
+  },
+  "tsxcode":{
+    "prefix": "tsxcode",
+    "body": ["```TSX", "$1", "```"]
+  }
 }

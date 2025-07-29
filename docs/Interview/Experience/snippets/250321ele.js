@@ -49,4 +49,4 @@ function getSum(str) {
     );
 }
 console.log(getSum('HeLlo'));
-// #endregion
+// #endregion code
