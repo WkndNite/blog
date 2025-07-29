@@ -23,7 +23,7 @@ export default {
             buttonText: ' ',
             copiedText: ' ',
             buttonIcon: 'noto:link',
-            copiedIcon: 'noto:check-mark-button'
+            copiedIcon: 'noto:check-mark'
           })
       });
     }
