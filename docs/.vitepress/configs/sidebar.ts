@@ -14,12 +14,16 @@ type Sidebar = Record<string, SidebarItem[]>;
 
 const parseIndexMd = (filePath: string) => {
   const content = fs.readFileSync(filePath, 'utf-8');
-  const titleMatch = content.match(/# (.+)/);
+
+  // 去除 Markdown 注释块 <!-- -->
+  const cleaned = content.replace(/<!--[\s\S]*?-->/g, '');
+
+  const titleMatch = cleaned.match(/# (.+)/);
   const title = titleMatch
     ? titleMatch[1].replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
     : path.basename(filePath, '.md');
 
-  const hrefList = (content.match(/- (.+)/g) || []).map((item) =>
+  const hrefList = (cleaned.match(/- (.+)/g) || []).map((item) =>
     item.replace(/- /g, '')
   );
 
