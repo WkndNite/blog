@@ -6,7 +6,7 @@ export interface NavLink {
     | string
     | {
         text?: string;
-        type?: 'info' | 'tip' | 'warning' | 'danger';
+        type?: "info" | "tip" | "warning" | "danger";
       };
   /** 站点名称 */
   title: string;

@@ -97,7 +97,7 @@
     "prefix": "tscode",
     "body": ["```TypeScript", "$1", "```"]
   },
-  "tsxcode":{
+  "tsxcode": {
     "prefix": "tsxcode",
     "body": ["```TSX", "$1", "```"]
   }

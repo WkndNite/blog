@@ -20,8 +20,8 @@ class EventBus {
 }
 
 const eventBus = new EventBus();
-eventBus.on('click', (data) => {
-  console.log('click', data);
+eventBus.on("click", (data) => {
+  console.log("click", data);
 });
-eventBus.emit('click', 'data1'); // click data1
-eventBus.emit('click', 'data2'); // click data2
+eventBus.emit("click", "data1"); // click data1
+eventBus.emit("click", "data2"); // click data2

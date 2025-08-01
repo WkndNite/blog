@@ -23,18 +23,18 @@ flag = flag | PerformedWork | Update;
 //判断是否有  PerformedWork 种类的更新
 if (flag & PerformedWork) {
   //执行
-  console.log('执行 PerformedWork');
+  console.log("执行 PerformedWork");
 }
 
 //判断是否有 Update 种类的更新
 if (flag & Update) {
   //执行
-  console.log('执行 Update');
+  console.log("执行 Update");
 }
 
 if (flag & Placement) {
   //不执行
-  console.log('执行 Placement');
+  console.log("执行 Placement");
 }
 // #endregion 2
 

@@ -1,13 +1,13 @@
 // #region choose1
 var name = 117;
 const obj = {
-  name: 'John',
+  name: "John",
   func: function () {
     console.log(this.name);
-  }
+  },
 };
 
-(obj.name === 'John' ? obj.func : '')();
+(obj.name === "John" ? obj.func : "")();
 // #endregion choose1
 
 // #region choose2
@@ -18,12 +18,10 @@ const obj = {
 // #endregion choose2
 
 // #region choose3
-var name = 'tom';
+var name = "tom";
 function getMethod() {
-  var result = function () {
-    return name;
-  };
-  var name = 'Jerry';
+  var result = () => name;
+  var name = "Jerry";
   return result;
 }
 var getName = getMethod();
@@ -33,7 +31,7 @@ console.log(name1);
 
 // #region code
 function getSum(str) {
-  let result = '';
+  let result = "";
   for (const s of str) {
     if (/[a-z]$/.test(s)) {
       result += s.toUpperCase();
@@ -42,11 +40,11 @@ function getSum(str) {
     }
   }
   return result
-    .split('')
+    .split("")
     .reduce(
       (acc, cur, index) => (index % 2 === 0 ? acc + cur.charCodeAt() : acc),
-      0
+      0,
     );
 }
-console.log(getSum('HeLlo'));
+console.log(getSum("HeLlo"));
 // #endregion code

@@ -1,9 +1,9 @@
 // #region choose1
 const person = {
-  name: 'zhoumowan',
+  name: "zhoumowan",
   sayName: function () {
     console.log(this.name);
-  }
+  },
 };
 person.sayName();
 // #endregion choose1
@@ -11,7 +11,7 @@ person.sayName();
 // #region choose2
 const myName = Symbol();
 obj = {
-  [myName]: '123'
+  [myName]: "123",
 };
 // #endregion choose2
 
@@ -29,7 +29,7 @@ console.log(res);
 // #endregion choose3
 
 // #region code1
-const yes = ['A', 'H', 'I', 'M', 'O', 'T', 'U', 'V', 'W', 'X', 'Y'];
+const yes = ["A", "H", "I", "M", "O", "T", "U", "V", "W", "X", "Y"];
 
 function solution(str) {
   const length = str.length;
@@ -54,25 +54,25 @@ function valid(str) {
   }
   return true;
 }
-const result = solution('AAAA');
+const result = solution("AAAA");
 console.log(result); // 6
 // #endregion code1
 
 // #region code2
 // 用例通过率最高 10% OR 超时
-const rl = require('readline').createInterface({
-  input: process.stdin
+const rl = require("readline").createInterface({
+  input: process.stdin,
 });
 let times = 0;
-rl.on('line', (line) => {
+rl.on("line", (line) => {
   inputs.push(line);
   times = +inputs[0];
   if (inputs.length === times * 2 + 1) rl.close();
 });
-rl.on('close', () => {
+rl.on("close", () => {
   for (let i = 1; i <= times; i++) {
     const length = +inputs[2 * i - 1];
-    const array = inputs[2 * i].split(' ').map(Number);
+    const array = inputs[2 * i].split(" ").map(Number);
     console.log(solution(array));
   }
 });

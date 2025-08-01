@@ -7,24 +7,22 @@ function check(reg, txt) {
 }
 
 // 即使是相同的正则表达式，也需要重新传递一次
-console.log(check(/\d+/g, 'test1')); // true
-console.log(check(/\d+/g, 'testtest')); // false
-console.log(check(/[a-z]+/g, 'test')); // true
+console.log(check(/\d+/g, "test1")); // true
+console.log(check(/\d+/g, "testtest")); // false
+console.log(check(/[a-z]+/g, "test")); // true
 
 // Currying后
 function curryingCheck(reg) {
-  return function (txt) {
-    return reg.test(txt);
-  };
+  return (txt) => reg.test(txt);
 }
 
 // 正则表达式通过闭包保存了起来
 var hasNumber = curryingCheck(/\d+/g);
 var hasLetter = curryingCheck(/[a-z]+/g);
 
-console.log(hasNumber('test1')); // true
-console.log(hasNumber('testtest')); // false
-console.log(hasLetter('21212')); // false
+console.log(hasNumber("test1")); // true
+console.log(hasNumber("testtest")); // false
+console.log(hasLetter("21212")); // false
 // #endregion 1
 
 // #region 2
@@ -34,48 +32,48 @@ console.log(hasLetter('21212')); // false
  * @param {绑定什么事件} event
  * @param {事件处理函数} handler
  */
-var on = function (element, event, handler) {
+var on = (element, event, handler) => {
   if (document.addEventListener) {
     if (element && event && handler) {
       element.addEventListener(event, handler, false);
     }
   } else {
     if (element && event && handler) {
-      element.attachEvent('on' + event, handler);
+      element.attachEvent("on" + event, handler);
     }
   }
 };
 
-on(div, 'click', function () {});
+on(div, "click", () => {});
 
-var on = (function () {
+var on = (() => {
   if (document.addEventListener) {
-    return function (element, event, handler) {
+    return (element, event, handler) => {
       if (element && event && handler) {
         element.addEventListener(event, handler, false);
       }
     };
   } else {
-    return function (element, event, handler) {
+    return (element, event, handler) => {
       if (element && event && handler) {
-        element.attachEvent('on' + event, handler);
+        element.attachEvent("on" + event, handler);
       }
     };
   }
 })();
 
-on(div, 'click', function () {});
+on(div, "click", () => {});
 
 //换一种写法可能比较好理解一点，上面就是把 isSupport 这个参数给先确定下来了
-var on = function (isSupport, element, event, handler) {
+var on = (isSupport, element, event, handler) => {
   isSupport = isSupport || document.addEventListener;
   if (isSupport) {
     return element.addEventListener(event, handler, false);
   } else {
-    return element.attachEvent('on' + event, handler);
+    return element.attachEvent("on" + event, handler);
   }
 };
-on(true, div, 'click', function () {});
-on(true, div, 'click', function () {});
-on(true, div, 'click', function () {});
+on(true, div, "click", () => {});
+on(true, div, "click", () => {});
+on(true, div, "click", () => {});
 // #endregion 2

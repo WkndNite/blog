@@ -6,7 +6,7 @@ class EventBus {
       const callbacks = this.eventObj[eventName];
       for (const id in callbacks) {
         callbacks[id](...args);
-        if (id.indexOf('D' !== -1)) {
+        if (id.indexOf("D" !== -1)) {
           delete this.eventObj[eventName][id];
         }
       }
@@ -19,7 +19,7 @@ class EventBus {
     if (!this.eventObj[eventName]) {
       this.eventObj[eventName] = {};
     }
-    const id = 'D' + this.callbcakId++;
+    const id = "D" + this.callbcakId++;
     this.eventObj[eventName][id] = callback;
     return id;
   }

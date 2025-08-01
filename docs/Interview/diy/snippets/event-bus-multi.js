@@ -33,17 +33,17 @@ class EventBus {
 }
 
 const eventBus = new EventBus();
-const id1 = eventBus.on('click', (data) => {
-  console.log('click-id1', data);
+const id1 = eventBus.on("click", (data) => {
+  console.log("click-id1", data);
 });
-const id2 = eventBus.on('click', (data) => {
-  console.log('click-id2', data);
+const id2 = eventBus.on("click", (data) => {
+  console.log("click-id2", data);
 });
 
-eventBus.emit('click', 'hello');
+eventBus.emit("click", "hello");
 // click-id1 hello
 // click-id2 hello
-eventBus.off('click', id1);
-eventBus.emit('click', 'hello');
+eventBus.off("click", id1);
+eventBus.emit("click", "hello");
 // off click 0
 // click-id2 hello

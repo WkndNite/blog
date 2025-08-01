@@ -2,7 +2,7 @@
 function main() {
   {
     var a = 1;
-    let b = 2;
+    const b = 2;
   }
   console.log(a);
   console.log(b);
@@ -13,13 +13,13 @@ console.log(a);
 // #endregion scope1
 
 // #region scope2
-const text = 'Hello';
+const text = "Hello";
 function printText() {
   console.log(text);
 }
 
 function main() {
-  const text = 'World';
+  const text = "World";
   printText();
   console.log(text);
 }
@@ -67,17 +67,17 @@ for (var i = 0; i < 5; i++) {
 }
 // #endregion closure4
 // #region react
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function App() {
   const [count, setCount] = useState(0);
 
-  console.log('render', count);
+  console.log("render", count);
 
   const handleClick = () => {
     setCount((prevCount) => prevCount + 1);
     setTimeout(() => {
-      console.log('setTimeout', count);
+      console.log("setTimeout", count);
     }, 1000);
   };
 

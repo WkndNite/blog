@@ -1,4 +1,4 @@
-const { set } = require('animejs');
+const { set } = require("animejs");
 
 // #region choose1
 class Parent {
@@ -11,8 +11,8 @@ class Parent {
 }
 class Child extends Parent {
   constructor(name) {
-    super(name + '_P');
-    this.name = name + '_C';
+    super(name + "_P");
+    this.name = name + "_C";
   }
   logName = () => {
     super.logName();
@@ -24,11 +24,11 @@ class Child extends Parent {
   }
 }
 
-const child = new Child('A');
+const child = new Child("A");
 const obj = {
-  name: 'object',
+  name: "object",
   log: child.log,
-  logName: child.logName
+  logName: child.logName,
 };
 obj.log();
 // #endregion choose1
@@ -79,17 +79,17 @@ function hasCycleDep(config) {
 }
 
 const result = hasCycleDep({
-  a: { deps: ['b', 'd'] },
-  b: { deps: ['c'] },
-  c: { deps: ['a'] }
+  a: { deps: ["b", "d"] },
+  b: { deps: ["c"] },
+  c: { deps: ["a"] },
 });
 console.log(result);
 // #endregion code1
 
 // #region code2
 function matrixSnakeTraversal(matrix) {
-  let srcX = 0;
-  let srcY = 0;
+  const srcX = 0;
+  const srcY = 0;
 
   const result = [];
 
@@ -131,7 +131,7 @@ const matrix = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
-  [11, 12, 13]
+  [11, 12, 13],
 ];
 
 console.log(matrixSnakeTraversal(matrix));
@@ -193,7 +193,7 @@ const matrix2 = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
-  [11, 12, 13]
+  [11, 12, 13],
 ];
 
 console.log(matrixSnakeTraversal2(matrix2));

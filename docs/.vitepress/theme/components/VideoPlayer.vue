@@ -13,26 +13,26 @@
 
 <script>
 export default {
-  name: 'VideoPlayer',
+  name: "VideoPlayer",
   props: {
     src: { type: String, required: true }, // 视频路径或ID
-    platform: { type: String, default: '' }, // 平台标识：bilibili/youtube/local
-    poster: { type: String, default: '' }, // 本地视频封面
+    platform: { type: String, default: "" }, // 平台标识：bilibili/youtube/local
+    poster: { type: String, default: "" }, // 本地视频封面
     episode: { type: Number, default: 1 }, // 章节信息
-    time: { type: Number, default: 0 } // 视频时间
+    time: { type: Number, default: 0 }, // 视频时间
   },
   computed: {
     isLocal() {
-      return this.platform === 'local';
+      return this.platform === "local";
     },
     platformUrl() {
       const map = {
         bilibili: `https://player.bilibili.com/player.html?bvid=${this.src}&t=${this.time}&p=${this.episode}&autoplay=0`,
-        youtube: `https://www.youtube.com/embed/${this.src}`
+        youtube: `https://www.youtube.com/embed/${this.src}`,
       };
       return map[this.platform];
-    }
-  }
+    },
+  },
 };
 </script>
 
