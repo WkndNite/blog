@@ -8,4 +8,6 @@ tags:
 
 # [Type Challenges](https://github.com/type-challenges/type-challenges)
 
-<<< ./snippets/challenges.ts
+## Easy 13
+
+<!--@include: ./snippets/tsch-easy.md-->

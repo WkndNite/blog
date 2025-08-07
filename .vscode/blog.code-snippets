@@ -1,104 +1,157 @@
 {
-  "blog-header": {
-    "prefix": "blog-header",
+  "博客头部": {
+    "prefix": "bh",
     "body": [
       "---",
       "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
       "tags:",
       "   - $2",
       "---"
-    ]
+    ],
+    "description": "博客文章头部元信息"
   },
-  "info": {
-    "prefix": "info",
-    "body": [":::info ⛽️", "$1", ":::"]
+
+  "索引导航": {
+    "prefix": "idx",
+    "body": ["---", "hidden: true", "date: false", "author: false", "---"],
+    "description": "隐藏的索引导航页配置"
   },
-  "warning": {
-    "prefix": "warning",
-    "body": [":::warning ⚠️ 注意", "$1", ":::"]
+
+  "插入图片": {
+    "prefix": "img",
+    "body": ["![alt](./assets$1)"],
+    "description": "插入本地图片"
   },
-  "tip": {
-    "prefix": "tip",
-    "body": [":::tip 📌 提示", "$1", ":::"]
+
+  "插入视频": {
+    "prefix": "vid",
+    "body": ["<VideoPlayer platform=\"local\" src=\"/videos/$1\" />"],
+    "description": "插入本地视频"
   },
-  "details": {
-    "prefix": "details",
-    "body": [":::details 🔍 补充信息", "$1", ":::"]
-  },
-  "danger": {
-    "prefix": "danger",
-    "body": [":::danger", "$1", ":::"]
-  },
-  "important": {
-    "prefix": "important",
-    "body": ["> [!Important] $1", "> "]
-  },
-  "insert collapse js code": {
-    "prefix": "detailjs",
-    "body": [":::details", "```JavaScript", "$1", "```", ":::"]
-  },
-  "insert js code": {
-    "prefix": "jscode",
-    "body": ["```JavaScript", "$2", "```"]
-  },
-  "insert jsx code": {
-    "prefix": "jsxcode",
-    "body": ["```JSX", "$2", "```"]
-  },
-  "insert css code": {
-    "prefix": "csscode",
-    "body": ["```CSS", "$2", "```"]
-  },
-  "insert html code": {
-    "prefix": "htmlcode",
-    "body": ["```HTML", "$2", "```"]
-  },
-  "insert code group": {
-    "prefix": "codegroup",
-    "body": [":::code-group", "$1", ":::"]
-  },
-  "insert video": {
-    "prefix": "video",
-    "body": ["<VideoPlayer platform=\"local\" src=\"/videos/$1\" />"]
-  },
-  "index navigate": {
-    "prefix": "index",
-    "body": ["---", "hidden: true", "date: false", "author: false", "---"]
-  },
-  "insert image": {
-    "prefix": "blog-image",
-    "body": ["![alt](./assets$1)"]
-  },
-  "no-line-numbers": {
-    "prefix": "nln",
-    "body": [":no-line-numbers"]
-  },
-  "latex": {
-    "prefix": "latex",
-    "body": ["$$", "$1", "$$"]
-  },
-  "inline-latex": {
-    "prefix": "ilx",
-    "body": ["$${1}$"]
-  },
-  "mark": {
-    "prefix": "mark",
-    "body": ["<mark>$1</mark>"]
-  },
-  "bilibili-video": {
+
+  "bilibili 视频": {
     "prefix": "bv",
-    "body": ["<VideoPlayer platform='bilibili' src='$1' episode='$2' />"]
+    "body": ["<VideoPlayer platform='bilibili' src='$1' episode='$2' />"],
+    "description": "插入 Bilibili 视频"
   },
-  "quote": {
-    "prefix": "blog-quote",
-    "body": ["> $1"]
+
+  "插入 HTML 代码": {
+    "prefix": "html",
+    "body": ["```HTML", "$2", "```"],
+    "description": "HTML 代码块"
   },
-  "tscode": {
-    "prefix": "tscode",
-    "body": ["```TypeScript", "$1", "```"]
+
+  "插入 CSS 代码": {
+    "prefix": "css",
+    "body": ["```CSS", "$2", "```"],
+    "description": "CSS 代码块"
   },
-  "tsxcode": {
-    "prefix": "tsxcode",
-    "body": ["```TSX", "$1", "```"]
+
+  "插入 JavaScript 代码": {
+    "prefix": "js",
+    "body": ["```JavaScript", "$2", "```"],
+    "description": "JavaScript 代码块"
+  },
+
+  "插入 JSX 代码": {
+    "prefix": "jsx",
+    "body": ["```JSX", "$2", "```"],
+    "description": "JSX 代码块"
+  },
+
+  "TypeScript 代码": {
+    "prefix": "ts",
+    "body": ["```TypeScript", "$1", "```"],
+    "description": "TypeScript 代码块"
+  },
+
+  "TSX 代码": {
+    "prefix": "tsx",
+    "body": ["```TSX", "$1", "```"],
+    "description": "TSX 代码块"
+  },
+
+  "TypeScript 挑战题": {
+    "prefix": "tsch",
+    "body": [":::details 🔍 $1", "```TypeScript", "$2", "```", ":::"],
+    "description": "TypeScript 挑战题折叠面板"
+  },
+
+  "折叠面板": {
+    "prefix": "det",
+    "body": [":::details 🔍 补充信息", "$1", ":::"],
+    "description": "折叠补充信息"
+  },
+
+  "插入折叠的 JS 代码": {
+    "prefix": "detjs",
+    "body": [":::details", "```JavaScript", "$1", "```", ":::"],
+    "description": "折叠展开的 JavaScript 代码块"
+  },
+
+  "代码块组": {
+    "prefix": "cg",
+    "body": [":::code-group", "$1", ":::"],
+    "description": "代码块组容器"
+  },
+
+  "信息提示": {
+    "prefix": "info",
+    "body": [":::info ⛽️", "$1", ":::"],
+    "description": "信息提示块"
+  },
+
+  "警告提示": {
+    "prefix": "warn",
+    "body": [":::warning ⚠️ 注意", "$1", ":::"],
+    "description": "警告提示块"
+  },
+
+  "提示块": {
+    "prefix": "tip",
+    "body": [":::tip 📌 提示", "$1", ":::"],
+    "description": "提示信息块"
+  },
+
+  "危险提示": {
+    "prefix": "danger",
+    "body": [":::danger", "$1", ":::"],
+    "description": "危险提示块"
+  },
+
+  "重要信息": {
+    "prefix": "imp",
+    "body": ["> [!Important] $1", "> "],
+    "description": "重要信息块"
+  },
+
+  "引用": {
+    "prefix": "q",
+    "body": ["> $1"],
+    "description": "引用文本"
+  },
+
+  "数学公式（块）": {
+    "prefix": "tex",
+    "body": ["$$", "$1", "$$"],
+    "description": "数学公式块（块级公式）"
+  },
+
+  "数学公式（行内）": {
+    "prefix": "itex",
+    "body": ["$${1}$"],
+    "description": "数学公式（行内公式）"
+  },
+
+  "高亮标记": {
+    "prefix": "mark",
+    "body": ["<mark>$1</mark>"],
+    "description": "高亮文本"
+  },
+
+  "无行号代码块": {
+    "prefix": "nln",
+    "body": [":no-line-numbers"],
+    "description": "无行号标记"
   }
 }
