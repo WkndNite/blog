@@ -1,6 +1,8 @@
 :::details 🔍 Pick
 
 ```TypeScript
+type MyPick<T, K extends keyof T> = Omit<T, Exclude<keyof T, K>>;
+
 type MyPick<T, K extends keyof T> = {
   [P in K]: T[P];
 };
