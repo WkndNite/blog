@@ -97,7 +97,7 @@
 
   "信息提示": {
     "prefix": "info",
-    "body": [":::info ⛽️", "$1", ":::"],
+    "body": [":::info ⛽️ 信息", "$1", ":::"],
     "description": "信息提示块"
   },
 
@@ -115,7 +115,7 @@
 
   "危险提示": {
     "prefix": "danger",
-    "body": [":::danger", "$1", ":::"],
+    "body": [":::danger ❌ 危险", "$1", ":::"],
     "description": "危险提示块"
   },
 
@@ -139,7 +139,7 @@
 
   "数学公式（行内）": {
     "prefix": "itex",
-    "body": ["$${1}$"],
+    "body": ["$$1$"],
     "description": "数学公式（行内公式）"
   },
 
@@ -153,5 +153,11 @@
     "prefix": "nln",
     "body": [":no-line-numbers"],
     "description": "无行号标记"
+  },
+
+  "插入 ElementPlus 标签": {
+    "prefix": "etag",
+    "body": ["<el-tag type='$1'>$2</el-tag>"],
+    "description": "自渲染标签"
   }
 }

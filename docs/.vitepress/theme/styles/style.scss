@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  cursor: url('./assets/default.cur'), auto;
+  cursor: url("./assets/default.cur"), auto;
   word-break: break-all;
   -webkit-hyphens: auto; /* 针对 Safari 和 Chrome */
   -moz-hyphens: auto; /* 针对 Firefox */
@@ -52,7 +52,6 @@ code {
 }
 
 .vp-doc .el-tag {
-  margin-top: -5px;
   margin-left: 4px;
   padding: 6px;
 }
