@@ -60,7 +60,7 @@ alert(obj.value);
    <<< ./snippets/2026-autumn-test/2.js
    :::
 
-3. 如图 <el-tag type='primary'>京东 24 秋招</el-tag><el-tag type='danger'>this 指向</el-tag>
+3. 如图 <el-tag type='primary'>京东 24 秋招</el-tag><el-tag type='warning'>this 指向</el-tag>
 
    ![20250809212837_6c490f7b3a01adccb7fab4b095b3726a.png](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20250809212837_6c490f7b3a01adccb7fab4b095b3726a.png)
 
@@ -76,10 +76,40 @@ alert(obj.value);
    <<< ./snippets/2026-autumn-test/4.js
    :::
 
-5. 如图 <el-tag type='primary'>京东 24 秋招</el-tag><el-tag type='danger'>区间化处理不只是输出最小值</el-tag>
+5. 如图 <el-tag type='primary'>京东 24 秋招</el-tag><el-tag type='warning'>区间化处理不只是输出最小值</el-tag>
 
    ![20250810144405_dccc9319f78929e08157215f317ed816.png](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20250810144405_dccc9319f78929e08157215f317ed816.png)
 
-   :::details 🔍 补充信息
+   :::details 🔍 展开代码
    <<< ./snippets/2026-autumn-test/5.js
+   :::
+
+6. 如图 <el-tag type='primary'>虾皮 24 秋招</el-tag><el-tag type='danger'>数组的预处理和双指针思想</el-tag>
+
+   ![20250810162310_5cf777b124c4fdf9468dc9d4f9e88037.png](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20250810162310_5cf777b124c4fdf9468dc9d4f9e88037.png)
+
+   :::details 🔍 展开代码
+   <<< ./snippets/2026-autumn-test/6.js
+   :::
+
+7. 如图 <el-tag type='primary'>虾皮 24 秋招</el-tag><el-tag type='danger'>背包问题不熟练</el-tag>
+
+   ![20250810165354_b2fbc0fe0749cdee30d93848713dffad.png](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20250810165354_b2fbc0fe0749cdee30d93848713dffad.png)
+
+   :::details 🔍 展开代码
+   <<< ./snippets/2026-autumn-test/7.js
+   :::
+
+8. 给出一个仅由大写字母 A 和 B 构成的字符串 s，请你求出 s 中包含 A 和 B 个数相同的连续区间的最长长度。<el-tag type='primary'>京东 2024 春招</el-tag><el-tag type='warning'>暴力双循环超时</el-tag>
+
+   :::details 🔍 展开代码
+   <<< ./snippets/2026-autumn-test/8.js
+   :::
+
+9. 如图 <el-tag type='primary'>快手 2024 秋招</el-tag><el-tag type='warning'>注意递归和 memo 位置不写错</el-tag>
+
+   ![20250810232312_39204325e024e25be2e1ddd3789ba553.png](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20250810232312_39204325e024e25be2e1ddd3789ba553.png)
+
+   :::details 🔍 展开代码
+   <<< ./snippets/2026-autumn-test/9.js
    :::
