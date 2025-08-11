@@ -101,3 +101,81 @@ type LookUp<U, T extends string> = U extends { type: T } ? U : never;
 ```
 
 :::
+
+:::details 🔍 TrimLeft
+
+```TypeScript
+type Space = " " | "\n" | "\t";
+type TrimLeft<S extends string> = S extends `${Space}${infer R}`
+  ? TrimLeft<R>
+  : S;
+```
+
+:::
+
+:::details 🔍 Trim
+
+```TypeScript
+type Space = " " | "\n" | "\t";
+type Trim<S extends string> = S extends
+  | `${Space}${infer R}`
+  | `${infer R}${Space}`
+  ? Trim<R>
+  : S;
+```
+
+:::
+
+:::details 🔍 Capitalize
+
+```TypeScript
+type MyCapitalize<S extends string> = S extends `${infer head}${infer tail}`
+  ? `${Uppercase<head>}${tail}`
+  : S;
+```
+
+:::
+
+:::details 🔍 Replace
+
+```TypeScript
+type Replace<
+  S extends string,
+  From extends string,
+  To extends string
+> = From extends ""
+  ? S
+  : S extends `${infer A}${From}${infer B}`
+  ? `${A}${To}${B}`
+  : S;
+```
+
+:::
+
+:::details 🔍 ReplaceAll
+
+```TypeScript
+type ReplaceAll<
+  S extends string,
+  From extends string,
+  To extends string
+> = From extends ""
+  ? S
+  : S extends `${infer A}${From}${infer B}`
+  ? `${A}${To}${ReplaceAll<B, From, To>}`
+  : S;
+```
+
+:::
+
+:::details 🔍 Append Argument
+
+```TypeScript
+type AppendArgument<Fn extends (...args: any[]) => any, A> = Fn extends (
+  ...args: infer P
+) => infer R
+  ? (...args: [...P, A]) => R
+  : never;
+```
+
+:::
