@@ -159,5 +159,11 @@
     "prefix": "etag",
     "body": ["<el-tag type='$1'>$2</el-tag>"],
     "description": "自渲染标签"
+  },
+
+  "区域注释": {
+    "prefix": "reg",
+    "body": ["// #region $1", "$2", "// #endregion $1"],
+    "description": "快速插入一段 Snippets 文件需要的区域代码"
   }
 }
