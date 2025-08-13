@@ -1,7 +1,7 @@
 <template>
   <div class="video-container">
     <!-- 本地视频 -->
-    <video v-if="isLocal" controls :poster="poster">
+    <video v-if="isLocal" controls :poster="poster" preload="metadata">
       <source :src type="video/mp4" />
       您的浏览器不支持视频播放
     </video>
@@ -15,11 +15,11 @@
 export default {
   name: "VideoPlayer",
   props: {
-    src: { type: String, required: true }, // 视频路径或ID
-    platform: { type: String, default: "" }, // 平台标识：bilibili/youtube/local
-    poster: { type: String, default: "" }, // 本地视频封面
-    episode: { type: Number, default: 1 }, // 章节信息
-    time: { type: Number, default: 0 }, // 视频时间
+    src: { type: String, required: true },
+    platform: { type: String, default: "" },
+    poster: { type: String, default: "" },
+    episode: { type: Number, default: 1 },
+    time: { type: Number, default: 0 },
   },
   computed: {
     isLocal() {
@@ -38,21 +38,18 @@ export default {
 
 <style scoped>
 .video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 100%;
 }
 
-iframe,
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+
+/* iframe 视频：保持 16:9 容器，让平台播放器正常展示 */
+iframe {
+  aspect-ratio: 16 / 9;
+  border: none;
 }
 </style>
