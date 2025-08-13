@@ -179,3 +179,39 @@ type AppendArgument<Fn extends (...args: any[]) => any, A> = Fn extends (
 ```
 
 :::
+
+:::details 🔍 Permutation
+
+```TypeScript
+type Permutation<T, K = T> = [T] extends [never]
+  ? []
+  : K extends T
+  ? [K, ...Permutation<Exclude<T, K>>]
+  : never;
+```
+
+:::
+
+:::details 🔍 Length of String
+
+```TypeScript
+type StringToArray<S extends string> = S extends `${infer A}${infer B}`
+  ? [A, ...StringToArray<B>]
+  : [];
+type LengthOfString<S extends string> = StringToArray<S>["length"];
+```
+
+:::
+
+:::details 🔍 Flatten
+
+```TypeScript
+type Flatten<S extends any[]> = S extends [infer First, ...infer Rest]
+  ? First extends any[]
+    ? [...Flatten<First>, ...Flatten<Rest>]
+    : [First, ...Flatten<Rest>]
+  : [];
+
+```
+
+:::
