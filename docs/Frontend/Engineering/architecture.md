@@ -73,7 +73,7 @@ tags:
 
 :::code-group
 
-```JavaScript
+```TypeScript [main.ts]
 import Garfish from 'garfish';
 Garfish.run({
   // 子应用的基础路径
