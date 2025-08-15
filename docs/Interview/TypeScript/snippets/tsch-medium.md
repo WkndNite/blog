@@ -215,3 +215,22 @@ type Flatten<S extends any[]> = S extends [infer First, ...infer Rest]
 ```
 
 :::
+
+:::details 🔍 Append To Object
+
+```TypeScript
+// ❌ 交叉类型不自动展开计算 KV
+type AppendToObject<T, U extends string, V> = {
+  [K in U]: V;
+} & T;
+
+// ✅ 强制重建对象
+type AppendToObject<T, U extends string, V> = Omit<T & { [key in U]: V }, never>
+
+// ✅ 手动创建新对象
+type AppendToObject<T, U extends string, V> = {
+  [K in keyof T | U]: K extends keyof T ? T[K] : V;
+};
+```
+
+:::
