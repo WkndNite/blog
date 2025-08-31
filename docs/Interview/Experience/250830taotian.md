@@ -20,5 +20,9 @@ tags:
 3. 对给定区间求四元组方案数满足以下条件：
    
    $$
-   l \le a < b < c < d \le r \cup max(a,b,c,d) = lcm(a,b,c,d)
+   l \le a < b < c < d \le r
+   $$
+
+   $$
+   max(a,b,c,d) = lcm(a,b,c,d)
    $$
