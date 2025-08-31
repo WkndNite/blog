@@ -11,7 +11,7 @@ tags:
 
 1.  输出选择
 
-    <<< ./snippets/250812sophee.js#1
+    <<< ./1.js
 
     - [ ] hello hello2
     - [ ] hello hello
@@ -20,7 +20,7 @@ tags:
 
 2.  输出选择
 
-    <<< ./snippets/250812sophee.js#2
+    <<< ./2.js
 
     - [ ] 两个都会输出
     - [ ] 两个都不输出
@@ -29,7 +29,7 @@ tags:
 
 3.  输出
 
-    <<< ./snippets/250812sophee.js#3
+    <<< ./3.js
 
     - [x] Sophee Sophee SopheePay Sophee
     - [ ] Sophee SopheePay Sophee Sophee
@@ -57,5 +57,5 @@ tags:
 8.  实现深度比较
 
     :::details 🔍 展开代码
-    <<< ./snippets/250812sophee.js#deep
+    <<< ./4.js
     :::

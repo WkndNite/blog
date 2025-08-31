@@ -1,5 +1,3 @@
-const { set } = require("animejs");
-
 // #region choose1
 class Parent {
   constructor(name) {

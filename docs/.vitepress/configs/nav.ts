@@ -64,6 +64,10 @@ export const nav = [
         text: "编译原理",
         link: "/Softskills/Compilation",
       },
+      {
+        text:'AI',
+        link: "/Softskills/AI",
+      }
     ],
   },
   {

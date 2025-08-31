@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
-    "@sugarat/theme": "^0.5.4",
+    "@sugarat/theme": "^0.5.6",
     "animejs": "^3.2.2",
     "element-plus": "^2.7.2",
     "vitepress-plugin-announcement": "^0.1.4",

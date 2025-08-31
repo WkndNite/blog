@@ -36,7 +36,7 @@ alert(obj.value);
 1. 对于一个序列的中位数判定，若是奇数长度的序列不解释，若是偶数长度的序列选择中间两个数字里的较小者。现给定一个序列，排序以后每次取出中位数，并从序列剔除该数得到一个新的序列，最后输出整个序列按照取中位数顺序得到的结果。<el-tag type='primary'>科大讯飞 24 秋招</el-tag><el-tag type='danger'>超时</el-tag>
 
    :::details 🔍 展开代码
-   <<< ./snippets/26prepare/1.js
+   <<< ./1.js
    :::
 
    解析可参考 [二叉索引树](/Interview/Programming/FenwickTree)。
@@ -46,7 +46,7 @@ alert(obj.value);
    ![20250808172814_ee3d4f30473daf8b71a2154c3dec8ac5.png](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20250808172814_ee3d4f30473daf8b71a2154c3dec8ac5.png)
 
    :::details 🔍 展开代码
-   <<< ./snippets/26prepare/2.js
+   <<< ./2.js
    :::
 
 3. 如图 <el-tag type='primary'>京东 24 秋招</el-tag><el-tag type='warning'>this 指向</el-tag>
@@ -54,7 +54,7 @@ alert(obj.value);
    ![20250809212837_6c490f7b3a01adccb7fab4b095b3726a.png](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20250809212837_6c490f7b3a01adccb7fab4b095b3726a.png)
 
    :::details 🔍 展开代码
-   <<< ./snippets/26prepare/3.js{19-24}
+   <<< ./3.js{19-24}
    :::
 
 4. 如图 <el-tag type='primary'>京东 24 秋招</el-tag><el-tag type='warning'>不难但脑子抽了</el-tag>
@@ -62,7 +62,7 @@ alert(obj.value);
    ![20250809220024_07a2e84c53e2a16bcf54562c934e491f.png](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20250809220024_07a2e84c53e2a16bcf54562c934e491f.png)
 
    :::details 🔍 展开代码
-   <<< ./snippets/26prepare/4.js
+   <<< ./4.js
    :::
 
 5. 如图 <el-tag type='primary'>京东 24 秋招</el-tag><el-tag type='warning'>区间化处理不只是输出最小值</el-tag>
@@ -70,7 +70,7 @@ alert(obj.value);
    ![20250810144405_dccc9319f78929e08157215f317ed816.png](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20250810144405_dccc9319f78929e08157215f317ed816.png)
 
    :::details 🔍 展开代码
-   <<< ./snippets/26prepare/5.js
+   <<< ./5.js
    :::
 
 6. 如图 <el-tag type='primary'>虾皮 24 秋招</el-tag><el-tag type='danger'>数组的预处理和双指针思想</el-tag>
@@ -78,7 +78,7 @@ alert(obj.value);
    ![20250810162310_5cf777b124c4fdf9468dc9d4f9e88037.png](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20250810162310_5cf777b124c4fdf9468dc9d4f9e88037.png)
 
    :::details 🔍 展开代码
-   <<< ./snippets/26prepare/6.js
+   <<< ./6.js
    :::
 
 7. 如图 <el-tag type='primary'>虾皮 24 秋招</el-tag><el-tag type='danger'>背包问题不熟练</el-tag>
@@ -86,13 +86,13 @@ alert(obj.value);
    ![20250810165354_b2fbc0fe0749cdee30d93848713dffad.png](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20250810165354_b2fbc0fe0749cdee30d93848713dffad.png)
 
    :::details 🔍 展开代码
-   <<< ./snippets/26prepare/7.js
+   <<< ./7.js
    :::
 
 8. 给出一个仅由大写字母 A 和 B 构成的字符串 s，请你求出 s 中包含 A 和 B 个数相同的连续区间的最长长度。<el-tag type='primary'>京东 2024 春招</el-tag><el-tag type='warning'>暴力双循环超时</el-tag>
 
    :::details 🔍 展开代码
-   <<< ./snippets/26prepare/8.js
+   <<< ./8.js
    :::
 
 9. 如图 <el-tag type='primary'>快手 2024 秋招</el-tag><el-tag type='warning'>注意递归和 memo 位置不写错</el-tag>
@@ -100,5 +100,5 @@ alert(obj.value);
    ![20250810232312_39204325e024e25be2e1ddd3789ba553.png](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20250810232312_39204325e024e25be2e1ddd3789ba553.png)
 
    :::details 🔍 展开代码
-   <<< ./snippets/26prepare/9.js
+   <<< ./9.js
    :::
