@@ -31,6 +31,10 @@ export default defineConfig({
     theme: { light: "one-light", dark: "dracula" },
     codeCopyButtonTitle: "复制代码",
   },
+  ignoreDeadLinks: [
+    // 秋招 index.md 里的
+    /^\.\/(25\d{4}|26)[a-zA-Z0-9]+$/,
+  ],
   extends: blogTheme,
   lang: "en",
   title: "周末晚的岛屿",

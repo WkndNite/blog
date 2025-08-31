@@ -65,9 +65,9 @@ export const nav = [
         link: "/Softskills/Compilation",
       },
       {
-        text:'AI',
+        text: "AI",
         link: "/Softskills/AI",
-      }
+      },
     ],
   },
   {

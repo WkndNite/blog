@@ -51,8 +51,8 @@ const transformLinkToSidebarItem = (list: string[], basePath: string) => {
 
       // 处理路径：若路径含后缀（非纯文件名），直接用原始路径；否则取文件名（兼容原.md逻辑）
       const isHasExtension = path.extname(rawPath) !== "";
-      const finalPath = isHasExtension 
-        ? rawPath 
+      const finalPath = isHasExtension
+        ? rawPath
         : path.basename(rawPath, path.extname(rawPath)); // 若为纯文件名（如“250319xiaomi”），直接用
 
       // 拼接基础路径（如“/Interview” + “/250319xiaomi.html”）
