@@ -5,7 +5,6 @@ tags:
   - 面试
   - Minimax
   - 前端
-  - 面经
 ---
 
 # Minimax 秋招一面
