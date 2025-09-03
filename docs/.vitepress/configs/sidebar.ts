@@ -12,7 +12,7 @@ type SidebarItem = {
 
 type Sidebar = Record<string, SidebarItem[]>;
 
-// 保留原逻辑：解析index.md的标题和列表项（无改动）
+// 解析index.md的标题和列表项
 const parseIndexMd = (filePath: string) => {
   const content = fs.readFileSync(filePath, "utf-8");
 
@@ -25,7 +25,7 @@ const parseIndexMd = (filePath: string) => {
     ? titleMatch[1].replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // 移除标题中的链接语法
     : path.basename(filePath, ".md");
 
-  // 提取所有 "- " 开头的列表项（保留原始格式，后续处理）
+  // 提取所有 "- " 开头的列表项
   const hrefList = (cleaned.match(/- (.+)/g) || []).map((item) =>
     item.replace(/- /g, ""),
   );
@@ -34,11 +34,8 @@ const parseIndexMd = (filePath: string) => {
 };
 
 /**
- * 核心修改：处理链接路径拼接逻辑
- * 1. 若匹配 Markdown 链接（[文本](路径)）：
- *    - 文本部分：提取 [ ] 内的纯文本
- *    - 路径部分：若路径含后缀（如.html/.pdf），直接用完整路径；若为.md，仅取文件名（兼容原逻辑）
- * 2. 若不匹配 Markdown 链接，直接用原始文本作为文本和路径
+ * 处理链接路径拼接逻辑
+ * 确保生成的链接与实际路由路径完全匹配，以支持当前页面高亮
  */
 const transformLinkToSidebarItem = (list: string[], basePath: string) => {
   return list.map((item) => {
@@ -46,31 +43,45 @@ const transformLinkToSidebarItem = (list: string[], basePath: string) => {
     const linkMatch = item.match(/\[([^\]]+)\]\(([^)]+)\)/);
 
     if (linkMatch) {
-      const text = linkMatch[1]; // 提取 [ ] 内的纯文本（如“2025-03-19 小米日常一面”）
-      const rawPath = linkMatch[2]; // 提取 ( ) 内的原始路径（如“250319xiaomi.md”或“docs/250319xiaomi.html”）
+      const text = linkMatch[1];
+      const rawPath = linkMatch[2];
+      const ext = path.extname(rawPath);
+      const isMdFile = ext.toLowerCase() === ".md";
 
-      // 处理路径：若路径含后缀（非纯文件名），直接用原始路径；否则取文件名（兼容原.md逻辑）
-      const isHasExtension = path.extname(rawPath) !== "";
-      const finalPath = isHasExtension
-        ? rawPath
-        : path.basename(rawPath, path.extname(rawPath)); // 若为纯文件名（如“250319xiaomi”），直接用
+      // 处理路径：
+      // 1. .md文件移除扩展名（大多数文档系统会自动处理）
+      // 2. 其他文件保留完整路径
+      // 3. 确保路径以/开头，保持一致性
+      let finalPath = isMdFile ? path.basename(rawPath, ext) : rawPath;
 
-      // 拼接基础路径（如“/Interview” + “/250319xiaomi.html”）
+      // 组合基础路径和最终路径，确保路径格式统一
+      let fullLink = `${basePath}/${finalPath}`.replace(/\/+/g, "/");
+
+      // 确保链接始终以/开头
+      if (!fullLink.startsWith("/")) {
+        fullLink = `/${fullLink}`;
+      }
+
       return {
         text,
-        link: `${basePath}/${finalPath}`.replace(/\/+/g, "/"), // 处理多斜杠问题（如“//”转为“/”）
+        link: fullLink,
       };
     }
 
-    // 若不匹配 Markdown 链接（如纯文本“测试项”），文本和路径都用原始文本
+    // 非Markdown链接处理
+    let fullLink = `${basePath}/${item}`.replace(/\/+/g, "/");
+    if (!fullLink.startsWith("/")) {
+      fullLink = `/${fullLink}`;
+    }
+
     return {
       text: item,
-      link: `${basePath}/${item}`.replace(/\/+/g, "/"),
+      link: fullLink,
     };
   });
 };
 
-// 保留原逻辑：检测目录类型（single/double/mixed/unknown）
+// 检测目录类型
 const detectDirectoryType = (dirPath: string) => {
   const children = fs.readdirSync(dirPath);
 
@@ -87,7 +98,7 @@ const detectDirectoryType = (dirPath: string) => {
   return "unknown";
 };
 
-// 保留原逻辑：生成侧边栏项（无改动，依赖修改后的transformLinkToSidebarItem）
+// 生成侧边栏项
 const generateSidebarItems = (dirPath: string, category: string) => {
   const type = detectDirectoryType(dirPath);
   const items: SidebarItem[] = [];
@@ -135,9 +146,15 @@ const generateSidebarItems = (dirPath: string, category: string) => {
         .map((file) => {
           const filePath = path.join(dirPath, file);
           const { title } = parseIndexMd(filePath);
+          // 确保单个文件链接格式正确
+          const fileName = path.basename(file, ".md");
+          let link = `/${category}/${fileName}`;
+          if (!link.startsWith("/")) {
+            link = `/${link}`;
+          }
           return {
             text: title,
-            link: `/${category}/${path.basename(file, ".md")}`,
+            link: link,
           };
         });
 
@@ -156,7 +173,7 @@ const generateSidebarItems = (dirPath: string, category: string) => {
   return items;
 };
 
-// 只需要处理这些指定目录
+// 需要处理的指定目录
 const TARGET_DIRECTORIES = ["Life", "Frontend", "Interview", "Softskills"];
 
 const sidebar: Sidebar = {};
@@ -176,7 +193,9 @@ TARGET_DIRECTORIES.forEach((category) => {
     return;
   }
 
-  sidebar[`/${category}/`] = generateSidebarItems(categoryPath, category);
+  // 确保侧边栏键名格式一致，以/结尾
+  const sidebarKey = `/${category}/`;
+  sidebar[sidebarKey] = generateSidebarItems(categoryPath, category);
 });
 
 export { sidebar };
