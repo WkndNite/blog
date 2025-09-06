@@ -9,9 +9,8 @@
     "build": "NODE_ENV=production vitepress build docs",
     "serve": "vitepress serve docs",
     "format": "biome format --write .",
-    "clear": "rimraf node_modules docs/.vitepress/cache",
     "lint": "textlint --fix .",
-    "cz": "bun format && bun lint && git add . && git cz"
+    "cz": "bun format && bun lint && git add . && git-cz"
   },
   "config": {
     "commitizen": {
@@ -36,11 +35,11 @@
     "@biomejs/biome": "2.1.3",
     "@mdit-vue/shared": "^2.1.3",
     "@theojs/lumen": "^5.4.0",
-    "cz-git": "^1.11.1",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.12.0",
     "markdown-it-mathjax3": "^4.3.2",
     "nprogress-v2": "^1.1.10",
     "pagefind": "^1.1.1",
-    "rimraf": "^6.0.1",
     "sass": "^1.76.0",
     "textlint": "^14.6.0",
     "textlint-rule-ja-space-between-half-and-full-width": "^2.4.2",
