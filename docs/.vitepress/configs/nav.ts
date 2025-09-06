@@ -74,8 +74,8 @@ export const nav = [
     text: "校招备战",
     items: [
       {
+        text: "编程思维",
         link: "/Interview/Programming",
-        text: "编程题",
       },
       {
         text: "网络",
