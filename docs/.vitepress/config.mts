@@ -4,7 +4,7 @@ import { type RSSOptions, RssPlugin } from "vitepress-plugin-rss";
 import { SponsorPlugin } from "vitepress-plugin-sponsor";
 import { blogTheme } from "./blog-theme";
 import { nav } from "./configs/nav";
-import { sidebar } from "./configs/sidebar";
+import sidebar from "./configs/sidebar.json";
 
 const baseUrl = "https://blog.wkndnite-tech.cn";
 const RSS: RSSOptions = {

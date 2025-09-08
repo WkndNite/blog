@@ -63,7 +63,7 @@ const transformLinkToSidebarItem = (list: string[], basePath: string) => {
 
       return {
         text,
-        link: `${isMdFile ? fullLink : fullLink + "/"}`,
+        link: fullLink,
       };
     }
 
@@ -196,5 +196,11 @@ TARGET_DIRECTORIES.forEach((category) => {
   const sidebarKey = `/${category}/`;
   sidebar[sidebarKey] = generateSidebarItems(categoryPath, category);
 });
+
+// fs write sidebar.json
+fs.writeFileSync(
+  path.join(docsPath, "sidebar.json"),
+  JSON.stringify(sidebar, null, 2),
+);
 
 export { sidebar };
