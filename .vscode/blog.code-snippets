@@ -165,5 +165,11 @@
     "prefix": "reg",
     "body": ["// #region $1", "$2", "// #endregion $1"],
     "description": "快速插入一段 Snippets 文件需要的区域代码"
+  },
+
+  "插入引用代码文件": {
+    "prefix": "snippet",
+    "body": ["<<< ./$1"],
+    "description": "插入引用代码文件"
   }
 }
