@@ -1,0 +1,6 @@
+# 所有 JS 和 JSX 文件使用 LF
+*.js text eol=lf
+*.jsx text eol=lf
+
+# Markdown 文件也使用 LF
+*.md text eol=lf
