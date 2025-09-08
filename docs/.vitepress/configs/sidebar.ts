@@ -41,7 +41,6 @@ const transformLinkToSidebarItem = (list: string[], basePath: string) => {
   return list.map((item) => {
     // 匹配 Markdown 链接语法：[文本内容](路径信息)
     const linkMatch = item.match(/\[([^\]]+)\]\(([^)]+)\)/);
-
     if (linkMatch) {
       const text = linkMatch[1];
       const rawPath = linkMatch[2];
@@ -64,7 +63,7 @@ const transformLinkToSidebarItem = (list: string[], basePath: string) => {
 
       return {
         text,
-        link: fullLink,
+        link: `${isMdFile ? fullLink : fullLink + "/"}`,
       };
     }
 
