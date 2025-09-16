@@ -5,7 +5,7 @@
   "author": "周末晚",
   "license": "MIT",
   "scripts": {
-    "dev": "vitepress dev docs --port 9527",
+    "dev": "vitepress dev docs",
     "build": "NODE_ENV=production vitepress build docs",
     "serve": "vitepress serve docs",
     "format": "biome format --write .",
