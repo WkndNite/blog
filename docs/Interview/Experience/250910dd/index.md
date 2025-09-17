@@ -24,4 +24,4 @@ tags:
     :::
 
 4. 写一个布局，外层 div 里有三个按照对角线排列的 div。要求：外层的 div 没有固定高度。
-5. 手写 TupleToUnion<T>。
+5. 手写 TupleToUnion。
