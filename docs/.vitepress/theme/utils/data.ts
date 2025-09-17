@@ -5,6 +5,12 @@ export const NAV_DATA: NavData[] = [
     title: "开发文档",
     items: [
       {
+        icon: "https://langshift.dev/favicon.ico",
+        title: "LangShift",
+        desc: "技术栈反复横跳",
+        link: "https://langshift.dev",
+      },
+      {
         icon: "https://caniuse.com/img/favicon-128.png",
         title: "Can I use",
         desc: "前端 API 兼容性查询",
