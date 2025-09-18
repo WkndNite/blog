@@ -542,7 +542,7 @@
         },
         {
           "text": "08-22 腾讯秋招一面",
-          "link": "/Interview/Experience/250822tencent"
+          "link": "/Interview/Experience/250822wxg"
         },
         {
           "text": "08-22 百度秋招一面",
@@ -578,7 +578,7 @@
         },
         {
           "text": "09-02 腾讯秋招二面",
-          "link": "/Interview/Experience/250902tencent"
+          "link": "/Interview/Experience/250902wxg"
         },
         {
           "text": "09-04 小红书秋招一面",
@@ -586,7 +586,7 @@
         },
         {
           "text": "09-04 腾讯秋招三面",
-          "link": "/Interview/Experience/250904tencent"
+          "link": "/Interview/Experience/250904wxg"
         },
         {
           "text": "09-05 Boss 秋招一面",
@@ -674,11 +674,23 @@
         },
         {
           "text": "09-16 腾讯秋招一面",
-          "link": "/Interview/Experience/250916tencent"
+          "link": "/Interview/Experience/250916cdg"
         },
         {
           "text": "09-17 小红书秋招 HR 面",
           "link": "/Interview/Experience/250917xhs"
+        },
+        {
+          "text":"09-17 华为秋招笔试",
+          "link": "/Interview/Experience/250917huawei/"
+        },
+        {
+          "text": "09-18 小米秋招一面",
+          "link": "/Interview/Experience/250918xiaomi"
+        },
+        {
+          "text": "09-18 腾讯音乐秋招一面",
+          "link": "/Interview/Experience/250918tme"
         }
       ]
     },
