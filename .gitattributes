@@ -1,0 +1,32 @@
+# 设置默认行为，在提交时自动规范化行结束符
+* text=auto
+
+# 强制指定某些文件类型使用LF结束符
+*.md text eol=lf
+*.json text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.vue text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.html text eol=lf
+*.xml text eol=lf
+
+# 确保这些文件始终使用LF结束符
+package.json text eol=lf
+package-lock.json text eol=lf
+bun.lockb binary
+
+# 二进制文件不应该被转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary

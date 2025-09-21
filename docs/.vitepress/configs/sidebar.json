@@ -1,0 +1,950 @@
+{
+  "/Life/": [
+    {
+      "text": "随笔",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "菊次郎的夏天 老流氓与孤单男孩的相互救赎",
+          "link": "/Life/kikujiro-summer"
+        },
+        {
+          "text": "《史记·项羽本纪》的一些看法",
+          "link": "/Life/historical-records-xiangyu"
+        }
+      ]
+    }
+  ],
+  "/Frontend/": [
+    {
+      "text": "语言基础",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "块级格式化上下文",
+          "link": "/Frontend/Basic/block-formatting-context"
+        },
+        {
+          "text": "CSS 计算属性",
+          "link": "/Frontend/Basic/computed"
+        },
+        {
+          "text": "视觉格式化模型",
+          "link": "/Frontend/Basic/visual-formatting-model"
+        },
+        {
+          "text": "层叠上下文",
+          "link": "/Frontend/Basic/stacking-context"
+        },
+        {
+          "text": "现代化 CSS 中的 border",
+          "link": "/Frontend/Basic/modern-border"
+        },
+        {
+          "text": "一文搞懂 flex",
+          "link": "/Frontend/Basic/modern-flex"
+        },
+        {
+          "text": "盘点 CSS Grid",
+          "link": "/Frontend/Basic/grid"
+        },
+        {
+          "text": "JavaScript 中数字的存储",
+          "link": "/Frontend/Basic/number-storage"
+        },
+        {
+          "text": "一些或大或小的坑",
+          "link": "/Frontend/Basic/some-details"
+        },
+        {
+          "text": "位运算",
+          "link": "/Frontend/Basic/bit-operation"
+        },
+        {
+          "text": "JavaScript 作用域与闭包",
+          "link": "/Frontend/Basic/scope-closure"
+        },
+        {
+          "text": "一些零碎的改动",
+          "link": "/Frontend/Basic/some-changes"
+        },
+        {
+          "text": "ES6 中数组的改动",
+          "link": "/Frontend/Basic/array"
+        },
+        {
+          "text": "ES6 中对象的改动",
+          "link": "/Frontend/Basic/object"
+        },
+        {
+          "text": "Promise",
+          "link": "/Frontend/Basic/promise"
+        },
+        {
+          "text": "ESnext 特性一览",
+          "link": "/Frontend/Basic/overview"
+        },
+        {
+          "text": "字节 · 深入浅出 TypeScript",
+          "link": "/Frontend/Basic/byte-ts"
+        }
+      ]
+    },
+    {
+      "text": "浏览器",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "浏览器渲染原理",
+          "link": "/Frontend/Browser/render"
+        },
+        {
+          "text": "事件循环原理",
+          "link": "/Frontend/Browser/event-cycle"
+        }
+      ]
+    },
+    {
+      "text": "前端工程化",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "CSS 工程化概述",
+          "link": "/Frontend/Engineering/CSS-Engineering"
+        },
+        {
+          "text": "利用 Webpack 拆分 CSS",
+          "link": "/Frontend/Engineering/Webpack-Split-CSS"
+        },
+        {
+          "text": "解决类名冲突",
+          "link": "/Frontend/Engineering/CSS-Name-Conflict"
+        },
+        {
+          "text": "解决重复样式的问题",
+          "link": "/Frontend/Engineering/CSS-Repeat"
+        },
+        {
+          "text": "谈一谈 Post CSS",
+          "link": "/Frontend/Engineering/PostCSS"
+        },
+        {
+          "text": "如何抽离 CSS 文件",
+          "link": "/Frontend/Engineering/CSS-Extract"
+        },
+        {
+          "text": "Babel",
+          "link": "/Frontend/Engineering/Babel"
+        },
+        {
+          "text": "性能优化",
+          "link": "/Frontend/Engineering/Performance-Optimization"
+        },
+        {
+          "text": "前端架构的演进",
+          "link": "/Frontend/Engineering/architecture"
+        }
+      ]
+    },
+    {
+      "text": "NodeJS",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "BFF",
+          "link": "/Frontend/NodeJS/BFF"
+        }
+      ]
+    },
+    {
+      "text": "前端杂谈",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "VS Code 字体美化教程",
+          "link": "/Frontend/Others/vscode-fonts"
+        },
+        {
+          "text": "一些你可能会爱上的配色",
+          "link": "/Frontend/Others/some"
+        },
+        {
+          "text": "博客路由迁移",
+          "link": "/Frontend/Others/vitepress-router"
+        }
+      ]
+    },
+    {
+      "text": "Debug",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "React 请求转发与默认打包冲突",
+          "link": "/Frontend/Projects/cra-path-conflict-proxy-pack"
+        },
+        {
+          "text": "React Toast UI sourcemap 报错",
+          "link": "/Frontend/Projects/toastui-parse-sourcemap"
+        }
+      ]
+    },
+    {
+      "text": "React 生态",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "字节 · 响应式系统与 React",
+          "link": "/Frontend/React/byte-react"
+        },
+        {
+          "text": "React 核心概念（一）",
+          "link": "/Frontend/React/core-concepts-one"
+        },
+        {
+          "text": "React 核心概念（二）",
+          "link": "/Frontend/React/core-concepts-two"
+        },
+        {
+          "text": "React 路由",
+          "link": "/Frontend/React/router"
+        },
+        {
+          "text": "React 中的状态管理库",
+          "link": "/Frontend/React/redux"
+        },
+        {
+          "text": "属性默认值和类型验证",
+          "link": "/Frontend/React/prop-type"
+        },
+        {
+          "text": "高阶组件",
+          "link": "/Frontend/React/hoc"
+        },
+        {
+          "text": "Context",
+          "link": "/Frontend/React/context"
+        },
+        {
+          "text": "Render Props",
+          "link": "/Frontend/React/render-props"
+        },
+        {
+          "text": "Portals",
+          "link": "/Frontend/React/portals"
+        },
+        {
+          "text": "错误边界",
+          "link": "/Frontend/React/error-boundaries"
+        },
+        {
+          "text": "Ref",
+          "link": "/Frontend/React/ref"
+        },
+        {
+          "text": "组件渲染时的性能优化",
+          "link": "/Frontend/React/performance"
+        },
+        {
+          "text": "前端框架的理解",
+          "link": "/Frontend/React/framework-comprehension"
+        },
+        {
+          "text": "React 和 Vue 描述页面的区别",
+          "link": "/Frontend/React/react-vs-vue"
+        },
+        {
+          "text": "前端框架的分类",
+          "link": "/Frontend/React/framework-classification"
+        },
+        {
+          "text": "虚拟 DOM",
+          "link": "/Frontend/React/virtual-dom"
+        },
+        {
+          "text": "React 整体架构",
+          "link": "/Frontend/React/react-architecture"
+        },
+        {
+          "text": "React 渲染流程",
+          "link": "/Frontend/React/render-process"
+        },
+        {
+          "text": "Fiber 双缓冲",
+          "link": "/Frontend/React/fiber-double-buffer"
+        },
+        {
+          "text": "图解 diff 算法",
+          "link": "/Frontend/React/diff-algorithm"
+        },
+        {
+          "text": "Message Channel",
+          "link": "/Frontend/React/message-channel"
+        },
+        {
+          "text": "Scheduler 调度普通任务",
+          "link": "/Frontend/React/scheduler-normal-task"
+        },
+        {
+          "text": "Scheduler 调度延时任务",
+          "link": "/Frontend/React/scheduler-timeout-task"
+        },
+        {
+          "text": "最小堆",
+          "link": "/Frontend/React/min-heap"
+        },
+        {
+          "text": "React 中的位运算",
+          "link": "/Frontend/React/bitwise-operation"
+        },
+        {
+          "text": "beginWork 工作流程",
+          "link": "/Frontend/React/beginwork-completework"
+        },
+        {
+          "text": "Hook 原理",
+          "link": "/Frontend/React/hook"
+        },
+        {
+          "text": "useState 和 useReducer",
+          "link": "/Frontend/React/useState-useReducer"
+        },
+        {
+          "text": "effect 相关 Hooks",
+          "link": "/Frontend/React/effect-hooks"
+        },
+        {
+          "text": "useCallback 和 useMemo",
+          "link": "/Frontend/React/useCallback-useMemo"
+        }
+      ]
+    },
+    {
+      "text": "Vue",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "Vue3 里的 ref 和 reactive",
+          "link": "/Frontend/Vue/ref-reactive"
+        },
+        {
+          "text": "谈一谈 Vue 中的虚拟 DOM",
+          "link": "/Frontend/Vue/virtual-dom"
+        },
+        {
+          "text": "Vue3 模板的本质",
+          "link": "/Frontend/Vue/nature-of-template"
+        },
+        {
+          "text": "组件树和虚拟 DOM 树",
+          "link": "/Frontend/Vue/component-tree-and-virtual-dom-tree"
+        },
+        {
+          "text": "Vue 中数据拦截的本质",
+          "link": "/Frontend/Vue/data-interception"
+        },
+        {
+          "text": "Vue 中响应式数据的本质",
+          "link": "/Frontend/Vue/reactive-data"
+        }
+      ]
+    },
+    {
+      "text": "Webpack",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "Webpack 入门",
+          "link": "/Frontend/Webpack/intro"
+        },
+        {
+          "text": "模块化兼容性",
+          "link": "/Frontend/Webpack/module-compatibility"
+        },
+        {
+          "text": "Webpack 中的配置文件",
+          "link": "/Frontend/Webpack/config"
+        },
+        {
+          "text": "Webpack 编译过程",
+          "link": "/Frontend/Webpack/compile-process"
+        },
+        {
+          "text": "入口与出口配置",
+          "link": "/Frontend/Webpack/entry-output"
+        },
+        {
+          "text": "Loaders 与 Plugins",
+          "link": "/Frontend/Webpack/loaders-plugins"
+        },
+        {
+          "text": "Webpack 如何区分环境？",
+          "link": "/Frontend/Webpack/env"
+        },
+        {
+          "text": "一些细节配置补充",
+          "link": "/Frontend/Webpack/details"
+        },
+        {
+          "text": "Webpack 常用扩展",
+          "link": "/Frontend/Webpack/extension"
+        },
+        {
+          "text": "开发服务器",
+          "link": "/Frontend/Webpack/dev-server"
+        },
+        {
+          "text": "Webpack 内置插件",
+          "link": "/Frontend/Webpack/builtin-plugins"
+        }
+      ]
+    }
+  ],
+  "/Interview/": [
+    {
+      "text": "CSS",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "CSS 单位总结",
+          "link": "/Interview/CSS/unit"
+        },
+        {
+          "text": "居中方式总结",
+          "link": "/Interview/CSS/center"
+        }
+      ]
+    },
+    {
+      "text": "手撕代码",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "手搓 Promise 全系列",
+          "link": "/Interview/Handcraft/promise"
+        },
+        {
+          "text": "数组方式解构对象",
+          "link": "/Interview/Handcraft/destructure"
+        },
+        {
+          "text": "手撕事件总线",
+          "link": "/Interview/Handcraft/event-bus"
+        },
+        {
+          "text": "大文件上传",
+          "link": "/Interview/Handcraft/big-file-upload"
+        },
+        {
+          "text": "防抖和节流",
+          "link": "/Interview/Handcraft/debounce-throttle"
+        },
+        {
+          "text": "函数柯里化",
+          "link": "/Interview/Handcraft/currying"
+        }
+      ]
+    },
+    {
+      "text": "笔面经验",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "03-19 小米日常一面",
+          "link": "/Interview/Experience/2025-03-19-XiaoMi/"
+        },
+        {
+          "text": "03-20 腾讯音乐暑期一面",
+          "link": "/Interview/Experience/2025-03-20-TME"
+        },
+        {
+          "text": "03-21 饿了么暑期笔试",
+          "link": "/Interview/Experience/2025-03-21-Ele/"
+        },
+        {
+          "text": "03-22 美团暑期笔试",
+          "link": "/Interview/Experience/2025-03-22-MeiTuan/"
+        },
+        {
+          "text": "03-23 拼多多暑期笔试",
+          "link": "/Interview/Experience/2025-03-23-PDD/"
+        },
+        {
+          "text": "03-25 腾讯音乐暑期二面",
+          "link": "/Interview/Experience/2025-03-25-TME"
+        },
+        {
+          "text": "03-26 快手暑期一面",
+          "link": "/Interview/Experience/2025-03-26-KuaiShou"
+        },
+        {
+          "text": "03-26 美团暑期一面",
+          "link": "/Interview/Experience/2025-03-26-MeiTuan"
+        },
+        {
+          "text": "03-26 百度日常一面",
+          "link": "/Interview/Experience/2025-03-26-BaiDu"
+        },
+        {
+          "text": "03-27 字节暑期一面",
+          "link": "/Interview/Experience/2025-03-27-ByteDance"
+        },
+        {
+          "text": "03-27 作业帮暑期一面",
+          "link": "/Interview/Experience/2025-03-27-ZuoYeBang"
+        },
+        {
+          "text": "03-28 快手暑期二面",
+          "link": "/Interview/Experience/2025-03-28-KuaiShou"
+        },
+        {
+          "text": "03-28 美团暑期二面",
+          "link": "/Interview/Experience/2025-03-28-MeiTuan"
+        },
+        {
+          "text": "03-31 懂车帝暑期一面",
+          "link": "/Interview/Experience/2025-03-31-DongCheDi"
+        },
+        {
+          "text": "04-01 字节暑期二面",
+          "link": "/Interview/Experience/2025-04-01-ByteDance"
+        },
+        {
+          "text": "往届刷题错题总结",
+          "link": "/Interview/Experience/26prepare/"
+        },
+        {
+          "text": "07-28 字节内转即创一面",
+          "link": "/Interview/Experience/2025-07-28-ByteDance-JiChuang"
+        },
+        {
+          "text": "08-06 字节内转线索一面",
+          "link": "/Interview/Experience/2025-08-06-ByteDance-XianSuo"
+        },
+        {
+          "text": "08-12 虾皮秋招笔试",
+          "link": "/Interview/Experience/2025-08-12-Sophee/"
+        },
+        {
+          "text": "08-12 字节内转线索二面",
+          "link": "/Interview/Experience/2025-08-12-ByteDance-XianSuo"
+        },
+        {
+          "text": "08-14 字节内转线索三面",
+          "link": "/Interview/Experience/2025-08-14-ByteDance-XianSuo"
+        },
+        {
+          "text": "08-20 Minimax 秋招一面",
+          "link": "/Interview/Experience/2025-08-20-Minimax"
+        },
+        {
+          "text": "08-20 小红书秋招笔试",
+          "link": "/Interview/Experience/2025-08-20-XiaoHongShu/"
+        },
+        {
+          "text": "08-22 腾讯秋招一面",
+          "link": "/Interview/Experience/2025-08-22-WXG"
+        },
+        {
+          "text": "08-22 百度秋招一面",
+          "link": "/Interview/Experience/2025-08-22-BaiDu/"
+        },
+        {
+          "text": "08-23 京东秋招笔试",
+          "link": "/Interview/Experience/2025-08-23-JingDong/"
+        },
+        {
+          "text": "08-23 虾皮秋招面试",
+          "link": "/Interview/Experience/2025-08-23-Sophee"
+        },
+        {
+          "text": "08-23 科大讯飞秋招笔试",
+          "link": "/Interview/Experience/2025-08-23-KeDa/"
+        },
+        {
+          "text": "08-25 快手秋招一面",
+          "link": "/Interview/Experience/2025-08-25-KuaiShou"
+        },
+        {
+          "text": "08-30 淘天集团秋招笔试",
+          "link": "/Interview/Experience/2025-08-30-TaoTian"
+        },
+        {
+          "text": "08-31 拼多多秋招提前批笔试",
+          "link": "/Interview/Experience/2025-08-31-PDD/"
+        },
+        {
+          "text": "09-01 快手秋招二面",
+          "link": "/Interview/Experience/2025-09-01-KuaiShou/"
+        },
+        {
+          "text": "09-02 腾讯秋招二面",
+          "link": "/Interview/Experience/2025-09-02-WXG"
+        },
+        {
+          "text": "09-04 小红书秋招一面",
+          "link": "/Interview/Experience/2025-09-04-XiaoHongShu"
+        },
+        {
+          "text": "09-04 腾讯秋招三面",
+          "link": "/Interview/Experience/2025-09-04-WXG"
+        },
+        {
+          "text": "09-05 Boss 秋招一面",
+          "link": "/Interview/Experience/2025-09-05-Boss"
+        },
+        {
+          "text": "09-05 影石秋招一面",
+          "link": "/Interview/Experience/2025-09-05-Insta"
+        },
+        {
+          "text": "09-06 美团秋招笔试",
+          "link": "/Interview/Experience/2025-09-06-MeiTuan/"
+        },
+        {
+          "text": "09-06 小米秋招笔试",
+          "link": "/Interview/Experience/2025-09-06-XiaoMi/"
+        },
+        {
+          "text": "09-07 滴滴秋招笔试",
+          "link": "/Interview/Experience/2025-09-07-DD/"
+        },
+        {
+          "text": "09-08 作业帮秋招笔试",
+          "link": "/Interview/Experience/2025-09-08-ZuoYeBang/"
+        },
+        {
+          "text": "09-09 快手秋招三面",
+          "link": "/Interview/Experience/2025-09-09-KuaiShou"
+        },
+        {
+          "text": "09-10 Boss 秋招二面",
+          "link": "/Interview/Experience/2025-09-10-Boss"
+        },
+        {
+          "text": "09-10 滴滴秋招一面",
+          "link": "/Interview/Experience/2025-09-10-DD/"
+        },
+        {
+          "text": "09-10 小红书秋招二面",
+          "link": "/Interview/Experience/2025-09-10-XiaoHongShu"
+        },
+        {
+          "text": "09-11 影石秋招二面",
+          "link": "/Interview/Experience/2025-09-11-Insta"
+        },
+        {
+          "text": "09-11 科大讯飞秋招一面",
+          "link": "/Interview/Experience/2025-09-11-KeDa"
+        },
+        {
+          "text": "09-12 饿了么前端秋招笔试",
+          "link": "/Interview/Experience/2025-09-12-Ele/"
+        },
+        {
+          "text": "09-13 虾皮秋招二面",
+          "link": "/Interview/Experience/2025-09-13-Sophee"
+        },
+        {
+          "text": "09-14 拼多多秋招笔试",
+          "link": "/Interview/Experience/2025-09-14-PDD/"
+        },
+        {
+          "text": "09-14 去哪儿秋招 AI 笔面试",
+          "link": "/Interview/Experience/2025-09-14-Qunar/"
+        },
+        {
+          "text": "09-14 得物秋招笔试",
+          "link": "/Interview/Experience/2025-09-14-DeWu/"
+        },
+        {
+          "text": "09-15 猿辅导秋招一面",
+          "link": "/Interview/Experience/2025-09-15-YuanFuDao"
+        },
+        {
+          "text": "09-15 京东秋招一面",
+          "link": "/Interview/Experience/2025-09-15-JingDong"
+        },
+        {
+          "text": "09-15 快手秋招 HR 面",
+          "link": "/Interview/Experience/2025-09-15-KuaiShou"
+        },
+        {
+          "text": "09-16 Boss 秋招 HR 面",
+          "link": "/Interview/Experience/2025-09-16-Boss"
+        },
+        {
+          "text": "09-16 腾讯秋招一面",
+          "link": "/Interview/Experience/2025-09-16-CDG"
+        },
+        {
+          "text": "09-17 小红书秋招 HR 面",
+          "link": "/Interview/Experience/2025-09-17-XiaoHongShu"
+        },
+        {
+          "text": "09-17 华为秋招笔试",
+          "link": "/Interview/Experience/2025-09-17-HuaWei/"
+        },
+        {
+          "text": "09-18 小米秋招一面",
+          "link": "/Interview/Experience/2025-09-18-XiaoMi"
+        },
+        {
+          "text": "09-18 腾讯音乐秋招一面",
+          "link": "/Interview/Experience/2025-09-18-TME"
+        },
+        {
+          "text": "09-20 虾皮秋招三面",
+          "link": "/Interview/Experience/2025-09-20-Sophee"
+        },
+        {
+          "text": "09-21 米哈游秋招笔试",
+          "link": "/Interview/Experience/2025-09-21-MiHoYo/"
+        }
+      ]
+    },
+    {
+      "text": "JavaScript",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "let var const",
+          "link": "/Interview/JavaScript/let-var-const"
+        },
+        {
+          "text": "JavaScript 数据类型",
+          "link": "/Interview/JavaScript/data-type"
+        },
+        {
+          "text": "JavaScript 中的包装类型",
+          "link": "/Interview/JavaScript/wrapper"
+        },
+        {
+          "text": "运算符",
+          "link": "/Interview/JavaScript/operator"
+        },
+        {
+          "text": "原型和原型链",
+          "link": "/Interview/JavaScript/prototype"
+        },
+        {
+          "text": "数据类型的转换",
+          "link": "/Interview/JavaScript/type-conversion"
+        },
+        {
+          "text": "this 指向",
+          "link": "/Interview/JavaScript/this"
+        },
+        {
+          "text": "垃圾回收与内存泄漏",
+          "link": "/Interview/JavaScript/gc"
+        },
+        {
+          "text": "执行栈和执行上下文",
+          "link": "/Interview/JavaScript/execution-context"
+        },
+        {
+          "text": "作用域和作用域链",
+          "link": "/Interview/JavaScript/scope-chain"
+        },
+        {
+          "text": "事件循环",
+          "link": "/Interview/JavaScript/event-loop"
+        }
+      ]
+    },
+    {
+      "text": "网络",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "五层网络模型",
+          "link": "/Interview/Network/network-model"
+        },
+        {
+          "text": "常见的请求方法",
+          "link": "/Interview/Network/request-method"
+        },
+        {
+          "text": "Cookie",
+          "link": "/Interview/Network/cookie"
+        },
+        {
+          "text": "cookie 和 webStorage的区别",
+          "link": "/Interview/Network/cookie-storage-difference"
+        },
+        {
+          "text": "加密算法",
+          "link": "/Interview/Network/encryption"
+        },
+        {
+          "text": "JWT",
+          "link": "/Interview/Network/jwt"
+        },
+        {
+          "text": "同源与跨域",
+          "link": "/Interview/Network/same-origin-cross-domain"
+        },
+        {
+          "text": "HTTP 各版本",
+          "link": "/Interview/Network/http-version"
+        },
+        {
+          "text": "域名和 DNS",
+          "link": "/Interview/Network/domain-dns"
+        },
+        {
+          "text": "输入 URL 到页面展示",
+          "link": "/Interview/Network/url-to-page"
+        },
+        {
+          "text": "Session",
+          "link": "/Interview/Network/session"
+        },
+        {
+          "text": "TCP 协议",
+          "link": "/Interview/Network/tcp"
+        },
+        {
+          "text": "CSRF 和 XSS",
+          "link": "/Interview/Network/csrf-xss"
+        },
+        {
+          "text": "SSL、TLS 和 HTTPS",
+          "link": "/Interview/Network/ssl-tls-https"
+        },
+        {
+          "text": "网络性能优化",
+          "link": "/Interview/Network/performance-optimization"
+        },
+        {
+          "text": "WebSocket",
+          "link": "/Interview/Network/websocket"
+        },
+        {
+          "text": "缓存",
+          "link": "/Interview/Network/cache"
+        },
+        {
+          "text": "常见 HTTP 状态码总结",
+          "link": "/Interview/Network/http-status-codes"
+        }
+      ]
+    },
+    {
+      "text": "编程思维",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "贪心算法",
+          "link": "/Interview/Programming/Greedy"
+        },
+        {
+          "text": "动态规划",
+          "link": "/Interview/Programming/Dp"
+        },
+        {
+          "text": "哈希表",
+          "link": "/Interview/Programming/Hash"
+        },
+        {
+          "text": "二叉树",
+          "link": "/Interview/Programming/Tree"
+        },
+        {
+          "text": "二叉索引树",
+          "link": "/Interview/Programming/FenwickTree"
+        }
+      ]
+    },
+    {
+      "text": "TypeScript",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "Type Challenges",
+          "link": "/Interview/TypeScript/challenges"
+        }
+      ]
+    }
+  ],
+  "/Softskills/": [
+    {
+      "text": "AI",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "MCP 从入门到实战",
+          "link": "/Softskills/AI/MCP"
+        }
+      ]
+    },
+    {
+      "text": "设计模式与设计原则",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "设计模式",
+          "link": "/Softskills/Design/design-patterns"
+        },
+        {
+          "text": "设计原则",
+          "link": "/Softskills/Design/design-principles"
+        },
+        {
+          "text": "设计模式详解第一期 单例模式",
+          "link": "/Softskills/Design/design-patterns-singleton"
+        }
+      ]
+    },
+    {
+      "text": "Docker",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "Docker 存在的必要性",
+          "link": "/Softskills/Docker/preview"
+        },
+        {
+          "text": "简短的介绍",
+          "link": "/Softskills/Docker/intro"
+        },
+        {
+          "text": "一些常用命令",
+          "link": "/Softskills/Docker/command"
+        },
+        {
+          "text": "Docker 通信",
+          "link": "/Softskills/Docker/communication"
+        }
+      ]
+    },
+    {
+      "text": "Git",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "Commit 规范",
+          "link": "/Softskills/Git/commit"
+        },
+        {
+          "text": "Git 新旧命令",
+          "link": "/Softskills/Git/git-command-new"
+        },
+        {
+          "text": "Git 大小写不敏感闹乌龙",
+          "link": "/Softskills/Git/git-ignorecase"
+        }
+      ]
+    },
+    {
+      "text": "碎片集锦",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "编译原理",
+          "link": "/Softskills/Compilation"
+        }
+      ]
+    }
+  ]
+}

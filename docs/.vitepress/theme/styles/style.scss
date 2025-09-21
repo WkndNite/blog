@@ -1,0 +1,55 @@
+.VPHome {
+  &::before {
+    background-image: url(../assets/1.jpg);
+    background-size: cover;
+  }
+
+  background-image: url(../assets/1.jpg);
+  background-size: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'LXGW WenKai Screen';
+  font-weight: '400';
+  word-break: break-all;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+strong {
+  text-shadow: 0.8px 0;
+}
+
+.MathJax {
+  overflow-y: hidden;
+}
+
+table {
+  white-space: nowrap;
+}
+
+code {
+  font-family: inherit;
+}
+
+/* 默认适用于大屏（桌面）端 */
+.works {
+  width: 900px;
+}
+
+/* 手机端（最大宽度 382px）适配 */
+@media (max-width: 400px) {
+  .works {
+    width: 100%;
+  }
+}
+
+.vp-doc .el-tag {
+  margin-left: 4px;
+  padding: 6px;
+}

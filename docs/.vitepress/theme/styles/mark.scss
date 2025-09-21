@@ -1,0 +1,34 @@
+html[theme] {
+  --mark-bg: rgba(144, 202, 249, 0.25);
+  --mark-text: #2a5caa;
+  --mark-hover-bg: rgba(144, 202, 249, 0.4);
+  --mark-border: rgba(100, 149, 237, 0.3);
+  --hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+html[theme].dark {
+  --mark-bg: rgba(30, 144, 255, 0.15);
+  --mark-text: #b0e0e6;
+  --mark-hover-bg: rgba(12, 127, 241, 0.25);
+  --mark-border: rgba(70, 130, 180, 0.2);
+  --hover-shadow: 0 2px 12px rgb(255, 255, 255, 0.5);
+}
+
+mark {
+  background-color: var(--mark-bg);
+  color: var(--mark-text);
+  border-radius: 4px;
+  padding: 0 0.4em;
+  border: 1px solid var(--mark-border);
+  transition: all 0.3s ease;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+@media (any-hover: hover) {
+  mark:hover {
+    background-color: var(--mark-hover-bg);
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-1px);
+  }
+}

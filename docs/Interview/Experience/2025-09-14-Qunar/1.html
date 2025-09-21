@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Block 1 -->
+    <div v-if="1 + 1 === 2" class="div1">
+        “去哪儿 ”认识到在线旅游市场的用户需求已经逐渐变化...
+    </div>
+    <div v-else-if="1 + 1 === 2" class="div-else-if-after-true-if">
+        这个 v-else-if 紧跟在一个 true 的 v-if 后面，所以它不应该显示。
+    </div>
+
+    <!-- Block 2 -->
+    <div v-if="1 + 1 !== 2" class="div2">
+        2012年12月，去哪儿顺利通过PCI认证...
+    </div>
+    <div v-else-if="1 + 2 === 3" class="div3">
+        2021年8月，中国信息通信研究院发起的“卓信大数据计划”...
+    </div>
+    <div v-else-if="false" class="div4">
+        2022年1月，去哪儿旅行App获得移动互联网应用程序（App）安全认证证书...
+    </div>
+
+    <!-- v-show elements -->
+    <div v-show="true" class="div5">
+        2023年8月21日，去哪儿平台数据出境申报获得国家网信办批准...
+    </div>
+    <div v-show="false" class="div6">
+        “去哪儿”为旅游者提供国内外机票、酒店、会场、度假和签证服务的深度搜索...
+    </div>
+
+    <!-- Non-directive element -->
+    <span class="span1">
+        “去哪儿”是通往中国旅游市场，以及接触广大在线旅游消费者的通行证...
+    </span>
+
+    <script>
+        const rootElement = document.querySelector('body');
+        const children = Array.from(rootElement.children);
+
+        // 预处理：收集每个元素的 DOM 节点和指令信息（静态结构，不依赖实时DOM）
+        const elementInfos = children.map(element => ({
+            element: element,
+            directive: findDirective(element) // 待实现：识别元素的指令（v-if/v-else-if/v-show）
+        }));
+
+
+        let ifBlockMet = false; // 跟踪v-if链是否已有条件满足
+
+        // 遍历静态结构，处理每个元素的指令逻辑
+        for (let i = 0; i < elementInfos.length; i++) {
+            const { element, directive } = elementInfos[i];
+
+            if (!directive) {
+                ifBlockMet = false;
+                continue;
+            }
+
+            // 获取指令表达式并求值
+            const directiveValue = element.getAttribute(directive);
+            const result = expressionFun(directiveValue)();
+
+            // v-if逻辑
+            if (directive === 'v-if') {
+                if (result) { // [!code ++]
+                    ifBlockMet = true; // [!code ++]
+                } else { // [!code ++]
+                    ifBlockMet = false; // [!code ++]
+                    element.parentNode.removeChild(element); // [!code ++]
+                } // [!code ++]
+            }
+
+            // v-else-if逻辑
+            else if (directive === 'v-else-if') {
+                const prevInfo = elementInfos[i - 1];
+                const prevDirective = prevInfo ? prevInfo.directive : null;
+
+                // 合法性校验：前序必须是v-if/v-else-if，且当前链未满足
+                if (!/v-if|v-else-if/.test(prevDirective) || ifBlockMet) {
+                    element.parentNode.removeChild(element);
+                    continue;
+                }
+
+                if (result) {
+                    ifBlockMet = true;
+                } else {
+                    ifBlockMet = false;
+                    element.parentNode.removeChild(element);
+                }
+            }
+
+            // v-show逻辑
+            else if (directive === 'v-show') {
+                if (!result) { // [!code ++]
+                    element.style['display'] = 'none'; // [!code ++]
+                } // [!code ++]
+            }
+        }
+
+        /**
+         * 判断元素是否包含v-if/v-else-if/v-show指令
+         */
+        function findDirective(element) {
+            const dis = ['v-if', 'v-else-if', 'v-show']; // [!code ++]
+            for (const d of dis) { // [!code ++]
+                if (element.hasAttribute(d)) { // [!code ++]
+                    return d; // [!code ++]
+                } // [!code ++]
+            } // [!code ++]
+            return undefined; // [!code ++]
+        }
+
+        /**
+         * 将表达式字符串转为可执行函数
+         */
+        function expressionFun(attrValue) {
+            return function () { // [!code ++]
+                return eval(attrValue); // [!code ++]
+            }; // [!code ++]
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="file"
+      id="file"
+      label="选择文件"
+      title="Choose a file"
+      placeholder="No file chosen"
+    />
+    <script>
+      const file = document.getElementById('file');
+      file.onchange = (e) => {
+        const file = e.target.files[0];
+        const piece = file.slice(0, 45);
+        if (!file) return;
+        console.log('🚀 ~ file.html:20 ~ file:', file);
+        console.log('🚀 ~ file.html:22 ~ piece:', piece);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spark-md5/3.0.2/spark-md5.min.js"></script>
+  </head>
+  <body>
+    <input
+      type="file"
+      id="file"
+      label="选择文件"
+      title="Choose a file"
+      placeholder="No file chosen"
+    />
+    <script>
+      const file = document.getElementById('file');
+      file.onchange = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const chunks = createChunks(file, 1024);
+        hash(chunks);
+      };
+
+      function createChunks(file, chunkSize) {
+        const chunks = [];
+        let offset = 0;
+        while (offset < file.size) {
+          chunks.push(file.slice(offset, offset + chunkSize));
+          offset += chunkSize;
+        }
+        return chunks;
+      }
+
+      function hash(chunks) {
+        const spark = new SparkMD5();
+        function _read(i) {
+          if (i >= chunks.length) {
+            console.log('🚀 ~ file.html:41 ~ spark.end():', spark.end());
+            return;
+          }
+          const reader = new FileReader();
+          const blob = chunks[i];
+          reader.onload = (e) => {
+            const bytes = e.target.result;
+            spark.append(bytes);
+            _read(i + 1);
+          };
+          reader.readAsArrayBuffer(blob);
+        }
+        _read(0);
+      }
+    </script>
+  </body>
+</html>
