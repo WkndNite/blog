@@ -26,41 +26,7 @@ tags:
 
 4. 判断三个盒子各自的宽度。
 
-   ```HTML
-   <!doctype html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-      <style>
-         .wrapper1 {
-         width: 100px;
-         height: 100px;
-         }
-         .wrapper2 {
-         width: 50px;
-         height: 50px;
-         }
-         .two {
-         float: left;
-         }
-         .three {
-         position: relative;
-         }
-      </style>
-   </head>
-   <body>
-      <div class="wrapper1">
-         <div class="one"></div>
-         <div class="two"></div>
-      </div>
-      <div class="wrapper2">
-         <div class="three"></div>
-      </div>
-   </body>
-   </html>
-   ```
+   <<< ./1.html
 
 ## 编程题
 

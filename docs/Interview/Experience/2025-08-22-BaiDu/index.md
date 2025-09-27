@@ -13,7 +13,7 @@ tags:
 > 答得很烂竟然也过了
 
 1. 自我介绍。
-2. 为什么离职？有无 Offer？ 
+2. 为什么离职？有无 Offer？
 3. 介绍浏览器的架构。
 
     :::tip 📌 回答
@@ -24,7 +24,7 @@ tags:
     - JavaScript 引擎负责执行页面中的 JavaScript 代码，比如 Chrome 的 V8 引擎。具体来讲，又可以分为 Parser、Interpreter、JIT Compiler 三部分，分别负责解析代码、解释执行代码和编译执行代码。
     - 网络层负责处理网络请求，以及缓存策略、Cookie、DNS、重定向等网络功能。
     - UI 层负责显示页面和处理用户交互，比如 Chrome 的界面。
-    
+
     浏览器的工作流程可以参考 [这篇文章](/Frontend/Browser/Render)。
     :::
 
@@ -35,10 +35,10 @@ tags:
     :::tip 📌 回答
     - 可以使用 meta 标签来设置视口（viewport），从而禁止页面的缩放:
     ```HTML
-    <meta name="viewport" 
-      content="width=device-width, 
-               initial-scale=1, 
-               maximum-scale=1, 
+    <meta name="viewport"
+      content="width=device-width,
+               initial-scale=1,
+               maximum-scale=1,
                user-scalable=no">
     ```
     - 可以使用 CSS 来减弱缩放的影响（没有具体属性来禁止）：
@@ -101,7 +101,7 @@ tags:
     - 通过线上监控等工具检查资源加载失败率等指标。
     - 二分排查，逐步注释或调试代码，定位问题所在。
     - 查看渲染效果，是否有元素被隐藏或覆盖。
-    
+
     优化方向：
     - 优化资源加载，通过 defer/async 加载异步资源、通过懒加载或者 CDN 等优化静态资源等。
     - 增强代码稳定性，比如 try-catch 异常捕获、React 组件的错误边界等。
@@ -118,7 +118,7 @@ tags:
 
 15. 事件循环输出。
 16. 封装可中止的定时器钩子。
-    
+
     :::details 🔍 展开代码
     <<< ./useCountDown.jsx
     :::

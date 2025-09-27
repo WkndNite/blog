@@ -25,12 +25,6 @@ export const friend = {
       avatar: "https://suzhelevel6.github.io/suzhe_blog/touxiang1MB.jpg",
       url: "https://suzhelevel6.github.io/suzhe_blog/",
     },
-    // {
-    //   nickname: 'Lumen',
-    //   des: '集成 Vue 功能组件和主题美化的 VitePress 插件',
-    //   avatar: 'https://lumen.theojs.cn/Logo.webp',
-    //   url: 'https://lumen.theojs.cn/'
-    // },
     {
       nickname: "茂茂导航",
       des: "基于 VitePress 的个人前端导航页面模板",

@@ -35,7 +35,7 @@ tags:
    $$
 
    确定合法区间我们需要在 $[1,m]$ 去除掉 $[last-k+1,last+k-1]$，最终表达式可以化简为：
-   
+
    $$
    dp[len][last] = pre[last-k] + (pre[m] - pre[last+k-1])
    $$

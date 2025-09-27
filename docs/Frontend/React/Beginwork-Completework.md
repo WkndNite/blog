@@ -7,7 +7,7 @@ tags:
 
 # beginWork 和 completeWork 工作流程
 
-Reconciler（协调器） 是 Render 阶段的第二阶段工作，整个工作的过程可以分为“递”和“归”：
+Reconciler（协调器） 是 Render 阶段的第二阶段工作，整个工作的过程可以分为 `递` 和 `归`。
 
 - 递：beginWork
 - 归：completeWork

@@ -18,7 +18,7 @@ Promise 是一套专门处理异步场景的规范，它能有效的避免回调
 
 Promise A+ 规定：
 
-1. 所有的异步场景，都可以看作是一个异步任务，每个异步任务，在 JS 中应该表现为一个 **对象**，该对象称之为 **Promise 对象**，也叫做任务对象。
+1. 所有的异步场景，都可以看作是一个异步任务，每个异步任务，在 JS 中应该表现为一个 `对象`，该对象称之为 `Promise 对象`，也叫做任务对象。
 
    ![alt](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/20210618154556.png)
 
@@ -157,7 +157,7 @@ method3(); // Promise { <rejected> Error(1) }
 
 ### await
 
-`await` 关键字表示等待某个 Promise 完成，**它必须用于** `async` **函数中**：
+`await` 关键字表示等待某个 Promise 完成，<mark>它必须用于 async 函数中。</mark>
 
 ```JavaScript
 async function method() {

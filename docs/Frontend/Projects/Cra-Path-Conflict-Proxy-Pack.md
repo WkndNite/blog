@@ -16,7 +16,7 @@ tags:
 
 而在 CRA 项目里，有一个很简便的方法可以实现请求的转发。
 
-**在项目的** `src` **目录新建** `setupProxy.js`，下附对应文件代码。
+在项目的 `src` 目录新建 `setupProxy.js`，下附对应文件代码。
 
 ```JavaScript [setupProxy.js]
 const { createProxyMiddleware } = require('http-proxy-middleware');

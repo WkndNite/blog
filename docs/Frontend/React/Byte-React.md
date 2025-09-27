@@ -21,7 +21,7 @@ cover: https://cdn-icons-png.flaticon.com/128/2497/2497631.png
 
 2012 年，在 Facebook 收购 Instagram 后，该 FaxJS 项目在内部得到使用，Jordan Walke 基于 FaxJS 的经验，创造了 React。
 
-2014 年至今，React 生态大爆发，各种[围绕 React 的新的工具和框架](https://github.com/enaqx/awesome-react)开始涌现。
+2014 年至今，React 生态大爆发，各种 [围绕 React 的新的工具和框架](https://github.com/enaqx/awesome-react) 开始涌现。
 
 ## React 的设计思路
 
@@ -71,7 +71,7 @@ cover: https://cdn-icons-png.flaticon.com/128/2497/2497631.png
 
 ## React Hooks
 
-不再展开，可以参考[另一篇文章](../React/Core-Concepts-Two.md#hooks)。
+不再展开，可以参考 [另一篇文章](../React/Core-Concepts-Two.md#hooks)。
 
 ## React 的实现
 
@@ -99,7 +99,7 @@ cover: https://cdn-icons-png.flaticon.com/128/2497/2497631.png
 
 ## React 状态管理库
 
-不再展开，可以参考[另一篇文章](/Frontend/React/Redux)。
+不再展开，可以参考 [另一篇文章](/Frontend/React/Redux)。
 
 推荐状态管理库：
 [React Redux](https://react-redux.js.org/) /

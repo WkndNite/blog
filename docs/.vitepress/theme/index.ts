@@ -34,7 +34,6 @@ export default {
     BlogTheme?.enhanceApp?.(ctx);
     ctx.app.component("MNavLinks", MNavLinks);
     ctx.app.component("VideoPlayer", VideoPlayer);
-    // @ts-expect-error: bypass vue version mismatch temporarily
     ctx.app.use(ElementPlus);
     if (inBrowser) {
       NProgress.configure({ showSpinner: false });

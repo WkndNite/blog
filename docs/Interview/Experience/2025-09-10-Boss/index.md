@@ -19,35 +19,14 @@ tags:
 7. JS 原生事件有哪两个阶段？
 8. event.target 和 event.currentTarget 的区别？
 9. 输出。
-    ```JavaScript
-    console.log(1);
-    setTimeout(() => {
-    console.log(2);
-    Promise.resolve().then(() => {
-        console.log(3);
-    })
-    })
-    new Promise((resolve) => {
-    console.log(4);
-    resolve(5);
-    Promise.resolve().then(() => {
-        console.log(8);
-    })
-    }).then((data)=>{
-        console.log(data);
-    })
-    setTimeout(() => {
-    console.log(6);
-    });
-    console.log(7);
-    ```
+    
+    <<< ./1.js
+
 10. Promise 底层实现是否会有闭包？
 11. 手写 $[min,max]$ 随机整数函数。
-    ```JavaScript
-    function randomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-    ```
+    
+    <<< ./2.js
+
 12. 项目最有亮点和成就感的？其实想问的是别人能做你也能做，你比较突出的地方？
 13. 平时开发会不会用 AI？代码 AI 占比多少？
 14. 有一个列表，怎么去判断列表某一项被用户看过？

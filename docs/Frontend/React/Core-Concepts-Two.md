@@ -18,7 +18,7 @@ cover: https://cdn-icons-png.flaticon.com/512/10303/10303238.png
 
 因此，这里所谓的受控组件，本质上就是将表单中的控件和视图模型（状态）进行绑定，之后就是针对状态进行操作。受控组件与非受控组件的区别也就在于内容是由用户决定还是由 state 决定。
 
-受控与非受控的选择可以参考 [这篇文章](https://goshacmd.com/controlled-vs-uncontrolled-inputs-react/)
+受控与非受控的选择可以参考 [这篇文章](https://goshacmd.com/controlled-vs-uncontrolled-inputs-react/)。
 
 ::::details
 :::code-group
@@ -318,7 +318,7 @@ export default class App extends Component {
 
 React 在组件的生命周期中提供了一系列钩子函数（类似于事件），可以让开发者在函数中注入代码，这些代码会在适当的时机运行。
 
-**生命周期钩子函数是独属于类组件的东西**，但是自从 React v16.8 以来，整体已经开始以函数式组件为主，因此此处仅介绍一些常用的生命周期钩子函数。
+生命周期钩子函数是独属于类组件的东西，但是自从 React v16.8 以来，整体已经开始以函数式组件为主，因此此处仅介绍一些常用的生命周期钩子函数。
 
 完整的生命周期图谱，可以参考官网：[React 组件的生命周期图谱](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 

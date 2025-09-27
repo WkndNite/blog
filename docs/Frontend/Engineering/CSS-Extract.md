@@ -14,7 +14,7 @@ style-loader 使用的方式是用一段 js 代码，将样式加入到 style �
 
 而实际的开发中，我们往往希望依赖的样式最终形成一个 css 文件。
 
-此时，就需要用到一个库：`mini-css-extract-plugin`
+此时，就需要用到一个库：`mini-css-extract-plugin`。
 
 该库提供了 1 个 plugin 和 1 个 loader。
 

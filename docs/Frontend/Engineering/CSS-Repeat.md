@@ -51,7 +51,7 @@ LESS 编译器是基于 node 开发的，可以通过 npm 下载安装：
 npm i -D less
 ```
 
-安装好了 less 之后，它提供了一个 CLI 工具`lessc`，通过该工具即可完成编译：
+安装好了 less 之后，它提供了一个 CLI 工具 `lessc`，通过该工具即可完成编译：
 
 ```shell :no-line-numbers
 lessc less代码文件 编译后的文件
@@ -59,7 +59,7 @@ lessc less代码文件 编译后的文件
 
 试一试:
 
-新建一个`index.less`文件，编写内容如下：
+新建一个 `index.less` 文件，编写内容如下：
 
 ```less
 // less代码
@@ -105,7 +105,7 @@ lessc index.less index.css
 npm i -D less-loader
 ```
 
-安装好了之后，在 Webpack 的配置文件中，添加一个`less-loader`的配置项即可：
+安装好了之后，在 Webpack 的配置文件中，添加一个 `less-loader` 的配置项即可：
 
 ```JavaScript
 const HtmlWebpackPlugin = require('html-webpack-plugin');

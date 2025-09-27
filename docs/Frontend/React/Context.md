@@ -25,7 +25,9 @@ tags:
 
 根据我们前面所讲的单向数据流规则，那么数据应该被提升到 App 根组件，然后通过 props 一层一层地传递给下面的子组件，最终 subComA-1 拿到所需要的数据；如果 subComA-1 组件需要修改传递下来的数据，那么该组件还需要接收从 App 根组件一层一层传递下来的能够修改数据的方法。
 
-官方在《何时使用 Context》这一节中举过一个形象的例子：<https://zh-hans.reactjs.org/docs/context.html#when-to-use-context>
+官方在《何时使用 Context》这一节中举过一个形象的例子：
+
+<https://zh-hans.reactjs.org/docs/context.html#when-to-use-context>
 
 因此，简单一句话概括 Context，那就是解决组件之间数据共享的问题，避免一层一层的传递。
 
@@ -292,7 +294,7 @@ export default App;
 :::
 
 :::warning
-**提供默认之之后不需要 Provider 组件来提供数据**，此时子组件可以直接消费上下文环境的默认数据，否则会导致无法渲染默认数据。
+提供默认值之后不需要 Provider 组件来提供数据，此时子组件可以直接消费上下文环境的默认数据，否则会导致无法渲染默认数据。
 :::
 
 ### 多个上下文环境
@@ -409,4 +411,4 @@ function ChildCom2() {
 export default ChildCom2;
 ```
 
-useContext(MyContext1) 相当于类组件中的 `static contextType = MyContext1` 或者 `<MyContext1.Consumer>`。但是我们 **仍然需要在上层组件树中使用** `<MyContext1.Provider>` **来为下层组件提供 context**。
+useContext(MyContext1) 相当于类组件中的 `static contextType = MyContext1` 或者 `<MyContext1.Consumer>`。但是我们仍然需要在上层组件树中使用 `<MyContext1.Provider>` 来为下层组件提供 context。

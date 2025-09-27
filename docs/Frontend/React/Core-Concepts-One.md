@@ -47,7 +47,7 @@ function App() {
 }
 ```
 
-官方建议用 `()` 包裹 JSX：
+官方建议用 `( )` 包裹 JSX：
 
 ```JSX
 function App() {
@@ -69,11 +69,11 @@ JSX 看起来可能比较像模板语言，但事实上它完全是在 JavaScrip
 
 - 根元素只能有一个，也就是说元素需要被包含在一个闭合标签中。
   > 如果不希望有多余标签单独用来闭合，可以使用空标签 `<>` 和 `</>`。
-- JSX 中的表达式要用 `{}` 包裹起来。
+- JSX 中的表达式要用 `{ }` 包裹起来。
   > 注意区分表达式和语句。
 - 属性值指定为字符串字面量，或者在属性值里使用表达式。
-  > 如果属性值是表达式，那么需要用 `{}` 包裹起来。
-- 在设置元素样式的时候，需要使用 `style={}` 并传入一个对象。
+  > 如果属性值是表达式，那么需要用 `{ }` 包裹起来。
+- 在设置元素样式的时候，需要使用 `style={ }` 并传入一个对象。
   > 注意，样式名需要使用驼峰命名法，例如 `font-size` 需要写成 `fontSize`。
 - JSX 中 `class` 属性需要写成 `className`，因为 `class` 是 JavaScript 的保留字。
 - 注释需要用 `{/* */}` 包裹起来。
@@ -81,7 +81,7 @@ JSX 看起来可能比较像模板语言，但事实上它完全是在 JavaScrip
 
 ### createElement
 
-Babel 会把 JSX 转译为一个名为 `React.createElement()` 函数调用。
+Babel 会把 JSX 转译为一个名为 `React.createElement( )` 函数调用。
 
 ```JavaScript :no-line-numbers
 React.createElement(type, [props], [...children]);
@@ -114,7 +114,7 @@ console.table(element1);
 
 ![React.createElement()](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/React.createElement.png)
 
-之所以输出的并不是我们希望看到的结果，是因为最终输出的其实是经过 Babel 调用 `React.createElement()` 函数生成的对象。这些对象（虚拟 DOM）被称为 React 元素，它们描述了应该在屏幕上看到的内容。
+之所以输出的并不是我们希望看到的结果，是因为最终输出的其实是经过 Babel 调用 `React.createElement( )` 函数生成的对象。这些对象（虚拟 DOM）被称为 React 元素，它们描述了应该在屏幕上看到的内容。
 
 :::tip
 可以看出，JSX 的本质其实就是 React.createElement 方法的语法糖。
@@ -154,7 +154,7 @@ function SomeComponent() {
 <button onClick={handleClick}>Click me</button>
 ```
 
-在 React 中无法像 Vue 通过 `return false` 来阻止默认行为，需要使用 `e.preventDefault()` 来阻止。
+在 React 中无法像 Vue 通过 `return false` 来阻止默认行为，需要使用 `e.preventDefault( )` 来阻止。
 
 ```JSX
 function handleClick(e) {
@@ -291,7 +291,7 @@ export default App;
 
 但是如此，会发现页面会默认输出一次 `Hello, world!`，同时点击按钮不会触发 `handleClick` 函数。这是因为 `handleClick` 函数在组件渲染时就被调用了，而不是在按钮被点击时才调用。
 
-**个人实验发现只有传参有这个现象，不用箭头函数但不传参不会如此！**
+<mark>个人实验发现只有传参有这个现象，不用箭头函数但不传参不会如此！</mark>
 
 所以，我们需要将 `handleClick` 函数包裹在一个箭头函数中，这样箭头函数中的代码只有当按钮被点击时才会执行。
 
@@ -367,7 +367,7 @@ export default Counter;
 ```
 
 :::warning
-出于性能考虑，React 可能会将多个 `setState` 调用合并成一个调用。因为 setState **可能** 会异步更新，所以不要依赖他们的值来更新状态。对于异步的 setState，React 会将多次状态更新后，统一对 state 进行修改，然后再触发组件的重新 render。
+出于性能考虑，React 可能会将多个 `setState` 调用合并成一个调用。因为 setState `可能` 会异步更新，所以不要依赖他们的值来更新状态。对于异步的 setState，React 会将多次状态更新后，统一对 state 进行修改，然后再触发组件的重新 render。
 
 如果改变状态的操作在 HTML 元素事件中，状态更新就是异步的；否则是同步的，比如在 setTimeout 中。
 
@@ -470,7 +470,7 @@ function App() {
 :::warning
 
 - 在类组件的代码里，你可能会收到提示，提醒你不需要写这个构造函数。这是 ESlint 的规则，ES2015 会默认提供构造函数，因此不必提供空的构造函数或仅仅是委托到父类的构造函数（ES6 就是 ES2015）。
-- 传递的数据如果是数字或布尔值等类型，需要用 `{}` 包裹起来，否则会默认解析为字符串。
+- 传递的数据如果是数字或布尔值等类型，需要用 `{ }` 包裹起来，否则会默认解析为字符串。
 
 :::
 
@@ -576,7 +576,7 @@ interface Props {
 
 ### 状态提升
 
-在 Vue 中，父传子通过 props，子传父通过自定义事件。在 React 中，如果子组件需要向父组件传递数据，同样是通过触发父组件传递给子组件的事件来进行传递。这在官网中被称为 **状态提升**。
+在 Vue 中，父传子通过 props，子传父通过自定义事件。在 React 中，如果子组件需要向父组件传递数据，同样是通过触发父组件传递给子组件的事件来进行传递。这在官网中被称为 `状态提升`。
 
 :::code-group
 

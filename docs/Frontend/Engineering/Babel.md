@@ -1,6 +1,5 @@
 ---
 date: 2025-03-20 14:08:45
-description: 不会吧 你不会真的在用 IE6 吧
 cover: https://www.babeljs.cn/img/babel.png
 tags:
   - Babel
@@ -78,7 +77,7 @@ babel 要编译的整个目录 -d 编译结果放置的目录
 
 ## Babel 预设
 
-babel 有多种预设，最常见的预设是`@babel/preset-env`。
+babel 有多种预设，最常见的预设是 `@babel/preset-env`。
 
 `@babel/preset-env` 可以让你使用最新的 JS 语法，而无需针对每种语法转换设置具体的插件。
 
@@ -171,7 +170,7 @@ new Promise(function (resolve) {
 - 插件顺序从前往后排列。
 - Preset 顺序是颠倒的（从后往前）。
 
-通常情况下，`@babel/preset-env`只转换那些已经形成正式标准的语法，对于某些处于早期阶段、还没有确定的语法不做转换。
+通常情况下，`@babel/preset-env` 只转换那些已经形成正式标准的语法，对于某些处于早期阶段、还没有确定的语法不做转换。
 
 如果要转换这些语法，就要单独使用插件。
 

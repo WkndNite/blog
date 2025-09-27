@@ -143,7 +143,7 @@ module.exports = {
 
    而 `postcss-preset-env` 内部包含了该库，自动有了该功能。
 
-   如果需要调整 **兼容的浏览器** 范围，可以通过下面的方式进行配置。
+   如果需要调整兼容的浏览器范围，可以通过下面的方式进行配置。
 
    <mark>方式 1：在 postcss-preset-env 的配置中加入 browsers。</mark>
 
@@ -175,7 +175,7 @@ module.exports = {
    ]
    ```
 
-   `browserslist`是一个多行的（数组形式的）标准字符串。
+   `browserslist` 是一个多行的（数组形式的）标准字符串。
 
    它的书写规范多而繁琐，详情见：<https://github.com/browserslist/browserslist>。
 
@@ -225,7 +225,7 @@ module.exports = {
 
    未来的 css 语法是天然支持变量的。
 
-   在 `:root{}` 中定义常用变量，使用 `--` 前缀命名变量
+   在 `:root { }` 中定义常用变量，使用 `--` 前缀命名变量
 
    ```CSS
    :root {

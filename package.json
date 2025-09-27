@@ -10,6 +10,7 @@
     "serve": "vitepress serve docs",
     "format": "biome format --write .",
     "lint": "textlint --fix .",
+    "fla": "bun format && bun lint && git add .",
     "cz": "bun format && bun lint && git add . && git-cz"
   },
   "config": {
@@ -33,7 +34,6 @@
   "devDependencies": {
     "@biomejs/biome": "2.2.4",
     "@mdit-vue/shared": "3.0.2",
-    "@theojs/lumen": "6.4.4",
     "commitizen": "4.3.1",
     "cz-git": "1.12.0",
     "markdown-it-mathjax3": "4.3.2",
