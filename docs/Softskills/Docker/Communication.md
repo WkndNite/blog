@@ -13,12 +13,12 @@ date: 2024-12-27
 
 Docker 提供了多种网络模式，以满足不同的应用需求。主要的网络模式包括：
 
-- **bridge**：默认的网络模式，适用于大多数应用场景。
-- **host**：容器与宿主机共享网络命名空间。
-- **none**：容器没有网络连接。
-- **overlay**：用于跨主机的容器通信。
-- **macvlan**：允许容器拥有自己的 MAC 地址。
-- **container**：容器与另一个容器共享网络命名空间。
+- `bridge`：默认的网络模式，适用于大多数应用场景。
+- `host`：容器与宿主机共享网络命名空间。
+- `none`：容器没有网络连接。
+- `overlay`：用于跨主机的容器通信。
+- `macvlan`：允许容器拥有自己的 MAC 地址。
+- `container`：容器与另一个容器共享网络命名空间。
 
 ## 网络实践
 
@@ -26,7 +26,7 @@ Docker 提供了多种网络模式，以满足不同的应用需求。主要的�
 
 首先我们准备两个 tomcat 的容器，然后进入容器内部安装 iproute2 和 iputils-ping 来为后续操作提供支持。
 
-当然，安装的过程可能比较漫长，**你也可以直接封装一个带有这些安装包的镜像**，这样就不需要重复安装了。
+当然，安装的过程可能比较漫长，`你也可以直接封装一个带有这些安装包的镜像`，这样就不需要重复安装了。
 
 ```Bash
 docker pull tomcat
@@ -72,7 +72,7 @@ docker exec -it tomcat-02 bash -c "ping -c 3 172.17.0.2"
 
 首先我们先检查一下宿主机的 ip 地址。
 
-```Bash
+```Bash :no-line-numbers
 ip addr
 ```
 
@@ -104,7 +104,7 @@ ping -c 3 172.17.0.3
 
 其实观察前面的图你就会明白，最后两个接口分别对应着 tomcat-01 和 tomcat-02 两个容器。此处的 br 接口，是因为我在我的服务器上还运行着另外一个容器——Harbor。那么，我们怎么得知这些接口情况呢？
 
-```Bash
+```Bash :no-line-numbers
 docker network ls
 ```
 
@@ -166,13 +166,13 @@ docker run -d -P --name tomcat-05 --net mynet tomcat-01
 
 然后，我们再次用 inspect 命令查看网络详情，可以看到，两个容器已经加入了 mynet 网络。
 
-```Bash
+```Bash :no-line-numbers
 docker network inspect mynet
 ```
 
 ![自定义网络](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/docker-network-custom.png)
 
-接下来，我们分别在两个容器内部 ping 对方的 ip 地址，看是否能够 ping 通。重点来了！**此时，我们通过容器名也是可以 ping 通的！**
+接下来，我们分别在两个容器内部 ping 对方的 ip 地址，看是否能够 ping 通。重点来了！`此时，我们通过容器名也是可以 ping 通的！`
 
 ```Bash
 docker exec -it tomcat-04 bash -c "ping -c 3 192.168.0.3"

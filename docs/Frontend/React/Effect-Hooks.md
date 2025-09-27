@@ -5,7 +5,7 @@ tags:
   - 前端
 ---
 
-# effect 相关 hook
+# effect 相关 Hooks
 
 > 面试题：说一说 useEffect 和 useLayoutEffect 的区别？
 

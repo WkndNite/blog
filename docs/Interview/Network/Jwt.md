@@ -25,7 +25,7 @@ JWT 就是为了解决这些问题出现的。
 
 JWT 全称 `Json Web Token`，本质就是一个字符串。
 
-它要解决的问题，就是在互联网环境中，提供 **统一的、安全的** 令牌格式。
+它要解决的问题，就是在互联网环境中，提供统一的、安全的令牌格式。
 
 因此，jwt 只是一个令牌格式而已，你可以把它存储到 cookie，也可以存储到 localstorage，没有任何限制！
 
@@ -132,14 +132,14 @@ window.btoa(
 // 得到字符串：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 ```
 
-同样的，浏览器也提供了`atob`函数，可以对其进行解码：
+同样的，浏览器也提供了 `atob` 函数，可以对其进行解码：
 
 ```JavaScript
 window.atob('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9');
 // 得到字符串：{"alg":"HS256","typ":"JWT"}
 ```
 
-> nodejs中没有提供这两个函数，可以安装第三方库 `atob` 和 `bota` 搞定
+> nodejs中没有提供这两个函数，可以安装第三方库 `atob` 和 `btoa` 搞定
 >
 > 或者，手动搞定。
 
@@ -186,7 +186,7 @@ window.atob('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9');
 }
 ```
 
-`foo: bar` 是我们自定义的信息，`iat: 1587548215`是 jwt 规范中的信息。
+`foo: bar` 是我们自定义的信息，`iat: 1587548215` 是 jwt 规范中的信息。
 
 最终，payload 部分和 header 一样，需要通过 `base64 url` 编码得到：
 
@@ -206,7 +206,7 @@ window.btoa(
 
 这部分的生成，是对前面两个部分的编码结果，按照头部指定的方式进行加密。
 
-比如：头部指定的加密方法是 `HS256`，前面两部分的编码结果是`eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJpYXQiOjE1ODc1NDgyMTV9`
+比如：头部指定的加密方法是 `HS256`，前面两部分的编码结果是 `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJpYXQiOjE1ODc1NDgyMTV9`
 
 则第三部分就是用对称加密算法 `HS256` 对字符串 `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJpYXQiOjE1ODc1NDgyMTV9` 进行加密，当然你得指定一个秘钥，比如 `shhhhh`
 

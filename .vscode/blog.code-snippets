@@ -171,5 +171,11 @@
     "prefix": "snippet",
     "body": ["<<< ./$1"],
     "description": "插入引用代码文件"
+  },
+
+  "插入双下划线": {
+    "prefix": "du",
+    "body": ["<span style=\"border-bottom: 2px double #000;\">$1</span>"],
+    "description": "插入双下划线"
   }
 }

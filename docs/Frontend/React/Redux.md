@@ -309,10 +309,10 @@ Redux 是一个独立的第三方库，之后 React 在 Redux 的基础上推出
 
 最新版的 React-Redux，已经全面拥抱了 Hooks，内置了诸如 `useSelector`、`useDispatch`、`useStore` 一类的 Hook。
 
-另外，Redux 官方推出了 [Redux Toolkit](https://redux-toolkit.js.org/) 来简化整个 Redux 的使用。因此现在在 React 应用中，状态管理库的使用一般都是 **React Redux + Redux Toolkit**。
+另外，Redux 官方推出了 [Redux Toolkit](https://redux-toolkit.js.org/) 来简化整个 Redux 的使用。因此现在在 React 应用中，状态管理库的使用一般都是 React Redux + Redux Toolkit。
 
-```Bash
- npm install @reduxjs/toolkit react-redux
+```Bash :no-line-numbers
+npm install @reduxjs/toolkit react-redux
 ```
 
 使用 React Redux 的代码如下：

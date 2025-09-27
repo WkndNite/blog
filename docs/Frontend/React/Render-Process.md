@@ -62,7 +62,7 @@ export default () => {
 
 注意上面 render 阶段的工作是在内存里面进行的，不会更新宿主环境 UI，因此这个阶段即使工作流程反复被中断，用户也不会看到“更新不完整的 UI”。
 
-当 Scheduler 调度完成后，将任务交给 Reconciler，Reconciler 就需要计算出新的 UI，最后就由 Renderer **同步**进行渲染更新操作。
+当 Scheduler 调度完成后，将任务交给 Reconciler，Reconciler 就需要计算出新的 UI，最后就由 Renderer 同步进行渲染更新操作。
 
 如下图所示：
 
@@ -139,7 +139,7 @@ performUnitOfWork 在创建下一个 FiberNode 的时候，整体上的工作流
 - 递阶段
 - 归阶段
 
-**递阶段**
+### 递阶段
 
 递阶段会从 HostRootFiber 开始向下以深度优先的原则进行遍历，遍历到的每一个 FiberNode 执行 beginWork 方法。该方法会根据传入的 FiberNode 创建下一级的 FiberNode，此时可能存在两种情况：
 
@@ -182,7 +182,7 @@ Li2Fiber.return = UlFiber;
 
 由于采用的是深度优先的原则，因此无法再往下走的时候，会进入到归阶段。
 
-**归阶段**
+### 归阶段
 
 归阶段会调用 completeWork 方法来处理 FiberNode，做一些副作用的收集。
 
@@ -209,7 +209,7 @@ function performUnitOfWork(fiberNode) {
 
 Renderer 工作的阶段被称之为 commit 阶段。该阶段会将各种副作用 commit 到宿主环境的 UI 中。
 
-相较于之前的 render 阶段可以被打断，commit 阶段一旦开始就会 **同步** 执行直到完成渲染工作。
+相较于之前的 render 阶段可以被打断，commit 阶段一旦开始就会同步执行直到完成渲染工作。
 
 整个渲染器渲染过程中可以分为三个子阶段：
 

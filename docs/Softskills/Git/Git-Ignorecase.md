@@ -27,13 +27,13 @@ Git 默认对于文件及文件夹大小写的命名是不敏感的。尽管 Git
 
 因此，需要通过以下配置，允许 Git 对这些情况跟踪：
 
-```Bash
+```Bash :no-line-numbers
 git config core.ignorecase false
 ```
 
 为了方便起见，这种情况应该在普遍的项目里都允许追踪：
 
-```Bash
+```Bash :no-line-numbers
 git config --global core.ignorecase false
 ```
 

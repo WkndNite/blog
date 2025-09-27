@@ -13,7 +13,7 @@ SSL（Secure Sockets Layer），安全套接字协议。
 
 TLS（Transport Layer Security），传输层安全性协议。
 
-**TLS是SSL的升级版，两者几乎是一样的。**
+<mark>TLS 是 SSL 的升级版，两者几乎是一样的。</mark>
 
 HTTPS（Hyper Text Transfer Protocol over SecureSocket Layer），建立在 SSL 协议之上的 HTTP 协议。
 

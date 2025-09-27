@@ -70,7 +70,7 @@ export default class App extends Component {
 
 ## createRef API
 
-接下来我们来看一下官方推荐的 **createRef API**。
+接下来我们来看一下官方推荐的 createRef API。
 
 示例如下：
 
@@ -101,7 +101,7 @@ export default class App extends Component {
 
 ![createRef API](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/createRef.png)
 
-**createRef** 这个方法本质也很简单，就是返回了一个 **{ current : null }** 的对象，下面是 createRef 的源码：
+createRef 这个方法本质也很简单，就是返回了一个 `{ current : null }` 的对象，下面是 createRef 的源码：
 
 ![createRef 源码](https://blog-1328542955.cos.ap-shanghai.myqcloud.com/2022-11-30-055424.png)
 
@@ -154,7 +154,7 @@ export default class App extends Component {
 ::::
 
 :::danger
-虽然提供这种方式，但是这是一种 **反模式**！相当于回到了 jQuery 时代，因此尽量避免这么做。
+虽然提供这种方式，但是这是反模式！相当于回到了 jQuery 时代，因此尽量避免这么做。
 :::
 
 React.createRef API 是在 React 16.3 版本中引入的，如果是稍早一些的版本，官方推荐使用回调 Refs，也就是函数的形式。例如：
@@ -194,7 +194,11 @@ export default class App extends Component {
 }
 ```
 
-你可能会好奇，为什么上面的例子都是使用的类组件，现在不都是使用函数组件了么？这是因为默认情况下，你不能在 **函数组件上** 使用 ref 属性，因为它们 **没有实例**，但是在函数组件内部是可以使用 ref 的，这涉及到后面要说的 useRef。
+你可能会好奇，为什么上面的例子都是使用的类组件，现在不都是使用函数组件了么？
+
+<mark>这是因为默认情况下，你不能在函数组件上使用 ref 属性，因为它们没有实例。</mark>
+
+但是在函数组件内部是可以使用 ref 的，这涉及到后面要说的 useRef。
 
 ## Ref 转发
 
@@ -298,7 +302,7 @@ export default class ChildCom1 extends Component {
 
 要解决这个问题就涉及到了 Ref 转发，也就是在增强组件中，将 Ref 关联到原来的子组件上，而不是增强组件本身。说直白一点，就是 Ref 向下传递给子组件。
 
-这里 React 官方为我们提供了一个 API，**React.forwardRef**，通过它我们可以实现 Ref 的转发。我们需要做的，仅仅是修改高阶组件。
+这里 React 官方为我们提供了一个 API，React.forwardRef，通过它我们可以实现 Ref 的转发。我们需要做的，仅仅是修改高阶组件。
 
 ```JSX
 import React, { Component } from 'react';
@@ -408,7 +412,7 @@ export default App;
 
 实际上，就是因为在函数式组件中使用 createRef 创建 ref 时存在弊端，组件每次更新，ref 对象就会被重新创建，所以出现了 useRef 来解决这个问题。
 
-useRef 还接受一个初始值，这在用作关联 DOM 元素时通常没什么用，但是在作为 **存储不需要变化** 的全局变量时则非常方便。来看下面的例子：
+useRef 还接受一个初始值，这在用作关联 DOM 元素时通常没什么用，但是在作为存储不需要变化的全局变量时则非常方便。来看下面的例子：
 
 ```JSX
 import { useState, useEffect } from 'react';
@@ -486,7 +490,7 @@ export default App;
 
 最后，我们要看一下另外一个 useImperativeHandle 这个 Hook。
 
-该 Hook 一般配合 React.forwardRef 使用，主要作用是父组件传入 Ref 时，**自定义** 要暴露给父组件的实例值。
+该 Hook 一般配合 React.forwardRef 使用，主要作用是父组件传入 Ref 时自定义要暴露给父组件的实例值。
 
 来看一个具体的示例：
 

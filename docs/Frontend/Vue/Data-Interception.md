@@ -27,12 +27,12 @@ date: 2025-01-20
 
 目前来讲，JS 中的数据拦截方式主要有两种：
 
-- **Object.defineProperty** 对应 Vue 1.x、2.x 的响应式原理
-- **Proxy** 对应 Vue 3.x 的响应式原理
+- `Object.defineProperty` 对应 Vue 1.x、2.x 的响应式原理
+- `Proxy` 对应 Vue 3.x 的响应式原理
 
-1. `Object.defineProperty(obj, prop, descriptor)`
+1. Object.defineProperty(obj, prop, descriptor)
 
-   这是 Object 上面的一个静态方法，用于**给一个对象添加新的属性**，除此之外还能够**对属性进行更为详细的配置**。
+   这是 Object 上面的一个静态方法，用于给一个对象添加新的属性，除此之外还能够对属性进行更为详细的配置。
 
    - `obj`：要定义属性的对象。
    - `prop`：一个字符串或 Symbol，表示要定义或修改的属性键。
@@ -54,7 +54,11 @@ date: 2025-01-20
    :::
 
    :::warning
-   属性描述符分为**数据描述符**和**访问器描述符**，二者是互斥的。`value`、`writable`、`enumerable`、`configurable` 是数据描述符，`get`、`set` 是访问器描述符。
+   属性描述符分为 `数据描述符` 和 `访问器描述符`，二者是互斥的。
+
+   `value`、`writable`、`enumerable`、`configurable` 是数据描述符。
+
+   `get`、`set` 是访问器描述符。
    :::
 
    ```JavaScript
@@ -67,7 +71,7 @@ date: 2025-01-20
    });
    ```
 
-2. `Proxy(target,handler)`
+2. Proxy(target,handler)
 
    另外一种方式是通过创建代理对象的方式来实现拦截。
 
@@ -220,13 +224,15 @@ date: 2025-01-20
 
    Vue 3 的响应式，从原来的 `Object.deepDefineProperty` 替换为了 `Proxy`。
 
-   之所以替换，就是因为 **两者在进行拦截的时候，无论是拦截的目标还是能够拦截的行为，都是不同的！**
+   之所以替换，就是因为：
 
-   - `Object.deepDefineProperty` 是 **针对对象特定属性** 的读写操作进行拦截；
-   - `Proxy` 则是 **针对一整个对象的多个操作**，包括属性的读取、赋值、属性描述符的获取和设置、属性的删除、原型的查看以及函数的调用等行为。
+   <mark>两者在进行拦截的时候，无论是拦截的目标还是能够拦截的行为，都是不同的！</mark>
+
+   - `Object.deepDefineProperty` 是针对<span style="border-bottom: 2px double #000;">对象特定属性的读写操作</span>进行拦截；
+   - `Proxy` 则是针对<span style="border-bottom: 2px double #000;">一整个对象的多个操作</span>，包括属性的读取、赋值、属性描述符的获取和设置、属性的删除、原型的查看以及函数的调用等行为。
 
    :::info
-   如果是使用 `Object.defineProperty`，因为是针对单属性拦截。设置之后再新增的属性——无法拦截。``Proxy` 针对整个对象，因此新增属性仍然可以被拦截。
+   如果是使用 `Object.defineProperty`，因为是针对单属性拦截。设置之后再新增的属性——无法拦截。`Proxy` 针对整个对象，因此新增属性仍然可以被拦截。
    :::
 
    :::details 理解上面这一点，就可以理解 Vue2 的响应式对象会有什么样的缺陷
@@ -269,7 +275,7 @@ date: 2025-01-20
 
 2. 性能上的区别
 
-**大多数情况下**，Proxy 是高效的，但是不能完全断定，需要看具体的场景。
+<mark>大多数情况下，Proxy 是高效的，但是不能完全断定，需要看具体的场景。</mark>
 
 如果需要拦截的操作类型较少，且主要集中在某些特定属性上，`Object.defineProperty` 可以提供更好的性能。
 

@@ -23,7 +23,7 @@ cover: https://cdn-icons-png.flaticon.com/128/12514/12514434.png
 
 - `feat`：表示在代码库中新增了一个功能（这和语义化版本中的 MINOR 相对应）。
 - `fix`：表示在代码库中修复了一个 bug（这和语义化版本中的 PATCH 相对应）。
-- `BREAKING CHANGE`：表示引入了破坏性变更（这和语义化版本中的 MAJOR 相对应）。**破坏性变更可以是任意类型提交的一部分。**
+- `BREAKING CHANGE`：表示引入了破坏性变更（这和语义化版本中的 MAJOR 相对应）。<mark>破坏性变更可以是任意类型提交的一部分。</mark>
 - `docs`：用于修改文档，例如修改 README 文件、API 文档等。
 - `style`：用于修改代码的样式，例如调整缩进、空格、空行等。
 - `refactor`：用于重构代码，例如修改代码结构、变量名、函数名等但不修改功能逻辑。
@@ -45,7 +45,7 @@ cover: https://cdn-icons-png.flaticon.com/128/12514/12514434.png
 
 cz-vinyl 是一个基于 [cz-customizable](https://github.com/leonardoanalista/cz-customizable) 的 commitizen 插件，它提供了一套自定义的提交信息模板，可以满足大部分的开发需求。
 
-```sh
+```sh :no-line-numbers
 npm install -g cz-vinyl
 ```
 
